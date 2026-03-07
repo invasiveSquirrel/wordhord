@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <rect width="256" height="256" fill="#1e1e2e" rx="32" />
+  <!-- Circular base of the 'd' -->
+  <circle cx="128" cy="152" r="48" fill="none" stroke="#cba6f7" stroke-width="20" />
+  <!-- Curved ascender -->
+  <path d="M 176 152 L 176 100 C 176 40, 112 40, 96 64" fill="none" stroke="#cba6f7" stroke-width="20" stroke-linecap="round" stroke-linejoin="round" />
+  <!-- Horizontal bar through the top -->
+  <path d="M 112 72 L 152 48" fill="none" stroke="#89b4fa" stroke-width="16" stroke-linecap="round" />
+</svg>

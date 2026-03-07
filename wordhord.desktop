@@ -1,0 +1,17 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Wordhord
+GenericName=Vocabulary Trainer
+Comment=Learn languages with AI-powered vocabulary training and native audio
+Exec=/home/chris/.local/bin/wordhord
+Icon=wordhord
+Categories=Education;Languages;Utility;
+Terminal=false
+StartupNotify=true
+Keywords=language;vocabulary;learning;flashcards;spanish;german;finnish;portuguese;dutch;swedish;
+X-GNOME-Autostart-enabled=false
+
+# Application metadata
+StartupWMClass=Electron
+SingleMainWindow=false

@@ -1,0 +1,27 @@
+# .gitignore for Wordhord
+
+# Node
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Python
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+backend.log
+startup.log
+
+# Database
+*.db
+*.db-journal
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Electron
+release/
+*.log
