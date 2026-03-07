@@ -5,9 +5,10 @@ Wordhord is an AI-powered vocabulary training desktop application designed for l
 ## Features
 - **Smart Flashcards**: Context-rich cards with IPA, grammatical gender, and example sentences.
 - **AI Generation**: Automatically generate related vocabulary based on your existing deck.
-- **Native Audio**: Instant text-to-speech using Google Cloud TTS.
+- **Native Audio**: Instant text-to-speech using Google Cloud TTS or local fallback.
 - **Pronunciation Comparison**: Record your voice and see your waveform side-by-side with a native speaker's.
 - **Spaced Repetition**: Intelligent study plans based on your learning progress (SQLite-backed).
+- **IPA Support**: Click the speaker icon to hear phonetic pronunciations via espeak-ng.
 
 ---
 
@@ -17,11 +18,10 @@ Wordhord requires [Ollama](https://ollama.com/) to be running locally to generat
 
 1.  **Download**: Visit [ollama.com](https://ollama.com/download) and download the installer for your OS (Windows, macOS, or Linux).
 2.  **Install**: Run the installer and ensure the Ollama icon appears in your system tray.
-3.  **Pull the Model**: Open your terminal (PowerShell, Terminal.app, or Bash) and run:
+3.  **Pull the Model**: Open your terminal and run:
     ```bash
     ollama run gemma2:9b
     ```
-    *Note: The app is configured for `gemma2:9b` by default. You can use other models by setting the `OLLAMA_MODEL` environment variable.*
 4.  **Keep it Running**: Ensure Ollama is running in the background while using Wordhord.
 
 ---
@@ -32,6 +32,7 @@ Wordhord requires [Ollama](https://ollama.com/) to be running locally to generat
 - **Node.js** (v18 or higher)
 - **Python** (v3.10 or higher)
 - **FFmpeg**: Required for audio playback (`ffplay`).
+- **espeak-ng**: Required for IPA and Scottish Gaelic speech.
 
 ### 1. Clone the repository
 ```bash
@@ -42,7 +43,7 @@ cd wordhord
 ### 2. OS-Specific Setup
 
 #### **Windows**
-1.  **Install FFmpeg**: Download from [ffmpeg.org](https://ffmpeg.org/download.html) or via Chocolatey: `choco install ffmpeg`.
+1.  **Install FFmpeg & espeak-ng**.
 2.  **Backend**:
     ```powershell
     cd backend
@@ -57,7 +58,7 @@ cd wordhord
     ```
 
 #### **macOS**
-1.  **Install FFmpeg**: Use Homebrew: `brew install ffmpeg`.
+1.  **Install FFmpeg & espeak-ng** (via Homebrew).
 2.  **Backend**:
     ```bash
     cd backend
@@ -72,7 +73,7 @@ cd wordhord
     ```
 
 #### **Linux (CachyOS/Arch/Ubuntu)**
-1.  **Install FFmpeg**: `sudo pacman -S ffmpeg` or `sudo apt install ffmpeg`.
+1.  **Install FFmpeg & espeak-ng**: `sudo pacman -S ffmpeg espeak-ng`.
 2.  **Setup**: Follow the macOS steps above or use the provided `./start.sh`.
 
 ---
@@ -81,22 +82,9 @@ cd wordhord
 
 ### Windows (Manual)
 You need two terminals open:
-1.  **Terminal 1 (Backend)**:
-    ```powershell
-    cd backend
-    .\venv\Scripts\activate
-    python main.py
-    ```
-2.  **Terminal 2 (Frontend)**:
-    ```powershell
-    cd frontend
-    npm run dev
-    ```
-3.  **Terminal 3 (Electron)**:
-    ```powershell
-    cd frontend
-    npm run electron
-    ```
+1.  **Backend**: `python main.py` (in venv)
+2.  **Frontend**: `npm run dev`
+3.  **Electron**: `npm run electron`
 
 ### Linux / macOS / Git Bash
 ```bash
@@ -107,9 +95,15 @@ You need two terminals open:
 
 ## 📖 How to Use Wordhord
 
-1.  **Select a Language**: Click a language button at the top.
+1.  **Select a Language**: Click a language button at the top (e.g., Gàidhlig, Swedish).
 2.  **Study**: Flip cards, listen to native audio, and record your own voice to compare waveforms.
 3.  **Build**: Click **"New Cards"** to have the AI expand your deck based on your learning history.
+
+---
+
+## 🔄 Integration with Panglossia
+
+Wordhord shares a database with **Panglossia**. Any vocabulary words you "learn" during a chat session in Panglossia will automatically appear in your Wordhord deck for spaced repetition study.
 
 ---
 
