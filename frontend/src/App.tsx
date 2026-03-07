@@ -222,6 +222,14 @@ export default function App() {
     audio.play();
   };
 
+  const speakIPA = async (ipa: string) => {
+    try {
+      await axios.post('http://localhost:8001/speak_ipa', { text: ipa, language });
+    } catch (e) {
+      console.error("IPA speak failed", e);
+    }
+  };
+
   const startRecording = async (expectedText: string) => {
     try {
       // Also fetch native audio if we don't have it yet, so we can compare
@@ -371,7 +379,14 @@ export default function App() {
                   {(currentCard.ipa || currentCard.gender || currentCard.part_of_speech || currentCard.conjugations || (language === 'swedish' && currentCard.tone) || currentCard.prefix || currentCard.preposition || currentCard.case) && (
                     <div className="linguistics-box">
                       {currentCard.part_of_speech && <p><strong>Part of Speech:</strong> {currentCard.part_of_speech}</p>}
-                      {currentCard.ipa && <p><strong>IPA:</strong> {currentCard.ipa}</p>}
+                      {currentCard.ipa && (
+                        <p className="ipa-row">
+                          <strong>IPA:</strong> {currentCard.ipa}
+                          <button onClick={(e) => { e.stopPropagation(); speakIPA(currentCard.ipa!); }} className="btn icon-btn mini-btn inline-btn" title="Speak IPA">
+                            <Volume2 size={14} />
+                          </button>
+                        </p>
+                      )}
                       {language === 'swedish' && currentCard.tone && <p><strong>Tone:</strong> {currentCard.tone}</p>}
                       {language === 'german' && currentCard.prefix && <p><strong>Prefix:</strong> {currentCard.prefix}</p>}
                       {(currentCard.preposition || currentCard.case) && (

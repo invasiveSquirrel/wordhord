@@ -293,6 +293,10 @@ async def speak(request: SpeakRequest):
 
     def play_audio():
         try:
+            if request.language == "scottish_gaelic":
+                subprocess.run(["espeak-ng", "-v", "gd", "-s", "150", text_to_speak], check=False)
+                return
+
             if texttospeech and os.environ.get("GOOGLE_APPLICATION_CREDENTIALS"):
                 client = texttospeech.TextToSpeechClient()
                 synthesis_input = texttospeech.SynthesisInput(text=text_to_speak)
@@ -303,7 +307,7 @@ async def speak(request: SpeakRequest):
                     "portuguese": ("pt-BR", "pt-BR-Chirp3-HD-Dione"),
                     "spanish": ("es-US", "es-US-Chirp3-HD-Callirrhoe"),
                     "dutch": ("nl-NL", "nl-NL-Chirp3-HD-Despina"),
-                    "scottish_gaelic": ("en-GB", "en-GB-Wavenet-B")
+                    "scottish_gaelic": ("en-GB", "en-GB-Wavenet-D")
                 }
                 l_code, v_name = gtts_voice_map.get(request.language, ("en-US", "en-US-Journey-F"))
                 voice = texttospeech.VoiceSelectionParams(language_code=l_code, name=v_name)
@@ -335,6 +339,18 @@ async def speak(request: SpeakRequest):
             print(f"DEBUG Error: {e}")
 
     threading.Thread(target=play_audio, daemon=True).start()
+    return {"status": "ok"}
+
+@app.post("/speak_ipa")
+async def speak_ipa(request: SpeakRequest):
+    def play_ipa():
+        try:
+            # espeak-ng phonetic input [[ ]]
+            ipa_text = f"[[{request.text}]]"
+            subprocess.run(["espeak-ng", "-v", "en-gb", ipa_text], check=False)
+        except Exception as e:
+            print(f"IPA Error: {e}")
+    threading.Thread(target=play_ipa, daemon=True).start()
     return {"status": "ok"}
 
 @app.post("/native_audio")
