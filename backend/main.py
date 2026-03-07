@@ -52,7 +52,7 @@ app.add_middleware(
 MODEL_NAME = os.getenv("OLLAMA_MODEL", "gemma2:9b")
 llm = OllamaLLM(model=MODEL_NAME, temperature=0.1)
 
-POLYGLOSSIA_DIR = "/home/chris/polyglossia"
+POLYGLOSSIA_DIR = "/home/chris/panglossia"
 PIPER_BIN = os.path.join(POLYGLOSSIA_DIR, "backend", "bin", "piper")
 PIPER_LIB = os.path.join(POLYGLOSSIA_DIR, "backend", "bin")
 VOICE_DIR = os.path.join(POLYGLOSSIA_DIR, "backend", "voices")

@@ -17,8 +17,8 @@ export OLLAMA_NUM_PARALLEL=1
 # Force Ollama to use the NVIDIA card (usually default, but ensures visibility)
 export CUDA_VISIBLE_DEVICES=0 
 
-if [ -f "$DIR/../polyglossia/google-credentials.json" ]; then
-    export GOOGLE_APPLICATION_CREDENTIALS="$DIR/../polyglossia/google-credentials.json"
+if [ -f "$DIR/../panglossia/google-credentials.json" ]; then
+    export GOOGLE_APPLICATION_CREDENTIALS="$DIR/../panglossia/google-credentials.json"
 fi
 
 ./venv/bin/python -B main.py > backend.log 2>&1 &

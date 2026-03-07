@@ -5,7 +5,7 @@ from sqlalchemy import create_engine, Column, Integer, String, UniqueConstraint
 from sqlalchemy.orm import declarative_base, sessionmaker
 
 DB_PATH = "/home/chris/wordhord.db"
-POLYGLOSSIA_DIR = "/home/chris/polyglossia"
+POLYGLOSSIA_DIR = "/home/chris/panglossia"
 LANGUAGES = ['dutch', 'finnish', 'german', 'portuguese', 'spanish', 'swedish']
 
 Base = declarative_base()
