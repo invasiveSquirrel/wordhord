@@ -5,6 +5,13 @@
       <stop offset="100%" style="stop-color:#11111b;stop-opacity:1" />
     </linearGradient>
   </defs>
-  <circle cx="256" cy="256" r="240" fill="url(#bg-grad)" stroke="#cba6f7" stroke-width="12" />
-  <text x="50%" y="50%" dominant-baseline="central" text-anchor="middle" font-family="Serif" font-size="320" font-weight="bold" fill="#cba6f7">ð</text>
+  <circle cx="256" cy="256" r="240" fill="url(#bg-grad)" stroke="#cba6f7" stroke-width="16" />
+  
+  <g transform="translate(256, 280)">
+    <!-- The Eth Body (ð) - Stylized with curved ascender -->
+    <path d="M -80 0 A 80 80 0 1 0 80 0 A 80 80 0 1 0 -80 0 M 65 -40 C 65 -120 40 -180 -20 -220" fill="none" stroke="#cba6f7" stroke-width="35" stroke-linecap="round" stroke-linejoin="round" />
+    
+    <!-- The Yellow Crossbar (Tie) -->
+    <path d="M 5 -160 L 85 -135" fill="none" stroke="#f9e2af" stroke-width="35" stroke-linecap="round" />
+  </g>
 </svg>
