@@ -4,8 +4,7 @@ import re
 import json
 import time
 from sqlalchemy import create_engine, Column, Integer, String, UniqueConstraint
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import sessionmaker
+from sqlalchemy.orm import declarative_base, sessionmaker
 from langchain_ollama import OllamaLLM
 
 # Database Setup
@@ -39,7 +38,7 @@ Base.metadata.create_all(bind=engine)
 # Configuration
 MODEL_NAME = os.getenv("OLLAMA_MODEL", "gemma2:9b")
 llm = OllamaLLM(model=MODEL_NAME, temperature=0.2)
-LANGUAGES = ['dutch', 'finnish', 'german', 'portuguese', 'spanish', 'swedish']
+LANGUAGES = ['dutch', 'finnish', 'german', 'portuguese', 'spanish', 'swedish', 'scottish_gaelic']
 BATCH_SIZE = 10 
 TOTAL_TARGET = 3000
 THERMAL_DELAY = 15 
@@ -48,7 +47,8 @@ def get_existing_count(db, language):
     return db.query(CardModel).filter(CardModel.language == language).count()
 
 def get_recent_terms(db, language):
-    cards = db.query(CardModel).filter(CardModel.language == language).order_by(CardModel.id.desc()).limit(50).all()
+    # Get 100 recent terms to avoid repeats in generation
+    cards = db.query(CardModel).filter(CardModel.language == language).order_by(CardModel.id.desc()).limit(100).all()
     return [c.term for c in cards]
 
 def generate_batch(language, recent_terms, level="A1-B2"):
@@ -59,7 +59,7 @@ Exclude these: {', '.join(recent_terms)}.
 REQUIREMENTS for each entry:
 - term: the {language} word.
 - translation: English translation.
-- ipa: IPA pronunciation. MANDATORY: Include the 'ˈ' mark for primary stress (especially for German/Swedish).
+- ipa: IPA pronunciation. MANDATORY: Include the 'ˈ' mark for primary stress.
 - part_of_speech: Noun, Verb, Adjective, etc.
 - gender: if applicable.
 - tone: For Swedish ONLY, include Accent 1 or Accent 2.
@@ -69,9 +69,6 @@ REQUIREMENTS for each entry:
 - conjugations: Main forms. 
 - example: A simple example sentence. 
 - example_translation: English translation.
-
-CRITICAL LINGUISTIC DETAIL:
-If a verb has a prefix that changes its meaning (like German 'übersetzen'), provide the specific usage and indicate if it's separable (e.g., 'er setzt über') or inseparable (e.g., 'er übersetzt').
 
 Output ONLY a JSON array of objects. No other text.
 """
@@ -85,25 +82,48 @@ Output ONLY a JSON array of objects. No other text.
 
 def save_to_db(db, language, cards):
     for entry in cards:
-        card = CardModel(
-            language=language,
-            term=entry.get('term'),
-            translation=entry.get('translation'),
-            ipa=entry.get('ipa', ''),
-            gender=entry.get('gender', ''),
-            part_of_speech=entry.get('part_of_speech', ''),
-            tone=entry.get('tone', ''),
-            prefix=entry.get('prefix', ''),
-            preposition=entry.get('preposition', ''),
-            case=entry.get('case', ''),
-            conjugations=entry.get('conjugations', ''),
-            example=entry.get('example', ''),
-            example_translation=entry.get('example_translation', '')
-        )
+        term = entry.get('term')
+        if not term: continue
+        
+        # Check if exists to avoid unique constraint failure
+        existing_card = db.query(CardModel).filter_by(language=language, term=term).first()
+        
+        if existing_card:
+            # Update existing with new AI data
+            existing_card.translation = entry.get('translation', existing_card.translation)
+            existing_card.ipa = entry.get('ipa', existing_card.ipa)
+            existing_card.gender = entry.get('gender', existing_card.gender)
+            existing_card.part_of_speech = entry.get('part_of_speech', existing_card.part_of_speech)
+            existing_card.tone = entry.get('tone', existing_card.tone)
+            existing_card.prefix = entry.get('prefix', existing_card.prefix)
+            existing_card.preposition = entry.get('preposition', existing_card.preposition)
+            existing_card.case = entry.get('case', existing_card.case)
+            existing_card.conjugations = entry.get('conjugations', existing_card.conjugations)
+            existing_card.example = entry.get('example', existing_card.example)
+            existing_card.example_translation = entry.get('example_translation', existing_card.example_translation)
+        else:
+            # Create new
+            new_card = CardModel(
+                language=language,
+                term=term,
+                translation=entry.get('translation'),
+                ipa=entry.get('ipa', ''),
+                gender=entry.get('gender', ''),
+                part_of_speech=entry.get('part_of_speech', ''),
+                tone=entry.get('tone', ''),
+                prefix=entry.get('prefix', ''),
+                preposition=entry.get('preposition', ''),
+                case=entry.get('case', ''),
+                conjugations=entry.get('conjugations', ''),
+                example=entry.get('example', ''),
+                example_translation=entry.get('example_translation', '')
+            )
+            db.add(new_card)
+        
         try:
-            db.merge(card) # Update if exists, else insert
             db.commit()
-        except Exception:
+        except Exception as e:
+            print(f"Error saving {term}: {e}")
             db.rollback()
 
 def main():

@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
-import { Mic, MicOff, Volume2, PlusCircle, CheckCircle, XCircle, BrainCircuit, X, Minus, Edit, Trash2 } from 'lucide-react';
+import { Mic, MicOff, Volume2, PlusCircle, CheckCircle, XCircle, BrainCircuit, X, Minus, Edit, Trash2, Play } from 'lucide-react';
 import './App.css';
 import CardEditor from './CardEditor';
 
@@ -22,10 +22,10 @@ interface Card {
   failed: number;
 }
 
-type Language = 'swedish' | 'german' | 'finnish' | 'portuguese' | 'spanish' | 'dutch';
-const LANGUAGES: Language[] = ['swedish', 'german', 'finnish', 'portuguese', 'spanish', 'dutch'];
+type Language = 'swedish' | 'german' | 'finnish' | 'portuguese' | 'spanish' | 'dutch' | 'scottish_gaelic';
+const LANGUAGES: Language[] = ['swedish', 'german', 'finnish', 'portuguese', 'spanish', 'dutch', 'scottish_gaelic'];
 
-const AudioVisualizer = ({ audioBlob, color, label }: { audioBlob: Blob | null, color: string, label: string }) => {
+const AudioVisualizer = ({ audioBlob, color, label, onPlay }: { audioBlob: Blob | null, color: string, label: string, onPlay?: () => void }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -69,7 +69,14 @@ const AudioVisualizer = ({ audioBlob, color, label }: { audioBlob: Blob | null, 
 
   return (
     <div className="visualizer-container">
-      <p>{label}</p>
+      <div className="visualizer-header">
+        <p>{label}</p>
+        {audioBlob && onPlay && (
+          <button onClick={onPlay} className="btn icon-btn mini-btn">
+            <Play size={12} />
+          </button>
+        )}
+      </div>
       <canvas ref={canvasRef} width={400} height={60} className="visualizer-canvas"></canvas>
     </div>
   );
@@ -86,6 +93,7 @@ export default function App() {
   const [isRecording, setIsRecording] = useState(false);
   const [pronunciationResult, setPronunciationResult] = useState<{ transcript: string, feedback: string } | null>(null);
   const [userAudioBlob, setUserAudioBlob] = useState<Blob | null>(null);
+  const [nativeAudioBlob, setNativeAudioBlob] = useState<Blob | null>(null);
   const [editorOpen, setEditorOpen] = useState(false);
   const [editingCard, setEditingCard] = useState<Card | undefined>(undefined);
 
@@ -102,14 +110,13 @@ export default function App() {
     try {
       const res = await axios.get(`http://localhost:8001/cards/${language}`);
       const fetchedCards = res.data.cards.map((c: any) => ({
-        ...c, passed: 0, failed: 0, id: c.id || Math.random().toString(36).substring(7)
+        ...c, passed: 0, failed: 0, id: String(c.id)
       }));
       setCards(fetchedCards);
       setDeckIds(fetchedCards.map((c: Card) => c.id));
       setCurrentIndex(0);
       setShowFront(true);
-      setUserAudioBlob(null);
-      setPronunciationResult(null);
+      resetAudioStates();
       setStatus(`Loaded ${fetchedCards.length} cards.`);
     } catch (e) {
       setStatus('Failed to load cards.');
@@ -118,11 +125,18 @@ export default function App() {
     }
   };
 
+  const resetAudioStates = () => {
+    setUserAudioBlob(null);
+    setNativeAudioBlob(null);
+    setPronunciationResult(null);
+  }
+
   const shuffleCards = () => {
     const shuffled = [...deckIds].sort(() => Math.random() - 0.5);
     setDeckIds(shuffled);
     setCurrentIndex(0);
     setShowFront(true);
+    resetAudioStates();
     setStatus('Deck shuffled.');
   };
 
@@ -133,8 +147,7 @@ export default function App() {
     if (currentIndex < deckIds.length - 1) {
       setCurrentIndex(currentIndex + 1);
       setShowFront(true);
-      setUserAudioBlob(null);
-      setPronunciationResult(null);
+      resetAudioStates();
     } else {
       generateStudyPlan();
     }
@@ -156,6 +169,7 @@ export default function App() {
         setDeckIds(res.data.ids);
         setCurrentIndex(0);
         setShowFront(true);
+        resetAudioStates();
         setStatus('New study plan ready.');
       }
     } catch (e) {
@@ -174,7 +188,7 @@ export default function App() {
         existing_terms: cards.map(c => c.term)
       });
       const newCards = res.data.cards.map((c: any) => ({
-        ...c, passed: 0, failed: 0, id: c.id || Math.random().toString(36).substring(7)
+        ...c, passed: 0, failed: 0, id: String(c.id) || Math.random().toString(36).substring(7)
       }));
       setCards(prev => [...prev, ...newCards]);
       setStatus(`Added ${newCards.length} cards.`);
@@ -185,16 +199,34 @@ export default function App() {
     }
   };
 
-  const speak = async (text: string) => {
+  const fetchNativeAudio = async () => {
+    if (!currentCard || nativeAudioBlob) return;
+    setStatus('Fetching native audio...');
     try {
-      await axios.post('http://localhost:8001/speak', { text, language });
+      const res = await axios.post('http://localhost:8001/native_audio', {
+        text: currentCard.example || currentCard.term,
+        language
+      }, { responseType: 'blob' });
+      setNativeAudioBlob(res.data);
+      setStatus('Native audio ready.');
     } catch (e) {
-      console.error("Speak failed", e);
+      console.error("Native audio fetch failed", e);
+      setStatus('Failed to fetch native audio.');
     }
+  };
+
+  const playBlob = (blob: Blob | null) => {
+    if (!blob) return;
+    const url = URL.createObjectURL(blob);
+    const audio = new Audio(url);
+    audio.play();
   };
 
   const startRecording = async (expectedText: string) => {
     try {
+      // Also fetch native audio if we don't have it yet, so we can compare
+      fetchNativeAudio();
+
       const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
       const mediaRecorder = new MediaRecorder(stream, { mimeType: 'audio/webm' });
       mediaRecorderRef.current = mediaRecorder;
@@ -359,12 +391,12 @@ export default function App() {
             
             {!showFront && (
               <div className="actions">
-                <button onClick={() => speak(currentCard.example || currentCard.term)} className="btn icon-btn">
-                  <Volume2 size={18} /> Native Audio
+                <button onClick={() => { fetchNativeAudio(); playBlob(nativeAudioBlob); }} className="btn icon-btn">
+                  <Volume2 size={18} /> {nativeAudioBlob ? 'Replay Native' : 'Fetch & Play Native'}
                 </button>
                 <button className={`btn icon-btn ${isRecording ? 'recording' : ''}`} 
                   onClick={() => isRecording ? stopRecording() : startRecording(currentCard.example || currentCard.term)}>
-                  {isRecording ? <MicOff size={18} /> : <Mic size={18} />} {isRecording ? 'Stop' : 'Test Speech'}
+                  {isRecording ? <MicOff size={18} /> : <Mic size={18} />} {isRecording ? 'Stop' : (userAudioBlob ? 'Rerecord Speech' : 'Test Speech')}
                 </button>
                 <button onClick={() => { setEditingCard(currentCard); setEditorOpen(true); }} className="btn icon-btn edit-btn">
                   <Edit size={18} /> Edit
@@ -375,9 +407,10 @@ export default function App() {
               </div>
             )}
 
-            {!showFront && userAudioBlob && (
+            {!showFront && (nativeAudioBlob || userAudioBlob) && (
               <div className="visualizations">
-                 <AudioVisualizer audioBlob={userAudioBlob} color="#a6e3a1" label="Your Voice Form" />
+                 {nativeAudioBlob && <AudioVisualizer audioBlob={nativeAudioBlob} color="#89b4fa" label="Native Voice" onPlay={() => playBlob(nativeAudioBlob)} />}
+                 {userAudioBlob && <AudioVisualizer audioBlob={userAudioBlob} color="#a6e3a1" label="Your Voice" onPlay={() => playBlob(userAudioBlob)} />}
               </div>
             )}
 

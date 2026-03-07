@@ -302,7 +302,8 @@ async def speak(request: SpeakRequest):
                     "finnish": ("fi-FI", "fi-FI-Chirp3-HD-Despina"),
                     "portuguese": ("pt-BR", "pt-BR-Chirp3-HD-Dione"),
                     "spanish": ("es-US", "es-US-Chirp3-HD-Callirrhoe"),
-                    "dutch": ("nl-NL", "nl-NL-Chirp3-HD-Despina")
+                    "dutch": ("nl-NL", "nl-NL-Chirp3-HD-Despina"),
+                    "scottish_gaelic": ("en-GB", "en-GB-Wavenet-B")
                 }
                 l_code, v_name = gtts_voice_map.get(request.language, ("en-US", "en-US-Journey-F"))
                 voice = texttospeech.VoiceSelectionParams(language_code=l_code, name=v_name)
@@ -335,6 +336,54 @@ async def speak(request: SpeakRequest):
 
     threading.Thread(target=play_audio, daemon=True).start()
     return {"status": "ok"}
+
+@app.post("/native_audio")
+async def get_native_audio(request: SpeakRequest):
+    text_to_speak = request.text.strip()
+    if not text_to_speak:
+        raise HTTPException(status_code=400, detail="Text is empty")
+
+    try:
+        if texttospeech and os.environ.get("GOOGLE_APPLICATION_CREDENTIALS"):
+            client = texttospeech.TextToSpeechClient()
+            synthesis_input = texttospeech.SynthesisInput(text=text_to_speak)
+            gtts_voice_map = {
+                "swedish": ("sv-SE", "sv-SE-Chirp3-HD-Laomedeia"),
+                "german": ("de-DE", "de-DE-Chirp3-HD-Leda"),
+                "finnish": ("fi-FI", "fi-FI-Chirp3-HD-Despina"),
+                "portuguese": ("pt-BR", "pt-BR-Chirp3-HD-Dione"),
+                "spanish": ("es-US", "es-US-Chirp3-HD-Callirrhoe"),
+                "dutch": ("nl-NL", "nl-NL-Chirp3-HD-Despina")
+            }
+            l_code, v_name = gtts_voice_map.get(request.language, ("en-US", "en-US-Journey-F"))
+            voice = texttospeech.VoiceSelectionParams(language_code=l_code, name=v_name)
+            audio_config = texttospeech.AudioConfig(audio_encoding=texttospeech.AudioEncoding.LINEAR16, speaking_rate=0.95)
+            response = client.synthesize_speech(input=synthesis_input, voice=voice, audio_config=audio_config)
+            
+            from fastapi.responses import Response
+            return Response(content=response.audio_content, media_type="audio/wav")
+
+        # Fallback to local Piper
+        voice_map = {"swedish": "sv_female.onnx", "finnish": "fi_female.onnx", "spanish": "es_mx_ximena.onnx"}
+        if request.language in voice_map:
+            v_path = os.path.join(VOICE_DIR, voice_map[request.language])
+            if os.path.exists(v_path):
+                with tempfile.NamedTemporaryFile(suffix=".wav", delete=False) as tmp:
+                    temp_wav = tmp.name
+                env = os.environ.copy()
+                env["LD_LIBRARY_PATH"] = f"{PIPER_LIB}:{env.get('LD_LIBRARY_PATH', '')}"
+                cmd = [PIPER_BIN, "--model", v_path, "--output_file", temp_wav]
+                subprocess.run(cmd, input=text_to_speak, text=True, env=env, check=False)
+                
+                with open(temp_wav, "rb") as f:
+                    content = f.read()
+                os.unlink(temp_wav)
+                from fastapi.responses import Response
+                return Response(content=content, media_type="audio/wav")
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+    raise HTTPException(status_code=501, detail="TTS not configured")
 
 if __name__ == "__main__":
     import uvicorn
