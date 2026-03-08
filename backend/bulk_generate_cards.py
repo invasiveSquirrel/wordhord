@@ -80,9 +80,16 @@ Output ONLY a JSON array of objects. No other text.
         print(f"Error: {e}")
     return []
 
+def clean_value(val):
+    if isinstance(val, list):
+        return ", ".join(map(str, val))
+    if val is None:
+        return ""
+    return str(val)
+
 def save_to_db(db, language, cards):
     for entry in cards:
-        term = entry.get('term')
+        term = clean_value(entry.get('term'))
         if not term: continue
         
         # Check if exists to avoid unique constraint failure
@@ -90,33 +97,33 @@ def save_to_db(db, language, cards):
         
         if existing_card:
             # Update existing with new AI data
-            existing_card.translation = entry.get('translation', existing_card.translation)
-            existing_card.ipa = entry.get('ipa', existing_card.ipa)
-            existing_card.gender = entry.get('gender', existing_card.gender)
-            existing_card.part_of_speech = entry.get('part_of_speech', existing_card.part_of_speech)
-            existing_card.tone = entry.get('tone', existing_card.tone)
-            existing_card.prefix = entry.get('prefix', existing_card.prefix)
-            existing_card.preposition = entry.get('preposition', existing_card.preposition)
-            existing_card.case = entry.get('case', existing_card.case)
-            existing_card.conjugations = entry.get('conjugations', existing_card.conjugations)
-            existing_card.example = entry.get('example', existing_card.example)
-            existing_card.example_translation = entry.get('example_translation', existing_card.example_translation)
+            existing_card.translation = clean_value(entry.get('translation', existing_card.translation))
+            existing_card.ipa = clean_value(entry.get('ipa', existing_card.ipa))
+            existing_card.gender = clean_value(entry.get('gender', existing_card.gender))
+            existing_card.part_of_speech = clean_value(entry.get('part_of_speech', existing_card.part_of_speech))
+            existing_card.tone = clean_value(entry.get('tone', existing_card.tone))
+            existing_card.prefix = clean_value(entry.get('prefix', existing_card.prefix))
+            existing_card.preposition = clean_value(entry.get('preposition', existing_card.preposition))
+            existing_card.case = clean_value(entry.get('case', existing_card.case))
+            existing_card.conjugations = clean_value(entry.get('conjugations', existing_card.conjugations))
+            existing_card.example = clean_value(entry.get('example', existing_card.example))
+            existing_card.example_translation = clean_value(entry.get('example_translation', existing_card.example_translation))
         else:
             # Create new
             new_card = CardModel(
                 language=language,
                 term=term,
-                translation=entry.get('translation'),
-                ipa=entry.get('ipa', ''),
-                gender=entry.get('gender', ''),
-                part_of_speech=entry.get('part_of_speech', ''),
-                tone=entry.get('tone', ''),
-                prefix=entry.get('prefix', ''),
-                preposition=entry.get('preposition', ''),
-                case=entry.get('case', ''),
-                conjugations=entry.get('conjugations', ''),
-                example=entry.get('example', ''),
-                example_translation=entry.get('example_translation', '')
+                translation=clean_value(entry.get('translation')),
+                ipa=clean_value(entry.get('ipa', '')),
+                gender=clean_value(entry.get('gender', '')),
+                part_of_speech=clean_value(entry.get('part_of_speech', '')),
+                tone=clean_value(entry.get('tone', '')),
+                prefix=clean_value(entry.get('prefix', '')),
+                preposition=clean_value(entry.get('preposition', '')),
+                case=clean_value(entry.get('case', '')),
+                conjugations=clean_value(entry.get('conjugations', '')),
+                example=clean_value(entry.get('example', '')),
+                example_translation=clean_value(entry.get('example_translation', ''))
             )
             db.add(new_card)
         

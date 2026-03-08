@@ -107,6 +107,23 @@ Wordhord shares a database with **Panglossia**. Any vocabulary words you "learn"
 
 ---
 
+## 📦 Bulk Generation
+
+If you want to quickly build a large initial vocabulary, you can use the `bulk_generate_cards.py` script.
+
+1.  **Activate Backend venv**:
+    ```bash
+    cd backend
+    source venv/bin/activate
+    ```
+2.  **Run the Script**:
+    ```bash
+    python bulk_generate_cards.py
+    ```
+    This will generate up to 3000 common words for each supported language (Dutch, Finnish, German, Portuguese, Spanish, Swedish, Scottish Gaelic) using your local Ollama instance. It includes a cooldown to prevent CPU/GPU overheating during long runs.
+
+---
+
 ## Technical Details
 - **Backend**: FastAPI with SQLAlchemy (SQLite).
 - **Frontend**: React (TypeScript) + Vite.

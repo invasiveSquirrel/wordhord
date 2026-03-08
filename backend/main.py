@@ -98,6 +98,13 @@ async def get_cards(language: str):
     db.close()
     return {"cards": [c.__dict__ for c in cards]}
 
+def clean_value(val):
+    if isinstance(val, list):
+        return ", ".join(map(str, val))
+    if val is None:
+        return ""
+    return str(val)
+
 def enrich_cards_background(language, cards_data):
     db = SessionLocal()
     for card_data in cards_data:
@@ -132,9 +139,23 @@ Output ONLY JSON.
                 if existing:
                     for key, val in details.items():
                         if hasattr(existing, key) and val:
-                            setattr(existing, key, val)
+                            setattr(existing, key, clean_value(val))
                 else:
-                    new_card = CardModel(language=language, **details)
+                    new_card = CardModel(
+                        language=language,
+                        term=clean_value(details.get('term', term)),
+                        translation=clean_value(details.get('translation', '')),
+                        ipa=clean_value(details.get('ipa', '')),
+                        gender=clean_value(details.get('gender', '')),
+                        part_of_speech=clean_value(details.get('part_of_speech', '')),
+                        tone=clean_value(details.get('tone', '')),
+                        prefix=clean_value(details.get('prefix', '')),
+                        preposition=clean_value(details.get('preposition', '')),
+                        case=clean_value(details.get('case', '')),
+                        conjugations=clean_value(details.get('conjugations', '')),
+                        example=clean_value(details.get('example', '')),
+                        example_translation=clean_value(details.get('example_translation', ''))
+                    )
                     db.add(new_card)
                 db.commit()
         except Exception as e:
@@ -172,7 +193,21 @@ Output ONLY a JSON array of objects. No other text.
             # Save to DB
             db = SessionLocal()
             for c in cards:
-                db_card = CardModel(language=request.language, **c)
+                db_card = CardModel(
+                    language=request.language,
+                    term=clean_value(c.get('term')),
+                    translation=clean_value(c.get('translation', '')),
+                    ipa=clean_value(c.get('ipa', '')),
+                    gender=clean_value(c.get('gender', '')),
+                    part_of_speech=clean_value(c.get('part_of_speech', '')),
+                    tone=clean_value(c.get('tone', '')),
+                    prefix=clean_value(c.get('prefix', '')),
+                    preposition=clean_value(c.get('preposition', '')),
+                    case=clean_value(c.get('case', '')),
+                    conjugations=clean_value(c.get('conjugations', '')),
+                    example=clean_value(c.get('example', '')),
+                    example_translation=clean_value(c.get('example_translation', ''))
+                )
                 db.merge(db_card)
             db.commit()
             db.close()
@@ -184,7 +219,11 @@ Output ONLY a JSON array of objects. No other text.
 @app.post("/cards/create")
 async def create_card(request: CardCreateRequest):
     db = SessionLocal()
-    db_card = CardModel(**request.dict())
+    # Manually clean values from request
+    data = request.dict()
+    for key, val in data.items():
+        data[key] = clean_value(val)
+    db_card = CardModel(**data)
     try:
         db.add(db_card)
         db.commit()
@@ -204,7 +243,8 @@ async def update_card(request: CardCreateRequest):
         raise HTTPException(status_code=404, detail="Card not found")
     
     for key, value in request.dict().items():
-        setattr(card, key, value)
+        if hasattr(card, key):
+            setattr(card, key, clean_value(value))
     
     try:
         db.commit()
