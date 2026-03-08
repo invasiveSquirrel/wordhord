@@ -1,4 +1,4 @@
-# Wordhord ði
+# Wordhord ð
 
 Wordhord is an AI-powered vocabulary training desktop application designed for language learners. It uses LLMs to generate contextual flashcards and provides instant audio feedback for pronunciation.
 
