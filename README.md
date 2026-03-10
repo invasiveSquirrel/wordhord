@@ -4,11 +4,14 @@ Wordhord is an AI-powered vocabulary training desktop application designed for l
 
 ## Features
 - **Smart Flashcards**: Context-rich cards with IPA, grammatical gender, and example sentences.
+- **Dynamic Audio & Waveforms**: Slow down native audio (0.5x, 0.75x, 1.0x) with pitch-preserved playback. A moving progress bar tracks across the waveform as you listen.
+- **Quick-Listen Icon**: Click the sound icon directly on the front of a card for instant audio feedback.
 - **AI Generation**: Automatically generate related vocabulary based on your existing deck.
 - **Native Audio**: Instant text-to-speech using Google Cloud TTS or local fallback.
 - **Pronunciation Comparison**: Record your voice and see your waveform side-by-side with a native speaker's.
+- **Improved Card Management**: Reliable Card Editor with real-time synchronization and language-aware state handling.
 - **Spaced Repetition**: Intelligent study plans based on your learning progress (SQLite-backed).
-- **IPA Support**: Click the speaker icon to hear phonetic pronunciations via espeak-ng.
+- **IPA Support**: Click the speaker icon to hear phonetic pronunciations via espeak-ng with adjustable speeds.
 
 ---
 
@@ -32,7 +35,7 @@ Wordhord requires [Ollama](https://ollama.com/) to be running locally to generat
 - **Node.js** (v18 or higher)
 - **Python** (v3.10 or higher)
 - **FFmpeg**: Required for audio playback (`ffplay`).
-- **espeak-ng**: Required for IPA and Scottish Gaelic speech.
+- **espeak-ng**: Required for IPA speech.
 
 ### 1. Clone the repository
 ```bash
@@ -120,7 +123,7 @@ If you want to quickly build a large initial vocabulary, you can use the `bulk_g
     ```bash
     python bulk_generate_cards.py
     ```
-    This will generate up to 3000 common words for each supported language (Dutch, Finnish, German, Portuguese, Spanish, Swedish, Scottish Gaelic) using your local Ollama instance. It includes a cooldown to prevent CPU/GPU overheating during long runs.
+    This will generate up to 3000 common words for each supported language (Dutch, Finnish, German, Portuguese, Spanish, Swedish) using your local Ollama instance. It includes a cooldown to prevent CPU/GPU overheating during long runs.
 
 ---
 

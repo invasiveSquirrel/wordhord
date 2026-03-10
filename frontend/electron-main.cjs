@@ -2,6 +2,7 @@ const { app, BrowserWindow, session } = require('electron');
 const path = require('path');
 
 app.setName('Wordhord');
+app.name = 'Wordhord';
 
 // Enable speech recognition API before app is ready
 app.commandLine.appendSwitch('enable-speech-dispatcher');

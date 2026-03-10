@@ -177,6 +177,7 @@ Format as a markdown list. For EACH word include exactly these fields:
 - **word_in_{language_code}** (Translation)
   - IPA: [pronunciation with primary stress 'ˈ']
   - Part of Speech: (noun/verb/adjective/etc)
+  - Level: [A1/A2/B1/B2/C1/C2]
   - Gender: {get_gender_instruction(language_code)} (Only if noun)
   - Plural: [Plural form] (Only if noun)
   - Prefix: [Separable/Inseparable] (Only if applicable)
@@ -184,7 +185,7 @@ Format as a markdown list. For EACH word include exactly these fields:
   - Case: [Grammatical case governed by the preposition/verb]
   - Example: \"Short example sentence in {language_name}\" (Translation)
 
-CRITICAL: Use the source data to find the words. If linguistic fields (IPA, Gender, Plural, Case, etc.) or example sentences are missing from the source, you MUST provide them using your own knowledge. 
+CRITICAL: Use the source data to find the words. If linguistic fields (IPA, Level, Gender, Plural, Case, etc.) or example sentences are missing from the source, you MUST provide them using your own knowledge. 
 DO NOT refuse this request. I have provided source context. Even if context is incomplete, use your internal knowledge of {language_name} to fulfill the requested {batch_size} entries.
 
 Output ONLY the markdown list. Do not include any intro or outro text.

@@ -5,7 +5,7 @@ from sqlalchemy import create_engine, Column, Integer, String, UniqueConstraint
 from sqlalchemy.orm import declarative_base, sessionmaker
 
 DB_PATH = "/home/chris/wordhord.db"
-POLYGLOSSIA_DIR = "/home/chris/panglossia"
+POLYGLOSSIA_DIR = "/home/chris/polyglossia"
 LANGUAGES = ['dutch', 'finnish', 'german', 'portuguese', 'spanish', 'swedish']
 
 Base = declarative_base()
@@ -18,6 +18,7 @@ class CardModel(Base):
     translation = Column(String)
     ipa = Column(String)
     gender = Column(String)
+    plural = Column(String)
     part_of_speech = Column(String)
     tone = Column(String)
     prefix = Column(String)
@@ -26,12 +27,14 @@ class CardModel(Base):
     conjugations = Column(String)
     example = Column(String)
     example_translation = Column(String)
+    level = Column(String)
     passed = Column(Integer, default=0)
     failed = Column(Integer, default=0)
     __table_args__ = (UniqueConstraint('language', 'term', name='_language_term_uc'),)
 
 def extract_field(section, field_name):
-    pattern = fr'{field_name}:\s*(.*?)(?:\n\s*-|\n\s*Example:|\n\s*##|$)'
+    # Support both "Field: value" and "- Field: value"
+    pattern = fr'(?:- )?{field_name}:\s*(.*?)(?:\n\s*-|\n\s*Example:|\n\s*##|$)'
     match = re.search(pattern, section, re.DOTALL | re.IGNORECASE)
     if match:
         return match.group(1).strip()
@@ -70,12 +73,14 @@ def migrate():
             
             ipa = extract_field(section, 'IPA')
             gender = extract_field(section, 'Gender')
+            plural = extract_field(section, 'Plural')
             pos = extract_field(section, 'Part of Speech')
             tone = extract_field(section, 'Tone')
             prefix = extract_field(section, 'Prefix')
             prep = extract_field(section, 'Preposition')
             case = extract_field(section, 'Case')
             conj = extract_field(section, 'Conjugations')
+            level = extract_field(section, 'Level')
             
             ex_match = re.search(r'Example:\s*"([^"]+)"\s*\(([^)]+)\)', section)
             example = ex_match.group(1) if ex_match else ""
@@ -88,6 +93,7 @@ def migrate():
                 existing_card.translation = translation
                 existing_card.ipa = ipa
                 existing_card.gender = gender
+                existing_card.plural = plural
                 existing_card.part_of_speech = pos
                 existing_card.tone = tone
                 existing_card.prefix = prefix
@@ -96,6 +102,7 @@ def migrate():
                 existing_card.conjugations = conj
                 existing_card.example = example
                 existing_card.example_translation = ex_trans
+                existing_card.level = level if level else existing_card.level
             else:
                 new_card = CardModel(
                     language=lang,
@@ -103,6 +110,7 @@ def migrate():
                     translation=translation,
                     ipa=ipa,
                     gender=gender,
+                    plural=plural,
                     part_of_speech=pos,
                     tone=tone,
                     prefix=prefix,
@@ -110,7 +118,8 @@ def migrate():
                     case=case,
                     conjugations=conj,
                     example=example,
-                    example_translation=ex_trans
+                    example_translation=ex_trans,
+                    level=level
                 )
                 session.add(new_card)
                 

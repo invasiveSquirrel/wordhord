@@ -3,6 +3,7 @@ import os
 import re
 import json
 import time
+import random
 from sqlalchemy import create_engine, Column, Integer, String, UniqueConstraint
 from sqlalchemy.orm import declarative_base, sessionmaker
 from langchain_ollama import OllamaLLM
@@ -21,6 +22,7 @@ class CardModel(Base):
     translation = Column(String)
     ipa = Column(String)
     gender = Column(String)
+    plural = Column(String)
     part_of_speech = Column(String)
     tone = Column(String)
     prefix = Column(String)
@@ -37,35 +39,39 @@ Base.metadata.create_all(bind=engine)
 
 # Configuration
 MODEL_NAME = os.getenv("OLLAMA_MODEL", "gemma2:9b")
-llm = OllamaLLM(model=MODEL_NAME, temperature=0.2)
-LANGUAGES = ['dutch', 'finnish', 'german', 'portuguese', 'spanish', 'swedish', 'scottish_gaelic']
+llm = OllamaLLM(model=MODEL_NAME, temperature=0.7)
+LANGUAGES = ['dutch', 'finnish', 'german', 'portuguese', 'spanish', 'swedish']
 BATCH_SIZE = 10 
 TOTAL_TARGET = 3000
 THERMAL_DELAY = 15 
+LEVELS = ["A1", "A2", "B1", "B2"]
 
 def get_existing_count(db, language):
     return db.query(CardModel).filter(CardModel.language == language).count()
-
-def get_recent_terms(db, language):
-    # Get 100 recent terms to avoid repeats in generation
-    cards = db.query(CardModel).filter(CardModel.language == language).order_by(CardModel.id.desc()).limit(100).all()
+def get_all_terms(db, language):
+    # Get all terms to avoid any repeats in generation
+    cards = db.query(CardModel).filter(CardModel.language == language).all()
     return [c.term for c in cards]
 
-def generate_batch(language, recent_terms, level="A1-B2"):
+def generate_batch(language, existing_terms, level="A1-B2"):
+    # Limit to 100 random existing terms to avoid prompt bloat while maintaining variety
+    random_samples = random.sample(existing_terms, min(len(existing_terms), 100))
     prompt = f"""
 Generate {BATCH_SIZE} unique and common {language} vocabulary words or expressions at {level} level.
-Exclude these: {', '.join(recent_terms)}.
+CRITICAL: Do NOT generate any of these terms: {', '.join(random_samples)}.
+Choose new, interesting words that aren't in that list.
 
 REQUIREMENTS for each entry:
 - term: the {language} word.
 - translation: English translation.
 - ipa: IPA pronunciation. MANDATORY: Include the 'ˈ' mark for primary stress.
 - part_of_speech: Noun, Verb, Adjective, etc.
-- gender: if applicable.
+- gender: (Only for nouns)
+- plural: (For nouns)
 - tone: For Swedish ONLY, include Accent 1 or Accent 2.
-- prefix: For German/Swedish verbs, explicitly state if a prefix is 'Separable' or 'Inseparable'.
-- preposition: For verbs, common associated preposition.
-- case: The grammatical case governed by the verb or preposition.
+- prefix: For German/Dutch/Swedish verbs, explicitly state if a prefix is 'Separable' or 'Inseparable'.
+- preposition: (If the verb is commonly used with one)
+- case: (The grammatical case governed by the verb/preposition)
 - conjugations: Main forms. 
 - example: A simple example sentence. 
 - example_translation: English translation.
@@ -74,8 +80,11 @@ Output ONLY a JSON array of objects. No other text.
 """
     try:
         response = llm.invoke(prompt)
+        print(f"DEBUG: LLM Response (first 100 chars): {response[:100]}...")
         json_match = re.search(r'\[.*\]', response, re.DOTALL)
         if json_match: return json.loads(json_match.group(0))
+        else:
+            print("DEBUG: No JSON array found in LLM response.")
     except Exception as e:
         print(f"Error: {e}")
     return []
@@ -85,7 +94,10 @@ def clean_value(val):
         return ", ".join(map(str, val))
     if val is None:
         return ""
-    return str(val)
+    s = str(val).strip()
+    if s.lower() in ["none", "null", "undefined", "n/a"]:
+        return ""
+    return s
 
 def save_to_db(db, language, cards):
     for entry in cards:
@@ -100,6 +112,7 @@ def save_to_db(db, language, cards):
             existing_card.translation = clean_value(entry.get('translation', existing_card.translation))
             existing_card.ipa = clean_value(entry.get('ipa', existing_card.ipa))
             existing_card.gender = clean_value(entry.get('gender', existing_card.gender))
+            existing_card.plural = clean_value(entry.get('plural', existing_card.plural))
             existing_card.part_of_speech = clean_value(entry.get('part_of_speech', existing_card.part_of_speech))
             existing_card.tone = clean_value(entry.get('tone', existing_card.tone))
             existing_card.prefix = clean_value(entry.get('prefix', existing_card.prefix))
@@ -116,6 +129,7 @@ def save_to_db(db, language, cards):
                 translation=clean_value(entry.get('translation')),
                 ipa=clean_value(entry.get('ipa', '')),
                 gender=clean_value(entry.get('gender', '')),
+                plural=clean_value(entry.get('plural', '')),
                 part_of_speech=clean_value(entry.get('part_of_speech', '')),
                 tone=clean_value(entry.get('tone', '')),
                 prefix=clean_value(entry.get('prefix', '')),
@@ -139,13 +153,20 @@ def main():
         print(f"--- {lang.upper()} ---")
         count = get_existing_count(db, lang)
         while count < TOTAL_TARGET:
-            recent = get_recent_terms(db, lang)
-            print(f"Batch ({count}/{TOTAL_TARGET})...")
-            cards = generate_batch(lang, recent)
+            all_existing = get_all_terms(db, lang)
+            level = random.choice(LEVELS)
+            print(f"Batch ({count}/{TOTAL_TARGET}) - Level {level}...")
+            cards = generate_batch(lang, all_existing, level=level)
+            print(f"DEBUG: LLM returned {len(cards)} cards")
             if not cards:
                 time.sleep(5); continue
             save_to_db(db, lang, cards)
-            count = get_existing_count(db, lang)
+            new_count = get_existing_count(db, lang)
+            if new_count == count:
+                print(f"DEBUG: No new cards added (maybe duplicates).")
+                # Wait longer if we are hitting repeats to let LLM "think" differently
+                time.sleep(10)
+            count = new_count
             print(f"Cooling down for {THERMAL_DELAY}s...")
             time.sleep(THERMAL_DELAY)
     db.close()

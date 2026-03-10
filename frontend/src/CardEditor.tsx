@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { X } from 'lucide-react';
 import './CardEditor.css';
 
@@ -10,6 +10,7 @@ interface Card {
   example_translation: string;
   ipa?: string;
   gender?: string;
+  plural?: string;
   part_of_speech?: string;
   conjugations?: string;
   tone?: string;
@@ -29,19 +30,40 @@ interface CardEditorProps {
 
 export default function CardEditor({ card, onClose, onSave, isOpen }: CardEditorProps) {
   const [formData, setFormData] = useState({
-    term: card?.term || '',
-    translation: card?.translation || '',
-    ipa: card?.ipa || '',
-    gender: card?.gender || '',
-    tone: card?.tone || '',
-    part_of_speech: card?.part_of_speech || '',
-    conjugations: card?.conjugations || '',
-    prefix: card?.prefix || '',
-    preposition: card?.preposition || '',
-    case: card?.case || '',
-    example: card?.example || '',
-    example_translation: card?.example_translation || '',
+    term: '',
+    translation: '',
+    ipa: '',
+    gender: '',
+    plural: '',
+    tone: '',
+    part_of_speech: '',
+    conjugations: '',
+    prefix: '',
+    preposition: '',
+    case: '',
+    example: '',
+    example_translation: '',
   });
+
+  useEffect(() => {
+    if (isOpen) {
+      setFormData({
+        term: card?.term || '',
+        translation: card?.translation || '',
+        ipa: card?.ipa || '',
+        gender: card?.gender || '',
+        plural: card?.plural || '',
+        tone: card?.tone || '',
+        part_of_speech: card?.part_of_speech || '',
+        conjugations: card?.conjugations || '',
+        prefix: card?.prefix || '',
+        preposition: card?.preposition || '',
+        case: card?.case || '',
+        example: card?.example || '',
+        example_translation: card?.example_translation || '',
+      });
+    }
+  }, [card, isOpen]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -60,6 +82,7 @@ export default function CardEditor({ card, onClose, onSave, isOpen }: CardEditor
       translation: '',
       ipa: '',
       gender: '',
+      plural: '',
       tone: '',
       part_of_speech: '',
       conjugations: '',
@@ -174,6 +197,18 @@ export default function CardEditor({ card, onClose, onSave, isOpen }: CardEditor
                 <option value="Neuter">Neuter</option>
                 <option value="Common">Common</option>
               </select>
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="plural">Plural Form</label>
+              <input
+                type="text"
+                id="plural"
+                name="plural"
+                value={formData.plural}
+                onChange={handleChange}
+                placeholder="e.g., words, äpfel"
+              />
             </div>
           </div>
 
