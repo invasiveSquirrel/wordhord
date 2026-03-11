@@ -1,226 +1,170 @@
 #!/usr/bin/env python3
 """
-Robust Vocabulary Generator
-Generates vocabulary words based on source texts.
-Targets: Dutch (5000), Portuguese (5000), Swedish (9000), German (10000), Spanish (10000), Finnish (3000).
-Uses Thermal Throttling and progress tracking.
+Comprehensive Vocabulary Generator - Gemini API
+Targets: German, Swedish, Spanish, Dutch, Finnish, Portuguese.
+Strict linguistic rules for IPA, Tone, Gender, and Morphological changes.
 """
 
 import os
-import json
 import re
-import subprocess
 import time
-from langchain_ollama import OllamaLLM
+import sys
+import google.generativeai as genai
 
+# Force line buffering for logs
+if hasattr(sys.stdout, 'reconfigure'):
+    sys.stdout.reconfigure(line_buffering=True)
+
+# Setup paths
 POLYGLOSSIA_DIR = "/home/chris/polyglossia"
 SOURCES_DIR = "/home/chris/vocabulary_sources"
-MODEL_NAME = "gemma2:9b"
-llm = OllamaLLM(model=MODEL_NAME, temperature=0.3)
+API_KEY_FILE = "/home/chris/wordhord/wordhord_api.txt"
+
+# Load API Key
+with open(API_KEY_FILE, "r") as f:
+    genai.configure(api_key=f.read().strip())
+
+model = genai.GenerativeModel('gemini-2.5-flash')
 
 LANGUAGES = {
-    "dutch": {"name": "Dutch", "sources": ["dutch_freq.txt"], "target": 5000},
-    "german": {"name": "German", "sources": ["german_freq.txt", "german_using.txt"], "target": 10000},
-    "swedish": {"name": "Swedish", "sources": ["swedish_source.txt", "swedish_kauderwelsch.txt"], "target": 9000},
-    "portuguese": {"name": "Portuguese", "sources": ["portuguese_freq.txt"], "target": 5000},
-    "spanish": {"name": "Spanish", "sources": ["spanish_freq.txt", "spanish_using.txt"], "target": 10000},
-    "finnish": {"name": "Finnish", "sources": ["finnish_source.txt"], "target": 3000}
+    "dutch": {"name": "Dutch", "sources": ["dutch_freq.txt"], "target": 10000, "articles": True, "start_line": 500},
+    "german": {"name": "German", "sources": ["german_freq.txt", "german_using.txt"], "target": 10000, "articles": True, "start_line": 870},
+    "swedish": {"name": "Swedish", "target": 30000, "articles": True, "method": "direct_graded"},
+    "portuguese": {"name": "Portuguese", "sources": ["portuguese_freq.txt"], "target": 10000, "articles": True, "start_line": 500},
+    "spanish": {"name": "Spanish", "sources": ["spanish_freq.txt", "spanish_using.txt"], "target": 10000, "articles": True, "start_line": 730},
+    "finnish": {"name": "Finnish", "target": 3000, "articles": False, "method": "direct_graded"}
 }
 
-def get_cpu_temp():
-    try:
-        output = subprocess.check_output(["sensors"], text=True)
-        for line in output.split("\n"):
-            if "Package id 0" in line:
-                temp_str = line.split("+")[1].split("°C")[0]
-                return float(temp_str)
-    except:
-        return 50.0
-    return 50.0
+def get_source_context(lang_code, start_rank):
+    info = LANGUAGES[lang_code]
+    source_files = info.get("sources", [])
+    if not source_files: return "Direct generation requested (no source file)."
+    
+    context = []
+    lines_to_skip = info.get("start_line", 0) + (start_rank * 4)
+    
+    for sf in source_files:
+        path = os.path.join(SOURCES_DIR, sf)
+        if os.path.exists(path):
+            try:
+                with open(path, "r", encoding="utf-8") as f:
+                    all_lines = f.readlines()
+                    chunk = all_lines[lines_to_skip : lines_to_skip + 300]
+                    context.append(f"--- Source: {sf} (Approx rank {start_rank}) ---\n" + "".join(chunk))
+            except Exception as e:
+                print(f"  ⚠ Error reading source {sf}: {e}", flush=True)
+    return "\n\n".join(context)
 
-def thermal_throttle():
-    temp = get_cpu_temp()
-    if temp > 80.0:
-        print(f"🔥 CPU Overheat ({temp}°C)! Cooling down for 60s...")
-        time.sleep(60)
-    elif temp > 70.0:
-        print(f"🌡️ CPU High ({temp}°C). Throttling for 15s...")
-        time.sleep(15)
-    elif temp > 60.0:
-        time.sleep(5)
-    else:
-        time.sleep(1)
-
-def get_source_context(lang_code: str, start_rank: int, end_rank: int) -> str:
-    source_files = LANGUAGES[lang_code]["sources"]
-    if not source_files:
-        return ""
-
-    context_accumulator = []
-
-    for source_file in source_files:
-        file_path = os.path.join(SOURCES_DIR, source_file)
-        if not os.path.exists(file_path):
-            continue
-
-        try:
-            # Skip thematic preambles for frequency dictionaries to find the actual list
-            skip_lines = 0
-            if lang_code == "dutch":
-                skip_lines = 640
-            elif lang_code == "portuguese":
-                skip_lines = 800
-            elif lang_code in ["german", "spanish"]:
-                skip_lines = 500
-
-            # Search pattern: rank at start of line, followed by space or end of line
-            pattern = f"^{start_rank}($|[[:space:]])"
-            
-            found_line_num = -1
-            with open(file_path, "r", encoding="utf-8") as f:
-                # Optimized search: start after skip_lines
-                for i, line in enumerate(f):
-                    if i < skip_lines:
-                        continue
-                    if re.match(pattern, line):
-                        found_line_num = i + 1
-                        break
-                
-                if found_line_num != -1:
-                    f.seek(0)
-                    lines = f.readlines()
-                    # Capture significant context (250 lines) for the batch
-                    context_lines = lines[max(0, found_line_num-5):found_line_num+250]
-                    context_accumulator.append(f"--- Context from {source_file} (Rank {start_rank}) ---\n" + "".join(context_lines))
-                else:
-                    # Fallback to sequential heuristic if rank not found (good for thematic books like Swedish)
-                    f.seek(0)
-                    lines = f.readlines()
-                    jump = 4 if lang_code == "swedish" else 15
-                    start_idx = (start_rank * jump) % max(1, len(lines) - 250)
-                    context_lines = lines[start_idx : start_idx + 250]
-                    context_accumulator.append(f"--- Context from {source_file} (Heuristic offset {start_idx}) ---\n" + "".join(context_lines))
-        except Exception as e:
-            print(f"    ⚠ Source context extraction failed for {source_file}: {e}")
-
-    return "\n\n".join(context_accumulator)
-
-def get_gender_instruction(language_code: str) -> str:
-    if language_code in ["german", "spanish", "portuguese"]:
-        return "gender (m/f/n)"
-    elif language_code == "swedish":
-        return "gender (common/neuter)"
-    else:
-        return "gender (if applicable)"
-
-def generate_vocabulary_batch(language_code: str, lang_info: dict):
-    language_name = lang_info["name"]
-    total_target = lang_info["target"]
-    output_file = os.path.join(POLYGLOSSIA_DIR, f"{language_code}_vocab.md")
-
-    # Check current progress
+def generate_batch(lang_code, lang_info):
+    name = lang_info["name"]
+    target = lang_info["target"]
+    output_file = os.path.join(POLYGLOSSIA_DIR, f"{lang_code}_vocab.md")
+    
+    print(f"Checking {name} progress in {output_file}...", flush=True)
     current_count = 0
     if os.path.exists(output_file):
         with open(output_file, "r", encoding="utf-8") as f:
             current_count = f.read().count("- **")
-
-    if current_count >= total_target:
-        print(f"✅ {language_name} already has {current_count} words. Skipping.")
+            
+    if current_count >= target:
+        print(f"✅ {name} complete ({current_count} words).", flush=True)
         return
 
-    print(f"\n🎯 Continuing {language_name} ({current_count}/{total_target})...")
-
-    batch_size = 25
+    print(f"\n🚀 Generating {name} ({current_count}/{target})...", flush=True)
+    batch_size = 50
     
-    while current_count < total_target:
-        thermal_throttle()
-
+    while current_count < target:
         start_rank = current_count + 1
-        end_rank = min(current_count + batch_size, total_target)
+        
+        if current_count < 1000: level_goal = "A1"
+        elif current_count < 3000: level_goal = "A2"
+        elif current_count < 6000: level_goal = "B1"
+        else: level_goal = "B2/C1"
 
-        source_hint = get_source_context(language_code, start_rank, end_rank)
+        if lang_info.get("method") == "direct_graded":
+            instr = f"Generate {batch_size} common {name} vocabulary words for level {level_goal}, starting from frequency rank {start_rank}."
+            context_block = ""
+        else:
+            instr = f"Extract and define the next {batch_size} unique words for {name} from the provided source text (Rank {start_rank}+)."
+            context_block = f"SOURCE CONTEXT:\n{get_source_context(lang_code, start_rank)}"
 
-        extra_instructions = ""
-        if language_code == "swedish":
-            extra_instructions = """
-            Use 'Grund- und Aufbauwortschatz' and 'Kauderwelsch' sources. 
-            CRITICAL: Include colloquial/informal pronunciation in the IPA or notes if it differs from formal speech (e.g., 'me' for 'med', 'ska' for 'skall').
-            Generate example sentences and linguistic details (gender, plural, IPA) even if missing from source.
-            """
-        elif language_code == "portuguese":
-            extra_instructions = """
-            CRITICAL: For accented 'o' and 'e' syllables, specify in the IPA if the vowel is OPEN (/ɔ/, /ɛ/) or CLOSED (/o/, /e/). 
-            This is mandatory even if the written word lacks a circumflex or acute accent.
-            Ensure you distinguish between Brazilian and European Portuguese if the source indicates a difference.
-            """
-        elif language_code == "german":
-            extra_instructions = "Ensure all entries follow standard Grundwortschatz conventions. Reference 'Using German Vocabulary' for thematic depth."
-        elif language_code == "spanish":
-            extra_instructions = "Ensure all entries follow standard frequency conventions. Reference 'Using Spanish Vocabulary' for thematic depth."
-        elif language_code == "finnish":
-            extra_instructions = "Use the 'Kauderwelsch Finnisch' source. Keep definitions and examples in German."
-
-        print(f"  Requesting words ranking {start_rank}-{end_rank}...")
-
-        prompt = f"""Generate exactly {batch_size} {language_name} vocabulary words. 
-If this is a frequency list, target ranks {start_rank} to {end_rank}.
-
-PROVIDED SOURCE DATA:
-{source_hint}
-
-INSTRUCTIONS:
-Extract or generate words based on the provided source data. For each word, include linguistic information and a sample sentence.
-{extra_instructions}
-
-Format as a markdown list. For EACH word include exactly these fields:
-
-- **word_in_{language_code}** (Translation)
-  - IPA: [pronunciation with primary stress 'ˈ']
-  - Part of Speech: (noun/verb/adjective/etc)
-  - Level: [A1/A2/B1/B2/C1/C2]
-  - Gender: {get_gender_instruction(language_code)} (Only if noun)
-  - Plural: [Plural form] (Only if noun)
-  - Prefix: [Separable/Inseparable] (Only if applicable)
-  - Preposition: [Commonly associated preposition] (Especially for verbs)
-  - Case: [Grammatical case governed by the preposition/verb]
-  - Example: \"Short example sentence in {language_name}\" (Translation)
-
-CRITICAL: Use the source data to find the words. If linguistic fields (IPA, Level, Gender, Plural, Case, etc.) or example sentences are missing from the source, you MUST provide them using your own knowledge. 
-DO NOT refuse this request. I have provided source context. Even if context is incomplete, use your internal knowledge of {language_name} to fulfill the requested {batch_size} entries.
-
-Output ONLY the markdown list. Do not include any intro or outro text.
-"""
-
-        try:
-            response = llm.invoke(prompt)
-            new_words_count = response.count("- **")
-
-            if new_words_count > 0:
-                file_exists = os.path.exists(output_file)
-                with open(output_file, "a", encoding="utf-8") as f:
-                    if not file_exists:
-                        f.write(f"# {language_name} Vocabulary\n\n")
-                    f.write("\n\n" + response.strip())
-
-                current_count += new_words_count
-                print(f"    ✓ Added {new_words_count} words. Total: {current_count}/{total_target}")
+        article_instr = ""
+        if lang_info.get("articles"):
+            if lang_code == "german":
+                article_instr = f"MANDATORY: For EVERY noun, include the lowercase definite article directly in the bold header (e.g., **[{level_goal}] der Abend**)."
             else:
-                print("    ⚠ LLM returned 0 words. Retrying in 30s...")
-                time.sleep(30)
+                article_instr = f"MANDATORY: For EVERY noun, include the definite article OF THE TARGET LANGUAGE directly in the bold header (e.g., Swedish: **[{level_goal}] Bilen** or **[{level_goal}] En bil**)."
 
+        capitalization_instr = ""
+        if lang_code == "german":
+            capitalization_instr = "GERMAN RULES: ONLY nouns (Substantive) MUST be capitalized. All other parts of speech (verbs, adjectives, etc.) MUST be lowercase. Articles MUST be lowercase."
+        elif lang_code == "spanish":
+            capitalization_instr = "SPANISH RULES: Ensure you ONLY extract the Spanish word as the term. Example: 'año' not 'year'. Use lowercase for all terms unless proper nouns. Prepend articles for nouns."
+        else:
+            capitalization_instr = f"Lower-case all {name} words unless they are proper nouns."
+
+        linguistic_instr = f"""STRICT LINGUISTIC RULES for {name}:
+1. IPA: MUST include the primary stress mark 'ˈ' before the stressed syllable.
+2. VERBS: Provide 'Present', 'Past', 'Future', and 'Participle' forms.
+3. NOUNS: Provide Gender and Plural forms.
+4. SWEDISH: Provide Tone (Accent 1 or 2). This is CRITICAL for pronunciation.
+5. FINNISH: Explicitly state any sound changes (e.g., consonant gradation k/p/t changes) in the Conjugations or a 'Notes' field. Provide the partitive singular form for nouns.
+6. EXAMPLES: Provide one clear example sentence in {name} with its English translation."""
+
+        prompt = f"""You are a master linguistic database tool. {instr}
+{context_block}
+
+{article_instr}
+{capitalization_instr}
+{linguistic_instr}
+
+FORMAT:
+- **[{level_goal}] [Article] word_in_{lang_code}** (English translation)
+  - IPA: [ipa with ˈ stress]
+  - Part of Speech: [pos]
+  - Gender: [gender]
+  - Plural: [plural / Finnish: partitive]
+  - Tone: [Swedish only]
+  - Conjugations: [Verbs: Pres: x, Past: y, Fut: z, Part: a | Finnish: include gradation notes]
+  - Example: "Example sentence in {name}" (English translation)
+
+Output ONLY the markdown list. Every field is mandatory for every entry.
+"""
+        try:
+            print(f"  ... Requesting {batch_size} {name} words (Rank {start_rank})...", flush=True)
+            response = model.generate_content(prompt)
+            text = response.text
+            new_words = text.count("- **")
+            if new_words > 0:
+                with open(output_file, "a", encoding="utf-8") as f:
+                    if os.path.getsize(output_file) < 50: f.write(f"# {name} Vocabulary\n\n")
+                    f.write("\n\n" + text.strip())
+                current_count += new_words
+                print(f"  ✓ Added {new_words} words. Total: {current_count}/{target}", flush=True)
+                time.sleep(5)
+            else:
+                print("  ⚠ No words found. Retrying...", flush=True)
+                time.sleep(10)
         except Exception as e:
-            print(f"    ❌ Error: {e}. Retrying...")
-            time.sleep(10)
+            print(f"  ❌ Error: {e}", flush=True)
+            if "429" in str(e): time.sleep(30)
+            else: time.sleep(15)
 
 def main():
-    print("=" * 70)
-    print("ROBUST VOCABULARY GENERATOR - GEMMA 2:9B")
-    print("=" * 70)
-
-    for lang_code, lang_info in LANGUAGES.items():
-        generate_vocabulary_batch(lang_code, lang_info)
-
-    print("\n✅ All languages complete!")
+    try:
+        print("🚀 Starting Vocabulary Generation Script (Strict Linguistic Mode)...", flush=True)
+        # Sequence requested: German, Swedish, Spanish, Dutch, Finnish, Portuguese
+        order = ["german", "swedish", "spanish", "dutch", "finnish", "portuguese"]
+        for code in order:
+            # Special case: Even if German file is full, our enrichment script is handling it in DB.
+            # We skip German here to move to Swedish/others faster.
+            if code == 'german' and os.path.exists(os.path.join(POLYGLOSSIA_DIR, "german_vocab.md")):
+                if os.path.getsize(os.path.join(POLYGLOSSIA_DIR, "german_vocab.md")) > 1000000:
+                    print("✅ German file is large, skipping to Swedish. (DB enrichment running separately)", flush=True)
+                    continue
+            generate_batch(code, LANGUAGES[code])
+    except Exception as e:
+        print(f"CRITICAL ERROR IN MAIN: {e}", flush=True)
 
 if __name__ == "__main__":
     main()

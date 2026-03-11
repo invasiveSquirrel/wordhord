@@ -9,14 +9,11 @@ echo "🚀 Starting Wordhord (Optimized for Dual-GPU)..."
 fuser -k 8001/tcp 5174/tcp 2>/dev/null
 pkill -f "wordhord.*electron" 2>/dev/null
 
-# 2. Start Backend (NVIDIA for Ollama)
-echo "🧠 Starting Backend (NVIDIA focus)..."
+# 2. Start Backend
+echo "🧠 Starting Backend..."
 cd "$DIR/backend"
-export OLLAMA_MODEL="gemma2:9b"
-export OLLAMA_NUM_PARALLEL=1
-# Force Ollama to use the NVIDIA card (usually default, but ensures visibility)
-export CUDA_VISIBLE_DEVICES=0 
 
+# Note: Ollama/Local LLM references removed. System now uses Gemini 2.0 API.
 if [ -f "$DIR/../panglossia/google-credentials.json" ]; then
     export GOOGLE_APPLICATION_CREDENTIALS="$DIR/../panglossia/google-credentials.json"
 fi
@@ -35,11 +32,11 @@ sleep 5
 # 4. Launch Electron (Intel iGPU for UI)
 echo "✨ Launching UI on Intel iGPU..."
 # DRI_PRIME=0 forces the Intel Integrated GPU on Linux
-# We removed --disable-gpu to allow smooth animations on the Intel card
+# We use Intel for UI to leave NVIDIA free for heavy tasks if needed.
 DRI_PRIME=0 npx electron . --no-sandbox > electron.log 2>&1 &
 ELECTRON_PID=$!
 
 echo "-----------------------------------"
 echo "✅ Wordhord is running!"
-echo "GPU Split: Intel (UI) | NVIDIA (LLM)"
+echo "GPU Split: Intel (UI) | API (LLM)"
 echo "-----------------------------------"

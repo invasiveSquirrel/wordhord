@@ -16,6 +16,10 @@
   --crust: #11111b;
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body { font-family: 'Inter', sans-serif; background: var(--crust); color: var(--text); margin: 0; overflow: hidden; }
 
 .app-container { 
@@ -92,21 +96,41 @@ main {
   border: 1px solid var(--surface1);
 }
 
+.card-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .card-level-badge { position: absolute; top: 1.5rem; right: 1.5rem; background: var(--mantle); color: var(--yellow); padding: 0.3rem 0.8rem; border-radius: 12px; font-weight: 800; font-size: 0.9rem; }
 
 .term-row h2 { font-size: 3.5rem; margin: 0; }
 .speak-main-btn { width: 64px; height: 64px; border-radius: 50%; justify-content: center; background: var(--surface1); }
 
-.main-translation { font-size: 4rem; color: var(--mauve); margin-bottom: 2rem; font-weight: 800; }
+.main-translation { font-size: 4rem; color: var(--mauve); margin-bottom: 2rem; font-weight: 800; width: 100%; word-wrap: break-word; }
 
-.linguistics-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; margin-bottom: 2rem; }
+.linguistics-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; margin-bottom: 2rem; width: 100%; }
 .ling-item { padding: 0.6rem 1.2rem; border-radius: 15px; background: var(--mantle); font-size: 1.1rem; display: flex; align-items: center; gap: 0.5rem; }
 .ipa-item strong { color: var(--teal); }
 .plural-item strong { color: var(--peach); }
 
-.example-section { background: var(--mantle); padding: 2rem; border-radius: 24px; border: 1px solid var(--surface1); width: 100%; }
-.example-text { font-size: 1.6rem; font-style: italic; margin-bottom: 0.8rem; color: var(--text); }
-.example-trans { color: var(--subtext0); font-size: 1.2rem; margin-bottom: 1.5rem; }
+.example-section { 
+  background: var(--mantle); 
+  padding: 2rem; 
+  border-radius: 24px; 
+  border: 1px solid var(--surface1); 
+  width: 100%; 
+  max-width: 100%; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.example-text { font-size: 1.6rem; font-style: italic; margin-bottom: 0.8rem; color: var(--text); word-wrap: break-word; text-align: center; }
+.example-trans { color: var(--subtext0); font-size: 1.2rem; margin-bottom: 1.5rem; word-wrap: break-word; text-align: center; }
+.example-actions { display: flex; justify-content: center; width: 100%; }
+
+
 
 .review-interface { display: flex; flex-direction: column; gap: 1.5rem; width: 100%; }
 .srs-buttons { display: flex; gap: 0.8rem; }

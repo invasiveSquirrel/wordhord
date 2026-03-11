@@ -1,18 +1,27 @@
 import { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
-import { Mic, MicOff, Volume2, PlusCircle, CheckCircle, XCircle, BrainCircuit, X, Minus, Edit, Trash2, Play, Settings, RefreshCw, Repeat } from 'lucide-react';
+import { Mic, MicOff, Volume2, PlusCircle, BrainCircuit, Edit, Trash2, Settings, RefreshCw, Repeat } from 'lucide-react';
 import './App.css';
 import CardEditor from './CardEditor';
 
 interface Card {
   id: string;
+  language: string;
   term: string;
   translation: string;
   example: string;
   example_translation: string;
   level?: string;
   ipa?: string;
+  gender?: string;
   plural?: string;
+  part_of_speech?: string;
+  conjugations?: string;
+  tone?: string;
+  prefix?: string;
+  preposition?: string;
+  case?: string;
+  accusative?: string;
   passed: number;
   failed: number;
 }
@@ -64,8 +73,8 @@ export default function App() {
   const [deckIds, setDeckIds] = useState<string[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showFront, setShowFront] = useState(true);
-  const [loading, setLoading] = useState(false);
-  const [status, setStatus] = useState('');
+  const [, setLoading] = useState(false);
+  const [, setStatus] = useState('');
   const [isRecording, setIsRecording] = useState(false);
   const [pronunciationResult, setPronunciationResult] = useState<{ transcript: string, feedback: string } | null>(null);
   const [userAudioBlob, setUserAudioBlob] = useState<Blob | null>(null);
@@ -73,6 +82,14 @@ export default function App() {
   const [editorOpen, setEditorOpen] = useState(false);
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [selectedLevels, setSelectedLevels] = useState<string[]>(['None', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2']);
+
+  const currentCard = cards.find(c => c.id === deckIds[currentIndex]);
+
+  const resetAudioStates = () => {
+    setNativeAudioBlob(null);
+    setUserAudioBlob(null);
+    setPronunciationResult(null);
+  };
 
   useEffect(() => { loadCards(); }, [language]);
 
@@ -91,9 +108,33 @@ export default function App() {
     } catch (e) { setStatus('Load failed.'); } finally { setLoading(false); }
   };
 
-  const resetAudioStates = () => { setUserAudioBlob(null); setNativeAudioBlob(null); setPronunciationResult(null); };
+  const saveCard = async (cardData: any) => {
+    try {
+      if (editorOpen && currentCard) {
+        // Edit existing
+        await axios.put(`http://localhost:8001/cards/${currentCard.id}`, cardData);
+      } else {
+        // Create new
+        await axios.post('http://localhost:8001/cards', cardData);
+      }
+      setEditorOpen(false);
+      loadCards();
+    } catch (e) {
+      alert('Failed to save card');
+    }
+  };
 
-  const currentCard = cards.find(c => c.id === deckIds[currentIndex]);
+  const deleteCard = async () => {
+    if (!currentCard) return;
+    if (window.confirm(`Are you sure you want to delete "${currentCard.term}"?`)) {
+      try {
+        await axios.delete(`http://localhost:8001/cards/${currentCard.id}`);
+        loadCards();
+      } catch (e) {
+        alert('Failed to delete card');
+      }
+    }
+  };
 
   const handleReview = async (quality: number) => {
     if (!currentCard) return;
@@ -170,7 +211,16 @@ export default function App() {
 
       <div className="controls">
         <button onClick={generateStudyPlan} className="btn primary"><BrainCircuit size={18} /> Daily Review</button>
-        <button onClick={loadCards} className="btn secondary"><RefreshCw size={16} /> Reload</button>
+        <button onClick={() => { setEditorOpen(true); }} className="btn secondary"><PlusCircle size={18} /> Add Word</button>
+        <button onClick={async () => {
+          setLoading(true);
+          try {
+            await axios.post('http://localhost:8001/migrate');
+          } catch (e) {
+            console.error("Migration failed:", e);
+          }
+          loadCards();
+        }} className="btn secondary"><RefreshCw size={16} /> Reload</button>
       </div>
 
       <main>
@@ -186,7 +236,11 @@ export default function App() {
                   {currentCard.level && <span className="card-level-badge">{currentCard.level}</span>}
                 </div>
               ) : (
-                <div className="card-content back-content">
+                <div className="card-content">
+                  <div className="card-actions-top">
+                    <button onClick={(e) => { e.stopPropagation(); setEditorOpen(true); }} className="btn icon-btn mini-btn"><Edit size={14} /> Edit</button>
+                    <button onClick={(e) => { e.stopPropagation(); deleteCard(); }} className="btn icon-btn mini-btn delete-btn"><Trash2 size={14} /></button>
+                  </div>
                   <h2 className="main-translation">{currentCard.translation}</h2>
                   <div className="linguistics-grid">
                     {currentCard.ipa && (
@@ -197,7 +251,11 @@ export default function App() {
                         </button>
                       </div>
                     )}
+                    {currentCard.part_of_speech && <div className="ling-item pos-item"><strong>PoS:</strong> {currentCard.part_of_speech}</div>}
+                    {currentCard.gender && <div className="ling-item gender-item"><strong>Gender:</strong> {currentCard.gender}</div>}
+                    {currentCard.tone && <div className="ling-item tone-item"><strong>Tone:</strong> {currentCard.tone}</div>}
                     {currentCard.plural && <div className="ling-item plural-item"><strong>Plural:</strong> {currentCard.plural}</div>}
+                    {currentCard.conjugations && <div className="ling-item conj-item"><strong>Forms:</strong> {currentCard.conjugations}</div>}
                   </div>
                   {currentCard.example && (
                     <div className="example-section">
@@ -259,6 +317,14 @@ export default function App() {
           </div>
         </div>
       )}
+
+      <CardEditor 
+        isOpen={editorOpen} 
+        card={currentCard} 
+        language={language}
+        onClose={() => setEditorOpen(false)} 
+        onSave={saveCard} 
+      />
     </div>
   );
 }

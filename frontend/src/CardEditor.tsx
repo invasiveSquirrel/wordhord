@@ -4,10 +4,12 @@ import './CardEditor.css';
 
 interface Card {
   id: string;
+  language: string;
   term: string;
   translation: string;
   example: string;
   example_translation: string;
+  level?: string;
   ipa?: string;
   gender?: string;
   plural?: string;
@@ -17,19 +19,22 @@ interface Card {
   prefix?: string;
   preposition?: string;
   case?: string;
+  accusative?: string;
   passed: number;
   failed: number;
 }
 
 interface CardEditorProps {
   card?: Card;
+  language: string;
   onClose: () => void;
-  onSave: (card: Omit<Card, 'id' | 'passed' | 'failed'>) => void;
+  onSave: (card: any) => void;
   isOpen: boolean;
 }
 
-export default function CardEditor({ card, onClose, onSave, isOpen }: CardEditorProps) {
+export default function CardEditor({ card, language, onClose, onSave, isOpen }: CardEditorProps) {
   const [formData, setFormData] = useState({
+    language: language,
     term: '',
     translation: '',
     ipa: '',
@@ -41,13 +46,16 @@ export default function CardEditor({ card, onClose, onSave, isOpen }: CardEditor
     prefix: '',
     preposition: '',
     case: '',
+    accusative: '',
     example: '',
     example_translation: '',
+    level: '',
   });
 
   useEffect(() => {
     if (isOpen) {
       setFormData({
+        language: card?.language || language,
         term: card?.term || '',
         translation: card?.translation || '',
         ipa: card?.ipa || '',
@@ -59,11 +67,13 @@ export default function CardEditor({ card, onClose, onSave, isOpen }: CardEditor
         prefix: card?.prefix || '',
         preposition: card?.preposition || '',
         case: card?.case || '',
+        accusative: card?.accusative || '',
         example: card?.example || '',
         example_translation: card?.example_translation || '',
+        level: card?.level || '',
       });
     }
-  }, [card, isOpen]);
+  }, [card, isOpen, language]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -78,6 +88,7 @@ export default function CardEditor({ card, onClose, onSave, isOpen }: CardEditor
     }
     onSave(formData);
     setFormData({
+      language: language,
       term: '',
       translation: '',
       ipa: '',
@@ -89,8 +100,10 @@ export default function CardEditor({ card, onClose, onSave, isOpen }: CardEditor
       prefix: '',
       preposition: '',
       case: '',
+      accusative: '',
       example: '',
       example_translation: '',
+      level: '',
     });
   };
 
@@ -148,16 +161,20 @@ export default function CardEditor({ card, onClose, onSave, isOpen }: CardEditor
             </div>
 
             <div className="form-group">
-              <label htmlFor="tone">Tone (Accent 1/2)</label>
+              <label htmlFor="level">Level</label>
               <select
-                id="tone"
-                name="tone"
-                value={formData.tone}
+                id="level"
+                name="level"
+                value={formData.level}
                 onChange={handleChange}
               >
                 <option value="">None</option>
-                <option value="Accent 1">Accent 1</option>
-                <option value="Accent 2">Accent 2</option>
+                <option value="A1">A1</option>
+                <option value="A2">A2</option>
+                <option value="B1">B1</option>
+                <option value="B2">B2</option>
+                <option value="C1">C1</option>
+                <option value="C2">C2</option>
               </select>
             </div>
           </div>
@@ -198,7 +215,9 @@ export default function CardEditor({ card, onClose, onSave, isOpen }: CardEditor
                 <option value="Common">Common</option>
               </select>
             </div>
+          </div>
 
+          <div className="form-row">
             <div className="form-group">
               <label htmlFor="plural">Plural Form</label>
               <input
@@ -209,6 +228,20 @@ export default function CardEditor({ card, onClose, onSave, isOpen }: CardEditor
                 onChange={handleChange}
                 placeholder="e.g., words, äpfel"
               />
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="tone">Tone (Accent 1/2)</label>
+              <select
+                id="tone"
+                name="tone"
+                value={formData.tone}
+                onChange={handleChange}
+              >
+                <option value="">None</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+              </select>
             </div>
           </div>
 
@@ -244,16 +277,30 @@ export default function CardEditor({ card, onClose, onSave, isOpen }: CardEditor
             </div>
           </div>
 
-          <div className="form-group">
-            <label htmlFor="preposition">Associated Preposition</label>
-            <input
-              type="text"
-              id="preposition"
-              name="preposition"
-              value={formData.preposition}
-              onChange={handleChange}
-              placeholder="e.g., auf, med, etc."
-            />
+          <div className="form-row">
+            <div className="form-group">
+              <label htmlFor="preposition">Associated Preposition</label>
+              <input
+                type="text"
+                id="preposition"
+                name="preposition"
+                value={formData.preposition}
+                onChange={handleChange}
+                placeholder="e.g., auf, med, etc."
+              />
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="accusative">N-Declension (Accusative)</label>
+              <input
+                type="text"
+                id="accusative"
+                name="accusative"
+                value={formData.accusative}
+                onChange={handleChange}
+                placeholder="e.g., den Jungen"
+              />
+            </div>
           </div>
 
           <div className="form-group">
