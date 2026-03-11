@@ -25,3 +25,16 @@ Thumbs.db
 # Electron
 release/
 *.log
+
+# Credentials (IMPORTANT)
+.env
+*.key
+*.pem
+
+# API Keys and Secrets
+*_api.txt
+*_api_key.txt
+wordhord_api.txt
+panglossia_api.txt
+api_credentials.json
+google-credentials.json
