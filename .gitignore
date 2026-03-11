@@ -40,3 +40,8 @@ wordhord_api.txt
 panglossia_api.txt
 api_credentials.json
 google-credentials.json
+
+# Generated and temporary files
+archive/
+cleanup_database.py
+enrich_german_verbs.py
