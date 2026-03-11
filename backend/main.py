@@ -68,7 +68,29 @@ class CardModel(Base):
 
 app = FastAPI()
 app.add_middleware(GZIPMiddleware, minimum_size=1000)
-app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"])
+
+ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+    "http://localhost:5173",
+    "http://localhost:8000",
+    "http://localhost:8001",
+    "http://127.0.0.1:3000",
+    "http://127.0.0.1:5173",
+    "http://127.0.0.1:8000",
+    "http://127.0.0.1:8001",
+]
+
+if os.getenv("ENVIRONMENT") == "production":
+    allowed = os.getenv("CORS_ORIGINS", "").split(",")
+    ALLOWED_ORIGINS = [origin.strip() for origin in allowed if origin.strip()]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=ALLOWED_ORIGINS,
+    allow_credentials=True,
+    allow_methods=["GET", "POST", "PUT", "DELETE"],
+    allow_headers=["Content-Type"],
+)
 
 @app.on_event("startup")
 async def startup():
@@ -76,9 +98,21 @@ async def startup():
         await conn.run_sync(Base.metadata.create_all)
 
 # Configuration
-API_KEY_FILE = "/home/chris/wordhord/wordhord_api.txt"
-with open(API_KEY_FILE, "r") as f:
-    GOOGLE_API_KEY = f.read().strip()
+def load_google_api_key() -> str:
+    key = os.getenv("GOOGLE_API_KEY")
+    if key:
+        return key
+    try:
+        api_key_file = os.getenv("API_KEY_FILE", "/home/chris/wordhord/wordhord_api.txt")
+        with open(api_key_file, "r") as f:
+            return f.read().strip()
+    except FileNotFoundError:
+        raise RuntimeError(
+            "GOOGLE_API_KEY environment variable not set and API key file not found. "
+            "Set GOOGLE_API_KEY environment variable or create the API key file."
+        )
+
+GOOGLE_API_KEY = load_google_api_key()
 
 # Gemini 2.5 Flash
 llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash", google_api_key=GOOGLE_API_KEY, temperature=0.1)
@@ -317,8 +351,21 @@ async def evaluate_pronunciation(audio: UploadFile = File(...), language: str = 
 
 @app.post("/speak_ipa")
 async def speak_ipa(request: SpeakRequest):
+    if not isinstance(request.text, str) or not request.text.strip():
+        return {"status": "ok"}
+    
+    ipa_text = f"[[{request.text.strip()}]]"
+    
     def play_ipa():
-        subprocess.run(["espeak-ng", "-v", "en-gb", "-s", "150", f"[[{request.text}]]"], check=False)
+        try:
+            subprocess.run(
+                ["espeak-ng", "-v", "en-gb", "-s", "150", ipa_text],
+                check=False,
+                timeout=10,
+            )
+        except (subprocess.TimeoutExpired, FileNotFoundError):
+            pass
+    
     threading.Thread(target=play_ipa, daemon=True).start()
     return {"status": "ok"}
 
