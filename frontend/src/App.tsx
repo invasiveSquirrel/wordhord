@@ -68,6 +68,14 @@ const AudioVisualizer = ({ audioBlob, color, label }: { audioBlob: Blob | null, 
 };
 
 export default function App() {
+  const [renderError, setRenderError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const handleError = (e: ErrorEvent) => setRenderError(e.message);
+    window.addEventListener('error', handleError);
+    return () => window.removeEventListener('error', handleError);
+  }, []);
+
   const [language, setLanguage] = useState<Language>('swedish');
   const [cards, setCards] = useState<Card[]>([]);
   const [deckIds, setDeckIds] = useState<string[]>([]);
