@@ -62,8 +62,12 @@ def migrate():
         with open(filepath, 'r', encoding='utf-8') as f:
             content = f.read()
             
-        # Updated pattern to catch [A1], A1, or Level 1
-        pattern = r'- \*\*(?:\[?([A-C][12])\]?|Level\s+(\d))\s*([^*]+)\*\*\s*\(([^)]+)\)'
+        # Optimization: Fetch all existing terms for this language once to avoid N+1 queries
+        existing_cards = {c.term: c for c in session.query(CardModel).filter_by(language=lang).all()}
+            
+        # Capture Level/Level num, then skip any bracketed tags or leading non-word chars like stress marks 'ˈ'
+        # The translation part now captures everything until the LAST closing parenthesis on the line
+        pattern = r'- \*\*(?:\[?([A-C][12])\]?|Level\s+(\d))\s*(?:\[[^\]]+\]\s*)?[^a-zA-Z0-9\[(]*([^*]+)\*\*\s*\((.*)\)'
         matches = list(re.finditer(pattern, content))
         
         for i, match in enumerate(matches):
@@ -83,17 +87,24 @@ def migrate():
             term = raw_term.strip()
             while True:
                 old_val = term
-                term = re.sub(r'^[^\w\s\(]+', '', term).strip()
+                # Remove common prefixes and junk
+                term = re.sub(r'^[^\w\s"\'ˈ]+', '', term).strip() # Remove leading punctuation/brackets but keep stress mark
                 term = re.sub(r'^(Level\s*\w\d?|\[?[A-C][12]\]?)\s*', '', term, flags=re.IGNORECASE).strip()
+                term = re.sub(r'^\[[^\]]+\]\s*', '', term).strip()
                 term = re.sub(r'^(Verb|Adjektiv|Adverb|Nomen|Substantiv|Noun|Adj|Adv)\s+', '', term, flags=re.IGNORECASE).strip()
                 if lang == 'german':
                     term = re.sub(r'^(Der|Die|Das)\s+', '', term, flags=re.IGNORECASE).strip()
+                if lang in ['portuguese', 'spanish']:
+                    term = re.sub(r'^(o|a|el|la)\s+', '', term, flags=re.IGNORECASE).strip()
                 term = re.sub(r'^\d+[\.\s]*', '', term).strip()
                 if term == old_val:
                     break
 
-            if not term:
+            if not term or len(term) < 1:
                 continue
+            
+            # Final check: if term starts with junk again after cleaning
+            term = re.sub(r'^[\s\]\-\*]+', '', term).strip()
             
             start_pos = match.end()
             if i + 1 < len(matches):
@@ -138,24 +149,34 @@ def migrate():
             example = ex_match.group(1) if ex_match else ""
             ex_trans = ex_match.group(2) if ex_match else ""
             
-            # Check if exists
-            existing_card = session.query(CardModel).filter_by(language=lang, term=term).first()
-            
-            if existing_card:
-                existing_card.translation = translation
-                existing_card.ipa = ipa
-                existing_card.gender = gender
-                existing_card.plural = plural
-                existing_card.part_of_speech = pos
-                existing_card.tone = tone
-                existing_card.prefix = prefix
-                existing_card.preposition = prep
-                existing_card.case = case
-                existing_card.accusative = accusative
-                existing_card.conjugations = conj
-                existing_card.example = example
-                existing_card.example_translation = ex_trans
-                if level: existing_card.level = level
+            # Check if exists in our local cache or if we already added it in this run
+            if term in existing_cards:
+                existing_card = existing_cards[term]
+                # Merge translation if new
+                if translation and translation.lower() not in (existing_card.translation or "").lower():
+                    existing_card.translation = f"{existing_card.translation}, {translation}"
+                
+                # Merge example if new
+                if example and example.lower() not in (existing_card.example or "").lower():
+                    if existing_card.example:
+                        existing_card.example = f"{existing_card.example}\n{example}"
+                        existing_card.example_translation = f"{existing_card.example_translation}\n{ex_trans}"
+                    else:
+                        existing_card.example = example
+                        existing_card.example_translation = ex_trans
+
+                # Fill in missing fields
+                if not existing_card.ipa: existing_card.ipa = ipa
+                if not existing_card.gender: existing_card.gender = gender
+                if not existing_card.plural: existing_card.plural = plural
+                if not existing_card.part_of_speech: existing_card.part_of_speech = pos
+                if not existing_card.tone: existing_card.tone = tone
+                if not existing_card.prefix: existing_card.prefix = prefix
+                if not existing_card.preposition: existing_card.preposition = prep
+                if not existing_card.case: existing_card.case = case
+                if not existing_card.accusative: existing_card.accusative = accusative
+                if not existing_card.conjugations: existing_card.conjugations = conj
+                if not existing_card.level: existing_card.level = level
             else:
                 new_card = CardModel(
                     language=lang,
@@ -177,8 +198,13 @@ def migrate():
                     next_review=datetime.utcnow()
                 )
                 session.add(new_card)
+                existing_cards[term] = new_card # Add to cache for this run
                 
-        session.commit()
+        try:
+            session.commit()
+        except Exception as e:
+            print(f"  ⚠ Error committing {lang}: {e}")
+            session.rollback()
     session.close()
     print("Migration complete.")
 

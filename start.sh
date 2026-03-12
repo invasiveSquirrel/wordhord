@@ -7,18 +7,24 @@ echo "🚀 Starting Wordhord (Optimized for Dual-GPU)..."
 
 # 1. Clean up stale processes
 fuser -k 8001/tcp 5174/tcp 2>/dev/null
-pkill -f "wordhord.*electron" 2>/dev/null
+pkill -f "electron" 2>/dev/null
 
 # 2. Start Backend
 echo "🧠 Starting Backend..."
 cd "$DIR/backend"
+
+# Load Gemini API Key into environment
+if [ -f "$DIR/../wordhord_api.txt" ]; then
+    export GOOGLE_API_KEY=$(cat "$DIR/../wordhord_api.txt")
+    echo "✅ Gemini API Key loaded into environment."
+fi
 
 # Note: Ollama/Local LLM references removed. System now uses Gemini 2.0 API.
 if [ -f "$DIR/../panglossia/google-credentials.json" ]; then
     export GOOGLE_APPLICATION_CREDENTIALS="$DIR/../panglossia/google-credentials.json"
 fi
 
-./venv/bin/python -B main.py > backend.log 2>&1 &
+./venv_latest/bin/python -B main.py > backend.log 2>&1 &
 BACKEND_PID=$!
 
 # 3. Start Frontend (Vite)

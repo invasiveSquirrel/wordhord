@@ -9,6 +9,7 @@ import os
 import re
 import time
 import sys
+import subprocess
 import google.generativeai as genai
 
 # Force line buffering for logs
@@ -19,21 +20,49 @@ if hasattr(sys.stdout, 'reconfigure'):
 POLYGLOSSIA_DIR = "/home/chris/polyglossia"
 SOURCES_DIR = "/home/chris/vocabulary_sources"
 API_KEY_FILE = "/home/chris/wordhord/wordhord_api.txt"
+DB_PATH = "/home/chris/wordhord/wordhord.db"
+MIGRATE_SCRIPT = "/home/chris/wordhord/migrate_to_sqlite.py"
+VENV_PYTHON = "/home/chris/wordhord/backend/venv/bin/python"
 
 # Load API Key
-with open(API_KEY_FILE, "r") as f:
-    genai.configure(api_key=f.read().strip())
+api_key = os.getenv("GOOGLE_API_KEY")
+if not api_key and os.path.exists(API_KEY_FILE):
+    with open(API_KEY_FILE, "r") as f:
+        api_key = f.read().strip()
 
-model = genai.GenerativeModel('gemini-2.5-flash')
+if api_key:
+    genai.configure(api_key=api_key)
+else:
+    print("❌ Error: GOOGLE_API_KEY not found in environment or file.")
+    sys.exit(1)
+
+model = genai.GenerativeModel('gemini-2.0-flash')
 
 LANGUAGES = {
     "dutch": {"name": "Dutch", "sources": ["dutch_freq.txt"], "target": 10000, "articles": True, "start_line": 500},
     "german": {"name": "German", "sources": ["german_freq.txt", "german_using.txt"], "target": 10000, "articles": True, "start_line": 870},
-    "swedish": {"name": "Swedish", "target": 30000, "articles": True, "method": "direct_graded"},
+    "swedish": {"name": "Swedish", "target": 10000, "articles": True, "method": "direct_graded"},
     "portuguese": {"name": "Portuguese", "sources": ["portuguese_freq.txt"], "target": 10000, "articles": True, "start_line": 500},
     "spanish": {"name": "Spanish", "sources": ["spanish_freq.txt", "spanish_using.txt"], "target": 10000, "articles": True, "start_line": 730},
     "finnish": {"name": "Finnish", "target": 3000, "articles": False, "method": "direct_graded"}
 }
+
+def get_db_count(lang_code):
+    try:
+        cmd = ["/usr/bin/sqlite3", DB_PATH, f"SELECT COUNT(*) FROM cards WHERE language='{lang_code}';"]
+        result = subprocess.run(cmd, capture_output=True, text=True, check=True)
+        return int(result.stdout.strip())
+    except Exception as e:
+        print(f"  ⚠ Error querying database for {lang_code}: {e}", flush=True)
+        return 0
+
+def run_migration():
+    print(f"🔄 Triggering migration to database...", flush=True)
+    try:
+        subprocess.run([VENV_PYTHON, MIGRATE_SCRIPT], check=True)
+        print(f"✅ Migration complete.", flush=True)
+    except Exception as e:
+        print(f"  ❌ Migration failed: {e}", flush=True)
 
 def get_source_context(lang_code, start_rank):
     info = LANGUAGES[lang_code]
@@ -60,14 +89,11 @@ def generate_batch(lang_code, lang_info):
     target = lang_info["target"]
     output_file = os.path.join(POLYGLOSSIA_DIR, f"{lang_code}_vocab.md")
     
-    print(f"Checking {name} progress in {output_file}...", flush=True)
-    current_count = 0
-    if os.path.exists(output_file):
-        with open(output_file, "r", encoding="utf-8") as f:
-            current_count = f.read().count("- **")
+    print(f"Checking {name} progress in database...", flush=True)
+    current_count = get_db_count(lang_code)
             
     if current_count >= target:
-        print(f"✅ {name} complete ({current_count} words).", flush=True)
+        print(f"✅ {name} complete ({current_count} words in DB).", flush=True)
         return
 
     print(f"\n🚀 Generating {name} ({current_count}/{target})...", flush=True)
@@ -134,13 +160,19 @@ Output ONLY the markdown list. Every field is mandatory for every entry.
             print(f"  ... Requesting {batch_size} {name} words (Rank {start_rank})...", flush=True)
             response = model.generate_content(prompt)
             text = response.text
-            new_words = text.count("- **")
-            if new_words > 0:
+            new_words_count = text.count("- **")
+            if new_words_count > 0:
                 with open(output_file, "a", encoding="utf-8") as f:
-                    if os.path.getsize(output_file) < 50: f.write(f"# {name} Vocabulary\n\n")
+                    if not os.path.exists(output_file) or os.path.getsize(output_file) < 50: 
+                        f.write(f"# {name} Vocabulary\n\n")
                     f.write("\n\n" + text.strip())
-                current_count += new_words
-                print(f"  ✓ Added {new_words} words. Total: {current_count}/{target}", flush=True)
+                
+                # Sync to DB
+                run_migration()
+                
+                # Re-query DB to get true count
+                current_count = get_db_count(lang_code)
+                print(f"  ✓ DB now has {current_count} {name} words (Target: {target})", flush=True)
                 time.sleep(5)
             else:
                 print("  ⚠ No words found. Retrying...", flush=True)

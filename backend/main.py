@@ -1,6 +1,6 @@
 from fastapi import FastAPI, HTTPException, UploadFile, File, Form, Depends
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.middleware.gzip import GZIPMiddleware
+from fastapi.middleware.gzip import GZipMiddleware
 from fastapi.responses import Response
 from pydantic import BaseModel
 from sqlalchemy import Column, Integer, String, Float, DateTime, UniqueConstraint, Index, func, select, update, delete
@@ -18,6 +18,7 @@ import re
 import threading
 import tempfile
 import aiofiles
+import hashlib
 from datetime import datetime, timedelta
 
 # Database Setup
@@ -67,7 +68,7 @@ class CardModel(Base):
     )
 
 app = FastAPI()
-app.add_middleware(GZIPMiddleware, minimum_size=1000)
+app.add_middleware(GZipMiddleware, minimum_size=1000)
 
 ALLOWED_ORIGINS = [
     "http://localhost:3000",
@@ -124,6 +125,8 @@ POLYGLOSSIA_DIR = "/home/chris/panglossia"
 PIPER_BIN = os.path.join(POLYGLOSSIA_DIR, "backend", "bin", "piper")
 PIPER_LIB = os.path.join(POLYGLOSSIA_DIR, "backend", "bin")
 VOICE_DIR = os.path.join(POLYGLOSSIA_DIR, "backend", "voices")
+CACHE_DIR = "/tmp/wordhord_cache"
+os.makedirs(CACHE_DIR, exist_ok=True)
 
 try:
     from google.cloud import texttospeech
@@ -194,8 +197,52 @@ async def delete_card(card_id: int, db: AsyncSession = Depends(get_db)):
     await db.commit()
     return {"status": "ok"}
 
+def expand_abbreviations(text: str, language: str) -> str:
+    if not text: return ""
+    
+    # Common English expansions for translations
+    eng_expansions = {
+        r'\bsth\.?\b': 'something',
+        r'\bsb\.?\b': 'someone',
+        r'\bsomeb\.?\b': 'somebody',
+        r'\bsomew\.?\b': 'somewhere',
+    }
+    
+    # Language specific expansions for terms
+    lang_expansions = {
+        'german': {
+            r'\betw\.?\b': 'etwas',
+            r'\bjmd\.?\b': 'jemand',
+            r'\bjmdn\.?\b': 'jemanden',
+            r'\bjmdm\.?\b': 'jemandem',
+            r'\bjmds\.?\b': 'jemandes',
+        },
+        'swedish': {
+            r'\bngt\.?\b': 'något',
+            r'\bngn\.?\b': 'någon',
+        },
+        'dutch': {
+            r'\biem\.?\b': 'iemand',
+        },
+        'spanish': {
+            r'\balg\.?\b': 'algo',
+            r'\balgn\.?\b': 'alguien',
+        }
+    }
+
+    # Expand English definitions
+    for pattern, expansion in eng_expansions.items():
+        text = re.sub(pattern, expansion, text, flags=re.IGNORECASE)
+        
+    # Expand native language terms
+    if language in lang_expansions:
+        for pattern, expansion in lang_expansions[language].items():
+            text = re.sub(pattern, expansion, text, flags=re.IGNORECASE)
+            
+    return text
+
 @app.get("/cards/{language}")
-async def get_cards(language: str, db: AsyncSession = Depends(get_db), levels: str = None, skip: int = 0, limit: int = 100):
+async def get_cards(language: str, db: AsyncSession = Depends(get_db), levels: str = None, skip: int = 0, limit: int = 100000):
     stmt = select(CardModel).filter(CardModel.language == language)
     if levels:
         level_list = levels.split(",")
@@ -210,12 +257,77 @@ async def get_cards(language: str, db: AsyncSession = Depends(get_db), levels: s
     result = await db.execute(stmt.offset(skip).limit(limit))
     cards = result.scalars().all()
     
-    mapper = {c.name: None for c in inspect(CardModel).columns}
+    formatted_cards = []
+    for card in cards:
+        term = card.term.strip()
+        translation = expand_abbreviations(card.translation or "", language)
+        gender = (card.gender or "").lower()
+        
+        # Apply language-specific formatting
+        if language == 'german':
+            is_noun = (card.part_of_speech and 'noun' in card.part_of_speech.lower()) or \
+                      (gender in ['masculine', 'feminine', 'neuter', 'der', 'die', 'das', 'm', 'f', 'n'])
+            
+            # Handle parentheses: (das) Haus or Haus (Building)
+            # If it's a noun, ensure we have the article and capitalization
+            if is_noun:
+                # Remove any existing article to re-add it consistently
+                term = re.sub(r'^(der|die|das)\s+', '', term, flags=re.IGNORECASE).strip()
+                
+                g_map = {'masculine': 'der', 'feminine': 'die', 'neuter': 'das', 'der': 'der', 'die': 'die', 'das': 'das', 'm': 'der', 'f': 'die', 'n': 'das'}
+                art = g_map.get(gender, "")
+                
+                # Expand abbreviations in the term itself (e.g., etw. machen)
+                term = expand_abbreviations(term, language)
+                
+                # Check if it starts with parentheses like "(etwas) Noun"
+                if term.startswith('('):
+                    # Capitalize the first letter of the word inside or after parens if noun
+                    # e.g. (etwas) wasser -> (etwas) Wasser
+                    term = re.sub(r'(\w+)', lambda m: m.group(1).capitalize(), term, count=1)
+                else:
+                    term = term.capitalize()
+                
+                if art:
+                    term = f"{art} {term}"
+            else:
+                # For non-nouns, lowercase unless it's a proper noun
+                term = expand_abbreviations(term.lower(), language)
+
+        elif language == 'dutch':
+            term = expand_abbreviations(term.lower(), language)
+            if 'de' in gender or 'maskulin' in gender or 'feminin' in gender:
+                term = f"de {term}"
+            elif 'het' in gender or 'neuter' in gender or 'onzijdig' in gender:
+                term = f"het {term}"
+                
+        elif language == 'spanish':
+            term = expand_abbreviations(term.lower(), language)
+            if 'maskulin' in gender or 'masculine' in gender or 'el' in gender:
+                term = f"el {term}"
+            elif 'feminin' in gender or 'feminine' in gender or 'la' in gender:
+                term = f"la {term}"
+                
+        elif language == 'portuguese':
+            term = expand_abbreviations(term.lower(), language)
+            if 'maskulin' in gender or 'masculine' in gender or ' o ' in f" {gender} " or gender == 'o':
+                term = f"o {term}"
+            elif 'feminin' in gender or 'feminine' in gender or ' a ' in f" {gender} " or gender == 'a':
+                term = f"a {term}"
+        
+        elif language == 'swedish':
+            term = expand_abbreviations(term.lower(), language)
+            
+        elif language == 'finnish':
+            term = expand_abbreviations(term.lower(), language)
+            
+        card_dict = {c.name: getattr(card, c.name) for c in inspect(CardModel).columns}
+        card_dict['term'] = term
+        card_dict['translation'] = translation
+        formatted_cards.append(card_dict)
+
     return {
-        "cards": [
-            {key: getattr(card, key) for key in mapper.keys()} 
-            for card in cards
-        ],
+        "cards": formatted_cards,
         "total": total,
         "skip": skip,
         "limit": limit
@@ -276,6 +388,15 @@ async def next_cards(request: dict, db: AsyncSession = Depends(get_db)):
 async def get_native_audio(request: SpeakRequest):
     text = request.text.strip()
     if not text: raise HTTPException(status_code=400)
+    
+    text_hash = hashlib.md5(f"{text}_{request.language}".encode()).hexdigest()
+    cache_path = os.path.join(CACHE_DIR, f"{text_hash}.wav")
+
+    if os.path.exists(cache_path):
+        async with aiofiles.open(cache_path, "rb") as f:
+            content = await f.read()
+            return Response(content=content, media_type="audio/wav")
+
     try:
         if texttospeech and os.environ.get("GOOGLE_APPLICATION_CREDENTIALS"):
             client = texttospeech.TextToSpeechClient()
@@ -292,25 +413,31 @@ async def get_native_audio(request: SpeakRequest):
             voice = texttospeech.VoiceSelectionParams(language_code=l_code, name=v_name)
             audio_config = texttospeech.AudioConfig(audio_encoding=texttospeech.AudioEncoding.LINEAR16, speaking_rate=0.95)
             response = client.synthesize_speech(input=synthesis_input, voice=voice, audio_config=audio_config)
+            
+            # Save to cache
+            async with aiofiles.open(cache_path, "wb") as f:
+                await f.write(response.audio_content)
+                
             return Response(content=response.audio_content, media_type="audio/wav")
+        
         voice_map = {"swedish": "sv_female.onnx", "finnish": "fi_female.onnx", "spanish": "es_mx_ximena.onnx"}
         if request.language in voice_map:
             v_path = os.path.join(VOICE_DIR, voice_map[request.language])
-            with tempfile.NamedTemporaryFile(suffix=".wav", delete=False) as tmp:
-                temp_wav = tmp.name
             try:
                 env = os.environ.copy()
                 env["LD_LIBRARY_PATH"] = f"{PIPER_LIB}:{env.get('LD_LIBRARY_PATH', '')}"
                 proc = await asyncio.create_subprocess_exec(
-                    PIPER_BIN, "--model", v_path, "--output_file", temp_wav,
+                    PIPER_BIN, "--model", v_path, "--output_file", cache_path,
                     stdin=asyncio.subprocess.PIPE, env=env
                 )
                 await proc.communicate(input=text.encode())
-                async with aiofiles.open(temp_wav, "rb") as f: content = await f.read()
-                return Response(content=content, media_type="audio/wav")
-            finally:
-                if os.path.exists(temp_wav):
-                    os.unlink(temp_wav)
+                
+                if os.path.exists(cache_path):
+                    async with aiofiles.open(cache_path, "rb") as f: 
+                        content = await f.read()
+                        return Response(content=content, media_type="audio/wav")
+            except Exception as e:
+                print(f"Local TTS error: {e}")
     except Exception as e: raise HTTPException(status_code=500, detail=str(e))
     raise HTTPException(status_code=501)
 
@@ -354,7 +481,9 @@ async def speak_ipa(request: SpeakRequest):
     if not isinstance(request.text, str) or not request.text.strip():
         return {"status": "ok"}
     
-    ipa_text = f"[[{request.text.strip()}]]"
+    # Sanitize IPA text: Allow only standard IPA, alphanumeric, and basic punctuation
+    sanitized = re.sub(r'[^\w\s\.\,\[\]\(\)\-\/ˈˌːˑ˘\.◌\u0250-\u02AF\u1D00-\u1D7F\u1D80-\u1DBF]', '', request.text.strip())
+    ipa_text = f"[[{sanitized}]]"
     
     def play_ipa():
         try:

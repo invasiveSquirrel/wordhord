@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useMemo } from 'react';
 import axios from 'axios';
 import { Mic, MicOff, Volume2, PlusCircle, BrainCircuit, Edit, Trash2, Settings, RefreshCw, Repeat } from 'lucide-react';
 import './App.css';
@@ -83,7 +83,13 @@ export default function App() {
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [selectedLevels, setSelectedLevels] = useState<string[]>(['None', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2']);
 
-  const currentCard = cards.find(c => c.id === deckIds[currentIndex]);
+  const cardMap = useMemo(() => {
+    const map = new Map<string, Card>();
+    cards.forEach(c => map.set(c.id, c));
+    return map;
+  }, [cards]);
+
+  const currentCard = useMemo(() => cardMap.get(deckIds[currentIndex]), [cardMap, deckIds, currentIndex]);
 
   const resetAudioStates = () => {
     setNativeAudioBlob(null);
@@ -97,7 +103,7 @@ export default function App() {
     setLoading(true);
     try {
       const levelsParam = selectedLevels.map(l => l === 'None' ? '' : l).join(',');
-      const res = await axios.get(`http://localhost:8001/cards/${language}?levels=${levelsParam}`);
+      const res = await axios.get(`http://localhost:8001/cards/${language}?levels=${levelsParam}&limit=10000`);
       const fetched = res.data.cards.map((c: any) => ({ ...c, id: String(c.id) }));
       setCards(fetched);
       setDeckIds(fetched.map((c: Card) => c.id));
@@ -106,6 +112,14 @@ export default function App() {
       resetAudioStates();
       setStatus(`Loaded ${fetched.length} cards.`);
     } catch (e) { setStatus('Load failed.'); } finally { setLoading(false); }
+  };
+
+  const shuffleDeck = () => {
+    const shuffled = [...deckIds].sort(() => Math.random() - 0.5);
+    setDeckIds(shuffled);
+    setCurrentIndex(0);
+    setShowFront(true);
+    setStatus('Deck shuffled.');
   };
 
   const saveCard = async (cardData: any) => {
@@ -219,9 +233,11 @@ export default function App() {
           } catch (e) {
             console.error("Migration failed:", e);
           }
+          setLoading(false);
           loadCards();
         }} className="btn secondary"><RefreshCw size={16} /> Reload</button>
-      </div>
+                 <button onClick={shuffleDeck} className="btn secondary"><Repeat size={16} /> Shuffle</button>
+               </div>
 
       <main>
         {currentCard ? (
