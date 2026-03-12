@@ -293,6 +293,34 @@ async def get_cards(language: str, db: AsyncSession = Depends(get_db), levels: s
                 # For non-nouns, lowercase unless it's a proper noun
                 term = expand_abbreviations(term.lower(), language)
 
+        elif language == 'dutch':
+            term = expand_abbreviations(term.lower(), language)
+            if 'de' in gender or 'maskulin' in gender or 'feminin' in gender:
+                term = f"de {term}"
+            elif 'het' in gender or 'neuter' in gender or 'onzijdig' in gender:
+                term = f"het {term}"
+                
+        elif language == 'spanish':
+            # Preserve database capitalization as requested (don't force .lower())
+            term = expand_abbreviations(term, language)
+            if 'maskulin' in gender or 'masculine' in gender or 'el' in gender:
+                term = f"el {term}"
+            elif 'feminin' in gender or 'feminine' in gender or 'la' in gender:
+                term = f"la {term}"
+                
+        elif language == 'portuguese':
+            term = expand_abbreviations(term.lower(), language)
+            if 'maskulin' in gender or 'masculine' in gender or ' o ' in f" {gender} " or gender == 'o':
+                term = f"o {term}"
+            elif 'feminin' in gender or 'feminine' in gender or ' a ' in f" {gender} " or gender == 'a':
+                term = f"a {term}"
+        
+        elif language == 'swedish':
+            term = expand_abbreviations(term.lower(), language)
+            
+        elif language == 'finnish':
+            term = expand_abbreviations(term.lower(), language)
+
         # Global Rule: Ensure balanced parentheses
         def balance_parens(text: str) -> str:
             if not text: return ""
