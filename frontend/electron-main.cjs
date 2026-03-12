@@ -14,7 +14,7 @@ function createWindow () {
     height: 800,
     title: 'Wordhord',
     icon: path.join(__dirname, '../icon.png'),
-    transparent: true,
+    backgroundColor: '#1e1e2e',
     frame: true, // Keep frame for standard controls, but background will be transparent
     autoHideMenuBar: true, 
     webPreferences: {
