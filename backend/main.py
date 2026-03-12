@@ -268,58 +268,42 @@ async def get_cards(language: str, db: AsyncSession = Depends(get_db), levels: s
             is_noun = (card.part_of_speech and 'noun' in card.part_of_speech.lower()) or \
                       (gender in ['masculine', 'feminine', 'neuter', 'der', 'die', 'das', 'm', 'f', 'n'])
             
-            # Handle parentheses: (das) Haus or Haus (Building)
-            # If it's a noun, ensure we have the article and capitalization
+            # Handle parentheses and articles
             if is_noun:
-                # Remove any existing article to re-add it consistently
-                term = re.sub(r'^(der|die|das)\s+', '', term, flags=re.IGNORECASE).strip()
-                
-                g_map = {'masculine': 'der', 'feminine': 'die', 'neuter': 'das', 'der': 'der', 'die': 'die', 'das': 'das', 'm': 'der', 'f': 'die', 'n': 'das'}
-                art = g_map.get(gender, "")
-                
-                # Expand abbreviations in the term itself (e.g., etw. machen)
-                term = expand_abbreviations(term, language)
-                
-                # Check if it starts with parentheses like "(etwas) Noun"
-                if term.startswith('('):
-                    # Capitalize the first letter of the word inside or after parens if noun
-                    # e.g. (etwas) wasser -> (etwas) Wasser
-                    term = re.sub(r'(\w+)', lambda m: m.group(1).capitalize(), term, count=1)
+                # Handle 'der/die ' prefix specifically
+                if term.lower().startswith('der/die '):
+                    # Capitalize the word following der/die
+                    term = re.sub(r'^(der/die\s+)(\(?\w)', lambda m: m.group(1) + m.group(2).upper(), term, flags=re.IGNORECASE)
                 else:
-                    term = term.capitalize()
-                
-                if art:
-                    term = f"{art} {term}"
+                    # Remove any existing single article to re-add it consistently
+                    term = re.sub(r'^(der|die|das)\s+', '', term, flags=re.IGNORECASE).strip()
+                    
+                    g_map = {'masculine': 'der', 'feminine': 'die', 'neuter': 'das', 'der': 'der', 'die': 'die', 'das': 'das', 'm': 'der', 'f': 'die', 'n': 'das'}
+                    art = g_map.get(gender, "")
+                    
+                    # Expand abbreviations in the term itself
+                    term = expand_abbreviations(term, language)
+                    
+                    # Capitalize first word char (handles (prefix)Noun -> (Prefix)noun)
+                    term = re.sub(r'(\w+)', lambda m: m.group(1).capitalize(), term, count=1)
+                    
+                    if art:
+                        term = f"{art} {term}"
             else:
                 # For non-nouns, lowercase unless it's a proper noun
                 term = expand_abbreviations(term.lower(), language)
 
-        elif language == 'dutch':
-            term = expand_abbreviations(term.lower(), language)
-            if 'de' in gender or 'maskulin' in gender or 'feminin' in gender:
-                term = f"de {term}"
-            elif 'het' in gender or 'neuter' in gender or 'onzijdig' in gender:
-                term = f"het {term}"
-                
-        elif language == 'spanish':
-            term = expand_abbreviations(term.lower(), language)
-            if 'maskulin' in gender or 'masculine' in gender or 'el' in gender:
-                term = f"el {term}"
-            elif 'feminin' in gender or 'feminine' in gender or 'la' in gender:
-                term = f"la {term}"
-                
-        elif language == 'portuguese':
-            term = expand_abbreviations(term.lower(), language)
-            if 'maskulin' in gender or 'masculine' in gender or ' o ' in f" {gender} " or gender == 'o':
-                term = f"o {term}"
-            elif 'feminin' in gender or 'feminine' in gender or ' a ' in f" {gender} " or gender == 'a':
-                term = f"a {term}"
-        
-        elif language == 'swedish':
-            term = expand_abbreviations(term.lower(), language)
-            
-        elif language == 'finnish':
-            term = expand_abbreviations(term.lower(), language)
+        # Global Rule: Ensure balanced parentheses
+        def balance_parens(text: str) -> str:
+            if not text: return ""
+            open_count = text.count('(')
+            close_count = text.count(')')
+            if open_count > close_count:
+                text += ')' * (open_count - close_count)
+            return text
+
+        term = balance_parens(term)
+        translation = balance_parens(translation)
             
         card_dict = {c.name: getattr(card, c.name) for c in inspect(CardModel).columns}
         card_dict['term'] = term

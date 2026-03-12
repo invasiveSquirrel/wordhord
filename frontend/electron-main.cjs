@@ -14,8 +14,9 @@ function createWindow () {
     height: 800,
     title: 'Wordhord',
     icon: path.join(__dirname, '../icon.png'),
-    backgroundColor: '#1e1e2e', // Catppuccin Base
-    autoHideMenuBar: true, // Hides the Alt-menu by default
+    transparent: true,
+    frame: true, // Keep frame for standard controls, but background will be transparent
+    autoHideMenuBar: true, 
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,

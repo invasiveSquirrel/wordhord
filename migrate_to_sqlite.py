@@ -65,10 +65,11 @@ def migrate():
         # Optimization: Fetch all existing terms for this language once to avoid N+1 queries
         existing_cards = {c.term: c for c in session.query(CardModel).filter_by(language=lang).all()}
             
-        # Capture Level/Level num, then skip any bracketed tags or leading non-word chars like stress marks 'ˈ'
+        # Capture Level/Level num (optional), then skip any bracketed tags or leading non-word chars like stress marks 'ˈ'
         # The translation part now captures everything until the LAST closing parenthesis on the line
-        pattern = r'- \*\*(?:\[?([A-C][12])\]?|Level\s+(\d))\s*(?:\[[^\]]+\]\s*)?[^a-zA-Z0-9\[(]*([^*]+)\*\*\s*\((.*)\)'
-        matches = list(re.finditer(pattern, content))
+        # Anchored to start and end of line for robustness
+        pattern = r'^- \*\*(?:(?:\[?([A-C][12])\]?|Level\s+(\d))\s*)?(?:\[[^\]]+\]\s*)?[^a-zA-Z0-9\[(]*([^*]+)\*\*\s*\((.*)\)$'
+        matches = list(re.finditer(pattern, content, re.MULTILINE))
         
         for i, match in enumerate(matches):
             level_code = match.group(1)
@@ -87,8 +88,9 @@ def migrate():
             term = raw_term.strip()
             while True:
                 old_val = term
-                # Remove common prefixes and junk
-                term = re.sub(r'^[^\w\s"\'ˈ]+', '', term).strip() # Remove leading punctuation/brackets but keep stress mark
+                # Remove common prefixes and junk (but PRESERVE leading parens for prefixes)
+                term = re.sub(r'^[\]\-\*\s\'\"]+', '', term).strip()
+                term = re.sub(r'[\]\-\*\s\'\"]+$', '', term).strip()
                 term = re.sub(r'^(Level\s*\w\d?|\[?[A-C][12]\]?)\s*', '', term, flags=re.IGNORECASE).strip()
                 term = re.sub(r'^\[[^\]]+\]\s*', '', term).strip()
                 term = re.sub(r'^(Verb|Adjektiv|Adverb|Nomen|Substantiv|Noun|Adj|Adv)\s+', '', term, flags=re.IGNORECASE).strip()
@@ -104,7 +106,7 @@ def migrate():
                 continue
             
             # Final check: if term starts with junk again after cleaning
-            term = re.sub(r'^[\s\]\-\*]+', '', term).strip()
+            term = re.sub(r'^[\]\-\*\s]+', '', term).strip()
             
             start_pos = match.end()
             if i + 1 < len(matches):
@@ -124,12 +126,17 @@ def migrate():
                 is_noun = (pos and 'noun' in pos.lower()) or (gender and gender.lower() in ['masculine', 'feminine', 'neuter', 'der', 'die', 'das', 'm', 'f', 'n'])
                 
                 if is_noun:
+                    # Remove any existing article to re-add it consistently
+                    term = re.sub(r'^(der|die|das)\s+', '', term, flags=re.IGNORECASE).strip()
+                    
                     g_map = {'masculine': 'der', 'feminine': 'die', 'neuter': 'das', 'der': 'der', 'die': 'die', 'das': 'das', 'm': 'der', 'f': 'die', 'n': 'das'}
                     art = g_map.get(gender.lower() if gender else "", "")
+                    
+                    # Capitalize first word char (handles (prefix)Noun -> (Prefix)noun)
+                    term = re.sub(r'(\w+)', lambda m: m.group(1).capitalize(), term, count=1)
+                    
                     if art:
-                        term = f"{art} {term.capitalize()}"
-                    else:
-                        term = term.capitalize()
+                        term = f"{art} {term}"
                 else:
                     term = term.lower()
             
