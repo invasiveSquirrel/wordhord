@@ -11,7 +11,7 @@
     <!-- The Eth Body (ð) - Stylized with curved ascender -->
     <path d="M -80 0 A 80 80 0 1 0 80 0 A 80 80 0 1 0 -80 0 M 65 -40 C 65 -120 40 -180 -20 -220" fill="none" stroke="#cba6f7" stroke-width="35" stroke-linecap="round" stroke-linejoin="round" />
     
-    <!-- The Yellow Crossbar (Tie) -->
-    <path d="M 5 -160 L 85 -135" fill="none" stroke="#f9e2af" stroke-width="35" stroke-linecap="round" />
+    <!-- The Crossbar (Tie) - Now same color as body (#cba6f7) -->
+    <path d="M 5 -160 L 85 -135" fill="none" stroke="#cba6f7" stroke-width="35" stroke-linecap="round" />
   </g>
 </svg>
