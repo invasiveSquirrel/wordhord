@@ -463,24 +463,26 @@ async def evaluate_pronunciation(audio: UploadFile = File(...), language: str = 
 @app.post("/speak_ipa")
 async def speak_ipa(request: SpeakRequest):
     if not isinstance(request.text, str) or not request.text.strip():
-        return {"status": "ok"}
+        raise HTTPException(status_code=400, detail="Invalid IPA text")
     
-    # Sanitize IPA text: Allow only standard IPA, alphanumeric, and basic punctuation
-    sanitized = re.sub(r'[^\w\s\.\,\[\]\(\)\-\/ˈˌːˑ˘\.◌\u0250-\u02AF\u1D00-\u1D7F\u1D80-\u1DBF]', '', request.text.strip())
-    ipa_text = f"[[{sanitized}]]"
+    # Sanitize IPA text: Remove existing brackets, then wrap in double brackets for espeak-ng
+    clean_ipa = request.text.strip().strip('[]')
+    # Allow standard IPA characters and common punctuation
+    sanitized = re.sub(r'[^\w\s\.\,ˈˌːˑ˘\.◌\u0250-\u02AF\u1D00-\u1D7F\u1D80-\u1DBF]', '', clean_ipa)
+    ipa_input = f"[[{sanitized}]]"
     
-    def play_ipa():
-        try:
-            subprocess.run(
-                ["espeak-ng", "-v", "en-gb", "-s", "150", ipa_text],
-                check=False,
-                timeout=10,
-            )
-        except (subprocess.TimeoutExpired, FileNotFoundError):
-            pass
-    
-    threading.Thread(target=play_ipa, daemon=True).start()
-    return {"status": "ok"}
+    try:
+        # Generate audio using espeak-ng and capture stdout
+        result = subprocess.run(
+            ["espeak-ng", "-v", "en-gb", "-s", "150", "--stdout", ipa_input],
+            capture_output=True,
+            check=True,
+            timeout=5
+        )
+        return Response(content=result.stdout, media_type="audio/wav")
+    except Exception as e:
+        print(f"Speak IPA error: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
 
 @app.post("/migrate")
 async def trigger_migrate():

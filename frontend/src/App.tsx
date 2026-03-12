@@ -186,7 +186,16 @@ export default function App() {
     } catch (e) {}
   };
 
-  const speakIPA = async (ipa: string) => { await axios.post('http://localhost:8001/speak_ipa', { text: ipa, language }); };
+  const speakIPA = async (ipa: string) => { 
+    try {
+      const res = await axios.post('http://localhost:8001/speak_ipa', { text: ipa, language }, { responseType: 'blob' });
+      const url = URL.createObjectURL(res.data);
+      const audio = new Audio(url);
+      audio.play();
+    } catch (e) {
+      console.error("Speak IPA failed", e);
+    }
+  };
 
   const startRecording = async () => {
     const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
