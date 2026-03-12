@@ -6,7 +6,7 @@ from sqlalchemy.orm import declarative_base, sessionmaker
 from datetime import datetime
 
 DB_PATH = "/home/chris/wordhord/wordhord.db"
-POLYGLOSSIA_DIR = "/home/chris/polyglossia"
+VOCABULARY_DIR = "/home/chris/wordhord/vocabulary"
 LANGUAGES = ['dutch', 'finnish', 'german', 'portuguese', 'spanish', 'swedish']
 
 Base = declarative_base()
@@ -53,7 +53,7 @@ def migrate():
     session = Session()
     
     for lang in LANGUAGES:
-        filepath = os.path.join(POLYGLOSSIA_DIR, f"{lang}_vocab.md")
+        filepath = os.path.join(VOCABULARY_DIR, f"{lang}_vocab.md")
         if not os.path.exists(filepath):
             print(f"File not found: {filepath}")
             continue

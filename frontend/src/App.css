@@ -46,7 +46,7 @@ header {
   font-weight: 700;
   margin: 0;
 }
-.eth-symbol { color: var(--yellow); font-weight: 900; margin-left: 0.5rem; margin-right: 1.5rem; font-size: 1.8rem; }
+.eth-symbol { color: var(--yellow); font-weight: 900; margin-left: 0.5rem; margin-right: 1.5rem; font-size: 1.8rem; font-style: normal; display: inline-block; }
 
 .language-selector { display: flex; gap: 0.5rem; }
 .language-selector button { 

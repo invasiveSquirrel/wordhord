@@ -35,7 +35,7 @@ For each vocabulary entry, the following fields are mandatory:
 The `generate_vocabulary_improved.py` script uses a local LLM (Gemma 2 9B via Ollama) to process source texts from `/home/chris/vocabulary_sources/`. 
 
 - **Thermal Throttling**: The script monitors CPU temperature to prevent overheating.
-- **Progress Tracking**: It tracks progress in `/home/chris/polyglossia/*.md` and resumes where it left off.
+- **Progress Tracking**: It tracks progress in `/home/chris/wordhord/vocabulary/*.md` and resumes where it left off.
 - **Source Context**: It extracts relevant ranks or sections from frequency dictionaries and thematic books to provide context to the LLM.
 
 ## Targets

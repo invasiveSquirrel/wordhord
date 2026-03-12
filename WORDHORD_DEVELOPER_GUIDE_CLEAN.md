@@ -37,7 +37,7 @@ This is your **Data Factory**. It runs in the background and talks to the **Gemi
 
 *   **How it works individually**: 
     1. It reads your raw source texts (from `/home/chris/vocabulary_sources`).
-    2. It tracks its progress by counting how many entries exist in your Markdown files (`polyglossia/*.md`).
+    2. It tracks its progress by counting how many entries exist in your Markdown files (`wordhord/vocabulary/*.md`).
     3. It sends a "Linguistic Extraction" prompt to Gemini. 
 *   **The Algorithm**: 
     *   **Context Sliding Window**: It calculates a `start_line` based on your current word count to "slide" through the source books, ensuring it doesn't repeat the same words.

@@ -17,7 +17,7 @@ if hasattr(sys.stdout, 'reconfigure'):
     sys.stdout.reconfigure(line_buffering=True)
 
 # Setup paths
-POLYGLOSSIA_DIR = "/home/chris/polyglossia"
+VOCABULARY_DIR = "/home/chris/wordhord/vocabulary"
 SOURCES_DIR = "/home/chris/vocabulary_sources"
 API_KEY_FILE = "/home/chris/wordhord/wordhord_api.txt"
 DB_PATH = "/home/chris/wordhord/wordhord.db"
@@ -87,7 +87,7 @@ def get_source_context(lang_code, start_rank):
 def generate_batch(lang_code, lang_info):
     name = lang_info["name"]
     target = lang_info["target"]
-    output_file = os.path.join(POLYGLOSSIA_DIR, f"{lang_code}_vocab.md")
+    output_file = os.path.join(VOCABULARY_DIR, f"{lang_code}_vocab.md")
     
     print(f"Checking {name} progress in database...", flush=True)
     current_count = get_db_count(lang_code)
@@ -190,8 +190,8 @@ def main():
         for code in order:
             # Special case: Even if German file is full, our enrichment script is handling it in DB.
             # We skip German here to move to Swedish/others faster.
-            if code == 'german' and os.path.exists(os.path.join(POLYGLOSSIA_DIR, "german_vocab.md")):
-                if os.path.getsize(os.path.join(POLYGLOSSIA_DIR, "german_vocab.md")) > 1000000:
+            if code == 'german' and os.path.exists(os.path.join(VOCABULARY_DIR, "german_vocab.md")):
+                if os.path.getsize(os.path.join(VOCABULARY_DIR, "german_vocab.md")) > 1000000:
                     print("✅ German file is large, skipping to Swedish. (DB enrichment running separately)", flush=True)
                     continue
             generate_batch(code, LANGUAGES[code])
