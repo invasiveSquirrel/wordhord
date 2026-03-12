@@ -309,7 +309,8 @@ async def get_cards(language: str, db: AsyncSession = Depends(get_db), levels: s
                 term = f"la {term}"
                 
         elif language == 'portuguese':
-            term = expand_abbreviations(term.lower(), language)
+            # Preserve database capitalization as requested
+            term = expand_abbreviations(term, language)
             if 'maskulin' in gender or 'masculine' in gender or ' o ' in f" {gender} " or gender == 'o':
                 term = f"o {term}"
             elif 'feminin' in gender or 'feminine' in gender or ' a ' in f" {gender} " or gender == 'a':
