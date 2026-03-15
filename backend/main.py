@@ -500,10 +500,22 @@ async def speak_ipa(request: SpeakRequest):
     sanitized = re.sub(r'[^\w\s\.\,ˈˌːˑ˘\.◌\u0250-\u02AF\u1D00-\u1D7F\u1D80-\u1DBF]', '', clean_ipa)
     ipa_input = f"[[{sanitized}]]"
     
+    # Map app language to espeak-ng voice codes
+    voice_map = {
+        "english": "en-gb",
+        "german": "de",
+        "dutch": "nl",
+        "spanish": "es",
+        "portuguese": "pt",
+        "finnish": "fi",
+        "swedish": "sv"
+    }
+    voice = voice_map.get(request.language.lower(), "en-gb")
+    
     try:
         # Generate audio using espeak-ng and capture stdout
         result = subprocess.run(
-            ["espeak-ng", "-v", "en-gb", "-s", "150", "--stdout", ipa_input],
+            ["espeak-ng", "-v", voice, "-s", "150", "--stdout", ipa_input],
             capture_output=True,
             check=True,
             timeout=5
