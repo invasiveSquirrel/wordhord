@@ -100,6 +100,11 @@ async def startup():
 
 # Configuration
 def load_google_api_key() -> str:
+    # Ensure Google Cloud Credentials are set for TTS
+    creds_path = "/home/chris/panglossia/google-credentials.json"
+    if os.path.exists(creds_path):
+        os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = creds_path
+    
     key = os.getenv("GOOGLE_API_KEY")
     if key:
         return key
@@ -440,9 +445,11 @@ async def get_native_audio(request: SpeakRequest):
                 "finnish": ("fi-FI", "fi-FI-Chirp3-HD-Despina"),
                 "portuguese": ("pt-BR", "pt-BR-Chirp3-HD-Dione"),
                 "spanish": ("es-US", "es-US-Chirp3-HD-Callirrhoe"),
-                "dutch": ("nl-NL", "nl-NL-Chirp3-HD-Despina")
+                "dutch": ("nl-NL", "nl-NL-Chirp3-HD-Despina"),
+                "scottish gaelic": ("en-GB", "en-GB-Standard-A")
             }
             l_code, v_name = gtts_voice_map.get(request.language, ("en-US", "en-US-Journey-F"))
+            print(f"DEBUG: Using voice {v_name} for {request.language}", flush=True)
             voice = texttospeech.VoiceSelectionParams(language_code=l_code, name=v_name)
             
             # Use SSML for Gaelic or if IPA characters detected
@@ -492,8 +499,12 @@ async def get_native_audio(request: SpeakRequest):
                         return Response(content=content, media_type="audio/wav")
             except Exception as e:
                 print(f"Local TTS error: {e}")
-    except Exception as e: raise HTTPException(status_code=500, detail=str(e))
-    raise HTTPException(status_code=501)
+    except Exception as e:
+        print(f"DEBUG: get_native_audio error: {e}", flush=True)
+        raise HTTPException(status_code=500, detail=str(e))
+    
+    print(f"DEBUG: No audio available for {request.language}", flush=True)
+    raise HTTPException(status_code=404, detail="No voice available for this language")
 
 @app.post("/evaluate_pronunciation")
 async def evaluate_pronunciation(audio: UploadFile = File(...), language: str = Form(...), expected_text: str = Form(...)):
@@ -550,7 +561,8 @@ async def speak_ipa(request: SpeakRequest):
         "spanish": "es",
         "portuguese": "pt",
         "finnish": "fi",
-        "swedish": "sv"
+        "swedish": "sv",
+        "scottish gaelic": "gd"
     }
     voice = voice_map.get(request.language.lower(), "en-gb")
     

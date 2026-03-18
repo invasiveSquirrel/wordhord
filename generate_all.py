@@ -58,7 +58,7 @@ if not GOOGLE_API_KEY:
     print("FATAL: No GOOGLE_API_KEY found.", flush=True)
     sys.exit(1)
 
-llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash", google_api_key=GOOGLE_API_KEY, temperature=0.7)
+llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash", google_api_key=GOOGLE_API_KEY, temperature=0.7)
 
 class CardItem(BaseModel):
     model_config = ConfigDict(extra='ignore')

@@ -37,9 +37,9 @@ sleep 5
 
 # 4. Launch Electron (Intel iGPU for UI)
 echo "✨ Launching UI on Intel iGPU..."
-# DRI_PRIME=0 forces the Intel Integrated GPU on Linux
+# prime-run forces the Intel Integrated GPU on Linux
 # We use Intel for UI to leave NVIDIA free for heavy tasks if needed.
-DRI_PRIME=0 npx electron . --no-sandbox > electron.log 2>&1 &
+prime-run npx electron . --no-sandbox > electron.log 2>&1 &
 ELECTRON_PID=$!
 
 echo "-----------------------------------"
