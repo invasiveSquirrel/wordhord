@@ -13,29 +13,31 @@ Wordhord is a powerful tool for building and studying massive collections of voc
 ## 🚀 How to Download and Install
 *You do NOT need to have GitHub installed to use this.*
 
-### 1. Download the Code
+### Step 1: Download the Files
 1. Scroll to the top of this GitHub page.
-2. Click the green button that says **"<> Code"**.
-3. Click **"Download ZIP"** at the bottom of the list.
-4. Once downloaded, "unzip" or "extract" the folder to your Documents or Desktop.
+2. Look for the green button that says **"<> Code"** and click it.
+3. Click **"Download ZIP"** at the bottom of the little menu that appears.
 
-### 2. Install for Windows
-1. Go to [nodejs.org](https://nodejs.org) and click the version that says **"LTS"**. Download and run the installer.
-2. Open the folder you unzipped in Step 1.
-3. In the address bar at the top of your folder window, type `cmd` and press Enter. 
-4. Type `npm install` and press Enter. Wait for it to finish.
-5. To run the app, type `npm start`.
+### Step 2: Extract (Unzip) the Folder
+Once the download is finished, you need to "unzip" the files before they will work:
+- **On Windows:** Right-click the downloaded file (it will look like a folder with a zipper) and select **"Extract All..."**, then click the **"Extract"** button.
+- **On Mac:** Simply double-click the downloaded file. A new, regular folder will appear automatically.
+- **On Linux:** Right-click the file and select **"Extract Here"**.
 
-### 3. Install for Mac
-1. Go to [nodejs.org](https://nodejs.org) and install the **"LTS"** version.
-2. Open the **Terminal** (press Command + Space and type "Terminal").
-3. Type `cd` followed by a space, then drag the unzipped folder into the Terminal window and press Enter.
+### Step 3: Final Installation
+**For Windows:**
+1. Install [Node.js](https://nodejs.org) (click the "LTS" version).
+2. Open your new "extracted" folder.
+3. Click the "address bar" at the top of the window, type `cmd` and press Enter.
+4. In the black window, type `npm install` and press Enter.
+5. When it's done, type `npm start` to run.
+
+**For Mac:**
+1. Install [Node.js](https://nodejs.org).
+2. Open the **Terminal** app.
+3. Type `cd ` (with a space) and then drag your extracted folder into the terminal window. Press Enter.
 4. Type `npm install` and press Enter.
 5. Type `npm start` to run.
-
-### 4. Install for Linux
-1. Open your terminal in the unzipped folder.
-2. Run `./wordhord-launcher.sh`.
 
 ---
 
