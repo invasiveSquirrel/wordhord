@@ -26,8 +26,8 @@ interface Card {
   failed: number;
 }
 
-type Language = 'swedish' | 'german' | 'finnish' | 'portuguese' | 'spanish' | 'dutch';
-const LANGUAGES: Language[] = ['swedish', 'german', 'finnish', 'portuguese', 'spanish', 'dutch'];
+type Language = 'swedish' | 'german' | 'finnish' | 'portuguese' | 'spanish' | 'dutch' | 'scottish gaelic';
+const LANGUAGES: Language[] = ['swedish', 'german', 'finnish', 'portuguese', 'spanish', 'dutch', 'scottish gaelic'];
 
 const LANG_NAMES: Record<Language, string> = {
   swedish: 'Svenska',
@@ -35,7 +35,8 @@ const LANG_NAMES: Record<Language, string> = {
   finnish: 'Suomi',
   portuguese: 'Português',
   spanish: 'Español',
-  dutch: 'Nederlands'
+  dutch: 'Nederlands',
+  'scottish gaelic': 'Gàidhlig'
 };
 
 const AudioVisualizer = ({ audioBlob, color, label }: { audioBlob: Blob | null, color: string, label: string }) => {
@@ -82,14 +83,17 @@ export default function App() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showFront, setShowFront] = useState(true);
   const [, setLoading] = useState(false);
-  const [, setStatus] = useState('');
+  const [status, setStatus] = useState('');
+  const [playbackRate, setPlaybackRate] = useState(1.0);
   const [isRecording, setIsRecording] = useState(false);
   const [pronunciationResult, setPronunciationResult] = useState<{ transcript: string, feedback: string } | null>(null);
   const [userAudioBlob, setUserAudioBlob] = useState<Blob | null>(null);
   const [nativeAudioBlob, setNativeAudioBlob] = useState<Blob | null>(null);
   const [editorOpen, setEditorOpen] = useState(false);
+  const [editingCard, setEditingCard] = useState<Card | null>(null);
   const [settingsOpen, setSettingsOpen] = useState(false);
-  const [selectedLevels, setSelectedLevels] = useState<string[]>(['None', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2']);
+  const [vocabCount, setVocabCount] = useState<number>(0);
+  const [selectedLevels, setSelectedLevels] = useState<string[]>(['None', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2', 'Expression', 'Advice']);
 
   const cardMap = useMemo(() => {
     const map = new Map<string, Card>();
@@ -105,7 +109,19 @@ export default function App() {
     setPronunciationResult(null);
   };
 
-  useEffect(() => { loadCards(); }, [language]);
+  useEffect(() => { 
+    loadCards(); 
+    loadVocabCount();
+  }, [language]);
+
+  const loadVocabCount = async () => {
+    try {
+      const res = await axios.get(`http://localhost:8001/count/${language}`);
+      setVocabCount(res.data.total);
+    } catch (e) {
+      console.error("Failed to load vocab count", e);
+    }
+  };
 
   const loadCards = async () => {
     setLoading(true);
@@ -118,6 +134,7 @@ export default function App() {
       setCurrentIndex(0);
       setShowFront(true);
       resetAudioStates();
+      loadVocabCount();
       setStatus(`Loaded ${fetched.length} cards.`);
     } catch (e) { setStatus('Load failed.'); } finally { setLoading(false); }
   };
@@ -132,14 +149,15 @@ export default function App() {
 
   const saveCard = async (cardData: any) => {
     try {
-      if (editorOpen && currentCard) {
+      if (editingCard) {
         // Edit existing
-        await axios.put(`http://localhost:8001/cards/${currentCard.id}`, cardData);
+        await axios.put(`http://localhost:8001/cards/${editingCard.id}`, cardData);
       } else {
         // Create new
         await axios.post('http://localhost:8001/cards', cardData);
       }
       setEditorOpen(false);
+      setEditingCard(null);
       loadCards();
     } catch (e) {
       alert('Failed to save card');
@@ -186,20 +204,49 @@ export default function App() {
 
   const playNative = async (text?: string) => {
     try {
-      const res = await axios.post('http://localhost:8001/native_audio', { text: text || currentCard?.term, language }, { responseType: 'blob' });
-      const blob = res.data as Blob;
+      // Force IPA source for Gaelic if available
+      const sourceText = (language === 'scottish gaelic' && !text) 
+        ? currentCard?.ipa || currentCard?.term 
+        : text || currentCard?.term;
+
+      const res = await axios.post('http://localhost:8001/native_audio', { 
+        text: sourceText, 
+        language,
+        speed: playbackRate
+      }, { responseType: 'blob' });
+      
+      const blob = new Blob([res.data], { type: 'audio/mpeg' });
       if (!text) setNativeAudioBlob(blob);
       const url = URL.createObjectURL(blob);
-      new Audio(url).play();
-    } catch (e) {}
+      const audio = new Audio(url);
+      audio.play().catch(e => console.error("Playback failed:", e));
+    } catch (e) {
+      console.error("Native audio failed:", e);
+    }
   };
 
   const speakIPA = async (ipa: string) => { 
     try {
-      const res = await axios.post('http://localhost:8001/speak_ipa', { text: ipa, language }, { responseType: 'blob' });
-      const url = URL.createObjectURL(res.data);
+      const res = await axios.post('http://localhost:8001/speak_ipa', { 
+        text: ipa, 
+        language,
+        speed: playbackRate
+      }, { responseType: 'blob' });
+      
+      // Handle cases where response might be an object instead of direct blob
+      let blob: Blob;
+      if (res.data instanceof Blob) {
+        blob = res.data;
+      } else if (res.data && res.data.data) {
+        // Axios sometimes returns object with data property if not handled correctly
+        blob = new Blob([new Uint8Array(res.data.data)], { type: 'audio/wav' });
+      } else {
+        blob = new Blob([res.data], { type: 'audio/wav' });
+      }
+
+      const url = URL.createObjectURL(blob);
       const audio = new Audio(url);
-      audio.play();
+      audio.play().catch(e => console.error("IPA playback failed:", e));
     } catch (e) {
       console.error("Speak IPA failed", e);
     }
@@ -235,14 +282,28 @@ export default function App() {
           <h1>wordhord</h1>
           <span className="eth-symbol">ð</span>
         </div>
-        <div className="language-selector">
-          {LANGUAGES.map(l => <button key={l} className={language === l ? 'active' : ''} onClick={() => setLanguage(l)}>{LANG_NAMES[l]}</button>)}
+        <div className="header-controls">
+          <select 
+            className="speed-dropdown" 
+            value={playbackRate} 
+            onChange={(e) => setPlaybackRate(parseFloat(e.target.value))}
+            title="Reading Speed"
+          >
+            {[1.0, 0.95, 0.9, 0.85, 0.8, 0.75, 0.7].map(rate => (
+              <option key={rate} value={rate}>
+                {rate}x
+              </option>
+            ))}
+          </select>
+          <div className="language-selector">
+            {LANGUAGES.map(l => <button key={l} className={language === l ? 'active' : ''} onClick={() => setLanguage(l)}>{LANG_NAMES[l]}</button>)}
+          </div>
         </div>
       </header>
 
       <div className="controls">
         <button onClick={generateStudyPlan} className="btn primary"><BrainCircuit size={18} /> Daily Review</button>
-        <button onClick={() => { setEditorOpen(true); }} className="btn secondary"><PlusCircle size={18} /> Add Word</button>
+        <button onClick={() => { setEditingCard(null); setEditorOpen(true); }} className="btn primary"><PlusCircle size={18} /> Add Word</button>
         <button onClick={async () => {
           setLoading(true);
           try {
@@ -271,7 +332,7 @@ export default function App() {
               ) : (
                 <div className="card-content">
                   <div className="card-actions-top">
-                    <button onClick={(e) => { e.stopPropagation(); setEditorOpen(true); }} className="btn icon-btn mini-btn"><Edit size={14} /> Edit</button>
+                    <button onClick={(e) => { e.stopPropagation(); setEditingCard(currentCard || null); setEditorOpen(true); }} className="btn icon-btn mini-btn"><Edit size={14} /> Edit</button>
                     <button onClick={(e) => { e.stopPropagation(); deleteCard(); }} className="btn icon-btn mini-btn delete-btn"><Trash2 size={14} /></button>
                   </div>
                   <h2 className="main-translation">{currentCard.translation}</h2>
@@ -336,11 +397,18 @@ export default function App() {
       {settingsOpen && (
         <div className="modal-overlay">
           <div className="modal-content settings-modal">
-            <h3>Settings - {LANG_NAMES[language]}</h3>
+            <div className="settings-header">
+              <h3>Settings - {LANG_NAMES[language]}</h3>
+              <div className="vocab-stats">
+                <span className="stat-label">Total Vocabulary:</span>
+                <span className="stat-value">{vocabCount.toLocaleString()} cards</span>
+              </div>
+            </div>
+            
             <div className="settings-section">
               <h4>Levels</h4>
               <div className="level-grid">
-                {['None', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2'].map(lvl => (
+                {['None', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2', 'Expression', 'Advice'].map(lvl => (
                   <button key={lvl} className={`level-btn ${selectedLevels.includes(lvl) ? 'active' : ''}`} onClick={() => setSelectedLevels(prev => prev.includes(lvl) ? prev.filter(x => x !== lvl) : [...prev, lvl])}>{lvl}</button>
                 ))}
               </div>
@@ -353,9 +421,9 @@ export default function App() {
 
       <CardEditor 
         isOpen={editorOpen} 
-        card={currentCard} 
+        card={editingCard || undefined} 
         language={language}
-        onClose={() => setEditorOpen(false)} 
+        onClose={() => { setEditorOpen(false); setEditingCard(null); }} 
         onSave={saveCard} 
       />
     </div>

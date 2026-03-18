@@ -1,137 +1,35 @@
-# Wordhord ð
+# Wordhord: Your Personal Language Library
 
-Wordhord is an AI-powered vocabulary training desktop application designed for language learners. It uses LLMs to generate contextual flashcards and provides instant audio feedback for pronunciation.
+Wordhord is a powerful tool for building and studying massive vocabulary collections. It works in the background to turn entire books and frequency dictionaries into high-quality flashcards.
 
-## Features
-- **Smart Flashcards**: Context-rich cards with IPA, grammatical gender, and example sentences.
-- **Dynamic Audio & Waveforms**: Slow down native audio (0.5x, 0.75x, 1.0x) with pitch-preserved playback. A moving progress bar tracks across the waveform as you listen.
-- **Quick-Listen Icon**: Click the sound icon directly on the front of a card for instant audio feedback.
-- **AI Generation**: Automatically generate related vocabulary based on your existing deck.
-- **Native Audio**: Instant text-to-speech using Google Cloud TTS or local fallback.
-- **Pronunciation Comparison**: Record your voice and see your waveform side-by-side with a native speaker's.
-- **Improved Card Management**: Reliable Card Editor with real-time synchronization and language-aware state handling.
-- **Spaced Repetition**: Intelligent study plans based on your learning progress (SQLite-backed).
-- **IPA Support**: Click the speaker icon to hear phonetic pronunciations via espeak-ng with adjustable speeds.
+## Key Features
+- **Massive Vocabulary Building:** Automatically generates thousands of cards from your own PDF and EPUB sources.
+- **Level-Based Study:** Filter your cards by CEFR level (A1-C2) or study specific "Expressions" and "Advice" captured from Panglossia.
+- **Smart Pronunciation:** Every word includes high-quality audio with speed controls (1.0x to 0.7x).
+- **Automated Cleansing:** New cards are automatically formatted and cleansed of errors during generation.
 
----
+## Installation Instructions
 
-## 🚀 Setting Up Ollama (AI Engine)
+### 🐧 Linux
+1. Open your terminal in this folder.
+2. Run `./wordhord-launcher.sh` or `./start.sh`.
 
-Wordhord requires [Ollama](https://ollama.com/) to be running locally to generate cards and provide feedback.
+### 🪟 Windows
+1. Install [Node.js](https://nodejs.org).
+2. Click **"Code" > "Download ZIP"** on GitHub and unzip it.
+3. In the folder, hold **Shift + Right-click** and select **"Open PowerShell window here."**
+4. Type `npm install` and press Enter.
+5. Type `npm start` to run.
 
-1.  **Download**: Visit [ollama.com](https://ollama.com/download) and download the installer for your OS (Windows, macOS, or Linux).
-2.  **Install**: Run the installer and ensure the Ollama icon appears in your system tray.
-3.  **Pull the Model**: Open your terminal and run:
-    ```bash
-    ollama run gemma2:9b
-    ```
-4.  **Keep it Running**: Ensure Ollama is running in the background while using Wordhord.
+### 🍎 Mac
+1. Install [Node.js](https://nodejs.org).
+2. Download and unzip the code.
+3. Open **Terminal**, drag the folder into the window, and press Enter.
+4. Type `npm install` and press Enter.
+5. Type `npm start` to run.
 
----
-
-## 💻 Installation
-
-### Prerequisites
-- **Node.js** (v18 or higher)
-- **Python** (v3.10 or higher)
-- **FFmpeg**: Required for audio playback (`ffplay`).
-- **espeak-ng**: Required for IPA speech.
-
-### 1. Clone the repository
-```bash
-git clone https://github.com/invasiveSquirrel/wordhord.git
-cd wordhord
-```
-
-### 2. OS-Specific Setup
-
-#### **Windows**
-1.  **Install FFmpeg & espeak-ng**.
-2.  **Backend**:
-    ```powershell
-    cd backend
-    python -m venv venv
-    .\venv\Scripts\activate
-    pip install fastapi sqlalchemy uvicorn pydantic langchain-ollama google-cloud-texttospeech google-cloud-speech
-    ```
-3.  **Frontend**:
-    ```powershell
-    cd ..\frontend
-    npm install
-    ```
-
-#### **macOS**
-1.  **Install FFmpeg & espeak-ng** (via Homebrew).
-2.  **Backend**:
-    ```bash
-    cd backend
-    python3 -m venv venv
-    source venv/bin/activate
-    pip install fastapi sqlalchemy uvicorn pydantic langchain-ollama google-cloud-texttospeech google-cloud-speech
-    ```
-3.  **Frontend**:
-    ```bash
-    cd ../frontend
-    npm install
-    ```
-
-#### **Linux (CachyOS/Arch/Ubuntu)**
-1.  **Install FFmpeg & espeak-ng**: `sudo pacman -S ffmpeg espeak-ng`.
-2.  **Setup**: Follow the macOS steps above or use the provided `./start.sh`.
-
----
-
-## 🏃 Running the Application
-
-### Windows (Manual)
-You need two terminals open:
-1.  **Backend**: `python main.py` (in venv)
-2.  **Frontend**: `npm run dev`
-3.  **Electron**: `npm run electron`
-
-### Linux / macOS / Git Bash
-```bash
-./start.sh
-```
-
----
-
-## 📖 How to Use Wordhord
-
-1.  **Select a Language**: Click a language button at the top (e.g., Gàidhlig, Swedish).
-2.  **Study**: Flip cards, listen to native audio, and record your own voice to compare waveforms.
-3.  **Build**: Click **"New Cards"** to have the AI expand your deck based on your learning history.
-
----
-
-## 🔄 Integration with Panglossia
-
-Wordhord shares a database with **Panglossia**. Any vocabulary words you "learn" during a chat session in Panglossia will automatically appear in your Wordhord deck for spaced repetition study.
-
----
-
-## 📦 Bulk Generation
-
-If you want to quickly build a large initial vocabulary, you can use the `bulk_generate_cards.py` script.
-
-1.  **Activate Backend venv**:
-    ```bash
-    cd backend
-    source venv/bin/activate
-    ```
-2.  **Run the Script**:
-    ```bash
-    python bulk_generate_cards.py
-    ```
-    This will generate up to 3000 common words for each supported language (Dutch, Finnish, German, Portuguese, Spanish, Swedish) using your local Ollama instance. It includes a cooldown to prevent CPU/GPU overheating during long runs.
-
----
-
-## Technical Details
-- **Backend**: FastAPI with SQLAlchemy (SQLite).
-- **Frontend**: React (TypeScript) + Vite.
-- **Desktop**: Electron.
-- **AI**: Local Ollama (gemma2:9b).
-
-## License
-MIT
+## Background Generation Setup
+To keep the vocabulary growing:
+1. Put your free Gemini API key in a file named `wordhord_api.txt` in this folder.
+2. Ensure your source books (PDF/EPUB) are in the `vocabulary_sources` folder.
+3. The app will handle the rest!

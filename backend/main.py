@@ -183,7 +183,13 @@ async def update_card(card_id: int, card_data: CardCreate, db: AsyncSession = De
         raise HTTPException(status_code=404, detail="Card not found")
     for key, value in card_data.dict().items():
         setattr(card, key, value)
-    await db.commit()
+    try:
+        await db.commit()
+    except Exception as e:
+        await db.rollback()
+        if "UNIQUE constraint failed" in str(e):
+             raise HTTPException(status_code=400, detail="This term already exists for this language.")
+        raise HTTPException(status_code=500, detail=f"Database error: {str(e)}")
     return {"status": "ok"}
 
 @app.delete("/cards/{card_id}")
@@ -296,25 +302,31 @@ async def get_cards(language: str, db: AsyncSession = Depends(get_db), levels: s
         elif language == 'dutch':
             term = expand_abbreviations(term.lower(), language)
             if 'de' in gender or 'maskulin' in gender or 'feminin' in gender:
-                term = f"de {term}"
+                if not term.startswith('de '):
+                    term = f"de {term}"
             elif 'het' in gender or 'neuter' in gender or 'onzijdig' in gender:
-                term = f"het {term}"
+                if not term.startswith('het '):
+                    term = f"het {term}"
                 
         elif language == 'spanish':
             # Preserve database capitalization as requested (don't force .lower())
             term = expand_abbreviations(term, language)
             if 'maskulin' in gender or 'masculine' in gender or 'el' in gender:
-                term = f"el {term}"
+                if not term.lower().startswith('el '):
+                    term = f"el {term}"
             elif 'feminin' in gender or 'feminine' in gender or 'la' in gender:
-                term = f"la {term}"
+                if not term.lower().startswith('la '):
+                    term = f"la {term}"
                 
         elif language == 'portuguese':
             # Preserve database capitalization as requested
             term = expand_abbreviations(term, language)
             if 'maskulin' in gender or 'masculine' in gender or ' o ' in f" {gender} " or gender == 'o':
-                term = f"o {term}"
+                if not term.lower().startswith('o '):
+                    term = f"o {term}"
             elif 'feminin' in gender or 'feminine' in gender or ' a ' in f" {gender} " or gender == 'a':
-                term = f"a {term}"
+                if not term.lower().startswith('a '):
+                    term = f"a {term}"
         
         elif language == 'swedish':
             term = expand_abbreviations(term.lower(), language)
@@ -345,6 +357,13 @@ async def get_cards(language: str, db: AsyncSession = Depends(get_db), levels: s
         "skip": skip,
         "limit": limit
     }
+
+@app.get("/count/{language}")
+async def get_count(language: str, db: AsyncSession = Depends(get_db)):
+    stmt = select(func.count(CardModel.id)).filter(CardModel.language == language)
+    result = await db.execute(stmt)
+    total = result.scalar()
+    return {"total": total}
 
 @app.get("/levels/{language}")
 async def get_levels(language: str, db: AsyncSession = Depends(get_db)):
@@ -402,13 +421,14 @@ async def get_native_audio(request: SpeakRequest):
     text = request.text.strip()
     if not text: raise HTTPException(status_code=400)
     
-    text_hash = hashlib.md5(f"{text}_{request.language}".encode()).hexdigest()
-    cache_path = os.path.join(CACHE_DIR, f"{text_hash}.wav")
+    # Include speed in hash to cache different speeds
+    text_hash = hashlib.md5(f"{text}_{request.language}_{request.speed}".encode()).hexdigest()
+    cache_path = os.path.join(CACHE_DIR, f"{text_hash}.mp3")
 
     if os.path.exists(cache_path):
         async with aiofiles.open(cache_path, "rb") as f:
             content = await f.read()
-            return Response(content=content, media_type="audio/wav")
+            return Response(content=content, media_type="audio/mpeg")
 
     try:
         if texttospeech and os.environ.get("GOOGLE_APPLICATION_CREDENTIALS"):
@@ -424,29 +444,50 @@ async def get_native_audio(request: SpeakRequest):
             }
             l_code, v_name = gtts_voice_map.get(request.language, ("en-US", "en-US-Journey-F"))
             voice = texttospeech.VoiceSelectionParams(language_code=l_code, name=v_name)
-            audio_config = texttospeech.AudioConfig(audio_encoding=texttospeech.AudioEncoding.LINEAR16, speaking_rate=0.95)
-            response = client.synthesize_speech(input=synthesis_input, voice=voice, audio_config=audio_config)
+            
+            # Use SSML for Gaelic or if IPA characters detected
+            is_ipa = bool(re.search(r'[ɑʋɛɪɔʊæøœʉɟʝɲŋʃʒθðɬɮɹɻɥɰʁˈˌ]', text))
+            if request.language == "scottish gaelic" or is_ipa:
+                clean_ipa = text.strip('[]').replace('"', '&quot;')
+                synthesis_input = texttospeech.SynthesisInput(
+                    ssml=f'<speak><phoneme alphabet="ipa" ph="{clean_ipa}">{clean_ipa}</phoneme></speak>'
+                )
+            else:
+                synthesis_input = texttospeech.SynthesisInput(text=text)
+
+            # Fix: Use MP3 encoding to avoid noise issues common with LINEAR16 if headers are mismatched
+            # Support variable speaking_rate
+            audio_config = texttospeech.AudioConfig(
+                audio_encoding=texttospeech.AudioEncoding.MP3, 
+                speaking_rate=request.speed
+            )
+            
+            response = await asyncio.to_thread(client.synthesize_speech, input=synthesis_input, voice=voice, audio_config=audio_config)
             
             # Save to cache
             async with aiofiles.open(cache_path, "wb") as f:
                 await f.write(response.audio_content)
                 
-            return Response(content=response.audio_content, media_type="audio/wav")
+            return Response(content=response.audio_content, media_type="audio/mpeg")
         
+        # Local fallback using Piper
         voice_map = {"swedish": "sv_female.onnx", "finnish": "fi_female.onnx", "spanish": "es_mx_ximena.onnx"}
         if request.language in voice_map:
             v_path = os.path.join(VOICE_DIR, voice_map[request.language])
             try:
+                # Piper generates WAV, we might need to convert or just serve as WAV
+                local_cache_path = os.path.join(CACHE_DIR, f"{text_hash}.wav")
                 env = os.environ.copy()
                 env["LD_LIBRARY_PATH"] = f"{PIPER_LIB}:{env.get('LD_LIBRARY_PATH', '')}"
+                # Piper doesn't directly support speed, we'd need ffmpeg or similar if really needed
                 proc = await asyncio.create_subprocess_exec(
-                    PIPER_BIN, "--model", v_path, "--output_file", cache_path,
+                    PIPER_BIN, "--model", v_path, "--output_file", local_cache_path,
                     stdin=asyncio.subprocess.PIPE, env=env
                 )
                 await proc.communicate(input=text.encode())
                 
-                if os.path.exists(cache_path):
-                    async with aiofiles.open(cache_path, "rb") as f: 
+                if os.path.exists(local_cache_path):
+                    async with aiofiles.open(local_cache_path, "rb") as f: 
                         content = await f.read()
                         return Response(content=content, media_type="audio/wav")
             except Exception as e:
@@ -468,7 +509,8 @@ async def evaluate_pronunciation(audio: UploadFile = File(...), language: str = 
                 sample_rate_hertz=48000,
                 language_code="sv-SE" if language == "swedish" else "de-DE" if language == "german" else "en-US",
             )
-            response = client.recognize(config=config, audio=speech.RecognitionAudio(content=content))
+            # Run the synchronous Google Cloud SDK call in a separate thread
+            response = await asyncio.to_thread(client.recognize, config=config, audio=speech.RecognitionAudio(content=content))
             if response.results:
                 transcript = response.results[0].alternatives[0].transcript
                 similarity_score = fuzz.ratio(expected_text.lower().strip(), transcript.lower().strip())
@@ -512,10 +554,14 @@ async def speak_ipa(request: SpeakRequest):
     }
     voice = voice_map.get(request.language.lower(), "en-gb")
     
+    # Scale base speed (150) by request.speed
+    # standard speed is 1.0, so speed 0.75 would be 150 * 0.75 = 112
+    espeak_speed = str(int(150 * request.speed))
+    
     try:
         # Generate audio using espeak-ng and capture stdout
         result = subprocess.run(
-            ["espeak-ng", "-v", voice, "-s", "150", "--stdout", ipa_input],
+            ["espeak-ng", "-v", voice, "-s", espeak_speed, "--stdout", ipa_input],
             capture_output=True,
             check=True,
             timeout=5
