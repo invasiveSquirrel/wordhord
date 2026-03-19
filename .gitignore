@@ -45,3 +45,8 @@ google-credentials.json
 archive/
 cleanup_database.py
 enrich_german_verbs.py
+
+# Temporary scripts
+recovered.sql
+remove_wrong_lang.py
+restore_dutch.py
