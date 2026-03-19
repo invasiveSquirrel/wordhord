@@ -2,7 +2,8 @@ from fastapi import FastAPI, HTTPException, UploadFile, File, Form, Depends
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.middleware.gzip import GZipMiddleware
 from fastapi.responses import Response
-from pydantic import BaseModel
+from pydantic import BaseModel, model_validator
+from langdetect import detect, LangDetectException
 from sqlalchemy import Column, Integer, String, Float, DateTime, UniqueConstraint, Index, func, select, update, delete
 from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession, async_sessionmaker
 from sqlalchemy.orm import declarative_base
@@ -166,6 +167,21 @@ class CardCreate(BaseModel):
     example: str = ""
     example_translation: str = ""
     level: str = ""
+
+    @model_validator(mode='after')
+    def validate_language(self):
+        target_lang = self.language.lower().strip() if self.language else ""
+        term = self.term.strip() if self.term else ""
+        example = self.example.strip() if self.example else ""
+        
+        if target_lang and target_lang not in ["english", "german"] and term:
+            try:
+                detected_lang = detect(term)
+                if detected_lang in ["en", "de"] and not example:
+                    raise ValueError(f"Suspected incorrect language insertion: Term '{term}' detected as '{detected_lang}', but missing sample sentence for target language '{target_lang}'.")
+            except LangDetectException:
+                pass
+        return self
 
 @app.post("/cards")
 async def create_card(card_data: CardCreate, db: AsyncSession = Depends(get_db)):

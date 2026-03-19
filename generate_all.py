@@ -6,10 +6,12 @@ import sys
 import random
 import re
 import warnings
+import logging
 from langchain_google_genai import ChatGoogleGenerativeAI
 from pydantic import BaseModel, ConfigDict, Field
 from typing import List, Optional
 from datetime import datetime, timezone
+from langdetect import detect, LangDetectException
 
 # Suppress Pydantic warnings
 warnings.filterwarnings("ignore", category=UserWarning, module="pydantic")
@@ -19,18 +21,18 @@ DB_PATH = "/home/chris/wordhord/wordhord.db"
 VOCAB_PATH = "/home/chris/wordhord/missing_vocab.json"
 
 TARGETS = {
-    'finnish': 6000,
-    'swedish': 10000,
-    'german': 20000,
-    'spanish': 20000,
-    'portuguese': 10000,
-    'dutch': 10000,
+    'finnish': 10000,
+    'swedish': 20000,
+    'german': 30000,
+    'spanish': 30000,
+    'portuguese': 20000,
+    'dutch': 30000,
     'scottish gaelic': 5000
 }
 
 # Increased frequency but smaller batches for stability
-BATCHES_PER_LANG = 15
-BATCH_TARGET = 15 
+BATCHES_PER_LANG = 1000 # Increased from 15 to ensure targets are met
+BATCH_TARGET = 20 # Increased from 15 for slightly larger batches
 
 LANGUAGE_RULES = {
     'german': "Nouns MUST be capitalized and include article like 'Der Hund'. Other parts of speech MUST be lowercase.",
@@ -153,6 +155,16 @@ Return ONLY a JSON list of objects with fields: term, translation, ipa, gender, 
         print(f"  [!] LLM error generating {language}: {e}", flush=True)
         return []
 
+def setup_logging():
+    log_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'generation_errors.log')
+    logging.basicConfig(level=logging.ERROR, 
+                        format='%(asctime)s - %(levelname)s - %(message)s',
+                        filename=log_file,
+                        filemode='a')
+    return logging.getLogger(__name__)
+
+error_logger = setup_logging()
+
 async def process_language(language, target_count):
     conn = sqlite3.connect(DB_PATH)
     cursor = conn.cursor()
@@ -167,10 +179,14 @@ async def process_language(language, target_count):
     print(f"\n--- {language.capitalize()} ({current_count}/{target_count}) ---", flush=True)
     
     for batch_num in range(BATCHES_PER_LANG):
+        if current_count >= target_count:
+            print(f"{language.capitalize()} target now met. Moving to next language.", flush=True)
+            break
+
         conn = sqlite3.connect(DB_PATH)
         cursor = conn.cursor()
-        cursor.execute("SELECT term FROM cards WHERE language = ?", (language,))
-        existing_terms = set(row[0].lower() for row in cursor.fetchall())
+        cursor.execute("SELECT lower(term) FROM cards WHERE language = ?", (language,))
+        existing_terms = set(row[0] for row in cursor.fetchall())
         conn.close()
         
         specific_words = None
@@ -182,58 +198,107 @@ async def process_language(language, target_count):
                 lang_missing = [w for w in lang_missing if w.lower() not in existing_terms]
                 if lang_missing:
                     specific_words = random.sample(lang_missing, min(len(lang_missing), BATCH_TARGET))
-            except: pass
+            except Exception as e:
+                error_logger.error(f"Failed to process missing vocab file for {language}: {e}")
+
 
         batch = await generate_batch(language, existing_terms, specific_words)
-        if not batch: continue
+        if not batch:
+            await asyncio.sleep(5) # Avoid rapid-fire failed generations
+            continue
         
         conn = sqlite3.connect(DB_PATH)
         cursor = conn.cursor()
-        added = 0
-        actually_added_words = []
+        added_in_batch = 0
+        
         for item in batch:
-            term = cleanup_term(item['term'], language)
-            if not term or term.lower() in existing_terms: continue
+            # Ensure all values are strings to prevent type errors
             try:
+                term = str(item.get('term', '')).strip()
+                if not term:
+                    continue
+
+                # Normalize term for checking and insertion
+                clean_term = cleanup_term(term, language)
+                lower_term = clean_term.lower()
+
+                if lower_term in existing_terms:
+                    continue
+
+                # Data validation & Language detection
+                if language.lower() not in ['english', 'german']:
+                    try:
+                        detected_lang = detect(clean_term)
+                        if detected_lang in ['en', 'de'] and not str(item.get('example', '')).strip():
+                            print(f"  [!] Rejecting '{clean_term}' (Detected {detected_lang}, missing example)", flush=True)
+                            continue
+                    except LangDetectException:
+                        pass # Ignore detection errors for short/ambiguous terms
+                
+                # Use INSERT OR IGNORE to prevent race conditions with unique constraint
                 cursor.execute("""
-                    INSERT INTO cards (language, term, translation, ipa, gender, part_of_speech, 
+                    INSERT OR IGNORE INTO cards (language, term, translation, ipa, gender, part_of_speech, 
                                      example, example_translation, plural, level, next_review, ease_factor)
                     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-                """, (language, term, item['translation'], item['ipa'], item['gender'], item['part_of_speech'],
-                    item['example'], item['example_translation'], item['plural'], item['level'],
-                    datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M:%S'), 2.5))
-                existing_terms.add(term.lower())
-                actually_added_words.append(item['term']) 
-                added += 1
-            except: continue
+                """, (language, clean_term, str(item.get('translation', '')), str(item.get('ipa', '[]')), 
+                      str(item.get('gender', 'N/A')), str(item.get('part_of_speech', 'unknown')),
+                      str(item.get('example', '')), str(item.get('example_translation', '')), 
+                      str(item.get('plural', '')), str(item.get('level', 'A1')),
+                      datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M:%S'), 2.5))
+                
+                if cursor.rowcount > 0:
+                    added_in_batch += 1
+                    existing_terms.add(lower_term)
+
+            except sqlite3.Error as e:
+                error_logger.error(f"DB insertion error for term '{item.get('term')}' in {language}: {e}")
+            except Exception as e:
+                error_logger.error(f"Unexpected error processing item '{item}' in {language}: {e}")
+        
         conn.commit()
         conn.close()
         
-        if specific_words and actually_added_words:
-            try:
-                with open(VOCAB_PATH, 'r', encoding='utf-8') as f:
-                    all_missing = json.load(f)
-                current_missing = all_missing.get(language, [])
-                new_missing = [w for w in current_missing if w not in actually_added_words]
-                all_missing[language] = new_missing
-                with open(VOCAB_PATH, 'w', encoding='utf-8') as f:
-                    json.dump(all_missing, f, ensure_ascii=False, indent=2)
-            except: pass
-
-        print(f"  [+] Added {added} cards (Batch {batch_num+1}/{BATCHES_PER_LANG}).", flush=True)
-        await asyncio.sleep(1)
+        current_count += added_in_batch
+        print(f"  [+] Added {added_in_batch} cards. Total for {language}: {current_count}/{target_count} (Batch {batch_num+1}/{BATCHES_PER_LANG})", flush=True)
+        await asyncio.sleep(2) # Brief pause to avoid overwhelming API
     return True
 
 async def main():
-    print(f"Starting generation pass at {datetime.now(timezone.utc)}", flush=True)
-    langs = list(TARGETS.keys())
-    random.shuffle(langs)
-    for lang in langs:
+    while True:
+        print(f"\n{'='*20}\nStarting new generation pass at {datetime.now(timezone.utc)}\n{'='*20}", flush=True)
+        
+        all_met = True
+        
+        # Get current counts for all languages first
         try:
-            await process_language(lang, TARGETS[lang])
-        except Exception as e:
-            print(f"Error in pass for {lang}: {e}", flush=True)
-    print("\nGeneration Pass complete.", flush=True)
+            conn = sqlite3.connect(DB_PATH)
+            cursor = conn.cursor()
+            cursor.execute("SELECT language, COUNT(*) FROM cards GROUP BY language")
+            current_counts = {lang: count for lang, count in cursor.fetchall()}
+            conn.close()
+        except sqlite3.Error as e:
+            error_logger.error(f"Failed to get initial counts: {e}")
+            await asyncio.sleep(60)
+            continue
+
+        langs = list(TARGETS.keys())
+        random.shuffle(langs)
+
+        for lang in langs:
+            if current_counts.get(lang, 0) < TARGETS[lang]:
+                all_met = False
+                try:
+                    await process_language(lang, TARGETS[lang])
+                except Exception as e:
+                    error_logger.error(f"Critical error in pass for {lang}: {e}")
+                    print(f"  [!!!] Critical error for {lang}: {e}", flush=True)
+        
+        if all_met:
+            print("\nAll vocabulary targets have been met or exceeded. Generation complete.", flush=True)
+            break
+        
+        print("\nGeneration Pass complete. Will start next pass in 60 seconds...", flush=True)
+        await asyncio.sleep(60)
 
 if __name__ == "__main__":
     asyncio.run(main())
