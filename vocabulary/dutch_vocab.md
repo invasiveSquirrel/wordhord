@@ -70739,3 +70739,5534 @@
   - Part of Speech: verb
   - Conjugations: Pres: duid, Past: duidde, Fut: zal duiden, Part: geduid
   - Example: "Hij duidde de fout aan." (He pointed out the mistake.)
+
+- **[B2/C1] de handeling** (action)
+  - IPA: [ˈɦɑndəlɪŋ]
+  - Part of Speech: noun
+  - Gender: feminine
+  - Plural: handelingen
+  - Example: "Het is een kwestie van alle handelingen in de goede volgorde uitvoeren." (It's a matter of performing all actions in the correct order.)
+
+- **[B2/C1] weleens** (sometimes, ever)
+  - IPA: [ˈʋeːlɛns]
+  - Part of Speech: adverb
+  - Gender: n/a
+  - Plural: n/a
+  - Example: "Heb jij weleens gerookt?" (Have you ever smoked?)
+
+- **[B2/C1] zuur** (acid)
+  - IPA: [ˈzyːr]
+  - Part of Speech: adjective
+  - Gender: n/a
+  - Plural: zure
+  - Example: "Voor zure dressing wordt vaak azijn of citroensap gebruikt." (For sour dressing, vinegar or lemon juice is often used.)
+
+- **[B2/C1] de ambassadeur** (ambassador)
+  - IPA: [ɑmbɑsaˈdøːr]
+  - Part of Speech: noun
+  - Gender: masculine
+  - Plural: ambassadeurs
+  - Example: "Pakistan riep zijn ambassadeur uit Denemarken terug." (Pakistan recalled its ambassador from Denmark.)
+
+- **[B2/C1] neutraal** (neutral)
+  - IPA: [nøːˈtraːl]
+  - Part of Speech: adjective
+  - Gender: n/a
+  - Plural: neutrale
+  - Example: "De wedstrijd wordt op neutraal terrein gespeeld." (The match is played on neutral ground.)
+
+- **[B2/C1] nuchter** (a) empty, sober b) plain)
+  - IPA: [ˈnʏxtər]
+  - Part of Speech: adjective
+  - Gender: n/a
+  - Plural: nuchtere
+  - Example: "Ik dronk een biertje op mijn nuchtere maag." (I drank a beer on an empty stomach.)
+
+- **[B2/C1] vooraan** (in front)
+  - IPA: [voːˈraːn]
+  - Part of Speech: adverb
+  - Gender: n/a
+  - Plural: n/a
+  - Example: "Ik sta liever helemaal vooraan in de rij dan helemaal achteraan." (I prefer to be at the very front of the line than at the very back.)
+
+- **[B2/C1] fataal** (fatal)
+  - IPA: [faːˈtaːl]
+  - Part of Speech: adjective
+  - Gender: n/a
+  - Plural: fatale
+  - Example: "Het ongeval had een fatale afloop." (The accident had a fatal outcome.)
+
+- **[B2/C1] intellectueel** (intellectual)
+  - IPA: [ɪntɛlɛktyˈweːl]
+  - Part of Speech: adjective
+  - Gender: n/a
+  - Plural: intellectuele
+  - Example: "Ons onderwijs is in intellectueel opzicht nogal schraal." (Our education is rather poor in intellectual terms.)
+
+- **[B2/C1] maandelijks** (monthly)
+  - IPA: [ˈmaːndələks]
+  - Part of Speech: adjective
+  - Gender: n/a
+  - Plural: maandelijkse
+  - Example: "Ik wil ook een fulltime baan en een maandelijks loon." (I also want a full-time job and a monthly salary.)
+
+- **[B2/C1] de mode** (fashion)
+  - IPA: [ˈmoːdə]
+  - Part of Speech: noun
+  - Gender: feminine
+  - Plural: moden
+  - Example: "Ze interesseert zich in mode." (She is interested in fashion.)
+
+- **[B2/C1] verkondigen** (to proclaim, to put forward)
+  - IPA: [vərˈkɔndəɣə(n)]
+  - Part of Speech: verb
+  - Pres: verkondig, Past: verkondigde, Fut: zal verkondigen, Part: verkondigd
+  - Example: "Zij verkondigt graag haar mening." (She likes to proclaim her opinion.)
+
+- **[B2/C1] de woonplaats** (residence)
+  - IPA: [ˈʋoːnplats]
+  - Part of Speech: noun
+  - Gender: feminine
+  - Plural: woonplaatsen
+  - Example: "Zijn woonplaats lag ergens in historisch Mesopotamië." (His residence was somewhere in historical Mesopotamia.)
+
+- **[B2/C1] beslist** (decisive, resolute)
+  - IPA: [bəˈslɪst]
+  - Part of Speech: adjective
+  - Gender: n/a
+  - Plural: besliste
+  - Example: "Met een besliste beweging sloot hij de deur." (With a decisive movement, he closed the door.)
+
+- **[B2/C1] bovenaan** (at the top)
+  - IPA: [ˈboːvənaːn]
+  - Part of Speech: adverb
+  - Gender: n/a
+  - Plural: n/a
+  - Example: "Hij stond bovenaan de trap." (He was standing at the top of the stairs.)
+
+- **[B2/C1] de dijk** (dike)
+  - IPA: [ˈdɛɪ̯k]
+  - Part of Speech: noun
+  - Gender: masculine
+  - Plural: dijken
+  - Example: "De dijk beschermt de polder." (The dike protects the polder.)
+
+- **[B2/C1] gieten** (to pour)
+  - IPA: [ˈɣitə(n)]
+  - Part of Speech: verb
+  - Pres: giet, Past: goot, Fut: zal gieten, Part: gegoten
+  - Example: "Hij giet het glas vol water." (He pours the glass full of water.)
+
+- **[B2/C1] het misverstand** (misunderstanding)
+  - IPA: [ˈmɪsvərstɑnt]
+  - Part of Speech: noun
+  - Gender: neuter
+  - Plural: misverstanden
+  - Example: "We moeten zo’n misverstand in de toekomst zien te vermijden." (We must try to avoid such a misunderstanding in the future.)
+
+- **[B2/C1] omkomen** (to die)
+  - IPA: [ˈɔmkɔmə(n)]
+  - Part of Speech: verb
+  - Pres: komt om, Past: kwam om, Fut: zal omkomen, Part: omgekomen
+  - Example: "Bij de aardbeving zijn 352 mensen omgekomen." (352 people died in the earthquake.)
+
+- **[B2/C1] de trouw** (faith(fulness))
+  - IPA: [ˈtrʌu̯]
+  - Part of Speech: noun
+  - Gender: feminine
+  - Plural: trouwen
+  - Example: "Zijn trouw aan zijn baas is onvoorwaardelijk." (His loyalty to his boss is unconditional.)
+
+- **[B2/C1] afvoeren** (to transport)
+  - IPA: [ˈɑfˌfuːrə(n)]
+  - Part of Speech: verb
+  - Pres: voert af, Past: voerde af, Fut: zal afvoeren, Part: afgevoerd
+  - Example: "Het afval wordt met drie wagens afgevoerd." (The waste is transported by three trucks.)
+
+- **[B2/C1] eng** (scary)
+  - IPA: [ˈɛŋ]
+  - Part of Speech: adjective
+  - Gender: n/a
+  - Plural: enge
+  - Example: "Zij vertelde de kinderen een eng verhaal." (She told the children a scary story.)
+
+- **[B2/C1] ontploffen** (to explode)
+  - IPA: [ɔntˈplɔfə(n)]
+  - Part of Speech: verb
+  - Pres: ontploft, Past: ontplofte, Fut: zal ontploffen, Part: ontploft
+  - Example: "De bom ontploft in het weiland." (The bomb explodes in the meadow.)
+
+- **[B2/C1] de rang** (rank)
+  - IPA: [ˈrɑŋ]
+  - Part of Speech: noun
+  - Gender: masculine
+  - Plural: rangen
+  - Example: "Zij heeft in het leger een hoge rang." (She has a high rank in the army.)
+
+- **[B2/C1] de richtlijn** (guideline)
+  - IPA: [ˈrɪxtlɪin]
+  - Part of Speech: noun
+  - Gender: feminine
+  - Plural: richtlijnen
+  - Example: "We kregen goede richtlijnen mee." (We received good guidelines.)
+
+- **[B2/C1] ruilen** (to exchange)
+  - IPA: [ˈrœylə(n)]
+  - Part of Speech: verb
+  - Pres: ruilt, Past: ruilde, Fut: zal ruilen, Part: geruild
+  - Example: "Wil je je boek ruilen voor een film?" (Do you want to exchange your book for a movie?)
+
+- **[B2/C1] straf** (hard)
+  - IPA: [ˈstrɑf]
+  - Part of Speech: adjective
+  - Gender: n/a
+  - Plural: straffe
+  - Example: "De gast deed een paar straffe uitspraken." (The guest made some bold statements.)
+
+- **[B2/C1] de deugd** (virtue)
+  - IPA: [ˈdøːxt]
+  - Part of Speech: noun
+  - Gender: feminine
+  - Plural: deugden
+  - Example: "Eerlijkheid en betrouwbaarheid zijn mooie deugden." (Honesty and reliability are beautiful virtues.)
+
+- **[B2/C1] discussiëren** (to discuss)
+  - IPA: [dɪskyˈsiːrə(n)]
+  - Part of Speech: verb
+  - Pres: discussieert, Past: discussieerde, Fut: zal discussiëren, Part: gediscussieerd
+  - Example: "Ik vind het leuk om te discussiëren." (I enjoy discussing.)
+
+- **[B2/C1] essentieel** (essential)
+  - IPA: [ɛsɛnˈʃeːl]
+  - Part of Speech: adjective
+  - Gender: n/a
+  - Plural: essentiële
+  - Example: "Wat zijn de essentiële kenmerken van dit tijdperk?" (What are the essential characteristics of this era?)
+
+- **[B2/C1] evident** (evident)
+  - IPA: [eːviˈdɛnt]
+  - Part of Speech: adjective
+  - Gender: n/a
+  - Plural: evidente
+  - Example: "Het is evident dat het om meer gaat dan om een biologisch verschil." (It is evident that it is about more than just a biological difference.)
+
+- **[B2/C1] genezen** (to cure)
+  - IPA: [ɣəˈneːzə(n)]
+  - Part of Speech: verb
+  - Pres: geneest, Past: genas, Fut: zal genezen, Part: genezen
+  - Example: "Het wondje in haar borst is nog steeds niet genezen." (The small wound in her chest has still not healed.)
+
+- **[B2/C1] de inrichting** (design)
+  - IPA: [ˈɪnrɪxtɪŋ]
+  - Part of Speech: noun
+  - Gender: feminine
+  - Plural: inrichtingen
+  - Example: "De inrichting van het hele huis is smaakvol en sober." (The design of the entire house is tasteful and simple.)
+
+- **[B2/C1] jaloers** (jealous)
+  - IPA: [ʒaˈluːrs]
+  - Part of Speech: adjective
+  - Gender: n/a
+  - Plural: jaloerse
+  - Example: "Mijn jaloerse zusje liep boos weg." (My jealous little sister walked away angrily.)
+
+- **[B2/C1] het motto** (motto)
+  - IPA: [ˈmɔtoː]
+  - Part of Speech: noun
+  - Gender: neuter
+  - Plural: motto's
+  - Example: "Het motto is dat de aanval de beste verdediging is." (The motto is that the attack is the best defense.)
+
+- **[B2/C1] naïef** (naive)
+  - IPA: [naːˈiːf]
+  - Part of Speech: adjective
+  - Gender: n/a
+  - Plural: naïeve
+  - Example: "Hij deed een naïeve uitspraak." (He made a naive statement.)
+
+- **[B2/C1] de nicht** (niece, cousin)
+  - IPA: [ˈnɪxt]
+  - Part of Speech: noun
+  - Gender: feminine
+  - Plural: nichten
+  - Example: "De meeste mensen hebben ook ooms en tantes, neven en nichten." (Most people also have uncles and aunts, nephews and nieces.)
+
+- **[B2] versnellen** (to accelerate)
+  - IPA: [vərˈsnɛlə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: versnel, Past: versnelde, Fut: zal versnellen, Part: versneld
+  - Example: "Vlak voor de finish versnelde hij nog." (Just before the finish, he accelerated.)
+
+- **[B2] verwoesten** (to destroy)
+  - IPA: [vərˈʋustə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: verwoest, Past: verwoestte, Fut: zal verwoesten, Part: verwoest
+  - Example: "De fabriek werd verwoest door een explosie." (The factory was destroyed by an explosion.)
+
+- **[B2] aantasten** (to affect)
+  - IPA: [ˈantɑstə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: tast aan, Past: tastte aan, Fut: zal aantasten, Part: aangetast
+  - Example: "De vorst tastte de bloesem aan." (The frost affected the blossom.)
+
+- **[B2] bewerken** (to work, to edit)
+  - IPA: [bəˈʋɛrkə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: bewerk, Past: bewerkte, Fut: zal bewerken, Part: bewerkt
+  - Example: "Ze bewerken de muur met een borstel." (They are working the wall with a brush.)
+
+- **[B2] doorvoeren** (to carry out, to implement)
+  - IPA: [ˈdorvurə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: voert door, Past: voerde door, Fut: zal doorvoeren, Part: doorgevoerd
+  - Example: "We gaan een paar veranderingen doorvoeren." (We are going to implement a few changes.)
+
+- **[B2] feliciteren** (to congratulate)
+  - IPA: [fəˈlɪsitərə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: feliciteer, Past: feliciteerde, Fut: zal feliciteren, Part: gefeliciteerd
+  - Example: "Van harte gefeliciteerd met jullie verjaardag." (Congratulations on your birthday.)
+
+- **[B2] fier** (proud)
+  - IPA: [fir]
+  - Part of Speech: adjective
+  - Gender: None
+  - Plural: fiere
+  - Example: "Het is totaal niet iets om fier op te zijn." (It's not something to be proud of at all.)
+
+- **[B2] De handeling** (action)
+  - IPA: [ˈɦɑndəlɪŋ]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: handelingen
+  - Example: "Het is een kwestie van alle handelingen in de goede volgorde uitvoeren." (It is a matter of performing all actions in the correct order.)
+
+- **[B2] weleens** (sometimes, ever)
+  - IPA: [ˈʋeːləns]
+  - Part of Speech: adverb
+  - Example: "Heb jij weleens gerookt?" (Have you ever smoked?)
+
+- **[B2] zuur** (acid, sour)
+  - IPA: [zyr]
+  - Part of Speech: adjective
+  - Gender: None
+  - Plural: zure
+  - Example: "Voor zure dressing wordt vaak azijn of citroensap gebruikt." (Vinegar or lemon juice is often used for sour dressing.)
+
+- **[B2] De ambassadeur** (ambassador)
+  - IPA: [ɑmbɑsaˈdør]
+  - Part of Speech: noun
+  - Gender: masculine (de)
+  - Plural: ambassadeurs
+  - Example: "Pakistan riep zijn ambassadeur uit Denemarken terug." (Pakistan recalled its ambassador from Denmark.)
+
+- **[B2] neutraal** (neutral)
+  - IPA: [nøːˈtraːl]
+  - Part of Speech: adjective
+  - Gender: None
+  - Plural: neutrale
+  - Example: "De wedstrijd wordt op neutraal terrein gespeeld." (The match is being played on neutral ground.)
+
+- **[B2] nuchter** (a) empty, sober b) plain)
+  - IPA: [ˈnʏxtər]
+  - Part of Speech: adjective
+  - Gender: None
+  - Plural: nuchtere
+  - Example: "Ik dronk een biertje op mijn nuchtere maag." (I drank a beer on an empty stomach.) "We gaan morgen proberen een nuchtere analyse te maken." (We're going to try to make a sober analysis tomorrow.)
+
+- **[B2] vooraan** (in front)
+  - IPA: [ˈvoran]
+  - Part of Speech: adverb
+  - Example: "Ik sta liever helemaal vooraan in de rij dan helemaal achteraan." (I'd rather be at the very front of the line than at the very back.)
+
+- **[B2] fataal** (fatal)
+  - IPA: [faːˈtaːl]
+  - Part of Speech: adjective
+  - Gender: None
+  - Plural: fatale
+  - Example: "Het ongeval had een fatale afloop." (The accident had a fatal outcome.)
+
+- **[B2] intellectueel** (intellectual)
+  - IPA: [ɪntɛlɛkˈtywel]
+  - Part of Speech: adjective
+  - Gender: None
+  - Plural: intellectuele
+  - Example: "Ons onderwijs is in intellectueel opzicht nogal schraal." (Our education is rather poor in intellectual terms.)
+
+- **[B2] maandelijks** (monthly)
+  - IPA: [ˈmandələks]
+  - Part of Speech: adjective
+  - Gender: None
+  - Plural: maandelijkse
+  - Example: "Ik wil ook een fulltime baan en een maandelijks loon." (I also want a full-time job and a monthly salary.)
+
+- **[B2] De mode** (fashion)
+  - IPA: [ˈmoːdə]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: modes
+  - Example: "Ze interesseert zich in mode." (She is interested in fashion.)
+
+- **[B2] verkondigen** (to proclaim, to put forward)
+  - IPA: [vərˈkɔndɪɣə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: verkondig, Past: verkondigde, Fut: zal verkondigen, Part: verkondigd
+  - Example: "Zij verkondigt graag haar mening." (She likes to proclaim her opinion.)
+
+- **[B2] De woonplaats** (residence)
+  - IPA: [ˈʋoːnplats]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: woonplaatsen
+  - Example: "Zijn woonplaats lag ergens in historisch Mesopotamië." (His residence was located somewhere in historical Mesopotamia.)
+
+- **[B2] beslist** (decisive, resolute)
+  - IPA: [bəˈslɪst]
+  - Part of Speech: adjective
+  - Gender: None
+  - Plural: besliste
+  - Example: "Met een besliste beweging sloot hij de deur." (With a decisive movement, he closed the door.)
+
+- **[B2] bovenaan** (at the top)
+  - IPA: [ˈboːvənan]
+  - Part of Speech: adverb
+  - Example: "Hij stond bovenaan de trap." (He was standing at the top of the stairs.)
+
+- **[B2] De dijk** (dike)
+  - IPA: [dɛɪ̯k]
+  - Part of Speech: noun
+  - Gender: masculine (de)
+  - Plural: dijken
+  - Example: "De dijk beschermt de polder." (The dike protects the polder.)
+
+- **[B2] gieten** (to pour)
+  - IPA: [ˈɣitə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: giet, Past: goot, Fut: zal gieten, Part: gegoten
+  - Example: "Hij giet het glas vol water." (He pours the glass full of water.)
+
+- **[B2] Het misverstand** (misunderstanding)
+  - IPA: [ˈmɪsfərstɑnt]
+  - Part of Speech: noun
+  - Gender: neuter (het)
+  - Plural: misverstanden
+  - Example: "We moeten zo’n misverstand in de toekomst zien te vermijden." (We must try to avoid such a misunderstanding in the future.)
+
+- **[B2] omkomen** (to die)
+  - IPA: [ˈɔmkɔmə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: komt om, Past: kwam om, Fut: zal omkomen, Part: omgekomen
+  - Example: "Bij de aardbeving zijn 352 mensen omgekomen." (352 people died in the earthquake.)
+
+- **[B2] De trouw** (faith(fulness))
+  - IPA: [trɑu̯]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: trouwen
+  - Example: "Zijn trouw aan zijn baas is onvoorwaardelijk." (His loyalty to his boss is unconditional.)
+
+- **[B2] afvoeren** (to transport)
+  - IPA: [ˈɑfvurə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: voert af, Past: voerde af, Fut: zal afvoeren, Part: afgevoerd
+  - Example: "Het afval wordt met drie wagens afgevoerd." (The waste is transported with three trucks.)
+
+- **[B2] eng** (scary)
+  - IPA: [ɛŋ]
+  - Part of Speech: adjective
+  - Gender: None
+  - Plural: enge
+  - Example: "Zij vertelde de kinderen een eng verhaal." (She told the children a scary story.)
+
+- **[B2] ontploffen** (to explode)
+  - IPA: [ɔntˈplɔfə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: ontploft, Past: ontplofte, Fut: zal ontploffen, Part: ontploft
+  - Example: "De bom ontploft in het weiland." (The bomb explodes in the meadow.)
+
+- **[B2] De rang** (rank)
+  - IPA: [rɑŋ]
+  - Part of Speech: noun
+  - Gender: masculine (de)
+  - Plural: rangen
+  - Example: "Zij heeft in het leger een hoge rang." (She has a high rank in the army.)
+
+- **[B2] De richtlijn** (guideline)
+  - IPA: [ˈrɪxtlɪin]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: richtlijnen
+  - Example: "We kregen goede richtlijnen mee." (We received good guidelines.)
+
+- **[B2] ruilen** (to exchange)
+  - IPA: [ˈrœylə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: ruil, Past: ruilde, Fut: zal ruilen, Part: geruild
+  - Example: "Wil je je boek ruilen voor een film?" (Do you want to exchange your book for a movie?)
+
+- **[B2] straf** (hard)
+  - IPA: [strɑf]
+  - Part of Speech: adjective
+  - Gender: None
+  - Plural: straffe
+  - Example: "De gast deed een paar straffe uitspraken." (The guest made some strong statements.)
+
+- **[B2] De deugd** (virtue)
+  - IPA: [døːxt]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: deugden
+  - Example: "Eerlijkheid en betrouwbaarheid zijn mooie deugden." (Honesty and reliability are beautiful virtues.)
+
+- **[B2] discussiëren** (to discuss)
+  - IPA: [dɪskyˈtirə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: discussieer, Past: discussieerde, Fut: zal discussiëren, Part: gediscussieerd
+  - Example: "Ik vind het leuk om te discussiëren." (I like to discuss.)
+
+- **[B2] essentieel** (essential)
+  - IPA: [ɛsɛnˈʃeːl]
+  - Part of Speech: adjective
+  - Gender: None
+  - Plural: essentiële
+  - Example: "Wat zijn de essentiële kenmerken van dit tijdperk?" (What are the essential characteristics of this era?)
+
+- **[B2] evident** (evident)
+  - IPA: [eviˈdɛnt]
+  - Part of Speech: adjective
+  - Gender: None
+  - Plural: evidente
+  - Example: "Het is evident dat het om meer gaat dan om een biologisch verschil." (It is evident that it is about more than just a biological difference.)
+
+- **[B2] genezen** (to cure)
+  - IPA: [ɣəˈneːzə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: genees, Past: genas, Fut: zal genezen, Part: genezen
+  - Example: "Het wondje in haar borst is nog steeds niet genezen." (The wound in her chest has still not healed.)
+
+- **[B2] De inrichting** (design, decor)
+  - IPA: [ˈɪnrɪxtɪŋ]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: inrichtingen
+  - Example: "De inrichting van het hele huis is smaakvol en sober." (The design of the whole house is tasteful and sober.)
+
+- **[B2] jaloers** (jealous)
+  - IPA: [ʒaˈlurs]
+  - Part of Speech: adjective
+  - Gender: None
+  - Plural: jaloerse
+  - Example: "Mijn jaloerse zusje liep boos weg." (My jealous little sister walked away angrily.)
+
+- **[B2] Het motto** (motto)
+  - IPA: [ˈmɔto]
+  - Part of Speech: noun
+  - Gender: neuter (het)
+  - Plural: motto's
+  - Example: "Het motto is dat de aanval de beste verdediging is." (The motto is that the attack is the best defense.)
+
+- **[B2] naïef** (naive)
+  - IPA: [naːˈif]
+  - Part of Speech: adjective
+  - Gender: None
+  - Plural: naïeve
+  - Example: "Hij deed een naïeve uitspraak." (He made a naive statement.)
+
+- **[B2] De nicht** (niece, cousin)
+  - IPA: [nɪxt]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: nichten
+  - Example: "De meeste mensen hebben ook ooms en tantes, neven en nichten." (Most people also have uncles and aunts, nephews and nieces/cousins.)
+
+- **[B2] plezant** (amusing)
+  - IPA: [pləˈzɑnt]
+  - Part of Speech: adjective
+  - Gender: None
+  - Plural: plezante
+  - Example: "Het was plezant en iedereen voelde zich goed en nuttig en gewaardeerd." (It was amusing, and everyone felt good and useful and appreciated.)
+
+- **[B2] gruwelijk** (horrible)
+  - IPA: [ˈɣryʋələk]
+  - Part of Speech: adjective
+  - Gender: None
+  - Plural: gruwelijke
+  - Example: "Ik kijk niet naar die gruwelijke beelden op de televisie." (I don't watch those horrible images on television.)
+
+- **[B2] De kabel** (cable)
+  - IPA: [ˈkaːbəl]
+  - Part of Speech: noun
+  - Gender: masculine (de)
+  - Plural: kabels
+  - Example: "Het schip werd gesleept met een dikke kabel." (The ship was towed with a thick cable.)
+
+- **[B2] Het schaap** (sheep)
+  - IPA: [sxɑp]
+  - Part of Speech: noun
+  - Gender: neuter (het)
+  - Plural: schapen
+  - Example: "De schapen leveren de wol voor een soort alternatieve bontjassen." (The sheep provide the wool for a kind of alternative fur coat.)
+
+- **[B2] tienduizend** (ten thousand)
+  - IPA: [ˈtienduizənt]
+  - Part of Speech: numeral
+  - Example: "Zij ontvangen een subsidie van tienduizend euro." (They receive a subsidy of ten thousand euros.)
+
+- **[B2] zolang** (as long as)
+  - IPA: [zoˈlɑŋ]
+  - Part of Speech: adverb
+  - Example: Zolang je je best doet, is het goed." (As long as you do your best, it's good.)
+
+- **[B2] versnellen** (to accelerate)
+  - IPA: [vərˈsnɛlə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: versnel, Past: versnelde, Fut: zal versnellen, Part: versneld
+  - Example: "Vlak voor de finish versnelde hij nog." (Just before the finish, he accelerated even more.)
+
+- **[B2] verwoesten** (to destroy)
+  - IPA: [vərˈʋustə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: verwoest, Past: verwoestte, Fut: zal verwoesten, Part: verwoest
+  - Example: "De fabriek werd verwoest door een explosie." (The factory was destroyed by an explosion.)
+
+- **[B2] aantasten** (to affect)
+  - IPA: [ˈaːntɑstə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: tast aan, Past: tastte aan, Fut: zal aantasten, Part: aangetast
+  - Example: "De vorst tastte de bloesem aan." (The frost affected the blossom.)
+
+- **[B2] bewerken** (to work, to edit)
+  - IPA: [bəˈʋɛrkə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: bewerk, Past: bewerkte, Fut: zal bewerken, Part: bewerkt
+  - Example: "Ze bewerken de muur met een borstel." (They are working the wall with a brush.)
+
+- **[B2] doorvoeren** (to carry out, to implement)
+  - IPA: [ˈdoːrvorə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: voer door, Past: voerde door, Fut: zal doorvoeren, Part: doorgevoerd
+  - Example: "We gaan een paar veranderingen doorvoeren." (We are going to carry out a few changes.)
+
+- **[B2] feliciteren** (to congratulate)
+  - IPA: [fəˈlɪsitərə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: feliciteer, Past: feliciteerde, Fut: zal feliciteren, Part: gefeliciteerd
+  - Example: "Van harte gefeliciteerd met jullie verjaardag." (Heartfelt congratulations on your birthday.)
+
+- **[B2] fier** (proud)
+  - IPA: [fiːr]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: fiere
+  - Example: "Het is totaal niet iets om fier op te zijn." (It is totally not something to be proud of.)
+
+- **[B2] De handeling** (action)
+  - IPA: [ˈɦɑndəlɪŋ]
+  - Part of Speech: noun
+  - Gender: de(f)
+  - Plural: handelingen
+  - Example: "Het is een kwestie van alle handelingen in de goede volgorde uitvoeren." (It is a matter of performing all actions in the correct order.)
+
+- **[B2] weleens** (sometimes, ever)
+  - IPA: [ˈʋeːlɛns]
+  - Part of Speech: adverb
+  - Example: "Heb jij weleens gerookt?" (Have you ever smoked?)
+
+- **[B2] zuur** (acid, sour)
+  - IPA: [zyːr]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: zure
+  - Example: "Voor zure dressing wordt vaak azijn of citroensap gebruikt." (Vinegar or lemon juice is often used for sour dressing.)
+
+- **[B2] De ambassadeur** (ambassador)
+  - IPA: [ɑmbɑsaˈdøːr]
+  - Part of Speech: noun
+  - Gender: de(m)
+  - Plural: ambassadeurs
+  - Example: "Pakistan riep zijn ambassadeur uit Denemarken terug." (Pakistan recalled its ambassador from Denmark.)
+
+- **[B2] neutraal** (neutral)
+  - IPA: [nøːˈtraːl]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: neutrale
+  - Example: "De wedstrijd wordt op neutraal terrein gespeeld." (The match is played on neutral ground.)
+
+- **[B2] nuchter** (a) empty, sober b) plain)
+  - IPA: [ˈnʏxtər]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: nuchtere
+  - Example: "Ik dronk een biertje op mijn nuchtere maag." (I drank a beer on an empty stomach.)
+
+- **[B2] vooraan** (in front)
+  - IPA: [voːˈraːn]
+  - Part of Speech: adverb
+  - Example: "Ik sta liever helemaal vooraan in de rij dan helemaal achteraan." (I prefer to stand at the very front of the line than at the very back.)
+
+- **[B2] fataal** (fatal)
+  - IPA: [faːˈtaːl]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: fatale
+  - Example: "Het ongeval had een fatale afloop." (The accident had a fatal outcome.)
+
+- **[B2] intellectueel** (intellectual)
+  - IPA: [ɪntɛlɛkˈtyeːl]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: intellectuele
+  - Example: "Ons onderwijs is in intellectueel opzicht nogal schraal." (Our education is rather poor in intellectual terms.)
+
+- **[B2] maandelijks** (monthly)
+  - IPA: [ˈmaːndələks]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: maandelijkse
+  - Example: "Ik wil ook een fulltime baan en een maandelijks loon." (I also want a full-time job and a monthly salary.)
+
+- **[B2] De mode** (fashion)
+  - IPA: [ˈmoːdə]
+  - Part of Speech: noun
+  - Gender: de
+  - Plural: moden
+  - Example: "Ze interesseert zich in mode." (She is interested in fashion.)
+
+- **[B2] verkondigen** (to proclaim, to put forward)
+  - IPA: [vərˈkɔndɪɣə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: verkondig, Past: verkondigde, Fut: zal verkondigen, Part: verkondigd
+  - Example: "Zij verkondigt graag haar mening." (She likes to proclaim her opinion.)
+
+- **[B2] De woonplaats** (residence)
+  - IPA: [ˈʋoːnplats]
+  - Part of Speech: noun
+  - Gender: de
+  - Plural: woonplaatsen
+  - Example: "Zijn woonplaats lag ergens in historisch Mesopotamië." (His residence was somewhere in historical Mesopotamia.)
+
+- **[B2] beslist** (decisive, resolute)
+  - IPA: [bəˈslɪst]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: besliste
+  - Example: "Met een besliste beweging sloot hij de deur." (With a decisive movement, he closed the door.)
+
+- **[B2] bovenaan** (at the top)
+  - IPA: [ˈboːvənaːn]
+  - Part of Speech: adverb
+  - Example: "Hij stond bovenaan de trap." (He was standing at the top of the stairs.)
+
+- **[B2] De dijk** (dike)
+  - IPA: [dɛɪ̯k]
+  - Part of Speech: noun
+  - Gender: de(m)
+  - Plural: dijken
+  - Example: "De dijk beschermt de polder." (The dike protects the polder.)
+
+- **[B2] gieten** (to pour)
+  - IPA: [ˈɣitə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: giet, Past: goot, Fut: zal gieten, Part: gegoten
+  - Example: "Hij giet het glas vol water." (He pours the glass full of water.)
+
+- **[B2] Het misverstand** (misunderstanding)
+  - IPA: [ˈmɪsvərstɑnt]
+  - Part of Speech: noun
+  - Gender: het
+  - Plural: misverstanden
+  - Example: "We moeten zo’n misverstand in de toekomst zien te vermijden." (We must try to avoid such a misunderstanding in the future.)
+
+- **[B2] omkomen** (to die)
+  - IPA: [ˈɔmkɔmə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: komt om, Past: kwam om, Fut: zal omkomen, Part: omgekomen
+  - Example: "Bij de aardbeving zijn 352 mensen omgekomen." (352 people died in the earthquake.)
+
+- **[B2] De trouw** (faith(fulness))
+  - IPA: [trɑu̯]
+  - Part of Speech: noun
+  - Gender: de
+  - Plural: trouwen
+  - Example: "Zijn trouw aan zijn baas is onvoorwaardelijk." (His loyalty to his boss is unconditional.)
+
+- **[B2] afvoeren** (to transport)
+  - IPA: [ˈɑfvorə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: voert af, Past: voerde af, Fut: zal afvoeren, Part: afgevoerd
+  - Example: "Het afval wordt met drie wagens afgevoerd." (The waste is transported with three trucks.)
+
+- **[B2] eng** (scary)
+  - IPA: [ɛŋ]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: enge
+  - Example: "Zij vertelde de kinderen een eng verhaal." (She told the children a scary story.)
+
+- **[B2] ontploffen** (to explode)
+  - IPA: [ɔntˈplɔfə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: ontploft, Past: ontplofte, Fut: zal ontploffen, Part: ontploft
+  - Example: "De bom ontploft in het weiland." (The bomb explodes in the meadow.)
+
+- **[B2] De rang** (rank)
+  - IPA: [rɑŋ]
+  - Part of Speech: noun
+  - Gender: de(m)
+  - Plural: rangen
+  - Example: "Zij heeft in het leger een hoge rang." (She has a high rank in the army.)
+
+- **[B2] De richtlijn** (guideline)
+  - IPA: [ˈrɪxtlɪin]
+  - Part of Speech: noun
+  - Gender: de
+  - Plural: richtlijnen
+  - Example: "We kregen goede richtlijnen mee." (We received good guidelines.)
+
+- **[B2] ruilen** (to exchange)
+  - IPA: [ˈrœylə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: ruil, Past: ruilde, Fut: zal ruilen, Part: geruild
+  - Example: "Wil je je boek ruilen voor een film?" (Do you want to exchange your book for a movie?)
+
+- **[B2] straf** (hard)
+  - IPA: [strɑf]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: straffe
+  - Example: "De gast deed een paar straffe uitspraken." (The guest made a few harsh statements.)
+
+- **[B2] De deugd** (virtue)
+  - IPA: [døːxt]
+  - Part of Speech: noun
+  - Gender: de
+  - Plural: deugden
+  - Example: "Eerlijkheid en betrouwbaarheid zijn mooie deugden." (Honesty and reliability are beautiful virtues.)
+
+- **[B2] discussiëren** (to discuss)
+  - IPA: [dɪskyˈtirə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: discussieer, Past: discussieerde, Fut: zal discussiëren, Part: gediscussieerd
+  - Example: "Ik vind het leuk om te discussiëren." (I enjoy discussing.)
+
+- **[B2] essentieel** (essential)
+  - IPA: [ɛsɛnˈʃeːl]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: essentiële
+  - Example: "Wat zijn de essentiële kenmerken van dit tijdperk?" (What are the essential characteristics of this era?)
+
+- **[B2] evident** (evident)
+  - IPA: [eːviˈdɛnt]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: evidente
+  - Example: "Het is evident dat het om meer gaat dan om een biologisch verschil." (It is evident that it is about more than just a biological difference.)
+
+- **[B2] genezen** (to cure)
+  - IPA: [ɣəˈneːzə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: genees, Past: genas, Fut: zal genezen, Part: genezen
+  - Example: "Het wondje in haar borst is nog steeds niet genezen." (The little wound on her chest has still not healed.)
+
+- **[B2] De inrichting** (design, decor)
+  - IPA: [ˈɪnrɪxtɪŋ]
+  - Part of Speech: noun
+  - Gender: de(f)
+  - Plural: inrichtingen
+  - Example: "De inrichting van het hele huis is smaakvol en sober." (The design of the entire house is tasteful and simple.)
+
+- **[B2] jaloers** (jealous)
+  - IPA: [ʒaˈluːrs]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: jaloerse
+  - Example: "Mijn jaloerse zusje liep boos weg." (My jealous little sister walked away angrily.)
+
+- **[B2] Het motto** (motto)
+  - IPA: [ˈmɔtoː]
+  - Part of Speech: noun
+  - Gender: het
+  - Plural: motto's
+  - Example: "Het motto is dat de aanval de beste verdediging is." (The motto is that attack is the best defense.)
+
+- **[B2] naïef** (naive)
+  - IPA: [naːˈiːf]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: naïeve
+  - Example: "Hij deed een naïeve uitspraak." (He made a naive statement.)
+
+- **[B2] De nicht** (niece, cousin)
+  - IPA: [nɪxt]
+  - Part of Speech: noun
+  - Gender: de(f)
+  - Plural: nichten
+  - Example: "De meeste mensen hebben ook ooms en tantes, neven en nichten." (Most people also have uncles and aunts, nephews and nieces/cousins.)
+
+- **[B2] plezant** (amusing)
+  - IPA: [pləˈzɑnt]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: plezante
+  - Example: "Het was plezant en iedereen voelde zich goed en nuttig en gewaardeerd." (It was amusing and everyone felt good and useful and appreciated.)
+
+- **[B2] gruwelijk** (horrible)
+  - IPA: [ˈɣryʋələk]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: gruwelijke
+  - Example: "Ik kijk niet naar die gruwelijke beelden op de televisie." (I don't watch those horrible images on television.)
+
+- **[B2] De kabel** (cable)
+  - IPA: [ˈkaːbəl]
+  - Part of Speech: noun
+  - Gender: de(m)
+  - Plural: kabels
+  - Example: "Het schip werd gesleept met een dikke kabel." (The ship was towed with a thick cable.)
+
+- **[B2] Het schaap** (sheep)
+  - IPA: [sxaːp]
+  - Part of Speech: noun
+  - Gender: het
+  - Plural: schapen
+  - Example: "De schapen leveren de wol voor een soort alternatieve bontjassen." (The sheep provide the wool for a kind of alternative fur coat.)
+
+- **[B2] tienduizend** (ten thousand)
+  - IPA: [ˈtienduizənt]
+  - Part of Speech: numeral
+  - Example: "Zij ontvangen een subsidie van tienduizend euro." (They receive a subsidy of ten thousand euros.)
+
+- **[B2] zolang** (as long as)
+  - IPA: [zoˈlɑŋ]
+  - Part of Speech: adverb
+  - Example: "Zolang je je best doet, ben ik tevreden." (As long as you do your best, I am satisfied.)
+
+- **[B2] versnellen** (to accelerate)
+  - IPA: [vərˈsnɛlə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: versnel, Past: versnelde, Fut: zal versnellen, Part: versneld
+  - Example: "Vlak voor de finish versnelde hij nog." (Just before the finish, he accelerated.)
+
+- **[B2] verwoesten** (to destroy)
+  - IPA: [vərˈʋustə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: verwoest, Past: verwoestte, Fut: zal verwoesten, Part: verwoest
+  - Example: "De fabriek werd verwoest door een explosie." (The factory was destroyed by an explosion.)
+
+- **[B2] aantasten** (to affect)
+  - IPA: [ˈaːntɑstə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: tast aan, Past: tastte aan, Fut: zal aantasten, Part: aangetast
+  - Example: "De vorst tastte de bloesem aan." (The frost affected the blossom.)
+
+- **[B2] bewerken** (to work, to edit)
+  - IPA: [bəˈʋɛrkə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: bewerk, Past: bewerkte, Fut: zal bewerken, Part: bewerkt
+  - Example: "Ze bewerken de muur met een borstel." (They are working the wall with a brush.)
+
+- **[B2] doorvoeren** (to carry out)
+  - IPA: [ˈdoːrˌvuːrə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: voert door, Past: voerde door, Fut: zal doorvoeren, Part: doorgevoerd
+  - Example: "We gaan een paar veranderingen doorvoeren." (We are going to carry out a few changes.)
+
+- **[B2] feliciteren** (to congratulate)
+  - IPA: [fəˈlɪsitɪrə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: feliciteer, Past: feliciteerde, Fut: zal feliciteren, Part: gefeliciteerd
+  - Example: "Van harte gefeliciteerd met jullie verjaardag." (Happy birthday to you.)
+
+- **[B2] fier** (proud)
+  - IPA: [fiːr]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: fiere
+  - Example: "Het is totaal niet iets om fier op te zijn." (It's not something to be proud of at all.)
+
+- **[B2] De handeling** (action)
+  - IPA: [ˈɦɑndəlɪŋ]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: handelingen
+  - Example: "Het is een kwestie van alle handelingen in de goede volgorde uitvoeren." (It is a matter of carrying out all actions in the right order.)
+
+- **[B2] weleens** (sometimes, ever)
+  - IPA: [ˈʋeːləns]
+  - Part of Speech: adverb
+  - Example: "Heb jij weleens gerookt?" (Have you ever smoked?)
+
+- **[B2] zuur** (acid, sour)
+  - IPA: [zyːr]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: zure
+  - Example: "Voor zure dressing wordt vaak azijn of citroensap gebruikt." (Vinegar or lemon juice is often used for sour dressing.)
+
+- **[B2] De ambassadeur** (ambassador)
+  - IPA: [ɑmbɑsaˈdøːr]
+  - Part of Speech: noun
+  - Gender: masculine (de)
+  - Plural: ambassadeurs
+  - Example: "Pakistan riep zijn ambassadeur uit Denemarken terug." (Pakistan recalled its ambassador from Denmark.)
+
+- **[B2] neutraal** (neutral)
+  - IPA: [nøyˈtraːl]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: neutrale
+  - Example: "De wedstrijd wordt op neutraal terrein gespeeld." (The match is played on neutral ground.)
+
+- **[B2] nuchter** (empty, sober, plain)
+  - IPA: [ˈnʏxtər]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: nuchtere
+  - Example: "Ik dronk een biertje op mijn nuchtere maag." (I drank a beer on an empty stomach.)
+
+- **[B2] vooraan** (in front)
+  - IPA: [ˈvoːraːn]
+  - Part of Speech: adverb
+  - Example: "Ik sta liever helemaal vooraan in de rij dan helemaal achteraan." (I'd rather be right at the front of the line than right at the back.)
+
+- **[B2] fataal** (fatal)
+  - IPA: [faːˈtaːl]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: fatale
+  - Example: "Het ongeval had een fatale afloop." (The accident had a fatal outcome.)
+
+- **[B2] intellectueel** (intellectual)
+  - IPA: [ɪntɛlɛkˈtʏwel]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: intellectuele
+  - Example: "Ons onderwijs is in intellectueel opzicht nogal schraal." (Our education is rather poor in intellectual terms.)
+
+- **[B2] maandelijks** (monthly)
+  - IPA: [ˈmaːndələks]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: maandelijkse
+  - Example: "Ik wil ook een fulltime baan en een maandelijks loon." (I also want a full-time job and a monthly salary.)
+
+- **[B2] De mode** (fashion)
+  - IPA: [ˈmoːdə]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: moden
+  - Example: "Ze interesseert zich in mode." (She is interested in fashion.)
+
+- **[B2] verkondigen** (to proclaim, to put forward)
+  - IPA: [vərˈkɔndɪɣə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: verkondig, Past: verkondigde, Fut: zal verkondigen, Part: verkondigd
+  - Example: "Zij verkondigt graag haar mening." (She likes to proclaim her opinion.)
+
+- **[B2] De woonplaats** (residence)
+  - IPA: [ˈʋoːnˌplaːts]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: woonplaatsen
+  - Example: "Zijn woonplaats lag ergens in historisch Mesopotamië." (His residence was somewhere in historical Mesopotamia.)
+
+- **[B2] beslist** (decisive, resolute)
+  - IPA: [bəˈslɪst]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: besliste
+  - Example: "Met een besliste beweging sloot hij de deur." (With a decisive movement, he closed the door.)
+
+- **[B2] bovenaan** (at the top)
+  - IPA: [ˈboːvəˌnaːn]
+  - Part of Speech: adverb
+  - Example: "Hij stond bovenaan de trap." (He stood at the top of the stairs.)
+
+- **[B2] De dijk** (dike)
+  - IPA: [dɛɪ̯k]
+  - Part of Speech: noun
+  - Gender: masculine (de)
+  - Plural: dijken
+  - Example: "De dijk beschermt de polder." (The dike protects the polder.)
+
+- **[B2] gieten** (to pour)
+  - IPA: [ˈɣitə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: giet, Past: goot, Fut: zal gieten, Part: gegoten
+  - Example: "Hij giet het glas vol water." (He pours the glass full of water.)
+
+- **[B2] Het misverstand** (misunderstanding)
+  - IPA: [ˈmɪsvərstɑnt]
+  - Part of Speech: noun
+  - Gender: neuter (het)
+  - Plural: misverstanden
+  - Example: "We moeten zo’n misverstand in de toekomst zien te vermijden." (We must try to avoid such a misunderstanding in the future.)
+
+- **[B2] omkomen** (to die)
+  - IPA: [ˈɔmˌkoːmə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: komt om, Past: kwam om, Fut: zal omkomen, Part: omgekomen
+  - Example: "Bij de aardbeving zijn 352 mensen omgekomen." (352 people died in the earthquake.)
+
+- **[B2] De trouw** (faith(fulness))
+  - IPA: [trɑu̯]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: trouwen
+  - Example: "Zijn trouw aan zijn baas is onvoorwaardelijk." (His loyalty to his boss is unconditional.)
+
+- **[B2] afvoeren** (to transport)
+  - IPA: [ˈɑfˌvuːrə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: voert af, Past: voerde af, Fut: zal afvoeren, Part: afgevoerd
+  - Example: "Het afval wordt met drie wagens afgevoerd." (The waste is transported with three trucks.)
+
+- **[B2] eng** (scary)
+  - IPA: [ɛŋ]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: enge
+  - Example: "Zij vertelde de kinderen een eng verhaal." (She told the children a scary story.)
+
+- **[B2] ontploffen** (to explode)
+  - IPA: [ɔntˈplɔfə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: ontploft, Past: ontplofte, Fut: zal ontploffen, Part: ontploft
+  - Example: "De bom ontploft in het weiland." (The bomb explodes in the meadow.)
+
+- **[B2] De rang** (rank)
+  - IPA: [rɑŋ]
+  - Part of Speech: noun
+  - Gender: masculine (de)
+  - Plural: rangen
+  - Example: "Zij heeft in het leger een hoge rang." (She has a high rank in the army.)
+
+- **[B2] De richtlijn** (guideline)
+  - IPA: [ˈrɪxtˌlɪin]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: richtlijnen
+  - Example: "We kregen goede richtlijnen mee." (We were given good guidelines.)
+
+- **[B2] ruilen** (to exchange)
+  - IPA: [ˈrœylə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: ruil, Past: ruilde, Fut: zal ruilen, Part: geruild
+  - Example: "Wil je je boek ruilen voor een film?" (Do you want to exchange your book for a film?)
+
+- **[B2] straf** (hard, severe)
+  - IPA: [strɑf]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: straffe
+  - Example: "De gast deed een paar straffe uitspraken." (The guest made a few strong statements.)
+
+- **[B2] De deugd** (virtue)
+  - IPA: [døːxt]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: deugden
+  - Example: "Eerlijkheid en betrouwbaarheid zijn mooie deugden." (Honesty and reliability are beautiful virtues.)
+
+- **[B2] discussiëren** (to discuss)
+  - IPA: [dɪskʏˈtirə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: discussieer, Past: discussieerde, Fut: zal discussiëren, Part: gediscussieerd
+  - Example: "Ik vind het leuk om te discussiëren." (I like to discuss.)
+
+- **[B2] essentieel** (essential)
+  - IPA: [ɛsɛnˈʃeːl]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: essentiële
+  - Example: "Wat zijn de essentiële kenmerken van dit tijdperk?" (What are the essential characteristics of this era?)
+
+- **[B2] evident** (evident)
+  - IPA: [eːviˈdɛnt]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: evidente
+  - Example: "Het is evident dat het om meer gaat dan om een biologisch verschil." (It is evident that it is about more than just a biological difference.)
+
+- **[B2] genezen** (to cure)
+  - IPA: [ɣəˈneːzə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: genees, Past: genas, Fut: zal genezen, Part: genezen
+  - Example: "Het wondje in haar borst is nog steeds niet genezen." (The little wound in her breast is still not healed.)
+
+- **[B2] De inrichting** (design, furnishing)
+  - IPA: [ˈɪnrɪxtɪŋ]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: inrichtingen
+  - Example: "De inrichting van het hele huis is smaakvol en sober." (The design of the whole house is tasteful and sober.)
+
+- **[B2] jaloers** (jealous)
+  - IPA: [ʒaˈluːrs]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: jaloerse
+  - Example: "Mijn jaloerse zusje liep boos weg." (My jealous little sister walked away angrily.)
+
+- **[B2] Het motto** (motto)
+  - IPA: [ˈmɔtoː]
+  - Part of Speech: noun
+  - Gender: neuter (het)
+  - Plural: motto's
+  - Example: "Het motto is dat de aanval de beste verdediging is." (The motto is that the attack is the best defense.)
+
+- **[B2] naïef** (naive)
+  - IPA: [naːˈiːf]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: naïeve
+  - Example: "Hij deed een naïeve uitspraak." (He made a naive statement.)
+
+- **[B2] De nicht** (niece, cousin)
+  - IPA: [nɪxt]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: nichten
+  - Example: "De meeste mensen hebben ook ooms en tantes, neven en nichten." (Most people also have uncles and aunts, nephews and nieces/cousins.)
+
+- **[B2] plezant** (amusing)
+  - IPA: [pləˈzɑnt]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: plezante
+  - Example: "Het was plezant en iedereen voelde zich goed en nuttig en gewaardeerd." (It was amusing and everyone felt good and useful and appreciated.)
+
+- **[B2] gruwelijk** (horrible)
+  - IPA: [ˈɣryʋələk]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: gruwelijke
+  - Example: "Ik kijk niet naar die gruwelijke beelden op de televisie." (I don't watch those horrible images on television.)
+
+- **[B2] De kabel** (cable)
+  - IPA: [ˈkaːbəl]
+  - Part of Speech: noun
+  - Gender: masculine (de)
+  - Plural: kabels
+  - Example: "Het schip werd gesleept met een dikke kabel." (The ship was towed with a thick cable.)
+
+- **[B2] Het schaap** (sheep)
+  - IPA: [sxaːp]
+  - Part of Speech: noun
+  - Gender: neuter (het)
+  - Plural: schapen
+  - Example: "De schapen leveren de wol voor een soort alternatieve bontjassen." (The sheep provide the wool for a kind of alternative fur coat.)
+
+- **[B2] tienduizend** (ten thousand)
+  - IPA: [ˈtinˌdœyzənt]
+  - Part of Speech: numeral
+  - Example: "Zij ontvangen een subsidie van tienduizend euro." (They receive a subsidy of ten thousand euros.)
+
+- **[B2] zolang** (as long as)
+  - IPA: [zoˈlɑŋ]
+  - Part of Speech: adverb
+  - Example: zolang het duurt (as long as it lasts)
+
+- **[B2] versnellen** (to accelerate)
+  - IPA: [vərˈsnɛlə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: Pres: versnel, Past: versnelde, Fut: zal versnellen, Part: versneld
+  - Example: "Vlak voor de finish versnelde hij nog." (Just before the finish, he accelerated.)
+
+- **[B2] verwoesten** (to destroy)
+  - IPA: [vərˈvustə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: Pres: verwoest, Past: verwoestte, Fut: zal verwoesten, Part: verwoest
+  - Example: "De fabriek werd verwoest door een explosie." (The factory was destroyed by an explosion.)
+
+- **[B2] aantasten** (to affect)
+  - IPA: [ˈaːntɑstə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: Pres: tast aan, Past: tastte aan, Fut: zal aantasten, Part: aangetast
+  - Example: "De vorst tastte de bloesem aan." (The frost affected the blossom.)
+
+- **[B2] bewerken** (to work, to edit)
+  - IPA: [bəˈʋɛrkə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: Pres: bewerk, Past: bewerkte, Fut: zal bewerken, Part: bewerkt
+  - Example: "Ze bewerken de muur met een borstel." (They are working the wall with a brush.)
+
+- **[B2] doorvoeren** (to carry out, to implement)
+  - IPA: [ˈdoːrˌvuːrə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: Pres: voert door, Past: voerde door, Fut: zal doorvoeren, Part: doorgevoerd
+  - Example: "We gaan een paar veranderingen doorvoeren." (We are going to carry out a few changes.)
+
+- **[B2] feliciteren** (to congratulate)
+  - IPA: [fəˈlɪsitɪrə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: Pres: feliciteer, Past: feliciteerde, Fut: zal feliciteren, Part: gefeliciteerd
+  - Example: "Van harte gefeliciteerd met jullie verjaardag." (Congratulations on your birthday.)
+
+- **[B2] fier** (proud)
+  - IPA: [fiːr]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: N/A
+  - Example: "Het is totaal niet iets om fier op te zijn." (It is not at all something to be proud of.)
+
+- **[B2] De handeling** (action)
+  - IPA: [ˈɦɑndəlɪŋ]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: handelingen
+  - Conjugations: N/A
+  - Example: "Het is een kwestie van alle handelingen in de goede volgorde uitvoeren." (It is a matter of performing all actions in the correct order.)
+
+- **[B2] weleens** (sometimes, ever)
+  - IPA: [ʋeːˈlɛns]
+  - Part of Speech: adverb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: N/A
+  - Example: "Heb jij weleens gerookt?" (Have you ever smoked?)
+
+- **[B2] zuur** (acid, sour)
+  - IPA: [zyːr]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: zure
+  - Conjugations: N/A
+  - Example: "Voor zure dressing wordt vaak azijn of citroensap gebruikt." (Vinegar or lemon juice is often used for sour dressing.)
+
+- **[B2] De ambassadeur** (ambassador)
+  - IPA: [ɑmbɑsaˈdøːr]
+  - Part of Speech: noun
+  - Gender: masculine (de)
+  - Plural: ambassadeurs
+  - Conjugations: N/A
+  - Example: "Pakistan riep zijn ambassadeur uit Denemarken terug." (Pakistan recalled its ambassador from Denmark.)
+
+- **[B2] neutraal** (neutral)
+  - IPA: [nøːˈtraːl]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: neutrale
+  - Conjugations: N/A
+  - Example: "De wedstrijd wordt op neutraal terrein gespeeld." (The match is played on neutral ground.)
+
+- **[B2] nuchter** (a) empty, sober b) plain)
+  - IPA: [ˈnʏxtər]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: nuchtere
+  - Conjugations: N/A
+  - Example: "Ik dronk een biertje op mijn nuchtere maag." (I drank a beer on an empty stomach.)
+  - Example: "We gaan morgen proberen een nuchtere analyse te maken." (We will try to make a sober analysis tomorrow.)
+
+- **[B2] vooraan** (in front)
+  - IPA: [ˈvoːrˌaːn]
+  - Part of Speech: adverb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: N/A
+  - Example: "Ik sta liever helemaal vooraan in de rij dan helemaal achteraan." (I'd rather be at the very front of the line than at the very back.)
+
+- **[B2] fataal** (fatal)
+  - IPA: [faːˈtaːl]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: fatale
+  - Conjugations: N/A
+  - Example: "Het ongeval had een fatale afloop." (The accident had a fatal outcome.)
+
+- **[B2] intellectueel** (intellectual)
+  - IPA: [ɪntɛlɛkˈtywel]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: intellectuele
+  - Conjugations: N/A
+  - Example: "Ons onderwijs is in intellectueel opzicht nogal schraal." (Our education is rather poor in intellectual terms.)
+
+- **[B2] maandelijks** (monthly)
+  - IPA: [ˈmaːndələks]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: maandelijkse
+  - Conjugations: N/A
+  - Example: "Ik wil ook een fulltime baan en een maandelijks loon." (I also want a full-time job and a monthly salary.)
+
+- **[B2] De mode** (fashion)
+  - IPA: [ˈmoːdə]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: moden
+  - Conjugations: N/A
+  - Example: "Ze interesseert zich in mode." (She is interested in fashion.)
+
+- **[B2] verkondigen** (to proclaim, to put forward)
+  - IPA: [vərˈkɔndɪɣə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: Pres: verkondig, Past: verkondigde, Fut: zal verkondigen, Part: verkondigd
+  - Example: "Zij verkondigt graag haar mening." (She likes to proclaim her opinion.)
+
+- **[B2] De woonplaats** (residence)
+  - IPA: [ˈʋoːnˌplaːts]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: woonplaatsen
+  - Conjugations: N/A
+  - Example: "Zijn woonplaats lag ergens in historisch Mesopotamië." (His residence was somewhere in historical Mesopotamia.)
+
+- **[B2] beslist** (decisive, resolute)
+  - IPA: [bəˈslɪst]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: besliste
+  - Conjugations: N/A
+  - Example: "Met een besliste beweging sloot hij de deur." (With a decisive movement, he closed the door.)
+
+- **[B2] bovenaan** (at the top)
+  - IPA: [ˈboːvənˌaːn]
+  - Part of Speech: adverb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: N/A
+  - Example: "Hij stond bovenaan de trap." (He stood at the top of the stairs.)
+
+- **[B2] De dijk** (dike)
+  - IPA: [dɛɪ̯k]
+  - Part of Speech: noun
+  - Gender: masculine (de)
+  - Plural: dijken
+  - Conjugations: N/A
+  - Example: "De dijk beschermt de polder." (The dike protects the polder.)
+
+- **[B2] gieten** (to pour)
+  - IPA: [ˈɣitə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: Pres: giet, Past: goot, Fut: zal gieten, Part: gegoten
+  - Example: "Hij giet het glas vol water." (He pours the glass full of water.)
+
+- **[B2] Het misverstand** (misunderstanding)
+  - IPA: [ˈmɪsfərˌstɑnt]
+  - Part of Speech: noun
+  - Gender: neuter (het)
+  - Plural: misverstanden
+  - Conjugations: N/A
+  - Example: "We moeten zo’n misverstand in de toekomst zien te vermijden." (We must try to avoid such a misunderstanding in the future.)
+
+- **[B2] omkomen** (to die)
+  - IPA: [ˈɔmˌkomə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: Pres: komt om, Past: kwam om, Fut: zal omkomen, Part: omgekomen
+  - Example: "Bij de aardbeving zijn 352 mensen omgekomen." (352 people died in the earthquake.)
+
+- **[B2] De trouw** (faith(fulness))
+  - IPA: [trɑu̯]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: trouwen
+  - Conjugations: N/A
+  - Example: "Zijn trouw aan zijn baas is onvoorwaardelijk." (His faith to his boss is unconditional.)
+
+- **[B2] afvoeren** (to transport)
+  - IPA: [ˈɑfˌvuːrə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: Pres: voert af, Past: voerde af, Fut: zal afvoeren, Part: afgevoerd
+  - Example: "Het afval wordt met drie wagens afgevoerd." (The waste is transported with three wagons.)
+
+- **[B2] eng** (scary)
+  - IPA: [ɛŋ]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: enge
+  - Conjugations: N/A
+  - Example: "Zij vertelde de kinderen een eng verhaal." (She told the children a scary story.)
+
+- **[B2] ontploffen** (to explode)
+  - IPA: [ɔntˈplɔfə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: Pres: ontploft, Past: ontplofte, Fut: zal ontploffen, Part: ontploft
+  - Example: "De bom ontploft in het weiland." (The bomb explodes in the meadow.)
+
+- **[B2] De rang** (rank)
+  - IPA: [rɑŋ]
+  - Part of Speech: noun
+  - Gender: masculine (de)
+  - Plural: rangen
+  - Conjugations: N/A
+  - Example: "Zij heeft in het leger een hoge rang." (She has a high rank in the army.)
+
+- **[B2] De richtlijn** (guideline)
+  - IPA: [ˈrɪxtˌlɪin]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: richtlijnen
+  - Conjugations: N/A
+  - Example: "We kregen goede richtlijnen mee." (We received good guidelines.)
+
+- **[B2] ruilen** (to exchange)
+  - IPA: [ˈrœylə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: Pres: ruil, Past: ruilde, Fut: zal ruilen, Part: geruild
+  - Example: "Wil je je boek ruilen voor een film?" (Do you want to exchange your book for a film?)
+
+- **[B2] straf** (hard)
+  - IPA: [strɑf]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: straffe
+  - Conjugations: N/A
+  - Example: "De gast deed een paar straffe uitspraken." (The guest made a few strong statements.)
+
+- **[B2] De deugd** (virtue)
+  - IPA: [døːxt]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: deugden
+  - Conjugations: N/A
+  - Example: "Eerlijkheid en betrouwbaarheid zijn mooie deugden." (Honesty and reliability are beautiful virtues.)
+
+- **[B2] discussiëren** (to discuss)
+  - IPA: [dɪskyˈtirə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: Pres: discussieer, Past: discussieerde, Fut: zal discussiëren, Part: gediscussieerd
+  - Example: "Ik vind het leuk om te discussiëren." (I like to discuss.)
+
+- **[B2] essentieel** (essential)
+  - IPA: [ɛsɛnˈʃeːl]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: essentiële
+  - Conjugations: N/A
+  - Example: "Wat zijn de essentiële kenmerken van dit tijdperk?" (What are the essential characteristics of this era?)
+
+- **[B2] evident** (evident)
+  - IPA: [eːviˈdɛnt]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: evidente
+  - Conjugations: N/A
+  - Example: "Het is evident dat het om meer gaat dan om een biologisch verschil." (It is evident that it is about more than a biological difference.)
+
+- **[B2] genezen** (to cure)
+  - IPA: [ɣəˈneːzə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: Pres: genees, Past: genas, Fut: zal genezen, Part: genezen
+  - Example: "Het wondje in haar borst is nog steeds niet genezen." (The small wound in her chest is still not healed.)
+
+- **[B2] De inrichting** (design, interior)
+  - IPA: [ˈɪnrɪxtɪŋ]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: inrichtingen
+  - Conjugations: N/A
+  - Example: "De inrichting van het hele huis is smaakvol en sober." (The design of the whole house is tasteful and simple.)
+
+- **[B2] jaloers** (jealous)
+  - IPA: [ʒaˈluːrs]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: jaloerse
+  - Conjugations: N/A
+  - Example: "Mijn jaloerse zusje liep boos weg." (My jealous little sister walked away angrily.)
+
+- **[B2] Het motto** (motto)
+  - IPA: [ˈmɔtoː]
+  - Part of Speech: noun
+  - Gender: neuter (het)
+  - Plural: motto's
+  - Conjugations: N/A
+  - Example: "Het motto is dat de aanval de beste verdediging is." (The motto is that the attack is the best defense.)
+
+- **[B2] naïef** (naive)
+  - IPA: [naːˈiːf]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: naïeve
+  - Conjugations: N/A
+  - Example: "Hij deed een naïeve uitspraak." (He made a naive statement.)
+
+- **[B2] De nicht** (niece, cousin)
+  - IPA: [nɪxt]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: nichten
+  - Conjugations: N/A
+  - Example: "De meeste mensen hebben ook ooms en tantes, neven en nichten." (Most people also have uncles and aunts, cousins, nieces and nephews.)
+
+- **[B2] plezant** (amusing)
+  - IPA: [pləˈzɑnt]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: plezante
+  - Conjugations: N/A
+  - Example: "Het was plezant en iedereen voelde zich goed en nuttig en gewaardeerd." (It was amusing and everyone felt good and useful and valued.)
+
+- **[B2] gruwelijk** (horrible)
+  - IPA: [ˈɣryʋələk]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: gruwelijke
+  - Conjugations: N/A
+  - Example: "Ik kijk niet naar die gruwelijke beelden op de televisie." (I don't watch those horrible images on television.)
+
+- **[B2] De kabel** (cable)
+  - IPA: [ˈkaːbəl]
+  - Part of Speech: noun
+  - Gender: masculine (de)
+  - Plural: kabels
+  - Conjugations: N/A
+  - Example: "Het schip werd gesleept met een dikke kabel." (The ship was towed with a thick cable.)
+
+- **[B2] Het schaap** (sheep)
+  - IPA: [sxaːp]
+  - Part of Speech: noun
+  - Gender: neuter (het)
+  - Plural: schapen
+  - Conjugations: N/A
+  - Example: "De schapen leveren de wol voor een soort alternatieve bontjassen." (The sheep provide the wool for a type of alternative fur coat.)
+
+- **[B2] tienduizend** (ten thousand)
+  - IPA: [ˈtinˌdœyzənt]
+  - Part of Speech: numeral
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: N/A
+  - Example: "Zij ontvangen een subsidie van tienduizend euro." (They receive a subsidy of ten thousand euros.)
+
+- **[B2] zolang** (as long as)
+  - IPA: [zoːˈlɑŋ]
+  - Part of Speech: adverb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: N/A
+  - Example: N/A
+
+- **[B2/C1] versnellen** (to accelerate)
+  - IPA: [vərˈsnɛlə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: Pres: versnel, Past: versnelde, Fut: zal versnellen, Part: versneld
+  - Example: "Vlak voor de finish versnelde hij nog." (Just before the finish, he accelerated.)
+
+- **[B2/C1] verwoesten** (to destroy)
+  - IPA: [vərˈʋustə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: Pres: verwoest, Past: verwoestte, Fut: zal verwoesten, Part: verwoest
+  - Example: "De fabriek werd verwoest door een explosie." (The factory was destroyed by an explosion.)
+
+- **[B2/C1] aantasten** (to affect)
+  - IPA: [ˈaːntɑstə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: Pres: tast aan, Past: tastte aan, Fut: zal aantasten, Part: aangetast
+  - Example: "De vorst tastte de bloesem aan." (The frost affected the blossom.)
+
+- **[B2/C1] bewerken** (to work)
+  - IPA: [bəˈʋɛrkə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: Pres: bewerk, Past: bewerkte, Fut: zal bewerken, Part: bewerkt
+  - Example: "Ze bewerken de muur met een borstel." (They are working the wall with a brush.)
+
+- **[B2/C1] doorvoeren** (to carry out)
+  - IPA: [ˈdoːrvuːrə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: Pres: voert door, Past: voerde door, Fut: zal doorvoeren, Part: doorgevoerd
+  - Example: "We gaan een paar veranderingen doorvoeren." (We are going to carry out a few changes.)
+
+- **[B2/C1] feliciteren** (to congratulate)
+  - IPA: [fəˈlɪsitərə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: Pres: feliciteer, Past: feliciteerde, Fut: zal feliciteren, Part: gefeliciteerd
+  - Example: "Van harte gefeliciteerd met jullie verjaardag." (Congratulations on your birthday.)
+
+- **[B2/C1] fier** (proud)
+  - IPA: [fiːr]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: fiere
+  - Conjugations: N/A
+  - Example: "Het is totaal niet iets om fier op te zijn." (It's totally not something to be proud of.)
+
+- **[B2/C1] de handeling** (action)
+  - IPA: [ˈɦɑndəlɪŋ]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: handelingen
+  - Conjugations: N/A
+  - Example: "Het is een kwestie van alle handelingen in de goede volgorde uitvoeren." (It's a matter of carrying out all actions in the right order.)
+
+- **[B2/C1] weleens** (sometimes, ever)
+  - IPA: [ˈʋeːləns]
+  - Part of Speech: adverb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: N/A
+  - Example: "Heb jij weleens gerookt?" (Have you ever smoked?)
+
+- **[B2/C1] zuur** (acid)
+  - IPA: [zyːr]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: zure
+  - Conjugations: N/A
+  - Example: "Voor zure dressing wordt vaak azijn of citroensap gebruikt." (Vinegar or lemon juice is often used for sour dressing.)
+
+- **[B2/C1] de ambassadeur** (ambassador)
+  - IPA: [ɑmbɑsaˈdøːr]
+  - Part of Speech: noun
+  - Gender: masculine (de)
+  - Plural: ambassadeurs
+  - Conjugations: N/A
+  - Example: "Pakistan riep zijn ambassadeur uit Denemarken terug." (Pakistan recalled its ambassador from Denmark.)
+
+- **[B2/C1] neutraal** (neutral)
+  - IPA: [nøːˈtraːl]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: neutrale
+  - Conjugations: N/A
+  - Example: "De wedstrijd wordt op neutraal terrein gespeeld." (The match is played on neutral ground.)
+
+- **[B2/C1] nuchter** (a) empty, sober b) plain)
+  - IPA: [ˈnʏxtər]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: nuchtere
+  - Conjugations: N/A
+  - Example: "Ik dronk een biertje op mijn nuchtere maag." (I drank a beer on an empty stomach.)
+
+- **[B2/C1] vooraan** (in front)
+  - IPA: [ˈvoːraːn]
+  - Part of Speech: adverb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: N/A
+  - Example: "Ik sta liever helemaal vooraan in de rij dan helemaal achteraan." (I prefer to stand at the very front of the line than at the very back.)
+
+- **[B2/C1] fataal** (fatal)
+  - IPA: [faːˈtaːl]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: fatale
+  - Conjugations: N/A
+  - Example: "Het ongeval had een fatale afloop." (The accident had a fatal outcome.)
+
+- **[B2/C1] intellectueel** (intellectual)
+  - IPA: [ɪntɛlɛkˈtyʋel]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: intellectuele
+  - Conjugations: N/A
+  - Example: "Ons onderwijs is in intellectueel opzicht nogal schraal." (Our education is rather poor in intellectual terms.)
+
+- **[B2/C1] maandelijks** (monthly)
+  - IPA: [ˈmaːndələks]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: maandelijkse
+  - Conjugations: N/A
+  - Example: "Ik wil ook een fulltime baan en een maandelijks loon." (I also want a full-time job and a monthly salary.)
+
+- **[B2/C1] de mode** (fashion)
+  - IPA: [ˈmoːdə]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: moden
+  - Conjugations: N/A
+  - Example: "Ze interesseert zich in mode." (She is interested in fashion.)
+
+- **[B2/C1] verkondigen** (to proclaim, to put forward)
+  - IPA: [vərˈkɔndɪɣə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: Pres: verkondig, Past: verkondigde, Fut: zal verkondigen, Part: verkondigd
+  - Example: "Zij verkondigt graag haar mening." (She likes to proclaim her opinion.)
+
+- **[B2/C1] de woonplaats** (residence)
+  - IPA: [ˈʋoːnplats]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: woonplaatsen
+  - Conjugations: N/A
+  - Example: "Zijn woonplaats lag ergens in historisch Mesopotamië." (His residence was somewhere in historical Mesopotamia.)
+
+- **[B2/C1] beslist** (decisive, resolute)
+  - IPA: [bəˈslɪst]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: besliste
+  - Conjugations: N/A
+  - Example: "Met een besliste beweging sloot hij de deur." (With a decisive movement, he closed the door.)
+
+- **[B2/C1] bovenaan** (at the top)
+  - IPA: [ˈboːvənaːn]
+  - Part of Speech: adverb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: N/A
+  - Example: "Hij stond bovenaan de trap." (He stood at the top of the stairs.)
+
+- **[B2/C1] de dijk** (dike)
+  - IPA: [dɛɪk]
+  - Part of Speech: noun
+  - Gender: masculine (de)
+  - Plural: dijken
+  - Conjugations: N/A
+  - Example: "De dijk beschermt de polder." (The dike protects the polder.)
+
+- **[B2/C1] gieten** (to pour)
+  - IPA: [ˈɣitə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: Pres: giet, Past: goot, Fut: zal gieten, Part: gegoten
+  - Example: "Hij giet het glas vol water." (He pours the glass full of water.)
+
+- **[B2/C1] het misverstand** (misunderstanding)
+  - IPA: [ˈmɪsfərstɑnt]
+  - Part of Speech: noun
+  - Gender: neuter (het)
+  - Plural: misverstanden
+  - Conjugations: N/A
+  - Example: "We moeten zo’n misverstand in de toekomst zien te vermijden." (We must try to avoid such a misunderstanding in the future.)
+
+- **[B2/C1] omkomen** (to die)
+  - IPA: [ˈɔmkɔmə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: Pres: komt om, Past: kwam om, Fut: zal omkomen, Part: omgekomen
+  - Example: "Bij de aardbeving zijn 352 mensen omgekomen." (352 people died in the earthquake.)
+
+- **[B2/C1] de trouw** (faith(fulness))
+  - IPA: [trɑu]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: (rare) trouwen
+  - Conjugations: N/A
+  - Example: "Zijn trouw aan zijn baas is onvoorwaardelijk." (His loyalty to his boss is unconditional.)
+
+- **[B2/C1] afvoeren** (to transport)
+  - IPA: [ˈɑfvuːrə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: Pres: voert af, Past: voerde af, Fut: zal afvoeren, Part: afgevoerd
+  - Example: "Het afval wordt met drie wagens afgevoerd." (The waste is transported with three wagons.)
+
+- **[B2/C1] eng** (scary)
+  - IPA: [ɛŋ]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: enge
+  - Conjugations: N/A
+  - Example: "Zij vertelde de kinderen een eng verhaal." (She told the children a scary story.)
+
+- **[B2/C1] ontploffen** (to explode)
+  - IPA: [ɔntˈplɔfə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: Pres: ontploft, Past: ontplofte, Fut: zal ontploffen, Part: ontploft
+  - Example: "De bom ontploft in het weiland." (The bomb explodes in the meadow.)
+
+- **[B2/C1] de rang** (rank)
+  - IPA: [rɑŋ]
+  - Part of Speech: noun
+  - Gender: masculine (de)
+  - Plural: rangen
+  - Conjugations: N/A
+  - Example: "Zij heeft in het leger een hoge rang." (She has a high rank in the army.)
+
+- **[B2/C1] de richtlijn** (guideline)
+  - IPA: [ˈrɪxtlɪɪn]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: richtlijnen
+  - Conjugations: N/A
+  - Example: "We kregen goede richtlijnen mee." (We received good guidelines.)
+
+- **[B2/C1] ruilen** (to exchange)
+  - IPA: [ˈrœylə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: Pres: ruil, Past: ruilde, Fut: zal ruilen, Part: geruild
+  - Example: "Wil je je boek ruilen voor een film?" (Do you want to exchange your book for a film?)
+
+- **[B2/C1] straf** (hard)
+  - IPA: [strɑf]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: straffe
+  - Conjugations: N/A
+  - Example: "De gast deed een paar straffe uitspraken." (The guest made a few bold statements.)
+
+- **[B2/C1] de deugd** (virtue)
+  - IPA: [døːxt]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: deugden
+  - Conjugations: N/A
+  - Example: "Eerlijkheid en betrouwbaarheid zijn mooie deugden." (Honesty and reliability are beautiful virtues.)
+
+- **[B2/C1] discussiëren** (to discuss)
+  - IPA: [dɪskyˈtirə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: Pres: discussieer, Past: discussieerde, Fut: zal discussiëren, Part: gediscussieerd
+  - Example: "Ik vind het leuk om te discussiëren." (I like to discuss.)
+
+- **[B2/C1] essentieel** (essential)
+  - IPA: [ɛsɛnˈʃeːl]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: essentiële
+  - Conjugations: N/A
+  - Example: "Wat zijn de essentiële kenmerken van dit tijdperk?" (What are the essential characteristics of this era?)
+
+- **[B2/C1] evident** (evident)
+  - IPA: [eviˈdɛnt]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: evidente
+  - Conjugations: N/A
+  - Example: "Het is evident dat het om meer gaat dan om een biologisch verschil." (It is evident that it's about more than just a biological difference.)
+
+- **[B2/C1] genezen** (to cure)
+  - IPA: [ɣəˈneːzə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: Pres: geneest, Past: genas, Fut: zal genezen, Part: genezen
+  - Example: "Het wondje in haar borst is nog steeds niet genezen." (The wound in her chest is still not healed.)
+
+- **[B2/C1] de inrichting** (design)
+  - IPA: [ˈɪnrɪxtɪŋ]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: inrichtingen
+  - Conjugations: N/A
+  - Example: "De inrichting van het hele huis is smaakvol en sober." (The design of the whole house is tasteful and sober.)
+
+- **[B2/C1] jaloers** (jealous)
+  - IPA: [ʒaˈluːrs]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: jaloerse
+  - Conjugations: N/A
+  - Example: "Mijn jaloerse zusje liep boos weg." (My jealous little sister walked away angrily.)
+
+- **[B2/C1] het motto** (motto)
+  - IPA: [ˈmɔtoː]
+  - Part of Speech: noun
+  - Gender: neuter (het)
+  - Plural: motto's
+  - Conjugations: N/A
+  - Example: "Het motto is dat de aanval de beste verdediging is." (The motto is that the attack is the best defense.)
+
+- **[B2/C1] naïef** (naive)
+  - IPA: [naːˈiːf]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: naïeve
+  - Conjugations: N/A
+  - Example: "Hij deed een naïeve uitspraak." (He made a naive statement.)
+
+- **[B2/C1] de nicht** (niece, cousin)
+  - IPA: [nɪxt]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: nichten
+  - Conjugations: N/A
+  - Example: "De meeste mensen hebben ook ooms en tantes, neven en nichten." (Most people also have uncles and aunts, nephews and nieces/cousins.)
+
+- **[B2/C1] plezant** (amusing)
+  - IPA: [pləˈzɑnt]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: plezante
+  - Conjugations: N/A
+  - Example: "Het was plezant en iedereen voelde zich goed en nuttig en gewaardeerd." (It was amusing, and everyone felt good, useful, and valued.)
+
+- **[B2/C1] gruwelijk** (horrible)
+  - IPA: [ˈɣryʋələk]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: gruwelijke
+  - Conjugations: N/A
+  - Example: "Ik kijk niet naar die gruwelijke beelden op de televisie." (I don't watch those horrible images on television.)
+
+- **[B2/C1] de kabel** (cable)
+  - IPA: [ˈkaːbəl]
+  - Part of Speech: noun
+  - Gender: masculine (de)
+  - Plural: kabels
+  - Conjugations: N/A
+  - Example: "Het schip werd gesleept met een dikke kabel." (The ship was towed with a thick cable.)
+
+- **[B2/C1] het schaap** (sheep)
+  - IPA: [sxaːp]
+  - Part of Speech: noun
+  - Gender: neuter (het)
+  - Plural: schapen
+  - Conjugations: N/A
+  - Example: "De schapen leveren de wol voor een soort alternatieve bontjassen." (The sheep provide the wool for a kind of alternative fur coat.)
+
+- **[B2/C1] tienduizend** (ten thousand)
+  - IPA: [ˈtienduizənt]
+  - Part of Speech: numeral
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: N/A
+  - Example: "Zij ontvangen een subsidie van tienduizend euro." (They receive a subsidy of ten thousand euros.)
+
+- **[B2/C1] zolang** (as long as)
+  - IPA: [zoˈlɑŋ]
+  - Part of Speech: adverb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: N/A
+  - Example: N/A
+
+- **[B2/C1] versnellen** (to accelerate)
+  - IPA: [vərˈsnɛlə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Tone: N/A
+  - Conjugations: Pres: versnel, Past: versnelde, Fut: zal versnellen, Part: versneld
+  - Example: "Vlak voor de finish versnelde hij nog." (Just before the finish, he accelerated.)
+
+- **[B2/C1] verwoesten** (to destroy)
+  - IPA: [vərˈwustə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Tone: N/A
+  - Conjugations: Pres: verwoest, Past: verwoestte, Fut: zal verwoesten, Part: verwoest
+  - Example: "De fabriek werd verwoest door een explosie." (The factory was destroyed by an explosion.)
+
+- **[B2/C1] aantasten** (to affect)
+  - IPA: [ˈaːntɑstə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Tone: N/A
+  - Conjugations: Pres: tast aan, Past: tastte aan, Fut: zal aantasten, Part: aangetast
+  - Example: "De vorst tastte de bloesem aan." (The frost affected the blossom.)
+
+- **[B2/C1] bewerken** (to work, to edit)
+  - IPA: [bəˈʋɛrkə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Tone: N/A
+  - Conjugations: Pres: bewerk, Past: bewerkte, Fut: zal bewerken, Part: bewerkt
+  - Example: "Ze bewerken de muur met een borstel." (They are working the wall with a brush.)
+
+- **[B2/C1] doorvoeren** (to carry out)
+  - IPA: [ˈdoːrˌvuːrə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Tone: N/A
+  - Conjugations: Pres: voert door, Past: voerde door, Fut: zal doorvoeren, Part: doorgevoerd
+  - Example: "We gaan een paar veranderingen doorvoeren." (We are going to carry out some changes.)
+
+- **[B2/C1] feliciteren** (to congratulate)
+  - IPA: [fəˈlɪsitərə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Tone: N/A
+  - Conjugations: Pres: feliciteer, Past: feliciteerde, Fut: zal feliciteren, Part: gefeliciteerd
+  - Example: "Van harte gefeliciteerd met jullie verjaardag." (Congratulations on your birthday.)
+
+- **[B2/C1] fier** (proud)
+  - IPA: [fiːr]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: fiere
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "Het is totaal niet iets om fier op te zijn." (It's not at all something to be proud of.)
+
+- **[B2/C1] De handeling** (action)
+  - IPA: [ˈɦɑndəlɪŋ]
+  - Part of Speech: noun
+  - Gender: feminine (de(f))
+  - Plural: handelingen
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "Het is een kwestie van alle handelingen in de goede volgorde uitvoeren." (It is a matter of performing all actions in the correct order.)
+
+- **[B2/C1] weleens** (sometimes, ever)
+  - IPA: [ˈʋeːləns]
+  - Part of Speech: adverb
+  - Gender: N/A
+  - Plural: N/A
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "Heb jij weleens gerookt?" (Have you ever smoked?)
+
+- **[B2/C1] zuur** (acid, sour)
+  - IPA: [zyːr]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: zure
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "Voor zure dressing wordt vaak azijn of citroensap gebruikt." (Vinegar or lemon juice is often used for sour dressing.)
+
+- **[B2/C1] De ambassadeur** (ambassador)
+  - IPA: [ɑmbɑsaˈdøːr]
+  - Part of Speech: noun
+  - Gender: masculine (de(m))
+  - Plural: ambassadeurs
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "Pakistan riep zijn ambassadeur uit Denemarken terug." (Pakistan recalled its ambassador from Denmark.)
+
+- **[B2/C1] neutraal** (neutral)
+  - IPA: [nøːˈtraːl]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: neutrale
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "De wedstrijd wordt op neutraal terrein gespeeld." (The match is played on neutral ground.)
+
+- **[B2/C1] nuchter** (a) empty, sober b) plain)
+  - IPA: [ˈnʏxtər]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: nuchtere
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "Ik dronk een biertje op mijn nuchtere maag." (I drank a beer on an empty stomach.)
+
+- **[B2/C1] vooraan** (in front)
+  - IPA: [ˈvoːrˌaːn]
+  - Part of Speech: adverb
+  - Gender: N/A
+  - Plural: N/A
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "Ik sta liever helemaal vooraan in de rij dan helemaal achteraan." (I prefer to be at the front of the line than at the back.)
+
+- **[B2/C1] fataal** (fatal)
+  - IPA: [faːˈtaːl]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: fatale
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "Het ongeval had een fatale afloop." (The accident had a fatal outcome.)
+
+- **[B2/C1] intellectueel** (intellectual)
+  - IPA: [ɪntɛlɛktyˈeːl]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: intellectuele
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "Ons onderwijs is in intellectueel opzicht nogal schraal." (Our education is rather poor in intellectual terms.)
+
+- **[B2/C1] maandelijks** (monthly)
+  - IPA: [ˈmaːndələks]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: N/A
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "Ik wil ook een fulltime baan en een maandelijks loon." (I also want a full-time job and a monthly salary.)
+
+- **[B2/C1] De mode** (fashion)
+  - IPA: [ˈmoːdə]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: moden
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "Ze interesseert zich in mode." (She is interested in fashion.)
+
+- **[B2/C1] verkondigen** (to proclaim, to put forward)
+  - IPA: [vərˈkɔndɪɣə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Tone: N/A
+  - Conjugations: Pres: verkondig, Past: verkondigde, Fut: zal verkondigen, Part: verkondigd
+  - Example: "Zij verkondigt graag haar mening." (She likes to proclaim her opinion.)
+
+- **[B2/C1] De woonplaats** (residence)
+  - IPA: [ˈʋoːnˌplaːts]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: woonplaatsen
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "Zijn woonplaats lag ergens in historisch Mesopotamië." (His residence was somewhere in historical Mesopotamia.)
+
+- **[B2/C1] beslist** (decisive, resolute)
+  - IPA: [bəˈslɪst]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: besliste
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "Met een besliste beweging sloot hij de deur." (With a decisive movement, he closed the door.)
+
+- **[B2/C1] bovenaan** (at the top)
+  - IPA: [ˈboːvənˌaːn]
+  - Part of Speech: adverb
+  - Gender: N/A
+  - Plural: N/A
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "Hij stond bovenaan de trap." (He was standing at the top of the stairs.)
+
+- **[B2/C1] De dijk** (dike)
+  - IPA: [dɛɪ̯k]
+  - Part of Speech: noun
+  - Gender: masculine (de(m))
+  - Plural: dijken
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "De dijk beschermt de polder." (The dike protects the polder.)
+
+- **[B2/C1] gieten** (to pour)
+  - IPA: [ˈɣitə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Tone: N/A
+  - Conjugations: Pres: giet, Past: goot, Fut: zal gieten, Part: gegoten
+  - Example: "Hij giet het glas vol water." (He pours the glass full of water.)
+
+- **[B2/C1] Het misverstand** (misunderstanding)
+  - IPA: [ˈmɪsfərstɑnt]
+  - Part of Speech: noun
+  - Gender: neuter (het)
+  - Plural: misverstanden
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "We moeten zo’n misverstand in de toekomst zien te vermijden." (We must try to avoid such a misunderstanding in the future.)
+
+- **[B2/C1] omkomen** (to die)
+  - IPA: [ˈɔmˌkoːmə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Tone: N/A
+  - Conjugations: Pres: komt om, Past: kwam om, Fut: zal omkomen, Part: omgekomen
+  - Example: "Bij de aardbeving zijn 352 mensen omgekomen." (352 people died in the earthquake.)
+
+- **[B2/C1] De trouw** (faith(fulness))
+  - IPA: [trɑu̯]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: trouwen
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "Zijn trouw aan zijn baas is onvoorwaardelijk." (His loyalty to his boss is unconditional.)
+
+- **[B2/C1] afvoeren** (to transport)
+  - IPA: [ˈɑfˌvuːrə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Tone: N/A
+  - Conjugations: Pres: voert af, Past: voerde af, Fut: zal afvoeren, Part: afgevoerd
+  - Example: "Het afval wordt met drie wagens afgevoerd." (The waste is transported with three trucks.)
+
+- **[B2/C1] eng** (scary)
+  - IPA: [ɛŋ]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: enge
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "Zij vertelde de kinderen een eng verhaal." (She told the children a scary story.)
+
+- **[B2/C1] ontploffen** (to explode)
+  - IPA: [ɔntˈplɔfə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Tone: N/A
+  - Conjugations: Pres: ontploft, Past: ontplofte, Fut: zal ontploffen, Part: ontploft
+  - Example: "De bom ontploft in het weiland." (The bomb explodes in the meadow.)
+
+- **[B2/C1] De rang** (rank)
+  - IPA: [rɑŋ]
+  - Part of Speech: noun
+  - Gender: masculine (de(m))
+  - Plural: rangen
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "Zij heeft in het leger een hoge rang." (She has a high rank in the army.)
+
+- **[B2/C1] De richtlijn** (guideline)
+  - IPA: [ˈrɪxtlɪin]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: richtlijnen
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "We kregen goede richtlijnen mee." (We were given good guidelines.)
+
+- **[B2/C1] ruilen** (to exchange)
+  - IPA: [ˈrœylə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Tone: N/A
+  - Conjugations: Pres: ruil, Past: ruilde, Fut: zal ruilen, Part: geruild
+  - Example: "Wil je je boek ruilen voor een film?" (Do you want to exchange your book for a film?)
+
+- **[B2/C1] straf** (hard)
+  - IPA: [strɑf]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: straffe
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "De gast deed een paar straffe uitspraken." (The guest made a few harsh statements.)
+
+- **[B2/C1] De deugd** (virtue)
+  - IPA: [døːxt]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: deugden
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "Eerlijkheid en betrouwbaarheid zijn mooie deugden." (Honesty and reliability are beautiful virtues.)
+
+- **[B2/C1] discussiëren** (to discuss)
+  - IPA: [dɪskyˈterə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Tone: N/A
+  - Conjugations: Pres: discussieer, Past: discussieerde, Fut: zal discussiëren, Part: gediscussieerd
+  - Example: "Ik vind het leuk om te discussiëren." (I enjoy discussing.)
+
+- **[B2/C1] essentieel** (essential)
+  - IPA: [ɛsɛnˈʃeːl]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: essentiële
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "Wat zijn de essentiële kenmerken van dit tijdperk?" (What are the essential characteristics of this era?)
+
+- **[B2/C1] evident** (evident)
+  - IPA: [eviˈdɛnt]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: evidente
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "Het is evident dat het om meer gaat dan om een biologisch verschil." (It is evident that it is about more than just a biological difference.)
+
+- **[B2/C1] genezen** (to cure)
+  - IPA: [ɣəˈneːzə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Tone: N/A
+  - Conjugations: Pres: genees, Past: genas, Fut: zal genezen, Part: genezen
+  - Example: "Het wondje in haar borst is nog steeds niet genezen." (The wound on her chest has still not healed.)
+
+- **[B2/C1] De inrichting** (design, interior)
+  - IPA: [ˈɪnrɪxtɪŋ]
+  - Part of Speech: noun
+  - Gender: feminine (de(f))
+  - Plural: inrichtingen
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "De inrichting van het hele huis is smaakvol en sober." (The design of the whole house is tasteful and sober.)
+
+- **[B2/C1] jaloers** (jealous)
+  - IPA: [ʒaˈluːrs]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: jaloerse
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "Mijn jaloerse zusje liep boos weg." (My jealous little sister walked away angrily.)
+
+- **[B2/C1] Het motto** (motto)
+  - IPA: [ˈmɔtoː]
+  - Part of Speech: noun
+  - Gender: neuter (het)
+  - Plural: motto's
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "Het motto is dat de aanval de beste verdediging is." (The motto is that the attack is the best defense.)
+
+- **[B2/C1] naïef** (naive)
+  - IPA: [naːˈiːf]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: naïeve
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "Hij deed een naïeve uitspraak." (He made a naive statement.)
+
+- **[B2/C1] De nicht** (niece, cousin)
+  - IPA: [nɪxt]
+  - Part of Speech: noun
+  - Gender: feminine (de(f))
+  - Plural: nichten
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "De meeste mensen hebben ook ooms en tantes, neven en nichten." (Most people also have uncles and aunts, nephews and nieces/cousins.)
+
+- **[B2/C1] plezant** (amusing)
+  - IPA: [pləˈzɑnt]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: plezante
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "Het was plezant en iedereen voelde zich goed en nuttig en gewaardeerd." (It was amusing and everyone felt good and useful and appreciated.)
+
+- **[B2/C1] gruwelijk** (horrible)
+  - IPA: [ˈɣryʋələk]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: gruwelijke
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "Ik kijk niet naar die gruwelijke beelden op de televisie." (I don't watch those horrible images on television.)
+
+- **[B2/C1] De kabel** (cable)
+  - IPA: [ˈkaːbəl]
+  - Part of Speech: noun
+  - Gender: masculine (de(m))
+  - Plural: kabels
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "Het schip werd gesleept met een dikke kabel." (The ship was towed with a thick cable.)
+
+- **[B2/C1] Het schaap** (sheep)
+  - IPA: [sxɑːp]
+  - Part of Speech: noun
+  - Gender: neuter (het)
+  - Plural: schapen
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "De schapen leveren de wol voor een soort alternatieve bontjassen." (The sheep provide the wool for a kind of alternative fur coat.)
+
+- **[B2/C1] tienduizend** (ten thousand)
+  - IPA: [ˈtinˌdœyzənt]
+  - Part of Speech: number
+  - Gender: N/A
+  - Plural: N/A
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "Zij ontvangen een subsidie van tienduizend euro." (They receive a subsidy of ten thousand euros.)
+
+- **[B2/C1] zolang** (as long as)
+  - IPA: [zoˈlɑŋ]
+  - Part of Speech: adverb
+  - Gender: N/A
+  - Plural: N/A
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "Zolang je je best doet, is het goed." (As long as you do your best, it's good.)
+
+- **[B2/C1] versnellen** (to accelerate)
+  - IPA: [vərˈsnɛlə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Tone: N/A
+  - Conjugations: Pres: versnel, Past: versnelde, Fut: zal versnellen, Part: versneld
+  - Example: "Vlak voor de finish versnelde hij nog." (Just before the finish, he accelerated.)
+
+- **[B2/C1] verwoesten** (to destroy)
+  - IPA: [vərˈʋustə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Tone: N/A
+  - Conjugations: Pres: verwoest, Past: verwoestte, Fut: zal verwoesten, Part: verwoest
+  - Example: "De fabriek werd verwoest door een explosie." (The factory was destroyed by an explosion.)
+
+- **[B2/C1] aantasten** (to affect)
+  - IPA: [ˈaːntɑstə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Tone: N/A
+  - Conjugations: Pres: tast aan, Past: tastte aan, Fut: zal aantasten, Part: aangetast
+  - Example: "De vorst tastte de bloesem aan." (The frost affected the blossom.)
+
+- **[B2/C1] bewerken** (to work, to edit)
+  - IPA: [bəˈʋɛrkə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Tone: N/A
+  - Conjugations: Pres: bewerk, Past: bewerkte, Fut: zal bewerken, Part: bewerkt
+  - Example: "Ze bewerken de muur met een borstel." (They are working the wall with a brush.)
+
+- **[B2/C1] doorvoeren** (to carry out, to implement)
+  - IPA: [ˈdoːrˌvuːrə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Tone: N/A
+  - Conjugations: Pres: voert door, Past: voerde door, Fut: zal doorvoeren, Part: doorgevoerd
+  - Example: "We gaan een paar veranderingen doorvoeren." (We are going to carry out some changes.)
+
+- **[B2/C1] feliciteren** (to congratulate)
+  - IPA: [fəˈlɪsitərə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Tone: N/A
+  - Conjugations: Pres: feliciteer, Past: feliciteerde, Fut: zal feliciteren, Part: gefeliciteerd
+  - Example: "Van harte gefeliciteerd met jullie verjaardag." (Congratulations on your birthday.)
+
+- **[B2/C1] fier** (proud)
+  - IPA: [fiːr]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: fiere
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "Het is totaal niet iets om fier op te zijn." (It's not something to be proud of at all.)
+
+- **[B2/C1] de handeling** (action)
+  - IPA: [ˈɦɑndəlɪŋ]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: handelingen
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "Het is een kwestie van alle handelingen in de goede volgorde uitvoeren." (It's a matter of carrying out all actions in the right order.)
+
+- **[B2/C1] weleens** (sometimes, ever)
+  - IPA: [ˈʋeːˌleːns]
+  - Part of Speech: adverb
+  - Gender: N/A
+  - Plural: N/A
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "Heb jij weleens gerookt?" (Have you ever smoked?)
+
+- **[B2/C1] zuur** (acid, sour)
+  - IPA: [zyːr]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: zure
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "Voor zure dressing wordt vaak azijn of citroensap gebruikt." (Vinegar or lemon juice is often used for sour dressing.)
+
+- **[B2/C1] de ambassadeur** (ambassador)
+  - IPA: [ɑmbɑsaˈdøːr]
+  - Part of Speech: noun
+  - Gender: masculine (de)
+  - Plural: ambassadeurs
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "Pakistan riep zijn ambassadeur uit Denemarken terug." (Pakistan recalled its ambassador from Denmark.)
+
+- **[B2/C1] neutraal** (neutral)
+  - IPA: [nøːˈtraːl]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: neutrale
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "De wedstrijd wordt op neutraal terrein gespeeld." (The match is played on neutral ground.)
+
+- **[B2/C1] nuchter** (a) empty, sober b) plain)
+  - IPA: [ˈnʏxtər]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: nuchtere
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "Ik dronk een biertje op mijn nuchtere maag." (I drank a beer on an empty stomach.) / "We gaan morgen proberen een nuchtere analyse te maken." (We are going to try to make a plain analysis tomorrow.)
+
+- **[B2/C1] vooraan** (in front)
+  - IPA: [ˈvoːrˌaːn]
+  - Part of Speech: adverb
+  - Gender: N/A
+  - Plural: N/A
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "Ik sta liever helemaal vooraan in de rij dan helemaal achteraan." (I prefer to be at the very front of the line than at the very back.)
+
+- **[B2/C1] fataal** (fatal)
+  - IPA: [faːˈtaːl]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: fatale
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "Het ongeval had een fatale afloop." (The accident had a fatal outcome.)
+
+- **[B2/C1] intellectueel** (intellectual)
+  - IPA: [ɪntɛlɛkˈtyʋel]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: intellectuele
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "Ons onderwijs is in intellectueel opzicht nogal schraal." (Our education is rather poor in intellectual terms.)
+
+- **[B2/C1] maandelijks** (monthly)
+  - IPA: [ˈmaːndələks]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: maandelijkse
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "Ik wil ook een fulltime baan en een maandelijks loon." (I also want a full-time job and a monthly salary.)
+
+- **[B2/C1] de mode** (fashion)
+  - IPA: [ˈmoːdə]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: moden
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "Ze interesseert zich in mode." (She is interested in fashion.)
+
+- **[B2/C1] verkondigen** (to proclaim, to put forward)
+  - IPA: [vərˈkɔndɪɣə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Tone: N/A
+  - Conjugations: Pres: verkondig, Past: verkondigde, Fut: zal verkondigen, Part: verkondigd
+  - Example: "Zij verkondigt graag haar mening." (She likes to proclaim her opinion.)
+
+- **[B2/C1] de woonplaats** (residence)
+  - IPA: [ˈʋoːnˌplaːts]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: woonplaatsen
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "Zijn woonplaats lag ergens in historisch Mesopotamië." (His residence was somewhere in historical Mesopotamia.)
+
+- **[B2/C1] beslist** (decisive, resolute)
+  - IPA: [bəˈslɪst]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: besliste
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "Met een besliste beweging sloot hij de deur." (With a decisive movement, he closed the door.)
+
+- **[B2/C1] bovenaan** (at the top)
+  - IPA: [ˈboːvəˌnaːn]
+  - Part of Speech: adverb
+  - Gender: N/A
+  - Plural: N/A
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "Hij stond bovenaan de trap." (He was standing at the top of the stairs.)
+
+- **[B2/C1] de dijk** (dike)
+  - IPA: [dɛi̯k]
+  - Part of Speech: noun
+  - Gender: masculine (de)
+  - Plural: dijken
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "De dijk beschermt de polder." (The dike protects the polder.)
+
+- **[B2/C1] gieten** (to pour)
+  - IPA: [ˈɣitə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Tone: N/A
+  - Conjugations: Pres: giet, Past: goot, Fut: zal gieten, Part: gegoten
+  - Example: "Hij giet het glas vol water." (He pours the glass full of water.)
+
+- **[B2/C1] het misverstand** (misunderstanding)
+  - IPA: [ˈmɪsvərˌstɑnt]
+  - Part of Speech: noun
+  - Gender: neuter (het)
+  - Plural: misverstanden
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "We moeten zo’n misverstand in de toekomst zien te vermijden." (We must try to avoid such a misunderstanding in the future.)
+
+- **[B2/C1] omkomen** (to die)
+  - IPA: [ˈɔmˌkoːmə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Tone: N/A
+  - Conjugations: Pres: komt om, Past: kwam om, Fut: zal omkomen, Part: omgekomen
+  - Example: "Bij de aardbeving zijn 352 mensen omgekomen." (352 people died in the earthquake.)
+
+- **[B2/C1] de trouw** (faith(fulness))
+  - IPA: [trɑu̯]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: trouwen
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "Zijn trouw aan zijn baas is onvoorwaardelijk." (His loyalty to his boss is unconditional.)
+
+- **[B2/C1] afvoeren** (to transport)
+  - IPA: [ˈɑfˌvuːrə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Tone: N/A
+  - Conjugations: Pres: voert af, Past: voerde af, Fut: zal afvoeren, Part: afgevoerd
+  - Example: "Het afval wordt met drie wagens afgevoerd." (The waste is transported with three trucks.)
+
+- **[B2/C1] eng** (scary)
+  - IPA: [ɛŋ]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: enge
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "Zij vertelde de kinderen een eng verhaal." (She told the children a scary story.)
+
+- **[B2/C1] ontploffen** (to explode)
+  - IPA: [ɔntˈplɔfə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Tone: N/A
+  - Conjugations: Pres: ontploft, Past: ontplofte, Fut: zal ontploffen, Part: ontploft
+  - Example: "De bom ontploft in het weiland." (The bomb explodes in the meadow.)
+
+- **[B2/C1] de rang** (rank)
+  - IPA: [rɑŋ]
+  - Part of Speech: noun
+  - Gender: masculine (de)
+  - Plural: rangen
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "Zij heeft in het leger een hoge rang." (She has a high rank in the army.)
+
+- **[B2/C1] de richtlijn** (guideline)
+  - IPA: [ˈrɪxtˌlɪin]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: richtlijnen
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "We kregen goede richtlijnen mee." (We received good guidelines.)
+
+- **[B2/C1] ruilen** (to exchange)
+  - IPA: [ˈrœylə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Tone: N/A
+  - Conjugations: Pres: ruil, Past: ruilde, Fut: zal ruilen, Part: geruild
+  - Example: "Wil je je boek ruilen voor een film?" (Do you want to exchange your book for a movie?)
+
+- **[B2/C1] straf** (hard, severe)
+  - IPA: [strɑf]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: straffe
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "De gast deed een paar straffe uitspraken." (The guest made a few harsh statements.)
+
+- **[B2/C1] de deugd** (virtue)
+  - IPA: [døːxt]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: deugden
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "Eerlijkheid en betrouwbaarheid zijn mooie deugden." (Honesty and reliability are beautiful virtues.)
+
+- **[B2/C1] discussiëren** (to discuss)
+  - IPA: [dɪskyˈtirə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Tone: N/A
+  - Conjugations: Pres: discussieer, Past: discussieerde, Fut: zal discussiëren, Part: gediscussieerd
+  - Example: "Ik vind het leuk om te discussiëren." (I like to discuss.)
+
+- **[B2/C1] essentieel** (essential)
+  - IPA: [ɛsɛnˈʃeːl]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: essentiële
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "Wat zijn de essentiële kenmerken van dit tijdperk?" (What are the essential characteristics of this era?)
+
+- **[B2/C1] evident** (evident)
+  - IPA: [eːviˈdɛnt]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: evidente
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "Het is evident dat het om meer gaat dan om een biologisch verschil." (It is evident that it is about more than just a biological difference.)
+
+- **[B2/C1] genezen** (to cure, to heal)
+  - IPA: [ɣəˈneːzə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Tone: N/A
+  - Conjugations: Pres: genees, Past: genas, Fut: zal genezen, Part: genezen
+  - Example: "Het wondje in haar borst is nog steeds niet genezen." (The small wound in her chest is still not healed.)
+
+- **[B2/C1] de inrichting** (design, decor)
+  - IPA: [ˈɪnˌrɪxtɪŋ]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: inrichtingen
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "De inrichting van het hele huis is smaakvol en sober." (The design of the whole house is tasteful and simple.)
+
+- **[B2/C1] jaloers** (jealous)
+  - IPA: [ʒaˈluːrs]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: jaloerse
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "Mijn jaloerse zusje liep boos weg." (My jealous little sister walked away angrily.)
+
+- **[B2/C1] het motto** (motto)
+  - IPA: [ˈmɔtoː]
+  - Part of Speech: noun
+  - Gender: neuter (het)
+  - Plural: motto's
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "Het motto is dat de aanval de beste verdediging is." (The motto is that the attack is the best defense.)
+
+- **[B2/C1] naïef** (naive)
+  - IPA: [naːˈiːf]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: naïeve
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "Hij deed een naïeve uitspraak." (He made a naive statement.)
+
+- **[B2/C1] de nicht** (niece, cousin)
+  - IPA: [nɪxt]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: nichten
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "De meeste mensen hebben ook ooms en tantes, neven en nichten." (Most people also have uncles and aunts, nephews and nieces/cousins.)
+
+- **[B2/C1] plezant** (amusing)
+  - IPA: [pləˈzɑnt]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: plezante
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "Het was plezant en iedereen voelde zich goed en nuttig en gewaardeerd." (It was amusing and everyone felt good and useful and appreciated.)
+
+- **[B2/C1] gruwelijk** (horrible)
+  - IPA: [ˈɣryʋələk]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: gruwelijke
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "Ik kijk niet naar die gruwelijke beelden op de televisie." (I don't watch those horrible images on television.)
+
+- **[B2/C1] de kabel** (cable)
+  - IPA: [ˈkaːbəl]
+  - Part of Speech: noun
+  - Gender: masculine (de)
+  - Plural: kabels
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "Het schip werd gesleept met een dikke kabel." (The ship was towed with a thick cable.)
+
+- **[B2/C1] het schaap** (sheep)
+  - IPA: [sxɑːp]
+  - Part of Speech: noun
+  - Gender: neuter (het)
+  - Plural: schapen
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "De schapen leveren de wol voor een soort alternatieve bontjassen." (The sheep provide the wool for a kind of alternative fur coat.)
+
+- **[B2/C1] tienduizend** (ten thousand)
+  - IPA: [ˈtinˌdœyzənt]
+  - Part of Speech: number
+  - Gender: N/A
+  - Plural: N/A
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "Zij ontvangen een subsidie van tienduizend euro." (They receive a subsidy of ten thousand euros.)
+
+- **[B2/C1] zolang** (as long as)
+  - IPA: [zoːˈlɑŋ]
+  - Part of Speech: adverb
+  - Gender: N/A
+  - Plural: N/A
+  - Tone: N/A
+  - Conjugations: N/A
+  - Example: "Zolang je je best doet, is het goed." (As long as you do your best, it's good.)
+
+- **[B2] versnellen** (to accelerate)
+  - IPA: [vərˈsnɛlə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: versnel, Past: versnelde, Fut: zal versnellen, Part: versneld
+  - Example: "Vlak voor de finish versnelde hij nog." (Just before the finish, he accelerated even more.)
+
+- **[B2] verwoesten** (to destroy)
+  - IPA: [vərˈwustə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: verwoest, Past: verwoestte, Fut: zal verwoesten, Part: verwoest
+  - Example: "De fabriek werd verwoest door een explosie." (The factory was destroyed by an explosion.)
+
+- **[B2] aantasten** (to affect)
+  - IPA: [ˈantɑstə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: tast aan, Past: tastte aan, Fut: zal aantasten, Part: aangetast
+  - Example: "De vorst tastte de bloesem aan." (The frost affected the blossom.)
+
+- **[B2] bewerken** (to work, to edit)
+  - IPA: [bəˈwɛrkə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: bewerk, Past: bewerkte, Fut: zal bewerken, Part: bewerkt
+  - Example: "Ze bewerken de muur met een borstel." (They are working on the wall with a brush.)
+
+- **[B2] doorvoeren** (to carry out, to implement)
+  - IPA: [ˈdorvurə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: voert door, Past: voerde door, Fut: zal doorvoeren, Part: doorgevoerd
+  - Example: "We gaan een paar veranderingen doorvoeren." (We are going to implement a few changes.)
+
+- **[B2] feliciteren** (to congratulate)
+  - IPA: [fəˈlɪsitərə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: feliciteer, Past: feliciteerde, Fut: zal feliciteren, Part: gefeliciteerd
+  - Example: "Van harte gefeliciteerd met jullie verjaardag." (Congratulations on your birthday.)
+
+- **[B2] fier** (proud)
+  - IPA: [fir]
+  - Part of Speech: adjective
+  - Example: "Het is totaal niet iets om fier op te zijn." (It is not something to be proud of at all.)
+
+- **[B2] De handeling** (action)
+  - IPA: [ˈɦɑndəlɪŋ]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: handelingen
+  - Example: "Het is een kwestie van alle handelingen in de goede volgorde uitvoeren." (It is a matter of performing all actions in the correct order.)
+
+- **[B2] weleens** (sometimes, ever)
+  - IPA: [ˈʋeːləns]
+  - Part of Speech: adverb
+  - Example: "Heb jij weleens gerookt?" (Have you ever smoked?)
+
+- **[B2] zuur** (acid, sour)
+  - IPA: [zyr]
+  - Part of Speech: adjective
+  - Example: "Voor zure dressing wordt vaak azijn of citroensap gebruikt." (Vinegar or lemon juice is often used for sour dressing.)
+
+- **[B2] De ambassadeur** (ambassador)
+  - IPA: [ɑmbɑsɑˈdør]
+  - Part of Speech: noun
+  - Gender: masculine (de)
+  - Plural: ambassadeurs
+  - Example: "Pakistan riep zijn ambassadeur uit Denemarken terug." (Pakistan recalled its ambassador from Denmark.)
+
+- **[B2] neutraal** (neutral)
+  - IPA: [nøːˈtraːl]
+  - Part of Speech: adjective
+  - Example: "De wedstrijd wordt op neutraal terrein gespeeld." (The match is played on neutral ground.)
+
+- **[B2] nuchter** (a) empty, sober b) plain)
+  - IPA: [ˈnʏxtər]
+  - Part of Speech: adjective
+  - Example: "Ik dronk een biertje op mijn nuchtere maag." (I drank a beer on an empty stomach.) / "We gaan morgen proberen een nuchtere analyse te maken." (We are going to try to make a sober analysis tomorrow.)
+
+- **[B2] vooraan** (in front)
+  - IPA: [voːˈraːn]
+  - Part of Speech: adverb
+  - Example: "Ik sta liever helemaal vooraan in de rij dan helemaal achteraan." (I prefer to be at the very front of the line rather than at the very back.)
+
+- **[B2] fataal** (fatal)
+  - IPA: [faːˈtaːl]
+  - Part of Speech: adjective
+  - Example: "Het ongeval had een fatale afloop." (The accident had a fatal outcome.)
+
+- **[B2] intellectueel** (intellectual)
+  - IPA: [ɪntɛlɛktyˈwel]
+  - Part of Speech: adjective
+  - Example: "Ons onderwijs is in intellectueel opzicht nogal schraal." (Our education is rather poor in intellectual terms.)
+
+- **[B2] maandelijks** (monthly)
+  - IPA: [ˈmandələks]
+  - Part of Speech: adjective
+  - Example: "Ik wil ook een fulltime baan en een maandelijks loon." (I also want a full-time job and a monthly salary.)
+
+- **[B2] De mode** (fashion)
+  - IPA: [ˈmoːdə]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: moden
+  - Example: "Ze interesseert zich in mode." (She is interested in fashion.)
+
+- **[B2] verkondigen** (to proclaim, to put forward)
+  - IPA: [vərˈkɔndɪɣə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: verkondig, Past: verkondigde, Fut: zal verkondigen, Part: verkondigd
+  - Example: "Zij verkondigt graag haar mening." (She likes to proclaim her opinion.)
+
+- **[B2] De woonplaats** (residence)
+  - IPA: [ˈʋoːnplats]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: woonplaatsen
+  - Example: "Zijn woonplaats lag ergens in historisch Mesopotamië." (His residence was somewhere in historic Mesopotamia.)
+
+- **[B2] beslist** (decisive, resolute)
+  - IPA: [bəˈslɪst]
+  - Part of Speech: adjective
+  - Example: "Met een besliste beweging sloot hij de deur." (With a decisive movement, he closed the door.)
+
+- **[B2] bovenaan** (at the top)
+  - IPA: [ˈboːvənan]
+  - Part of Speech: adverb
+  - Example: "Hij stond bovenaan de trap." (He stood at the top of the stairs.)
+
+- **[B2] De dijk** (dike)
+  - IPA: [dɛɪ̯k]
+  - Part of Speech: noun
+  - Gender: masculine (de)
+  - Plural: dijken
+  - Example: "De dijk beschermt de polder." (The dike protects the polder.)
+
+- **[B2] gieten** (to pour)
+  - IPA: [ˈɣitə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: giet, Past: goot, Fut: zal gieten, Part: gegoten
+  - Example: "Hij giet het glas vol water." (He pours the glass full of water.)
+
+- **[B2] Het misverstand** (misunderstanding)
+  - IPA: [ˈmɪsvərstɑnt]
+  - Part of Speech: noun
+  - Gender: neuter (het)
+  - Plural: misverstanden
+  - Example: "We moeten zo’n misverstand in de toekomst zien te vermijden." (We must try to avoid such a misunderstanding in the future.)
+
+- **[B2] omkomen** (to die)
+  - IPA: [ˈɔmkɔmə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: komt om, Past: kwam om, Fut: zal omkomen, Part: omgekomen
+  - Example: "Bij de aardbeving zijn 352 mensen omgekomen." (352 people died in the earthquake.)
+
+- **[B2] De trouw** (faith(fulness))
+  - IPA: [trɑu̯]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: trouwen
+  - Example: "Zijn trouw aan zijn baas is onvoorwaardelijk." (His loyalty to his boss is unconditional.)
+
+- **[B2] afvoeren** (to transport)
+  - IPA: [ˈɑfvoːrə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: voert af, Past: voerde af, Fut: zal afvoeren, Part: afgevoerd
+  - Example: "Het afval wordt met drie wagens afgevoerd." (The waste is transported by three trucks.)
+
+- **[B2] eng** (scary)
+  - IPA: [ɛŋ]
+  - Part of Speech: adjective
+  - Example: "Zij vertelde de kinderen een eng verhaal." (She told the children a scary story.)
+
+- **[B2] ontploffen** (to explode)
+  - IPA: [ɔntˈplɔfə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: ontploft, Past: ontplofte, Fut: zal ontploffen, Part: ontploft
+  - Example: "De bom ontploft in het weiland." (The bomb explodes in the field.)
+
+- **[B2] De rang** (rank)
+  - IPA: [rɑŋ]
+  - Part of Speech: noun
+  - Gender: masculine (de)
+  - Plural: rangen
+  - Example: "Zij heeft in het leger een hoge rang." (She has a high rank in the army.)
+
+- **[B2] De richtlijn** (guideline)
+  - IPA: [ˈrɪxtlɪin]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: richtlijnen
+  - Example: "We kregen goede richtlijnen mee." (We were given good guidelines.)
+
+- **[B2] ruilen** (to exchange)
+  - IPA: [ˈrœylə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: ruil, Past: ruilde, Fut: zal ruilen, Part: geruild
+  - Example: "Wil je je boek ruilen voor een film?" (Do you want to exchange your book for a film?)
+
+- **[B2] straf** (hard)
+  - IPA: [strɑf]
+  - Part of Speech: adjective
+  - Example: "De gast deed een paar straffe uitspraken." (The guest made some bold statements.)
+
+- **[B2] De deugd** (virtue)
+  - IPA: [døːxt]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: deugden
+  - Example: "Eerlijkheid en betrouwbaarheid zijn mooie deugden." (Honesty and reliability are beautiful virtues.)
+
+- **[B2] discussiëren** (to discuss)
+  - IPA: [dɪskyˈtirə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: discussieer, Past: discussieerde, Fut: zal discussiëren, Part: gediscussieerd
+  - Example: "Ik vind het leuk om te discussiëren." (I enjoy discussing things.)
+
+- **[B2] essentieel** (essential)
+  - IPA: [ɛsɛnˈʃeːl]
+  - Part of Speech: adjective
+  - Example: "Wat zijn de essentiële kenmerken van dit tijdperk?" (What are the essential characteristics of this era?)
+
+- **[B2] evident** (evident)
+  - IPA: [eviˈdɛnt]
+  - Part of Speech: adjective
+  - Example: "Het is evident dat het om meer gaat dan om een biologisch verschil." (It is evident that it is about more than just a biological difference.)
+
+- **[B2] genezen** (to cure)
+  - IPA: [ɣəˈneːzə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: genees, Past: genas, Fut: zal genezen, Part: genezen
+  - Example: "Het wondje in haar borst is nog steeds niet genezen." (The little wound in her chest is still not healed.)
+
+- **[B2] De inrichting** (design, furnishing)
+  - IPA: [ˈɪnrɪxtɪŋ]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: inrichtingen
+  - Example: "De inrichting van het hele huis is smaakvol en sober." (The design of the whole house is tasteful and sober.)
+
+- **[B2] jaloers** (jealous)
+  - IPA: [ʒaˈlurs]
+  - Part of Speech: adjective
+  - Example: "Mijn jaloerse zusje liep boos weg." (My jealous little sister walked away angrily.)
+
+- **[B2] Het motto** (motto)
+  - IPA: [ˈmɔtoː]
+  - Part of Speech: noun
+  - Gender: neuter (het)
+  - Plural: motto's
+  - Example: "Het motto is dat de aanval de beste verdediging is." (The motto is that the attack is the best defense.)
+
+- **[B2] naïef** (naive)
+  - IPA: [naːˈiːf]
+  - Part of Speech: adjective
+  - Example: "Hij deed een naïeve uitspraak." (He made a naive statement.)
+
+- **[B2] De nicht** (niece, cousin)
+  - IPA: [nɪxt]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: nichten
+  - Example: "De meeste mensen hebben ook ooms en tantes, neven en nichten." (Most people also have uncles and aunts, nephews and nieces.)
+
+- **[B2] plezant** (amusing)
+  - IPA: [pləˈzɑnt]
+  - Part of Speech: adjective
+  - Example: "Het was plezant en iedereen voelde zich goed en nuttig en gewaardeerd." (It was amusing and everyone felt good and useful and appreciated.)
+
+- **[B2] gruwelijk** (horrible)
+  - IPA: [ˈɣrywələk]
+  - Part of Speech: adjective
+  - Example: "Ik kijk niet naar die gruwelijke beelden op de televisie." (I don't watch those horrible images on television.)
+
+- **[B2] De kabel** (cable)
+  - IPA: [ˈkaːbəl]
+  - Part of Speech: noun
+  - Gender: masculine (de)
+  - Plural: kabels
+  - Example: "Het schip werd gesleept met een dikke kabel." (The ship was towed with a thick cable.)
+
+- **[B2] Het schaap** (sheep)
+  - IPA: [sxɑːp]
+  - Part of Speech: noun
+  - Gender: neuter (het)
+  - Plural: schapen
+  - Example: "De schapen leveren de wol voor een soort alternatieve bontjassen." (The sheep provide the wool for a type of alternative fur coat.)
+
+- **[B2] tienduizend** (ten thousand)
+  - IPA: [ˈtinˌdœyzənt]
+  - Part of Speech: numeral
+  - Example: "Zij ontvangen een subsidie van tienduizend euro." (They receive a subsidy of ten thousand euros.)
+
+- **[B2] zolang** (as long as)
+  - IPA: [zoˈlɑŋ]
+  - Part of Speech: adverb
+  - Example: Zodra het stopt met regenen, gaan we naar buiten. (As soon as it stops raining, we will go outside)
+
+- **[B2/C1] versnellen** (to accelerate)
+  - IPA: [vərˈsnɛlə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: versnel, Past: versnelde, Fut: zal versnellen, Part: versneld
+  - Example: "Vlak voor de finish versnelde hij nog." (Just before the finish, he accelerated.)
+
+- **[B2/C1] verwoesten** (to destroy)
+  - IPA: [vərˈwustə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: verwoest, Past: verwoestte, Fut: zal verwoesten, Part: verwoest
+  - Example: "De fabriek werd verwoest door een explosie." (The factory was destroyed by an explosion.)
+
+- **[B2/C1] aantasten** (to affect)
+  - IPA: [ˈaːntɑstə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: tast aan, Past: tastte aan, Fut: zal aantasten, Part: aangetast
+  - Example: "De vorst tastte de bloesem aan." (The frost affected the blossom.)
+
+- **[B2/C1] bewerken** (to work, to process)
+  - IPA: [bəˈʋɛrkə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: bewerk, Past: bewerkte, Fut: zal bewerken, Part: bewerkt
+  - Example: "Ze bewerken de muur met een borstel." (They are working on the wall with a brush.)
+
+- **[B2/C1] doorvoeren** (to carry out, to implement)
+  - IPA: [ˈdoːrˌvuːrə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: voert door, Past: voerde door, Fut: zal doorvoeren, Part: doorgevoerd
+  - Example: "We gaan een paar veranderingen doorvoeren." (We are going to implement a few changes.)
+
+- **[B2/C1] feliciteren** (to congratulate)
+  - IPA: [fəˈlɪsitɪre(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: feliciteer, Past: feliciteerde, Fut: zal feliciteren, Part: gefeliciteerd
+  - Example: "Van harte gefeliciteerd met jullie verjaardag." (Congratulations on your birthday.)
+
+- **[B2/C1] fier** (proud)
+  - IPA: [fiːr]
+  - Part of Speech: adjective
+  - Example: "Het is totaal niet iets om fier op te zijn." (It's not something to be proud of at all.)
+
+- **[B2/C1] De handeling** (action)
+  - IPA: [ˈɦɑndəlɪŋ]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: handelingen
+  - Example: "Het is een kwestie van alle handelingen in de goede volgorde uitvoeren." (It's a matter of performing all actions in the correct order.)
+
+- **[B2/C1] weleens** (sometimes, ever)
+  - IPA: [ˈʋeːləns]
+  - Part of Speech: adverb
+  - Example: "Heb jij weleens gerookt?" (Have you ever smoked?)
+
+- **[B2/C1] zuur** (acid, sour)
+  - IPA: [zyːr]
+  - Part of Speech: adjective
+  - Example: "Voor zure dressing wordt vaak azijn of citroensap gebruikt." (Vinegar or lemon juice is often used for sour dressing.)
+
+- **[B2/C1] De ambassadeur** (ambassador)
+  - IPA: [ɑmbɑsɑˈdøːr]
+  - Part of Speech: noun
+  - Gender: masculine (de)
+  - Plural: ambassadeurs
+  - Example: "Pakistan riep zijn ambassadeur uit Denemarken terug." (Pakistan recalled its ambassador from Denmark.)
+
+- **[B2/C1] neutraal** (neutral)
+  - IPA: [nøːˈtraːl]
+  - Part of Speech: adjective
+  - Example: "De wedstrijd wordt op neutraal terrein gespeeld." (The match is being played on neutral ground.)
+
+- **[B2/C1] nuchter** (a) empty, sober b) plain)
+  - IPA: [ˈnʏxtər]
+  - Part of Speech: adjective
+  - Example: "Ik dronk een biertje op mijn nuchtere maag." (I drank a beer on an empty stomach.)
+  - Example: "We gaan morgen proberen een nuchtere analyse te maken." (We will try to make a sober analysis tomorrow.)
+
+- **[B2/C1] vooraan** (in front)
+  - IPA: [ˈvoːrˌaːn]
+  - Part of Speech: adverb
+  - Example: "Ik sta liever helemaal vooraan in de rij dan helemaal achteraan." (I prefer to be at the very front of the line than at the very back.)
+
+- **[B2/C1] fataal** (fatal)
+  - IPA: [faːˈtaːl]
+  - Part of Speech: adjective
+  - Example: "Het ongeval had een fatale afloop." (The accident had a fatal outcome.)
+
+- **[B2/C1] intellectueel** (intellectual)
+  - IPA: [ɪntɛlɛkˈtʏwel]
+  - Part of Speech: adjective
+  - Example: "Ons onderwijs is in intellectueel opzicht nogal schraal." (Our education is rather poor in intellectual terms.)
+
+- **[B2/C1] maandelijks** (monthly)
+  - IPA: [ˈmaːndələks]
+  - Part of Speech: adjective
+  - Example: "Ik wil ook een fulltime baan en een maandelijks loon." (I also want a full-time job and a monthly salary.)
+
+- **[B2/C1] De mode** (fashion)
+  - IPA: [ˈmoːdə]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: moden
+  - Example: "Ze interesseert zich in mode." (She is interested in fashion.)
+
+- **[B2/C1] verkondigen** (to proclaim, to put forward)
+  - IPA: [vərˈkɔndɪɣə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: verkondig, Past: verkondigde, Fut: zal verkondigen, Part: verkondigd
+  - Example: "Zij verkondigt graag haar mening." (She likes to proclaim her opinion.)
+
+- **[B2/C1] De woonplaats** (residence)
+  - IPA: [ˈʋoːnˌplaːts]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: woonplaatsen
+  - Example: "Zijn woonplaats lag ergens in historisch Mesopotamië." (His residence was somewhere in historical Mesopotamia.)
+
+- **[B2/C1] beslist** (decisive, resolute)
+  - IPA: [bəˈslɪst]
+  - Part of Speech: adjective
+  - Example: "Met een besliste beweging sloot hij de deur." (With a decisive movement, he closed the door.)
+
+- **[B2/C1] bovenaan** (at the top)
+  - IPA: [ˈboːvənˌaːn]
+  - Part of Speech: adverb
+  - Example: "Hij stond bovenaan de trap." (He stood at the top of the stairs.)
+
+- **[B2/C1] De dijk** (dike)
+  - IPA: [dɛi̯k]
+  - Part of Speech: noun
+  - Gender: masculine (de)
+  - Plural: dijken
+  - Example: "De dijk beschermt de polder." (The dike protects the polder.)
+
+- **[B2/C1] gieten** (to pour)
+  - IPA: [ˈɣitə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: giet, Past: goot, Fut: zal gieten, Part: gegoten
+  - Example: "Hij giet het glas vol water." (He pours the glass full of water.)
+
+- **[B2/C1] Het misverstand** (misunderstanding)
+  - IPA: [ˈmɪsfərstɑnt]
+  - Part of Speech: noun
+  - Gender: neuter (het)
+  - Plural: misverstanden
+  - Example: "We moeten zo’n misverstand in de toekomst zien te vermijden." (We must try to avoid such a misunderstanding in the future.)
+
+- **[B2/C1] omkomen** (to die)
+  - IPA: [ˈɔmˌkoːmə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: komt om, Past: kwam om, Fut: zal omkomen, Part: omgekomen
+  - Example: "Bij de aardbeving zijn 352 mensen omgekomen." (352 people died in the earthquake.)
+
+- **[B2/C1] De trouw** (faith(fulness))
+  - IPA: [trʌu̯]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: trouwen
+  - Example: "Zijn trouw aan zijn baas is onvoorwaardelijk." (His loyalty to his boss is unconditional.)
+
+- **[B2/C1] afvoeren** (to transport)
+  - IPA: [ˈɑfˌvuːrə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: voert af, Past: voerde af, Fut: zal afvoeren, Part: afgevoerd
+  - Example: "Het afval wordt met drie wagens afgevoerd." (The waste is transported with three trucks.)
+
+- **[B2/C1] eng** (scary)
+  - IPA: [ɛŋ]
+  - Part of Speech: adjective
+  - Example: "Zij vertelde de kinderen een eng verhaal." (She told the children a scary story.)
+
+- **[B2/C1] ontploffen** (to explode)
+  - IPA: [ɔntˈplɔfə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: ontploft, Past: ontplofte, Fut: zal ontploffen, Part: ontploft
+  - Example: "De bom ontploft in het weiland." (The bomb explodes in the meadow.)
+
+- **[B2/C1] De rang** (rank)
+  - IPA: [rɑŋ]
+  - Part of Speech: noun
+  - Gender: masculine (de)
+  - Plural: rangen
+  - Example: "Zij heeft in het leger een hoge rang." (She has a high rank in the army.)
+
+- **[B2/C1] De richtlijn** (guideline)
+  - IPA: [ˈrɪxtlɪin]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: richtlijnen
+  - Example: "We kregen goede richtlijnen mee." (We received good guidelines.)
+
+- **[B2/C1] ruilen** (to exchange)
+  - IPA: [ˈrœylə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: ruil, Past: ruilde, Fut: zal ruilen, Part: geruild
+  - Example: "Wil je je boek ruilen voor een film?" (Do you want to exchange your book for a movie?)
+
+- **[B2/C1] straf** (hard, severe)
+  - IPA: [strɑf]
+  - Part of Speech: adjective
+  - Example: "De gast deed een paar straffe uitspraken." (The guest made a few strong statements.)
+
+- **[B2/C1] De deugd** (virtue)
+  - IPA: [døːxt]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: deugden
+  - Example: "Eerlijkheid en betrouwbaarheid zijn mooie deugden." (Honesty and reliability are beautiful virtues.)
+
+- **[B2/C1] discussiëren** (to discuss)
+  - IPA: [dɪskʏˈʃeːrə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: discussieer, Past: discussieerde, Fut: zal discussiëren, Part: gediscussieerd
+  - Example: "Ik vind het leuk om te discussiëren." (I like to discuss things.)
+
+- **[B2/C1] essentieel** (essential)
+  - IPA: [ɛsɛnˈʃeːl]
+  - Part of Speech: adjective
+  - Example: "Wat zijn de essentiële kenmerken van dit tijdperk?" (What are the essential characteristics of this era?)
+
+- **[B2/C1] evident** (evident)
+  - IPA: [eːviˈdɛnt]
+  - Part of Speech: adjective
+  - Example: "Het is evident dat het om meer gaat dan om een biologisch verschil." (It is evident that it is about more than just a biological difference.)
+
+- **[B2/C1] genezen** (to cure)
+  - IPA: [ɣəˈneːzə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: genees, Past: genas, Fut: zal genezen, Part: genezen
+  - Example: "Het wondje in haar borst is nog steeds niet genezen." (The little wound in her chest has still not healed.)
+
+- **[B2/C1] De inrichting** (design, furnishing)
+  - IPA: [ˈɪnrɪxtɪŋ]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: inrichtingen
+  - Example: "De inrichting van het hele huis is smaakvol en sober." (The design of the entire house is tasteful and sober.)
+
+- **[B2/C1] jaloers** (jealous)
+  - IPA: [ʒaˈluːrs]
+  - Part of Speech: adjective
+  - Example: "Mijn jaloerse zusje liep boos weg." (My jealous little sister walked away angrily.)
+
+- **[B2/C1] Het motto** (motto)
+  - IPA: [ˈmɔtoː]
+  - Part of Speech: noun
+  - Gender: neuter (het)
+  - Plural: motto's
+  - Example: "Het motto is dat de aanval de beste verdediging is." (The motto is that the attack is the best defense.)
+
+- **[B2/C1] naïef** (naive)
+  - IPA: [naːˈiːf]
+  - Part of Speech: adjective
+  - Example: "Hij deed een naïeve uitspraak." (He made a naive statement.)
+
+- **[B2/C1] De nicht** (niece, cousin)
+  - IPA: [nɪxt]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: nichten
+  - Example: "De meeste mensen hebben ook ooms en tantes, neven en nichten." (Most people also have uncles and aunts, nephews and nieces/cousins.)
+
+- **[B2/C1] plezant** (amusing)
+  - IPA: [pləˈzɑnt]
+  - Part of Speech: adjective
+  - Example: "Het was plezant en iedereen voelde zich goed en nuttig en gewaardeerd." (It was amusing and everyone felt good and useful and appreciated.)
+
+- **[B2/C1] gruwelijk** (horrible)
+  - IPA: [ˈɣryʋələk]
+  - Part of Speech: adjective
+  - Example: "Ik kijk niet naar die gruwelijke beelden op de televisie." (I don't watch those horrible images on television.)
+
+- **[B2/C1] De kabel** (cable)
+  - IPA: [ˈkaːbəl]
+  - Part of Speech: noun
+  - Gender: masculine (de)
+  - Plural: kabels
+  - Example: "Het schip werd gesleept met een dikke kabel." (The ship was towed with a thick cable.)
+
+- **[B2/C1] Het schaap** (sheep)
+  - IPA: [sxaːp]
+  - Part of Speech: noun
+  - Gender: neuter (het)
+  - Plural: schapen
+  - Example: "De schapen leveren de wol voor een soort alternatieve bontjassen." (The sheep provide the wool for a kind of alternative fur coat.)
+
+- **[B2/C1] tienduizend** (ten thousand)
+  - IPA: [ˈtinˌdœyzənt]
+  - Part of Speech: numeral
+  - Example: "Zij ontvangen een subsidie van tienduizend euro." (They receive a subsidy of ten thousand euros.)
+
+- **[B2/C1] zolang** (as long as)
+  - IPA: [zoˈlɑŋ]
+  - Part of Speech: adverb
+  - Example: "Zolang je je best doet, ben ik tevreden." (As long as you do your best, I am satisfied.)
+
+- **[B2/C1] versnellen** (to accelerate)
+  - IPA: [vərˈsnɛlə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: Pres: versnel, Past: versnelde, Fut: zal versnellen, Part: versneld
+  - Example: "Vlak voor de finish versnelde hij nog." (Just before the finish, he accelerated.)
+
+- **[B2/C1] verwoesten** (to destroy)
+  - IPA: [vərˈʋustə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: Pres: verwoest, Past: verwoestte, Fut: zal verwoesten, Part: verwoest
+  - Example: "De fabriek werd verwoest door een explosie." (The factory was destroyed by an explosion.)
+
+- **[B2/C1] aantasten** (to affect)
+  - IPA: [ˈaːntɑstə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: Pres: tast aan, Past: tastte aan, Fut: zal aantasten, Part: aangetast
+  - Example: "De vorst tastte de bloesem aan." (The frost affected the blossom.)
+
+- **[B2/C1] bewerken** (to work)
+  - IPA: [bəˈʋɛrkə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: Pres: bewerk, Past: bewerkte, Fut: zal bewerken, Part: bewerkt
+  - Example: "Ze bewerken de muur met een borstel." (They are working the wall with a brush.)
+
+- **[B2/C1] doorvoeren** (to carry out)
+  - IPA: [ˈdoːrvorə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: Pres: voert door, Past: voerde door, Fut: zal doorvoeren, Part: doorgevoerd
+  - Example: "We gaan een paar veranderingen doorvoeren." (We are going to carry out a few changes.)
+
+- **[B2/C1] feliciteren** (to congratulate)
+  - IPA: [fəˈlɪsitərə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: Pres: feliciteer, Past: feliciteerde, Fut: zal feliciteren, Part: gefeliciteerd
+  - Example: "Van harte gefeliciteerd met jullie verjaardag." (Congratulations on your birthday.)
+
+- **[B2/C1] fier** (proud)
+  - IPA: [fir]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: fiere
+  - Conjugations: N/A
+  - Example: "Het is totaal niet iets om fier op te zijn." (It's not something to be proud of at all.)
+
+- **[B2/C1] De handeling** (action)
+  - IPA: [ˈɦɑndəlɪŋ]
+  - Part of Speech: noun
+  - Gender: feminine
+  - Plural: handelingen
+  - Conjugations: N/A
+  - Example: "Het is een kwestie van alle handelingen in de goede volgorde uitvoeren." (It is a matter of performing all actions in the correct order.)
+
+- **[B2/C1] weleens** (sometimes, ever)
+  - IPA: [ʋeˈleːns]
+  - Part of Speech: adverb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: N/A
+  - Example: "Heb jij weleens gerookt?" (Have you ever smoked?)
+
+- **[B2/C1] zuur** (acid)
+  - IPA: [zyr]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: zure
+  - Conjugations: N/A
+  - Example: "Voor zure dressing wordt vaak azijn of citroensap gebruikt." (Vinegar or lemon juice is often used for sour dressing.)
+
+- **[B2/C1] De ambassadeur** (ambassador)
+  - IPA: [ɑmbɑsaˈdøːr]
+  - Part of Speech: noun
+  - Gender: masculine
+  - Plural: ambassadeurs
+  - Conjugations: N/A
+  - Example: "Pakistan riep zijn ambassadeur uit Denemarken terug." (Pakistan recalled its ambassador from Denmark.)
+
+- **[B2/C1] neutraal** (neutral)
+  - IPA: [nøːˈtraːl]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: neutrale
+  - Conjugations: N/A
+  - Example: "De wedstrijd wordt op neutraal terrein gespeeld." (The match is played on neutral ground.)
+
+- **[B2/C1] nuchter** (a) empty, sober b) plain)
+  - IPA: [ˈnʏxtər]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: nuchtere
+  - Conjugations: N/A
+  - Example: "Ik dronk een biertje op mijn nuchtere maag." (I drank a beer on an empty stomach.) "We gaan morgen proberen een nuchtere analyse te maken." (We will try to make a sober analysis tomorrow.)
+
+- **[B2/C1] vooraan** (in front)
+  - IPA: [ˈvoːraːn]
+  - Part of Speech: adverb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: N/A
+  - Example: "Ik sta liever helemaal vooraan in de rij dan helemaal achteraan." (I prefer to be at the front of the line than at the back.)
+
+- **[B2/C1] fataal** (fatal)
+  - IPA: [faːˈtaːl]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: fatale
+  - Conjugations: N/A
+  - Example: "Het ongeval had een fatale afloop." (The accident had a fatal outcome.)
+
+- **[B2/C1] intellectueel** (intellectual)
+  - IPA: [ɪntɛlɛktyˈwel]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: intellectuele
+  - Conjugations: N/A
+  - Example: "Ons onderwijs is in intellectueel opzicht nogal schraal." (Our education is rather poor in intellectual terms.)
+
+- **[B2/C1] maandelijks** (monthly)
+  - IPA: [ˈmaːndələks]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: maandelijkse
+  - Conjugations: N/A
+  - Example: "Ik wil ook een fulltime baan en een maandelijks loon." (I also want a full-time job and a monthly salary.)
+
+- **[B2/C1] De mode** (fashion)
+  - IPA: [ˈmoːdə]
+  - Part of Speech: noun
+  - Gender: feminine
+  - Plural: modes
+  - Conjugations: N/A
+  - Example: "Ze interesseert zich in mode." (She is interested in fashion.)
+
+- **[B2/C1] verkondigen** (to proclaim, to put forward)
+  - IPA: [vərˈkɔndɪɣə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: Pres: verkondig, Past: verkondigde, Fut: zal verkondigen, Part: verkondigd
+  - Example: "Zij verkondigt graag haar mening." (She likes to proclaim her opinion.)
+
+- **[B2/C1] De woonplaats** (residence)
+  - IPA: [ˈʋoːnplaːts]
+  - Part of Speech: noun
+  - Gender: feminine
+  - Plural: woonplaatsen
+  - Conjugations: N/A
+  - Example: "Zijn woonplaats lag ergens in historisch Mesopotamië." (His residence was located somewhere in historical Mesopotamia.)
+
+- **[B2/C1] beslist** (decisive, resolute)
+  - IPA: [bəˈslɪst]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: besliste
+  - Conjugations: N/A
+  - Example: "Met een besliste beweging sloot hij de deur." (With a decisive movement he closed the door.)
+
+- **[B2/C1] bovenaan** (at the top)
+  - IPA: [ˈboːvənaːn]
+  - Part of Speech: adverb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: N/A
+  - Example: "Hij stond bovenaan de trap." (He stood at the top of the stairs.)
+
+- **[B2/C1] De dijk** (dike)
+  - IPA: [dɛi̯k]
+  - Part of Speech: noun
+  - Gender: masculine
+  - Plural: dijken
+  - Conjugations: N/A
+  - Example: "De dijk beschermt de polder." (The dike protects the polder.)
+
+- **[B2/C1] gieten** (to pour)
+  - IPA: [ˈɣitə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: Pres: giet, Past: goot, Fut: zal gieten, Part: gegoten
+  - Example: "Hij giet het glas vol water." (He pours the glass full of water.)
+
+- **[B2/C1] Het misverstand** (misunderstanding)
+  - IPA: [ˈmɪsvərstɑnt]
+  - Part of Speech: noun
+  - Gender: neuter
+  - Plural: misverstanden
+  - Conjugations: N/A
+  - Example: "We moeten zo’n misverstand in de toekomst zien te vermijden." (We must try to avoid such a misunderstanding in the future.)
+
+- **[B2/C1] omkomen** (to die)
+  - IPA: [ˈɔmkɔmə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: Pres: komt om, Past: kwam om, Fut: zal omkomen, Part: omgekomen
+  - Example: "Bij de aardbeving zijn 352 mensen omgekomen." (352 people died in the earthquake.)
+
+- **[B2/C1] De trouw** (faith(fulness))
+  - IPA: [trʌu̯]
+  - Part of Speech: noun
+  - Gender: feminine
+  - Plural: N/A
+  - Conjugations: N/A
+  - Example: "Zijn trouw aan zijn baas is onvoorwaardelijk." (His loyalty to his boss is unconditional.)
+
+- **[B2/C1] afvoeren** (to transport)
+  - IPA: [ˈɑfvorə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: Pres: voert af, Past: voerde af, Fut: zal afvoeren, Part: afgevoerd
+  - Example: "Het afval wordt met drie wagens afgevoerd." (The waste is transported with three wagons.)
+
+- **[B2/C1] eng** (scary)
+  - IPA: [ɛŋ]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: enge
+  - Conjugations: N/A
+  - Example: "Zij vertelde de kinderen een eng verhaal." (She told the children a scary story.)
+
+- **[B2/C1] ontploffen** (to explode)
+  - IPA: [ɔntˈplɔfə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: Pres: ontploft, Past: ontplofte, Fut: zal ontploffen, Part: ontploft
+  - Example: "De bom ontploft in het weiland." (The bomb explodes in the meadow.)
+
+- **[B2/C1] De rang** (rank)
+  - IPA: [rɑŋ]
+  - Part of Speech: noun
+  - Gender: masculine
+  - Plural: rangen
+  - Conjugations: N/A
+  - Example: "Zij heeft in het leger een hoge rang." (She has a high rank in the army.)
+
+- **[B2/C1] De richtlijn** (guideline)
+  - IPA: [ˈrɪxtlɪin]
+  - Part of Speech: noun
+  - Gender: feminine
+  - Plural: richtlijnen
+  - Conjugations: N/A
+  - Example: "We kregen goede richtlijnen mee." (We received good guidelines.)
+
+- **[B2/C1] ruilen** (to exchange)
+  - IPA: [ˈrœylə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: Pres: ruil, Past: ruilde, Fut: zal ruilen, Part: geruild
+  - Example: "Wil je je boek ruilen voor een film?" (Do you want to exchange your book for a movie?)
+
+- **[B2/C1] straf** (hard)
+  - IPA: [strɑf]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: straffe
+  - Conjugations: N/A
+  - Example: "De gast deed een paar straffe uitspraken." (The guest made some bold statements.)
+
+- **[B2/C1] De deugd** (virtue)
+  - IPA: [døːxt]
+  - Part of Speech: noun
+  - Gender: feminine
+  - Plural: deugden
+  - Conjugations: N/A
+  - Example: "Eerlijkheid en betrouwbaarheid zijn mooie deugden." (Honesty and reliability are beautiful virtues.)
+
+- **[B2/C1] discussiëren** (to discuss)
+  - IPA: [dɪskyˈtirə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: Pres: discussieer, Past: discussieerde, Fut: zal discussiëren, Part: gediscussieerd
+  - Example: "Ik vind het leuk om te discussiëren." (I like to discuss.)
+
+- **[B2/C1] essentieel** (essential)
+  - IPA: [ɛsɛnˈʃeːl]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: essentiële
+  - Conjugations: N/A
+  - Example: "Wat zijn de essentiële kenmerken van dit tijdperk?" (What are the essential characteristics of this era?)
+
+- **[B2/C1] evident** (evident)
+  - IPA: [eːviˈdɛnt]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: evidente
+  - Conjugations: N/A
+  - Example: "Het is evident dat het om meer gaat dan om een biologisch verschil." (It is evident that it is about more than just a biological difference.)
+
+- **[B2/C1] genezen** (to cure)
+  - IPA: [ɣəˈneːzə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: Pres: geneest, Past: genas, Fut: zal genezen, Part: genezen
+  - Example: "Het wondje in haar borst is nog steeds niet genezen." (The little wound in her chest has still not healed.)
+
+- **[B2/C1] De inrichting** (design)
+  - IPA: [ˈɪnrɪxtɪŋ]
+  - Part of Speech: noun
+  - Gender: feminine
+  - Plural: inrichtingen
+  - Conjugations: N/A
+  - Example: "De inrichting van het hele huis is smaakvol en sober." (The design of the whole house is tasteful and sober.)
+
+- **[B2/C1] jaloers** (jealous)
+  - IPA: [ʒaˈlurs]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: jaloerse
+  - Conjugations: N/A
+  - Example: "Mijn jaloerse zusje liep boos weg." (My jealous little sister walked away angrily.)
+
+- **[B2/C1] Het motto** (motto)
+  - IPA: [ˈmɔtoː]
+  - Part of Speech: noun
+  - Gender: neuter
+  - Plural: motto's
+  - Conjugations: N/A
+  - Example: "Het motto is dat de aanval de beste verdediging is." (The motto is that the attack is the best defense.)
+
+- **[B2/C1] naïef** (naive)
+  - IPA: [naːˈiːf]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: naïeve
+  - Conjugations: N/A
+  - Example: "Hij deed een naïeve uitspraak." (He made a naive statement.)
+
+- **[B2/C1] De nicht** (niece, cousin)
+  - IPA: [nɪxt]
+  - Part of Speech: noun
+  - Gender: feminine
+  - Plural: nichten
+  - Conjugations: N/A
+  - Example: "De meeste mensen hebben ook ooms en tantes, neven en nichten." (Most people also have uncles and aunts, nephews and nieces/cousins.)
+
+- **[B2/C1] plezant** (amusing)
+  - IPA: [pləˈzɑnt]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: plezante
+  - Conjugations: N/A
+  - Example: "Het was plezant en iedereen voelde zich goed en nuttig en gewaardeerd." (It was amusing and everyone felt good and useful and appreciated.)
+
+- **[B2/C1] gruwelijk** (horrible)
+  - IPA: [ˈxryʋələk]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: gruwelijke
+  - Conjugations: N/A
+  - Example: "Ik kijk niet naar die gruwelijke beelden op de televisie." (I don't watch those horrible images on television.)
+
+- **[B2/C1] De kabel** (cable)
+  - IPA: [ˈkaːbəl]
+  - Part of Speech: noun
+  - Gender: masculine
+  - Plural: kabels
+  - Conjugations: N/A
+  - Example: "Het schip werd gesleept met een dikke kabel." (The ship was towed with a thick cable.)
+
+- **[B2/C1] Het schaap** (sheep)
+  - IPA: [sxɑːp]
+  - Part of Speech: noun
+  - Gender: neuter
+  - Plural: schapen
+  - Conjugations: N/A
+  - Example: "De schapen leveren de wol voor een soort alternatieve bontjassen." (The sheep provide the wool for a kind of alternative fur coat.)
+
+- **[B2/C1] tienduizend** (ten thousand)
+  - IPA: [ˈtienduizənt]
+  - Part of Speech: number
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: N/A
+  - Example: "Zij ontvangen een subsidie van tienduizend euro." (They receive a subsidy of ten thousand euros.)
+
+- **[B2/C1] zolang** (as long as)
+  - IPA: [zoˈlɑŋ]
+  - Part of Speech: adverb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: N/A
+  - Example: N/A
+
+- **[B2/C1] versnellen** (to accelerate)
+  - IPA: [vərˈsnɛlə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: Pres: versnel, Past: versnelde, Fut: zal versnellen, Part: versneld
+  - Example: "Vlak voor de finish versnelde hij nog." (Just before the finish, he accelerated.)
+
+- **[B2/C1] verwoesten** (to destroy)
+  - IPA: [vərˈwustə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: Pres: verwoest, Past: verwoestte, Fut: zal verwoesten, Part: verwoest
+  - Example: "De fabriek werd verwoest door een explosie." (The factory was destroyed by an explosion.)
+
+- **[B2/C1] aantasten** (to affect)
+  - IPA: [ˈaːntɑstə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: Pres: tast aan, Past: tastte aan, Fut: zal aantasten, Part: aangetast
+  - Example: "De vorst tastte de bloesem aan." (The frost affected the blossom.)
+
+- **[B2/C1] bewerken** (to work)
+  - IPA: [bəˈʋɛrkə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: Pres: bewerk, Past: bewerkte, Fut: zal bewerken, Part: bewerkt
+  - Example: "Ze bewerken de muur met een borstel." (They are working on the wall with a brush.)
+
+- **[B2/C1] doorvoeren** (to carry out)
+  - IPA: [ˈdoːrˌvuːrə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: Pres: voert door, Past: voerde door, Fut: zal doorvoeren, Part: doorgevoerd
+  - Example: "We gaan een paar veranderingen doorvoeren." (We are going to carry out a few changes.)
+
+- **[B2/C1] feliciteren** (to congratulate)
+  - IPA: [fəˈlɪsitɪrə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: Pres: feliciteer, Past: feliciteerde, Fut: zal feliciteren, Part: gefeliciteerd
+  - Example: "Van harte gefeliciteerd met jullie verjaardag." (Congratulations on your birthday.)
+
+- **[B2/C1] fier** (proud)
+  - IPA: [fiːr]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: fiere
+  - Conjugations: N/A
+  - Example: "Het is totaal niet iets om fier op te zijn." (It is not something to be proud of at all.)
+
+- **[B2/C1] De handeling** (action)
+  - IPA: [ˈɦɑndəlɪŋ]
+  - Part of Speech: noun
+  - Gender: feminine (de(f))
+  - Plural: handelingen
+  - Conjugations: N/A
+  - Example: "Het is een kwestie van alle handelingen in de goede volgorde uitvoeren." (It is a matter of performing all actions in the correct order.)
+
+- **[B2/C1] weleens** (sometimes, ever)
+  - IPA: [ˈʋeːləns]
+  - Part of Speech: adverb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: N/A
+  - Example: "Heb jij weleens gerookt?" (Have you ever smoked?)
+
+- **[B2/C1] zuur** (acid)
+  - IPA: [zyːr]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: zure
+  - Conjugations: N/A
+  - Example: "Voor zure dressing wordt vaak azijn of citroensap gebruikt." (Vinegar or lemon juice is often used for sour dressing.)
+
+- **[B2/C1] De ambassadeur** (ambassador)
+  - IPA: [ɑmbɑsaˈdøːr]
+  - Part of Speech: noun
+  - Gender: masculine (de(m))
+  - Plural: ambassadeurs
+  - Conjugations: N/A
+  - Example: "Pakistan riep zijn ambassadeur uit Denemarken terug." (Pakistan recalled its ambassador from Denmark.)
+
+- **[B2/C1] neutraal** (neutral)
+  - IPA: [nøːˈtraːl]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: neutrale
+  - Conjugations: N/A
+  - Example: "De wedstrijd wordt op neutraal terrein gespeeld." (The match is being played on neutral ground.)
+
+- **[B2/C1] nuchter** (a) empty, sober b) plain)
+  - IPA: [ˈnʏxtər]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: nuchtere
+  - Conjugations: N/A
+  - Example: "Ik dronk een biertje op mijn nuchtere maag." (I drank a beer on an empty stomach.)
+  - Example: "We gaan morgen proberen een nuchtere analyse te maken." (We will try to make a sober analysis tomorrow.)
+
+- **[B2/C1] vooraan** (in front)
+  - IPA: [ˈvoːrˌaːn]
+  - Part of Speech: adverb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: N/A
+  - Example: "Ik sta liever helemaal vooraan in de rij dan helemaal achteraan." (I prefer to be at the very front of the line than at the very back.)
+
+- **[B2/C1] fataal** (fatal)
+  - IPA: [faːˈtaːl]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: fatale
+  - Conjugations: N/A
+  - Example: "Het ongeval had een fatale afloop." (The accident had a fatal outcome.)
+
+- **[B2/C1] intellectueel** (intellectual)
+  - IPA: [ɪntɛlɛktyˈʋeːl]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: intellectuele
+  - Conjugations: N/A
+  - Example: "Ons onderwijs is in intellectueel opzicht nogal schraal." (Our education is quite poor in intellectual terms.)
+
+- **[B2/C1] maandelijks** (monthly)
+  - IPA: [ˈmaːndələks]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: maandelijkse
+  - Conjugations: N/A
+  - Example: "Ik wil ook een fulltime baan en een maandelijks loon." (I also want a full-time job and a monthly salary.)
+
+- **[B2/C1] De mode** (fashion)
+  - IPA: [ˈmoːdə]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: moden
+  - Conjugations: N/A
+  - Example: "Ze interesseert zich in mode." (She is interested in fashion.)
+
+- **[B2/C1] verkondigen** (to proclaim, to put forward)
+  - IPA: [vərˈkɔndɪɣə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: Pres: verkondig, Past: verkondigde, Fut: zal verkondigen, Part: verkondigd
+  - Example: "Zij verkondigt graag haar mening." (She likes to proclaim her opinion.)
+
+- **[B2/C1] De woonplaats** (residence)
+  - IPA: [ˈʋoːnˌplaːts]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: woonplaatsen
+  - Conjugations: N/A
+  - Example: "Zijn woonplaats lag ergens in historisch Mesopotamië." (His residence was somewhere in historical Mesopotamia.)
+
+- **[B2/C1] beslist** (decisive, resolute)
+  - IPA: [bəˈslɪst]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: besliste
+  - Conjugations: N/A
+  - Example: "Met een besliste beweging sloot hij de deur." (With a decisive movement, he closed the door.)
+
+- **[B2/C1] bovenaan** (at the top)
+  - IPA: [ˈboːvənˌaːn]
+  - Part of Speech: adverb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: N/A
+  - Example: "Hij stond bovenaan de trap." (He was standing at the top of the stairs.)
+
+- **[B2/C1] De dijk** (dike)
+  - IPA: [dɛɪ̯k]
+  - Part of Speech: noun
+  - Gender: masculine (de(m))
+  - Plural: dijken
+  - Conjugations: N/A
+  - Example: "De dijk beschermt de polder." (The dike protects the polder.)
+
+- **[B2/C1] gieten** (to pour)
+  - IPA: [ˈɣiːtə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: Pres: giet, Past: goot, Fut: zal gieten, Part: gegoten
+  - Example: "Hij giet het glas vol water." (He pours the glass full of water.)
+
+- **[B2/C1] Het misverstand** (misunderstanding)
+  - IPA: [ˈmɪsfərstɑnt]
+  - Part of Speech: noun
+  - Gender: neuter (het)
+  - Plural: misverstanden
+  - Conjugations: N/A
+  - Example: "We moeten zo’n misverstand in de toekomst zien te vermijden." (We must try to avoid such a misunderstanding in the future.)
+
+- **[B2/C1] omkomen** (to die)
+  - IPA: [ˈɔmˌkoːmə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: Pres: komt om, Past: kwam om, Fut: zal omkomen, Part: omgekomen
+  - Example: "Bij de aardbeving zijn 352 mensen omgekomen." (352 people died in the earthquake.)
+
+- **[B2/C1] De trouw** (faith(fulness))
+  - IPA: [trɑu̯]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: trouwen
+  - Conjugations: N/A
+  - Example: "Zijn trouw aan zijn baas is onvoorwaardelijk." (His loyalty to his boss is unconditional.)
+
+- **[B2/C1] afvoeren** (to transport)
+  - IPA: [ˈɑfˌvuːrə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: Pres: voert af, Past: voerde af, Fut: zal afvoeren, Part: afgevoerd
+  - Example: "Het afval wordt met drie wagens afgevoerd." (The waste is transported by three trucks.)
+
+- **[B2/C1] eng** (scary)
+  - IPA: [ɛŋ]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: enge
+  - Conjugations: N/A
+  - Example: "Zij vertelde de kinderen een eng verhaal." (She told the children a scary story.)
+
+- **[B2/C1] ontploffen** (to explode)
+  - IPA: [ɔntˈplɔfə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: Pres: ontploft, Past: ontplofte, Fut: zal ontploffen, Part: ontploft
+  - Example: "De bom ontploft in het weiland." (The bomb explodes in the meadow.)
+
+- **[B2/C1] De rang** (rank)
+  - IPA: [rɑŋ]
+  - Part of Speech: noun
+  - Gender: masculine (de(m))
+  - Plural: rangen
+  - Conjugations: N/A
+  - Example: "Zij heeft in het leger een hoge rang." (She has a high rank in the army.)
+
+- **[B2/C1] De richtlijn** (guideline)
+  - IPA: [ˈrɪxtlɪin]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: richtlijnen
+  - Conjugations: N/A
+  - Example: "We kregen goede richtlijnen mee." (We were given good guidelines.)
+
+- **[B2/C1] ruilen** (to exchange)
+  - IPA: [ˈrœylə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: Pres: ruil, Past: ruilde, Fut: zal ruilen, Part: geruild
+  - Example: "Wil je je boek ruilen voor een film?" (Do you want to exchange your book for a film?)
+
+- **[B2/C1] straf** (hard)
+  - IPA: [strɑf]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: straffe
+  - Conjugations: N/A
+  - Example: "De gast deed een paar straffe uitspraken." (The guest made some strong statements.)
+
+- **[B2/C1] De deugd** (virtue)
+  - IPA: [døːxt]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: deugden
+  - Conjugations: N/A
+  - Example: "Eerlijkheid en betrouwbaarheid zijn mooie deugden." (Honesty and reliability are beautiful virtues.)
+
+- **[B2/C1] discussiëren** (to discuss)
+  - IPA: [dɪskʏˈtirən]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: Pres: discussieer, Past: discussieerde, Fut: zal discussiëren, Part: gediscussieerd
+  - Example: "Ik vind het leuk om te discussiëren." (I like to discuss.)
+
+- **[B2/C1] essentieel** (essential)
+  - IPA: [ɛsɛnˈʃeːl]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: essentiële
+  - Conjugations: N/A
+  - Example: "Wat zijn de essentiële kenmerken van dit tijdperk?" (What are the essential characteristics of this era?)
+
+- **[B2/C1] evident** (evident)
+  - IPA: [eviˈdɛnt]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: evidente
+  - Conjugations: N/A
+  - Example: "Het is evident dat het om meer gaat dan om een biologisch verschil." (It is evident that it is about more than a biological difference.)
+
+- **[B2/C1] genezen** (to cure)
+  - IPA: [ɣəˈneːzə(n)]
+  - Part of Speech: verb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: Pres: genees, Past: genas, Fut: zal genezen, Part: genezen
+  - Example: "Het wondje in haar borst is nog steeds niet genezen." (The wound in her breast has still not healed.)
+
+- **[B2/C1] De inrichting** (design)
+  - IPA: [ˈɪnrɪxtɪŋ]
+  - Part of Speech: noun
+  - Gender: feminine (de(f))
+  - Plural: inrichtingen
+  - Conjugations: N/A
+  - Example: "De inrichting van het hele huis is smaakvol en sober." (The design of the entire house is tasteful and simple.)
+
+- **[B2/C1] jaloers** (jealous)
+  - IPA: [ʒaˈluːrs]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: jaloerse
+  - Conjugations: N/A
+  - Example: "Mijn jaloerse zusje liep boos weg." (My jealous little sister walked away angrily.)
+
+- **[B2/C1] Het motto** (motto)
+  - IPA: [ˈmɔtoː]
+  - Part of Speech: noun
+  - Gender: neuter (het)
+  - Plural: motto's
+  - Conjugations: N/A
+  - Example: "Het motto is dat de aanval de beste verdediging is." (The motto is that the attack is the best defense.)
+
+- **[B2/C1] naïef** (naive)
+  - IPA: [naːˈiːf]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: naïeve
+  - Conjugations: N/A
+  - Example: "Hij deed een naïeve uitspraak." (He made a naive statement.)
+
+- **[B2/C1] De nicht** (niece, cousin)
+  - IPA: [nɪxt]
+  - Part of Speech: noun
+  - Gender: feminine (de(f))
+  - Plural: nichten
+  - Conjugations: N/A
+  - Example: "De meeste mensen hebben ook ooms en tantes, neven en nichten." (Most people also have uncles and aunts, nephews and nieces/cousins.)
+
+- **[B2/C1] plezant** (amusing)
+  - IPA: [pləˈzɑnt]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: plezante
+  - Conjugations: N/A
+  - Example: "Het was plezant en iedereen voelde zich goed en nuttig en gewaardeerd." (It was amusing and everyone felt good and useful and appreciated.)
+
+- **[B2/C1] gruwelijk** (horrible)
+  - IPA: [ˈɣryʋələk]
+  - Part of Speech: adjective
+  - Gender: N/A
+  - Plural: gruwelijke
+  - Conjugations: N/A
+  - Example: "Ik kijk niet naar die gruwelijke beelden op de televisie." (I don't watch those horrible images on television.)
+
+- **[B2/C1] De kabel** (cable)
+  - IPA: [ˈkaːbəl]
+  - Part of Speech: noun
+  - Gender: masculine (de(m))
+  - Plural: kabels
+  - Conjugations: N/A
+  - Example: "Het schip werd gesleept met een dikke kabel." (The ship was towed with a thick cable.)
+
+- **[B2/C1] Het schaap** (sheep)
+  - IPA: [sxɑːp]
+  - Part of Speech: noun
+  - Gender: neuter (het)
+  - Plural: schapen
+  - Conjugations: N/A
+  - Example: "De schapen leveren de wol voor een soort alternatieve bontjassen." (The sheep provide the wool for a kind of alternative fur coat.)
+
+- **[B2/C1] tienduizend** (ten thousand)
+  - IPA: [ˈtiːnˌdœyzənt]
+  - Part of Speech: numeral
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: N/A
+  - Example: "Zij ontvangen een subsidie van tienduizend euro." (They receive a subsidy of ten thousand euros.)
+
+- **[B2/C1] zolang** (as long as)
+  - IPA: [zoˈlɑŋ]
+  - Part of Speech: adverb
+  - Gender: N/A
+  - Plural: N/A
+  - Conjugations: N/A
+  - Example: N/A
+
+- **[B2] versnellen** (to accelerate)
+  - IPA: [vərˈsnɛlə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: versnel, Past: versnelde, Fut: zal versnellen, Part: versneld
+  - Example: "Vlak voor de finish versnelde hij nog." (Right before the finish, he accelerated even more.)
+
+- **[B2] verwoesten** (to destroy)
+  - IPA: [vərˈwustə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: verwoest, Past: verwoestte, Fut: zal verwoesten, Part: verwoest
+  - Example: "De fabriek werd verwoest door een explosie." (The factory was destroyed by an explosion.)
+
+- **[B2] aantasten** (to affect)
+  - IPA: [ˈaːntɑstə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: tast aan, Past: tastte aan, Fut: zal aantasten, Part: aangetast
+  - Example: "De vorst tastte de bloesem aan." (The frost affected the blossom.)
+
+- **[B2] bewerken** (to work (on), to edit)
+  - IPA: [bəˈʋɛrkə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: bewerk, Past: bewerkte, Fut: zal bewerken, Part: bewerkt
+  - Example: "Ze bewerken de muur met een borstel." (They are working on the wall with a brush.)
+
+- **[B2] doorvoeren** (to carry out, to implement)
+  - IPA: [ˈdoːrˌvuːrə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: voert door, Past: voerde door, Fut: zal doorvoeren, Part: doorgevoerd
+  - Example: "We gaan een paar veranderingen doorvoeren." (We are going to implement a few changes.)
+
+- **[B2] feliciteren** (to congratulate)
+  - IPA: [fəˈlɪsitərə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: feliciteer, Past: feliciteerde, Fut: zal feliciteren, Part: gefeliciteerd
+  - Example: "Van harte gefeliciteerd met jullie verjaardag." (Congratulations on your birthday.)
+
+- **[B2] fier** (proud)
+  - IPA: [fiːr]
+  - Part of Speech: adjective
+  - Example: "Het is totaal niet iets om fier op te zijn." (It's not something to be proud of at all.)
+
+- **[B2] De handeling** (action)
+  - IPA: [ˈɦɑndəlɪŋ]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: handelingen
+  - Example: "Het is een kwestie van alle handelingen in de goede volgorde uitvoeren." (It is a matter of performing all actions in the correct order.)
+
+- **[B2] weleens** (sometimes, ever)
+  - IPA: [ˈʋeːləns]
+  - Part of Speech: adverb
+  - Example: "Heb jij weleens gerookt?" (Have you ever smoked?)
+
+- **[B2] zuur** (acid, sour)
+  - IPA: [zyːr]
+  - Part of Speech: adjective
+  - Example: "Voor zure dressing wordt vaak azijn of citroensap gebruikt." (Vinegar or lemon juice is often used for sour dressing.)
+
+- **[B2] De ambassadeur** (ambassador)
+  - IPA: [ɑmbɑsaˈdøːr]
+  - Part of Speech: noun
+  - Gender: masculine (de)
+  - Plural: ambassadeurs
+  - Example: "Pakistan riep zijn ambassadeur uit Denemarken terug." (Pakistan recalled its ambassador from Denmark.)
+
+- **[B2] neutraal** (neutral)
+  - IPA: [nøːˈtraːl]
+  - Part of Speech: adjective
+  - Example: "De wedstrijd wordt op neutraal terrein gespeeld." (The match is played on neutral ground.)
+
+- **[B2] nuchter** (a) empty, sober b) plain)
+  - IPA: [ˈnʏxtər]
+  - Part of Speech: adjective
+  - Example: "Ik dronk een biertje op mijn nuchtere maag." (I drank a beer on an empty stomach.)
+  - Example: "We gaan morgen proberen een nuchtere analyse te maken." (We are going to try to make a sober/plain analysis tomorrow.)
+
+- **[B2] vooraan** (in front)
+  - IPA: [ˈvoːraːn]
+  - Part of Speech: adverb
+  - Example: "Ik sta liever helemaal vooraan in de rij dan helemaal achteraan." (I prefer to stand all the way in front of the line than all the way at the back.)
+
+- **[B2] fataal** (fatal)
+  - IPA: [faːˈtaːl]
+  - Part of Speech: adjective
+  - Example: "Het ongeval had een fatale afloop." (The accident had a fatal outcome.)
+
+- **[B2] intellectueel** (intellectual)
+  - IPA: [ɪntɛlɛkˈtueːl]
+  - Part of Speech: adjective
+  - Example: "Ons onderwijs is in intellectueel opzicht nogal schraal." (Our education is rather poor in intellectual terms.)
+
+- **[B2] maandelijks** (monthly)
+  - IPA: [ˈmaːndələks]
+  - Part of Speech: adjective
+  - Example: "Ik wil ook een fulltime baan en een maandelijks loon." (I also want a full-time job and a monthly salary.)
+
+- **[B2] De mode** (fashion)
+  - IPA: [ˈmoːdə]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: moden
+  - Example: "Ze interesseert zich in mode." (She is interested in fashion.)
+
+- **[B2] verkondigen** (to proclaim, to put forward)
+  - IPA: [vərˈkɔndɪɣə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: verkondig, Past: verkondigde, Fut: zal verkondigen, Part: verkondigd
+  - Example: "Zij verkondigt graag haar mening." (She likes to proclaim her opinion.)
+
+- **[B2] De woonplaats** (residence)
+  - IPA: [ˈʋoːnˌplaːts]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: woonplaatsen
+  - Example: "Zijn woonplaats lag ergens in historisch Mesopotamië." (His residence was somewhere in historical Mesopotamia.)
+
+- **[B2] beslist** (decisive, resolute)
+  - IPA: [bəˈslɪst]
+  - Part of Speech: adjective
+  - Example: "Met een besliste beweging sloot hij de deur." (With a decisive movement, he closed the door.)
+
+- **[B2] bovenaan** (at the top)
+  - IPA: [ˈboːvə(n)aːn]
+  - Part of Speech: adverb
+  - Example: "Hij stond bovenaan de trap." (He was standing at the top of the stairs.)
+
+- **[B2] De dijk** (dike)
+  - IPA: [dɛi̯k]
+  - Part of Speech: noun
+  - Gender: masculine (de)
+  - Plural: dijken
+  - Example: "De dijk beschermt de polder." (The dike protects the polder.)
+
+- **[B2] gieten** (to pour)
+  - IPA: [ˈɣitə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: giet, Past: goot, Fut: zal gieten, Part: gegoten
+  - Example: "Hij giet het glas vol water." (He pours the glass full of water.)
+
+- **[B2] Het misverstand** (misunderstanding)
+  - IPA: [ˈmɪsvərstɑnt]
+  - Part of Speech: noun
+  - Gender: neuter (het)
+  - Plural: misverstanden
+  - Example: "We moeten zo’n misverstand in de toekomst zien te vermijden." (We must try to avoid such a misunderstanding in the future.)
+
+- **[B2] omkomen** (to die)
+  - IPA: [ˈɔmkɔmə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: komt om, Past: kwam om, Fut: zal omkomen, Part: omgekomen
+  - Example: "Bij de aardbeving zijn 352 mensen omgekomen." (352 people died in the earthquake.)
+
+- **[B2] De trouw** (faith(fulness))
+  - IPA: [trɑu̯]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: (none)
+  - Example: "Zijn trouw aan zijn baas is onvoorwaardelijk." (His faithfulness to his boss is unconditional.)
+
+- **[B2] afvoeren** (to transport)
+  - IPA: [ˈɑfˌvuːrə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: voert af, Past: voerde af, Fut: zal afvoeren, Part: afgevoerd
+  - Example: "Het afval wordt met drie wagens afgevoerd." (The waste is transported with three trucks.)
+
+- **[B2] eng** (scary)
+  - IPA: [ɛŋ]
+  - Part of Speech: adjective
+  - Example: "Zij vertelde de kinderen een eng verhaal." (She told the children a scary story.)
+
+- **[B2] ontploffen** (to explode)
+  - IPA: [ɔntˈplɔfə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: ontploft, Past: ontplofte, Fut: zal ontploffen, Part: ontploft
+  - Example: "De bom ontploft in het weiland." (The bomb explodes in the meadow.)
+
+- **[B2] De rang** (rank)
+  - IPA: [rɑŋ]
+  - Part of Speech: noun
+  - Gender: masculine (de)
+  - Plural: rangen
+  - Example: "Zij heeft in het leger een hoge rang." (She has a high rank in the army.)
+
+- **[B2] De richtlijn** (guideline)
+  - IPA: [ˈrɪxtˌlɛin]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: richtlijnen
+  - Example: "We kregen goede richtlijnen mee." (We received good guidelines.)
+
+- **[B2] ruilen** (to exchange)
+  - IPA: [ˈrœylə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: ruil, Past: ruilde, Fut: zal ruilen, Part: geruild
+  - Example: "Wil je je boek ruilen voor een film?" (Do you want to exchange your book for a film?)
+
+- **[B2] straf** (hard)
+  - IPA: [strɑf]
+  - Part of Speech: adjective
+  - Example: "De gast deed een paar straffe uitspraken." (The guest made some harsh statements.)
+
+- **[C1] De deugd** (virtue)
+  - IPA: [døːxt]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: deugden
+  - Example: "Eerlijkheid en betrouwbaarheid zijn mooie deugden." (Honesty and reliability are beautiful virtues.)
+
+- **[B2] discussiëren** (to discuss)
+  - IPA: [dɪskyˈtirə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: discussieer, Past: discussieerde, Fut: zal discussiëren, Part: gediscussieerd
+  - Example: "Ik vind het leuk om te discussiëren." (I enjoy discussing.)
+
+- **[B2] essentieel** (essential)
+  - IPA: [ɛsɛnˈʃeːl]
+  - Part of Speech: adjective
+  - Example: "Wat zijn de essentiële kenmerken van dit tijdperk?" (What are the essential characteristics of this era?)
+
+- **[B2] evident** (evident)
+  - IPA: [eːviˈdɛnt]
+  - Part of Speech: adjective
+  - Example: "Het is evident dat het om meer gaat dan om een biologisch verschil." (It is evident that it is about more than just a biological difference.)
+
+- **[B2] genezen** (to cure, to heal)
+  - IPA: [ɣəˈneːzə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: genees, Past: genas, Fut: zal genezen, Part: genezen
+  - Example: "Het wondje in haar borst is nog steeds niet genezen." (The wound in her chest is still not healed.)
+
+- **[B2] De inrichting** (design, interior)
+  - IPA: [ˈɪnrɪxtɪŋ]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: inrichtingen
+  - Example: "De inrichting van het hele huis is smaakvol en sober." (The design of the whole house is tasteful and sober.)
+
+- **[B2] jaloers** (jealous)
+  - IPA: [ʒaˈluːrs]
+  - Part of Speech: adjective
+  - Example: "Mijn jaloerse zusje liep boos weg." (My jealous little sister walked away angrily.)
+
+- **[B2] Het motto** (motto)
+  - IPA: [ˈmɔtoː]
+  - Part of Speech: noun
+  - Gender: neuter (het)
+  - Plural: motto's
+  - Example: "Het motto is dat de aanval de beste verdediging is." (The motto is that the attack is the best defense.)
+
+- **[B2] naïef** (naive)
+  - IPA: [naːˈiːf]
+  - Part of Speech: adjective
+  - Example: "Hij deed een naïeve uitspraak." (He made a naive statement.)
+
+- **[B2] De nicht** (niece, cousin)
+  - IPA: [nɪxt]
+  - Part of Speech: noun
+  - Gender: feminine (de)
+  - Plural: nichten
+  - Example: "De meeste mensen hebben ook ooms en tantes, neven en nichten." (Most people also have uncles and aunts, nephews and nieces/cousins.)
+
+- **[B2] plezant** (amusing, pleasant)
+  - IPA: [pləˈzɑnt]
+  - Part of Speech: adjective
+  - Example: "Het was plezant en iedereen voelde zich goed en nuttig en gewaardeerd." (It was pleasant and everyone felt good and useful and valued.)
+
+- **[B2] gruwelijk** (horrible)
+  - IPA: [ˈxryʋələk]
+  - Part of Speech: adjective
+  - Example: "Ik kijk niet naar die gruwelijke beelden op de televisie." (I don't watch those horrible images on television.)
+
+- **[B2] De kabel** (cable)
+  - IPA: [ˈkaːbəl]
+  - Part of Speech: noun
+  - Gender: masculine (de)
+  - Plural: kabels
+  - Example: "Het schip werd gesleept met een dikke kabel." (The ship was towed with a thick cable.)
+
+- **[B2] Het schaap** (sheep)
+  - IPA: [sxɑːp]
+  - Part of Speech: noun
+  - Gender: neuter (het)
+  - Plural: schapen
+  - Example: "De schapen leveren de wol voor een soort alternatieve bontjassen." (The sheep provide the wool for a kind of alternative fur coat.)
+
+- **[B2] tienduizend** (ten thousand)
+  - IPA: [ˈtinˌdœyzənt]
+  - Part of Speech: numeral
+  - Example: "Zij ontvangen een subsidie van tienduizend euro." (They receive a subsidy of ten thousand euros.)
+
+- **[B2] zolang** (as long as)
+  - IPA: [zoˈlɑŋ]
+  - Part of Speech: adverb
+  - Example: "Zolang je je best doet, is het goed." (As long as you do your best, it's good.)
+
+- **[B2] versnellen** (to accelerate)
+  - IPA: [vərˈsnɛlə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: versnel, Past: versnelde, Fut: zal versnellen, Part: versneld
+  - Example: "Vlak voor de finish versnelde hij nog." (Just before the finish, he accelerated.)
+
+- **[B2] verwoesten** (to destroy)
+  - IPA: [vərˈʋustə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: verwoest, Past: verwoestte, Fut: zal verwoesten, Part: verwoest
+  - Example: "De fabriek werd verwoest door een explosie." (The factory was destroyed by an explosion.)
+
+- **[B2] aantasten** (to affect)
+  - IPA: [ˈaːntɑstə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: tast aan, Past: tastte aan, Fut: zal aantasten, Part: aangetast
+  - Example: "De vorst tastte de bloesem aan." (The frost affected the blossom.)
+
+- **[B2] bewerken** (to work)
+  - IPA: [bəˈʋɛrkə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: bewerk, Past: bewerkte, Fut: zal bewerken, Part: bewerkt
+  - Example: "Ze bewerken de muur met een borstel." (They are working the wall with a brush.)
+
+- **[B2] doorvoeren** (to carry out)
+  - IPA: [ˈdoːrvorə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: voer door, Past: voerde door, Fut: zal doorvoeren, Part: doorgevoerd
+  - Example: "We gaan een paar veranderingen doorvoeren." (We are going to carry out a few changes.)
+
+- **[B2] feliciteren** (to congratulate)
+  - IPA: [fəˈlɪsitərə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: feliciteer, Past: feliciteerde, Fut: zal feliciteren, Part: gefeliciteerd
+  - Example: "Van harte gefeliciteerd met jullie verjaardag." (Congratulations on your birthday.)
+
+- **[B2] fier** (proud)
+  - IPA: [fir]
+  - Part of Speech: adjective
+  - Example: "Het is totaal niet iets om fier op te zijn." (It is not at all something to be proud of.)
+
+- **[B2] De handeling** (action)
+  - IPA: [ˈɦɑndəlɪŋ]
+  - Part of Speech: noun
+  - Gender: feminine
+  - Plural: handelingen
+  - Example: "Het is een kwestie van alle handelingen in de goede volgorde uitvoeren." (It is a matter of performing all actions in the correct order.)
+
+- **[B2] weleens** (sometimes, ever)
+  - IPA: [ˈʋeːləns]
+  - Part of Speech: adverb
+  - Example: "Heb jij weleens gerookt?" (Have you ever smoked?)
+
+- **[B2] zuur** (acid, sour)
+  - IPA: [zyːr]
+  - Part of Speech: adjective
+  - Example: "Voor zure dressing wordt vaak azijn of citroensap gebruikt." (Vinegar or lemon juice is often used for sour dressing.)
+
+- **[B2] De ambassadeur** (ambassador)
+  - IPA: [ɑmbɑsaˈdøːr]
+  - Part of Speech: noun
+  - Gender: masculine
+  - Plural: ambassadeurs
+  - Example: "Pakistan riep zijn ambassadeur uit Denemarken terug." (Pakistan recalled its ambassador from Denmark.)
+
+- **[B2] neutraal** (neutral)
+  - IPA: [nøːˈtraːl]
+  - Part of Speech: adjective
+  - Example: "De wedstrijd wordt op neutraal terrein gespeeld." (The match is played on neutral ground.)
+
+- **[B2] nuchter** (a) empty, sober b) plain)
+  - IPA: [ˈnʏxtər]
+  - Part of Speech: adjective
+  - Example: "Ik dronk een biertje op mijn nuchtere maag." (I drank a beer on an empty stomach.)
+  - Example: "We gaan morgen proberen een nuchtere analyse te maken." (We will try to make a sober analysis tomorrow.)
+
+- **[B2] vooraan** (in front)
+  - IPA: [voːˈraːn]
+  - Part of Speech: adverb
+  - Example: "Ik sta liever helemaal vooraan in de rij dan helemaal achteraan." (I'd rather be at the very front of the line than at the very back.)
+
+- **[B2] fataal** (fatal)
+  - IPA: [faːˈtaːl]
+  - Part of Speech: adjective
+  - Example: "Het ongeval had een fatale afloop." (The accident had a fatal outcome.)
+
+- **[B2] intellectueel** (intellectual)
+  - IPA: [ɪntɛlɛkˈtʋeːl]
+  - Part of Speech: adjective
+  - Example: "Ons onderwijs is in intellectueel opzicht nogal schraal." (Our education is rather poor in intellectual terms.)
+
+- **[B2] maandelijks** (monthly)
+  - IPA: [ˈmaːndələks]
+  - Part of Speech: adjective
+  - Example: "Ik wil ook een fulltime baan en een maandelijks loon." (I also want a full-time job and a monthly salary.)
+
+- **[B2] De mode** (fashion)
+  - IPA: [ˈmoːdə]
+  - Part of Speech: noun
+  - Gender: feminine
+  - Plural: modes
+  - Example: "Ze interesseert zich in mode." (She is interested in fashion.)
+
+- **[B2] verkondigen** (to proclaim, to put forward)
+  - IPA: [vərˈkɔndɪɣə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: verkondig, Past: verkondigde, Fut: zal verkondigen, Part: verkondigd
+  - Example: "Zij verkondigt graag haar mening." (She likes to proclaim her opinion.)
+
+- **[B2] De woonplaats** (residence)
+  - IPA: [ˈʋoːnplats]
+  - Part of Speech: noun
+  - Gender: feminine
+  - Plural: woonplaatsen
+  - Example: "Zijn woonplaats lag ergens in historisch Mesopotamië." (His residence was somewhere in historical Mesopotamia.)
+
+- **[B2] beslist** (decisive, resolute)
+  - IPA: [bəˈslɪst]
+  - Part of Speech: adjective
+  - Example: "Met een besliste beweging sloot hij de deur." (He closed the door with a decisive movement.)
+
+- **[B2] bovenaan** (at the top)
+  - IPA: [ˈboːvənaːn]
+  - Part of Speech: adverb
+  - Example: "Hij stond bovenaan de trap." (He was standing at the top of the stairs.)
+
+- **[B2] De dijk** (dike)
+  - IPA: [dɛi̯k]
+  - Part of Speech: noun
+  - Gender: masculine
+  - Plural: dijken
+  - Example: "De dijk beschermt de polder." (The dike protects the polder.)
+
+- **[B2] gieten** (to pour)
+  - IPA: [ˈɣitə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: giet, Past: goot, Fut: zal gieten, Part: gegoten
+  - Example: "Hij giet het glas vol water." (He pours the glass full of water.)
+
+- **[B2] Het misverstand** (misunderstanding)
+  - IPA: [ˈmɪsfərstɑnt]
+  - Part of Speech: noun
+  - Gender: neuter
+  - Plural: misverstanden
+  - Example: "We moeten zo’n misverstand in de toekomst zien te vermijden." (We must try to avoid such a misunderstanding in the future.)
+
+- **[B2] omkomen** (to die)
+  - IPA: [ˈɔmkɔmə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: komt om, Past: kwam om, Fut: zal omkomen, Part: omgekomen
+  - Example: "Bij de aardbeving zijn 352 mensen omgekomen." (352 people died in the earthquake.)
+
+- **[B2] De trouw** (faith(fulness))
+  - IPA: [trɑu̯]
+  - Part of Speech: noun
+  - Gender: feminine
+  - Plural: trouwen
+  - Example: "Zijn trouw aan zijn baas is onvoorwaardelijk." (His loyalty to his boss is unconditional.)
+
+- **[B2] afvoeren** (to transport)
+  - IPA: [ˈɑfvorə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: voert af, Past: voerde af, Fut: zal afvoeren, Part: afgevoerd
+  - Example: "Het afval wordt met drie wagens afgevoerd." (The waste is transported with three trucks.)
+
+- **[B2] eng** (scary)
+  - IPA: [ɛŋ]
+  - Part of Speech: adjective
+  - Example: "Zij vertelde de kinderen een eng verhaal." (She told the children a scary story.)
+
+- **[B2] ontploffen** (to explode)
+  - IPA: [ɔntˈplɔfə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: ontploft, Past: ontplofte, Fut: zal ontploffen, Part: ontploft
+  - Example: "De bom ontploft in het weiland." (The bomb explodes in the meadow.)
+
+- **[B2] De rang** (rank)
+  - IPA: [rɑŋ]
+  - Part of Speech: noun
+  - Gender: masculine
+  - Plural: rangen
+  - Example: "Zij heeft in het leger een hoge rang." (She has a high rank in the army.)
+
+- **[B2] De richtlijn** (guideline)
+  - IPA: [ˈrɪxtlɪi̯n]
+  - Part of Speech: noun
+  - Gender: feminine
+  - Plural: richtlijnen
+  - Example: "We kregen goede richtlijnen mee." (We received good guidelines.)
+
+- **[B2] ruilen** (to exchange)
+  - IPA: [ˈrœylə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: ruil, Past: ruilde, Fut: zal ruilen, Part: geruild
+  - Example: "Wil je je boek ruilen voor een film?" (Do you want to exchange your book for a film?)
+
+- **[B2] straf** (hard)
+  - IPA: [strɑf]
+  - Part of Speech: adjective
+  - Example: "De gast deed een paar straffe uitspraken." (The guest made some strong statements.)
+
+- **[C1] De deugd** (virtue)
+  - IPA: [døːxt]
+  - Part of Speech: noun
+  - Gender: feminine
+  - Plural: deugden
+  - Example: "Eerlijkheid en betrouwbaarheid zijn mooie deugden." (Honesty and reliability are beautiful virtues.)
+
+- **[B2] discussiëren** (to discuss)
+  - IPA: [dɪskyˈterə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: discussieer, Past: discussieerde, Fut: zal discussiëren, Part: gediscussieerd
+  - Example: "Ik vind het leuk om te discussiëren." (I like to discuss.)
+
+- **[B2] essentieel** (essential)
+  - IPA: [ɛsɛnˈʃeːl]
+  - Part of Speech: adjective
+  - Example: "Wat zijn de essentiële kenmerken van dit tijdperk?" (What are the essential characteristics of this era?)
+
+- **[B2] evident** (evident)
+  - IPA: [eːviˈdɛnt]
+  - Part of Speech: adjective
+  - Example: "Het is evident dat het om meer gaat dan om een biologisch verschil." (It is evident that it is about more than just a biological difference.)
+
+- **[B2] genezen** (to cure)
+  - IPA: [ɣəˈneːzə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: genees, Past: genas, Fut: zal genezen, Part: genezen
+  - Example: "Het wondje in haar borst is nog steeds niet genezen." (The small wound in her chest is still not healed.)
+
+- **[B2] De inrichting** (design)
+  - IPA: [ˈɪnrɪxtɪŋ]
+  - Part of Speech: noun
+  - Gender: feminine
+  - Plural: inrichtingen
+  - Example: "De inrichting van het hele huis is smaakvol en sober." (The design of the whole house is tasteful and sober.)
+
+- **[B2] jaloers** (jealous)
+  - IPA: [ʒaˈluːrs]
+  - Part of Speech: adjective
+  - Example: "Mijn jaloerse zusje liep boos weg." (My jealous little sister walked away angrily.)
+
+- **[B2] Het motto** (motto)
+  - IPA: [ˈmɔtoː]
+  - Part of Speech: noun
+  - Gender: neuter
+  - Plural: motto's
+  - Example: "Het motto is dat de aanval de beste verdediging is." (The motto is that the attack is the best defense.)
+
+- **[B2] naïef** (naive)
+  - IPA: [naːˈiːf]
+  - Part of Speech: adjective
+  - Example: "Hij deed een naïeve uitspraak." (He made a naive statement.)
+
+- **[B2] De nicht** (niece, cousin)
+  - IPA: [nɪxt]
+  - Part of Speech: noun
+  - Gender: feminine
+  - Plural: nichten
+  - Example: "De meeste mensen hebben ook ooms en tantes, neven en nichten." (Most people also have uncles and aunts, nephews and nieces.)
+
+- **[B2] plezant** (amusing)
+  - IPA: [pləˈzɑnt]
+  - Part of Speech: adjective
+  - Example: "Het was plezant en iedereen voelde zich goed en nuttig en gewaardeerd." (It was amusing and everyone felt good and useful and appreciated.)
+
+- **[B2] gruwelijk** (horrible)
+  - IPA: [ˈɣryʋələk]
+  - Part of Speech: adjective
+  - Example: "Ik kijk niet naar die gruwelijke beelden op de televisie." (I don't watch those horrible images on television.)
+
+- **[B2] De kabel** (cable)
+  - IPA: [ˈkaːbəl]
+  - Part of Speech: noun
+  - Gender: masculine
+  - Plural: kabels
+  - Example: "Het schip werd gesleept met een dikke kabel." (The ship was towed with a thick cable.)
+
+- **[B2] Het schaap** (sheep)
+  - IPA: [sxɑːp]
+  - Part of Speech: noun
+  - Gender: neuter
+  - Plural: schapen
+  - Example: "De schapen leveren de wol voor een soort alternatieve bontjassen." (The sheep provide the wool for a kind of alternative fur coats.)
+
+- **[B2] tienduizend** (ten thousand)
+  - IPA: [ˈtinˌdœyzənt]
+  - Part of Speech: numeral
+  - Example: "Zij ontvangen een subsidie van tienduizend euro." (They receive a subsidy of ten thousand euros.)
+
+- **[B2] zolang** (as long as)
+  - IPA: [zoˈlɑŋ]
+  - Part of Speech: adverb
+  - Example: "Zolang je je best doet, is het goed." (As long as you do your best, it is good.)
+
+- **[B2/C1] versnellen** (to accelerate)
+  - IPA: [vərˈsnɛlə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: versnel, Past: versnelde, Fut: zal versnellen, Part: versneld
+  - Example: "Vlak voor de finish versnelde hij nog." (Just before the finish, he accelerated.)
+
+- **[B2/C1] verwoesten** (to destroy)
+  - IPA: [vərˈʋustə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: verwoest, Past: verwoestte, Fut: zal verwoesten, Part: verwoest
+  - Example: "De fabriek werd verwoest door een explosie." (The factory was destroyed by an explosion.)
+
+- **[B2/C1] aantasten** (to affect)
+  - IPA: [ˈaːntɑstə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: tast aan, Past: tastte aan, Fut: zal aantasten, Part: aangetast
+  - Example: "De vorst tastte de bloesem aan." (The frost affected the blossom.)
+
+- **[B2/C1] bewerken** (to work, to process)
+  - IPA: [bəˈʋɛrkə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: bewerk, Past: bewerkte, Fut: zal bewerken, Part: bewerkt
+  - Example: "Ze bewerken de muur met een borstel." (They are working on the wall with a brush.)
+
+- **[B2/C1] doorvoeren** (to carry out, to implement)
+  - IPA: [ˈdoːrˌvuːrə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: voert door, Past: voerde door, Fut: zal doorvoeren, Part: doorgevoerd
+  - Example: "We gaan een paar veranderingen doorvoeren." (We are going to carry out a few changes.)
+
+- **[B2/C1] feliciteren** (to congratulate)
+  - IPA: [fəˈlɪsitɪrə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: feliciteer, Past: feliciteerde, Fut: zal feliciteren, Part: gefeliciteerd
+  - Example: "Van harte gefeliciteerd met jullie verjaardag." (Congratulations on your birthday.)
+
+- **[B2/C1] fier** (proud)
+  - IPA: [fiːr]
+  - Part of Speech: adjective
+  - Gender: None
+  - Plural: fiere
+  - Example: "Het is totaal niet iets om fier op te zijn." (It is not at all something to be proud of.)
+
+- **[B2/C1] De handeling** (action)
+  - IPA: [ˈɦɑndəlɪŋ]
+  - Part of Speech: noun
+  - Gender: de (feminine)
+  - Plural: handelingen
+  - Example: "Het is een kwestie van alle handelingen in de goede volgorde uitvoeren." (It is a matter of performing all actions in the correct order.)
+
+- **[B2/C1] weleens** (sometimes, ever)
+  - IPA: [ˈʋeːləns]
+  - Part of Speech: adverb
+  - Example: "Heb jij weleens gerookt?" (Have you ever smoked?)
+
+- **[B2/C1] zuur** (acid, sour)
+  - IPA: [zyːr]
+  - Part of Speech: adjective
+  - Gender: None
+  - Plural: zure
+  - Example: "Voor zure dressing wordt vaak azijn of citroensap gebruikt." (Vinegar or lemon juice is often used for sour dressing.)
+
+- **[B2/C1] De ambassadeur** (ambassador)
+  - IPA: [ɑmbɑsaˈdøːr]
+  - Part of Speech: noun
+  - Gender: de (masculine)
+  - Plural: ambassadeurs
+  - Example: "Pakistan riep zijn ambassadeur uit Denemarken terug." (Pakistan recalled its ambassador from Denmark.)
+
+- **[B2/C1] neutraal** (neutral)
+  - IPA: [nøːˈtraːl]
+  - Part of Speech: adjective
+  - Gender: None
+  - Plural: neutrale
+  - Example: "De wedstrijd wordt op neutraal terrein gespeeld." (The match is played on neutral ground.)
+
+- **[B2/C1] nuchter** (a) empty, sober b) plain)
+  - IPA: [ˈnʏxtər]
+  - Part of Speech: adjective
+  - Gender: None
+  - Plural: nuchtere
+  - Example: "Ik dronk een biertje op mijn nuchtere maag." (I drank a beer on an empty stomach.)
+
+- **[B2/C1] vooraan** (in front)
+  - IPA: [ˈvoːraːn]
+  - Part of Speech: adverb
+  - Example: "Ik sta liever helemaal vooraan in de rij dan helemaal achteraan." (I prefer to be at the very front of the line than at the very back.)
+
+- **[B2/C1] fataal** (fatal)
+  - IPA: [faːˈtaːl]
+  - Part of Speech: adjective
+  - Gender: None
+  - Plural: fatale
+  - Example: "Het ongeval had een fatale afloop." (The accident had a fatal outcome.)
+
+- **[B2/C1] intellectueel** (intellectual)
+  - IPA: [ɪntɛlɛkˈtyʋel]
+  - Part of Speech: adjective
+  - Gender: None
+  - Plural: intellectuele
+  - Example: "Ons onderwijs is in intellectueel opzicht nogal schraal." (Our education is rather poor in intellectual terms.)
+
+- **[B2/C1] maandelijks** (monthly)
+  - IPA: [ˈmaːndələks]
+  - Part of Speech: adjective
+  - Gender: None
+  - Plural: maandelijkse
+  - Example: "Ik wil ook een fulltime baan en een maandelijks loon." (I also want a full-time job and a monthly salary.)
+
+- **[B2/C1] De mode** (fashion)
+  - IPA: [ˈmoːdə]
+  - Part of Speech: noun
+  - Gender: de
+  - Plural: moden
+  - Example: "Ze interesseert zich in mode." (She is interested in fashion.)
+
+- **[B2/C1] verkondigen** (to proclaim, to put forward)
+  - IPA: [vərˈkɔndɪɣə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: verkondig, Past: verkondigde, Fut: zal verkondigen, Part: verkondigd
+  - Example: "Zij verkondigt graag haar mening." (She likes to proclaim her opinion.)
+
+- **[B2/C1] De woonplaats** (residence)
+  - IPA: [ˈʋoːnˌplaːts]
+  - Part of Speech: noun
+  - Gender: de
+  - Plural: woonplaatsen
+  - Example: "Zijn woonplaats lag ergens in historisch Mesopotamië." (His residence was somewhere in historical Mesopotamia.)
+
+- **[B2/C1] beslist** (decisive, resolute)
+  - IPA: [bəˈslɪst]
+  - Part of Speech: adjective
+  - Gender: None
+  - Plural: besliste
+  - Example: "Met een besliste beweging sloot hij de deur." (With a decisive movement, he closed the door.)
+
+- **[B2/C1] bovenaan** (at the top)
+  - IPA: [ˈboːvənaːn]
+  - Part of Speech: adverb
+  - Example: "Hij stond bovenaan de trap." (He was standing at the top of the stairs.)
+
+- **[B2/C1] De dijk** (dike)
+  - IPA: [dɛɪ̯k]
+  - Part of Speech: noun
+  - Gender: de (masculine)
+  - Plural: dijken
+  - Example: "De dijk beschermt de polder." (The dike protects the polder.)
+
+- **[B2/C1] gieten** (to pour)
+  - IPA: [ˈɣitə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: giet, Past: goot, Fut: zal gieten, Part: gegoten
+  - Example: "Hij giet het glas vol water." (He pours the glass full of water.)
+
+- **[B2/C1] Het misverstand** (misunderstanding)
+  - IPA: [ˈmɪsfərstɑnt]
+  - Part of Speech: noun
+  - Gender: het
+  - Plural: misverstanden
+  - Example: "We moeten zo’n misverstand in de toekomst zien te vermijden." (We must try to avoid such a misunderstanding in the future.)
+
+- **[B2/C1] omkomen** (to die)
+  - IPA: [ˈɔmˌkoːmə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: komt om, Past: kwam om, Fut: zal omkomen, Part: omgekomen
+  - Example: "Bij de aardbeving zijn 352 mensen omgekomen." (352 people died in the earthquake.)
+
+- **[B2/C1] De trouw** (faith(fulness))
+  - IPA: [trau]
+  - Part of Speech: noun
+  - Gender: de
+  - Plural: trouwen
+  - Example: "Zijn trouw aan zijn baas is onvoorwaardelijk." (His loyalty to his boss is unconditional.)
+
+- **[B2/C1] afvoeren** (to transport, to remove)
+  - IPA: [ˈɑfˌvuːrə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: voert af, Past: voerde af, Fut: zal afvoeren, Part: afgevoerd
+  - Example: "Het afval wordt met drie wagens afgevoerd." (The waste is transported by three trucks.)
+
+- **[B2/C1] eng** (scary)
+  - IPA: [ɛŋ]
+  - Part of Speech: adjective
+  - Gender: None
+  - Plural: enge
+  - Example: "Zij vertelde de kinderen een eng verhaal." (She told the children a scary story.)
+
+- **[B2/C1] ontploffen** (to explode)
+  - IPA: [ɔntˈplɔfə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: ontploft, Past: ontplofte, Fut: zal ontploffen, Part: ontploft
+  - Example: "De bom ontploft in het weiland." (The bomb explodes in the meadow.)
+
+- **[B2/C1] De rang** (rank)
+  - IPA: [rɑŋ]
+  - Part of Speech: noun
+  - Gender: de (masculine)
+  - Plural: rangen
+  - Example: "Zij heeft in het leger een hoge rang." (She has a high rank in the army.)
+
+- **[B2/C1] De richtlijn** (guideline)
+  - IPA: [ˈrɪxtlɪɪn]
+  - Part of Speech: noun
+  - Gender: de
+  - Plural: richtlijnen
+  - Example: "We kregen goede richtlijnen mee." (We were given good guidelines.)
+
+- **[B2/C1] ruilen** (to exchange)
+  - IPA: [ˈrœylə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: ruil, Past: ruilde, Fut: zal ruilen, Part: geruild
+  - Example: "Wil je je boek ruilen voor een film?" (Do you want to exchange your book for a film?)
+
+- **[B2/C1] straf** (hard, severe)
+  - IPA: [strɑf]
+  - Part of Speech: adjective
+  - Gender: None
+  - Plural: straffe
+  - Example: "De gast deed een paar straffe uitspraken." (The guest made a few harsh statements.)
+
+- **[B2/C1] De deugd** (virtue)
+  - IPA: [døːxt]
+  - Part of Speech: noun
+  - Gender: de
+  - Plural: deugden
+  - Example: "Eerlijkheid en betrouwbaarheid zijn mooie deugden." (Honesty and reliability are beautiful virtues.)
+
+- **[B2/C1] discussiëren** (to discuss)
+  - IPA: [dɪskyˈtirə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: discussieer, Past: discussieerde, Fut: zal discussiëren, Part: gediscussieerd
+  - Example: "Ik vind het leuk om te discussiëren." (I like to discuss.)
+
+- **[B2/C1] essentieel** (essential)
+  - IPA: [ɛsɛnˈʃeːl]
+  - Part of Speech: adjective
+  - Gender: None
+  - Plural: essentiële
+  - Example: "Wat zijn de essentiële kenmerken van dit tijdperk?" (What are the essential characteristics of this era?)
+
+- **[B2/C1] evident** (evident)
+  - IPA: [eːviˈdɛnt]
+  - Part of Speech: adjective
+  - Gender: None
+  - Plural: evidente
+  - Example: "Het is evident dat het om meer gaat dan om een biologisch verschil." (It is evident that it is about more than a biological difference.)
+
+- **[B2/C1] genezen** (to cure)
+  - IPA: [ɣəˈneːzə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: genees, Past: genas, Fut: zal genezen, Part: genezen
+  - Example: "Het wondje in haar borst is nog steeds niet genezen." (The small wound in her chest has still not healed.)
+
+- **[B2/C1] De inrichting** (design, interior)
+  - IPA: [ˈɪnrɪxtɪŋ]
+  - Part of Speech: noun
+  - Gender: de (feminine)
+  - Plural: inrichtingen
+  - Example: "De inrichting van het hele huis is smaakvol en sober." (The design of the entire house is tasteful and simple.)
+
+- **[B2/C1] jaloers** (jealous)
+  - IPA: [ʒaˈluːrs]
+  - Part of Speech: adjective
+  - Gender: None
+  - Plural: jaloerse
+  - Example: "Mijn jaloerse zusje liep boos weg." (My jealous little sister walked away angrily.)
+
+- **[B2/C1] Het motto** (motto)
+  - IPA: [ˈmɔtoː]
+  - Part of Speech: noun
+  - Gender: het
+  - Plural: motto's
+  - Example: "Het motto is dat de aanval de beste verdediging is." (The motto is that attack is the best defense.)
+
+- **[B2/C1] naïef** (naive)
+  - IPA: [naːˈiːf]
+  - Part of Speech: adjective
+  - Gender: None
+  - Plural: naïeve
+  - Example: "Hij deed een naïeve uitspraak." (He made a naive statement.)
+
+- **[B2/C1] De nicht** (niece, cousin)
+  - IPA: [nɪxt]
+  - Part of Speech: noun
+  - Gender: de (feminine)
+  - Plural: nichten
+  - Example: "De meeste mensen hebben ook ooms en tantes, neven en nichten." (Most people also have uncles and aunts, nephews and nieces/cousins.)
+
+- **[B2/C1] plezant** (amusing, pleasant)
+  - IPA: [pləˈzɑnt]
+  - Part of Speech: adjective
+  - Gender: None
+  - Plural: plezante
+  - Example: "Het was plezant en iedereen voelde zich goed en nuttig en gewaardeerd." (It was pleasant and everyone felt good and useful and appreciated.)
+
+- **[B2/C1] gruwelijk** (horrible)
+  - IPA: [ˈɣryʋələk]
+  - Part of Speech: adjective
+  - Gender: None
+  - Plural: gruwelijke
+  - Example: "Ik kijk niet naar die gruwelijke beelden op de televisie." (I don't watch those horrible images on television.)
+
+- **[B2/C1] De kabel** (cable)
+  - IPA: [ˈkaːbəl]
+  - Part of Speech: noun
+  - Gender: de (masculine)
+  - Plural: kabels
+  - Example: "Het schip werd gesleept met een dikke kabel." (The ship was towed with a thick cable.)
+
+- **[B2/C1] Het schaap** (sheep)
+  - IPA: [sxɑːp]
+  - Part of Speech: noun
+  - Gender: het
+  - Plural: schapen
+  - Example: "De schapen leveren de wol voor een soort alternatieve bontjassen." (The sheep provide the wool for a kind of alternative fur coat.)
+
+- **[B2/C1] tienduizend** (ten thousand)
+  - IPA: [ˈtinˌdœyzənt]
+  - Part of Speech: numeral
+  - Example: "Zij ontvangen een subsidie van tienduizend euro." (They receive a subsidy of ten thousand euros.)
+
+- **[B2/C1] zolang** (as long as)
+  - IPA: [zoˈlɑŋ]
+  - Part of Speech: adverb
+  - Example: "Zolang je je best doet, is het goed." (As long as you do your best, it's good.)
+
+- **[B2/C1] versnellen** (to accelerate)
+  - IPA: [vərˈsnɛlə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: versnel, Past: versnelde, Fut: zal versnellen, Part: versneld
+  - Example: "Vlak voor de finish versnelde hij nog." (Just before the finish, he accelerated.)
+
+- **[B2/C1] verwoesten** (to destroy)
+  - IPA: [vərˈwustə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: verwoest, Past: verwoestte, Fut: zal verwoesten, Part: verwoest
+  - Example: "De fabriek werd verwoest door een explosie." (The factory was destroyed by an explosion.)
+
+- **[B2/C1] aantasten** (to affect)
+  - IPA: [ˈantɑstə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: tast aan, Past: tastte aan, Fut: zal aantasten, Part: aangetast
+  - Example: "De vorst tastte de bloesem aan." (The frost affected the blossom.)
+
+- **[B2/C1] bewerken** (to work)
+  - IPA: [bəˈʋɛrkə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: bewerk, Past: bewerkte, Fut: zal bewerken, Part: bewerkt
+  - Example: "Ze bewerken de muur met een borstel." (They are working the wall with a brush.)
+
+- **[B2/C1] doorvoeren** (to carry out)
+  - IPA: [ˈdorvurə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: voert door, Past: voerde door, Fut: zal doorvoeren, Part: doorgevoerd
+  - Example: "We gaan een paar veranderingen doorvoeren." (We are going to carry out a few changes.)
+
+- **[B2/C1] feliciteren** (to congratulate)
+  - IPA: [fəˈlɪsitərə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: feliciteer, Past: feliciteerde, Fut: zal feliciteren, Part: gefeliciteerd
+  - Example: "Van harte gefeliciteerd met jullie verjaardag." (Heartfelt congratulations on your birthday.)
+
+- **[B2/C1] fier** (proud)
+  - IPA: [fir]
+  - Part of Speech: adjective
+  - Example: "Het is totaal niet iets om fier op te zijn." (It is not at all something to be proud of.)
+
+- **[B2/C1] De handeling** (action)
+  - IPA: [ˈɦɑndəlɪŋ]
+  - Part of Speech: noun
+  - Gender: de(f)
+  - Plural: handelingen
+  - Example: "Het is een kwestie van alle handelingen in de goede volgorde uitvoeren." (It is a matter of performing all actions in the correct order.)
+
+- **[B2/C1] weleens** (sometimes, ever)
+  - IPA: [ˈʋeːləns]
+  - Part of Speech: adverb
+  - Example: "Heb jij weleens gerookt?" (Have you ever smoked?)
+
+- **[B2/C1] zuur** (acid)
+  - IPA: [zyr]
+  - Part of Speech: adjective
+  - Example: "Voor zure dressing wordt vaak azijn of citroensap gebruikt." (Vinegar or lemon juice is often used for sour dressing.)
+
+- **[B2/C1] De ambassadeur** (ambassador)
+  - IPA: [ɑmbɑsɑˈdør]
+  - Part of Speech: noun
+  - Gender: de(m)
+  - Plural: ambassadeurs
+  - Example: "Pakistan riep zijn ambassadeur uit Denemarken terug." (Pakistan recalled its ambassador from Denmark.)
+
+- **[B2/C1] neutraal** (neutral)
+  - IPA: [nøˈtraːl]
+  - Part of Speech: adjective
+  - Example: "De wedstrijd wordt op neutraal terrein gespeeld." (The match is played on neutral ground.)
+
+- **[B2/C1] nuchter** (a) empty, sober b) plain)
+  - IPA: [ˈnʏxtər]
+  - Part of Speech: adjective
+  - Example: "Ik dronk een biertje op mijn nuchtere maag." (I drank a beer on an empty stomach.)
+  - Example: "We gaan morgen proberen een nuchtere analyse te maken." (We are going to try to make a sober analysis tomorrow.)
+
+- **[B2/C1] vooraan** (in front)
+  - IPA: [ˈvoran]
+  - Part of Speech: adverb
+  - Example: "Ik sta liever helemaal vooraan in de rij dan helemaal achteraan." (I prefer to stand right at the front of the queue than right at the back.)
+
+- **[B2/C1] fataal** (fatal)
+  - IPA: [faˈtaːl]
+  - Part of Speech: adjective
+  - Example: "Het ongeval had een fatale afloop." (The accident had a fatal outcome.)
+
+- **[B2/C1] intellectueel** (intellectual)
+  - IPA: [ɪntɛlɛktyˈwel]
+  - Part of Speech: adjective
+  - Example: "Ons onderwijs is in intellectueel opzicht nogal schraal." (Our education is rather poor in intellectual terms.)
+
+- **[B2/C1] maandelijks** (monthly)
+  - IPA: [ˈmandələks]
+  - Part of Speech: adjective
+  - Example: "Ik wil ook een fulltime baan en een maandelijks loon." (I also want a full-time job and a monthly salary.)
+
+- **[B2/C1] De mode** (fashion)
+  - IPA: [ˈmoːdə]
+  - Part of Speech: noun
+  - Gender: de
+  - Plural: moden
+  - Example: "Ze interesseert zich in mode." (She is interested in fashion.)
+
+- **[B2/C1] verkondigen** (to proclaim, to put forward)
+  - IPA: [vərˈkɔndɪɣə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: verkondig, Past: verkondigde, Fut: zal verkondigen, Part: verkondigd
+  - Example: "Zij verkondigt graag haar mening." (She likes to proclaim her opinion.)
+
+- **[B2/C1] De woonplaats** (residence)
+  - IPA: [ˈʋoːnplats]
+  - Part of Speech: noun
+  - Gender: de
+  - Plural: woonplaatsen
+  - Example: "Zijn woonplaats lag ergens in historisch Mesopotamië." (His residence was somewhere in historical Mesopotamia.)
+
+- **[B2/C1] beslist** (decisive, resolute)
+  - IPA: [bəˈslɪst]
+  - Part of Speech: adjective
+  - Example: "Met een besliste beweging sloot hij de deur." (He closed the door with a decisive movement.)
+
+- **[B2/C1] bovenaan** (at the top)
+  - IPA: [ˈboːvənan]
+  - Part of Speech: adverb
+  - Example: "Hij stond bovenaan de trap." (He was standing at the top of the stairs.)
+
+- **[B2/C1] De dijk** (dike)
+  - IPA: [dɛi̯k]
+  - Part of Speech: noun
+  - Gender: de(m)
+  - Plural: dijken
+  - Example: "De dijk beschermt de polder." (The dike protects the polder.)
+
+- **[B2/C1] gieten** (to pour)
+  - IPA: [ˈɣitə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: giet, Past: goot, Fut: zal gieten, Part: gegoten
+  - Example: "Hij giet het glas vol water." (He pours the glass full of water.)
+
+- **[B2/C1] Het misverstand** (misunderstanding)
+  - IPA: [ˈmɪsvərstɑnt]
+  - Part of Speech: noun
+  - Gender: het
+  - Plural: misverstanden
+  - Example: "We moeten zo’n misverstand in de toekomst zien te vermijden." (We must try to avoid such a misunderstanding in the future.)
+
+- **[B2/C1] omkomen** (to die)
+  - IPA: [ˈɔmkɔmə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: komt om, Past: kwam om, Fut: zal omkomen, Part: omgekomen
+  - Example: "Bij de aardbeving zijn 352 mensen omgekomen." (352 people died in the earthquake.)
+
+- **[B2/C1] De trouw** (faith(fulness))
+  - IPA: [trɑu̯]
+  - Part of Speech: noun
+  - Gender: de
+  - Plural: trouwen
+  - Example: "Zijn trouw aan zijn baas is onvoorwaardelijk." (His loyalty to his boss is unconditional.)
+
+- **[B2/C1] afvoeren** (to transport)
+  - IPA: [ˈɑfvuːrə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: voert af, Past: voerde af, Fut: zal afvoeren, Part: afgevoerd
+  - Example: "Het afval wordt met drie wagens afgevoerd." (The waste is transported with three wagons.)
+
+- **[B2/C1] eng** (scary)
+  - IPA: [ɛŋ]
+  - Part of Speech: adjective
+  - Example: "Zij vertelde de kinderen een eng verhaal." (She told the children a scary story.)
+
+- **[B2/C1] ontploffen** (to explode)
+  - IPA: [ɔntˈplɔfə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: ontploft, Past: ontplofte, Fut: zal ontploffen, Part: ontploft
+  - Example: "De bom ontploft in het weiland." (The bomb explodes in the meadow.)
+
+- **[B2/C1] De rang** (rank)
+  - IPA: [rɑŋ]
+  - Part of Speech: noun
+  - Gender: de(m)
+  - Plural: rangen
+  - Example: "Zij heeft in het leger een hoge rang." (She has a high rank in the army.)
+
+- **[B2/C1] De richtlijn** (guideline)
+  - IPA: [ˈrɪx(t)tˌlɪin]
+  - Part of Speech: noun
+  - Gender: de
+  - Plural: richtlijnen
+  - Example: "We kregen goede richtlijnen mee." (We were given good guidelines.)
+
+- **[B2/C1] ruilen** (to exchange)
+  - IPA: [ˈrœylə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: ruil, Past: ruilde, Fut: zal ruilen, Part: geruild
+  - Example: "Wil je je boek ruilen voor een film?" (Do you want to exchange your book for a film?)
+
+- **[B2/C1] straf** (hard)
+  - IPA: [strɑf]
+  - Part of Speech: adjective
+  - Example: "De gast deed een paar straffe uitspraken." (The guest made a few strong statements.)
+
+- **[B2/C1] De deugd** (virtue)
+  - IPA: [døːxt]
+  - Part of Speech: noun
+  - Gender: de
+  - Plural: deugden
+  - Example: "Eerlijkheid en betrouwbaarheid zijn mooie deugden." (Honesty and reliability are beautiful virtues.)
+
+- **[B2/C1] discussiëren** (to discuss)
+  - IPA: [dɪskʏˈʃerə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: discussieer, Past: discussieerde, Fut: zal discussiëren, Part: gediscussieerd
+  - Example: "Ik vind het leuk om te discussiëren." (I enjoy discussing.)
+
+- **[B2/C1] essentieel** (essential)
+  - IPA: [ɛsɛnˈʃeːl]
+  - Part of Speech: adjective
+  - Example: "Wat zijn de essentiële kenmerken van dit tijdperk?" (What are the essential characteristics of this era?)
+
+- **[B2/C1] evident** (evident)
+  - IPA: [eːviˈdɛnt]
+  - Part of Speech: adjective
+  - Example: "Het is evident dat het om meer gaat dan om een biologisch verschil." (It is evident that it is about more than a biological difference.)
+
+- **[B2/C1] genezen** (to cure)
+  - IPA: [ɣəˈneːzə(n)]
+  - Part of Speech: verb
+  - Conjugations: Pres: genees, Past: genas, Fut: zal genezen, Part: genezen
+  - Example: "Het wondje in haar borst is nog steeds niet genezen." (The little wound in her breast has still not healed.)
+
+- **[B2/C1] De inrichting** (design)
+  - IPA: [ˈɪnrɪxtɪŋ]
+  - Part of Speech: noun
+  - Gender: de(f)
+  - Plural: inrichtingen
+  - Example: "De inrichting van het hele huis is smaakvol en sober." (The design of the whole house is tasteful and sober.)
+
+- **[B2/C1] jaloers** (jealous)
+  - IPA: [ʒaˈlurs]
+  - Part of Speech: adjective
+  - Example: "Mijn jaloerse zusje liep boos weg." (My jealous little sister walked away angrily.)
+
+- **[B2/C1] Het motto** (motto)
+  - IPA: [ˈmɔtoː]
+  - Part of Speech: noun
+  - Gender: het
+  - Plural: motto's
+  - Example: "Het motto is dat de aanval de beste verdediging is." (The motto is that the attack is the best defense.)
+
+- **[B2/C1] naïef** (naive)
+  - IPA: [naːˈiːf]
+  - Part of Speech: adjective
+  - Example: "Hij deed een naïeve uitspraak." (He made a naive statement.)
+
+- **[B2/C1] De nicht** (niece, cousin)
+  - IPA: [nɪxt]
+  - Part of Speech: noun
+  - Gender: de(f)
+  - Plural: nichten
+  - Example: "De meeste mensen hebben ook ooms en tantes, neven en nichten." (Most people also have uncles and aunts, nephews and nieces/cousins.)
+
+- **[B2/C1] plezant** (amusing)
+  - IPA: [pləˈzɑnt]
+  - Part of Speech: adjective
+  - Example: "Het was plezant en iedereen voelde zich goed en nuttig en gewaardeerd." (It was amusing and everyone felt good and useful and valued.)
+
+- **[B2/C1] gruwelijk** (horrible)
+  - IPA: [ˈxryʋələk]
+  - Part of Speech: adjective
+  - Example: "Ik kijk niet naar die gruwelijke beelden op de televisie." (I don't watch those horrible images on television.)
+
+- **[B2/C1] De kabel** (cable)
+  - IPA: [ˈkaːbəl]
+  - Part of Speech: noun
+  - Gender: de(m)
+  - Plural: kabels
+  - Example: "Het schip werd gesleept met een dikke kabel." (The ship was towed with a thick cable.)
+
+- **[B2/C1] Het schaap** (sheep)
+  - IPA: [sxap]
+  - Part of Speech: noun
+  - Gender: het
+  - Plural: schapen
+  - Example: "De schapen leveren de wol voor een soort alternatieve bontjassen." (The sheep provide the wool for a kind of alternative fur coats.)
+
+- **[B2/C1] tienduizend** (ten thousand)
+  - IPA: [ˈtinˌdœyzənt]
+  - Part of Speech: numeral
+  - Example: "Zij ontvangen een subsidie van tienduizend euro." (They receive a subsidy of ten thousand euros.)
+
+- **[B2/C1] zolang** (as long as)
+  - IPA: [zoˈlɑŋ]
+  - Part of Speech: adverb
+  - Example: "Zolang je je best doet, is het goed." (As long as you do your best, it's good.)
