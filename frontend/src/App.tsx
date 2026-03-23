@@ -94,6 +94,10 @@ export default function App() {
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [vocabCount, setVocabCount] = useState<number>(0);
   const [selectedLevels, setSelectedLevels] = useState<string[]>(['None', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2', 'Expression', 'Advice']);
+  const [synonyms, setSynonyms] = useState<string[]>([]);
+  const [showSynonyms, setShowSynonyms] = useState(false);
+  const [synonymSource, setSynonymSource] = useState('dm');
+  const [loadingSynonyms, setLoadingSynonyms] = useState(false);
 
   const cardMap = useMemo(() => {
     const map = new Map<string, Card>();
@@ -139,11 +143,35 @@ export default function App() {
     } catch (e) { setStatus('Load failed.'); } finally { setLoading(false); }
   };
 
+  const fetchSynonyms = async () => {
+    if (!currentCard) return;
+    setLoadingSynonyms(true);
+    try {
+      const term = currentCard.term.split(' ')[0]; // Basic first word logic if there are articles
+      const res = await axios.get(`http://localhost:8001/synonyms/${encodeURIComponent(currentCard.term)}?lang=${language.substring(0,2).toLowerCase()}&source=${synonymSource}`);
+      setSynonyms(res.data.synonyms || []);
+    } catch (e) {
+      console.error("Failed to load synonyms", e);
+      setSynonyms([]);
+    } finally {
+      setLoadingSynonyms(false);
+    }
+  };
+
+  const toggleSynonyms = () => {
+    if (!showSynonyms && synonyms.length === 0) {
+      fetchSynonyms();
+    }
+    setShowSynonyms(!showSynonyms);
+  };
+
   const shuffleDeck = () => {
     const shuffled = [...deckIds].sort(() => Math.random() - 0.5);
     setDeckIds(shuffled);
     setCurrentIndex(0);
     setShowFront(true);
+    setShowSynonyms(false);
+    setSynonyms([]);
     setStatus('Deck shuffled.');
   };
 
@@ -158,9 +186,9 @@ export default function App() {
       }
       setEditorOpen(false);
       setEditingCard(null);
-      loadCards();
-    } catch (e) {
-      alert('Failed to save card');
+      await loadCards();
+    } catch (e: any) {
+      alert(`Failed to save card: ${e.response?.data?.detail || e.message}`);
     }
   };
 
@@ -169,9 +197,17 @@ export default function App() {
     if (window.confirm(`Are you sure you want to delete "${currentCard.term}"?`)) {
       try {
         await axios.delete(`http://localhost:8001/cards/${currentCard.id}`);
-        loadCards();
-      } catch (e) {
-        alert('Failed to delete card');
+        // Remove from deck
+        setDeckIds(prev => prev.filter(id => id !== currentCard.id));
+        // Keep currentIndex the same, which will now point to the next card
+        // If it was the last card, we might need to decrement
+        if (currentIndex >= deckIds.length - 1 && currentIndex > 0) {
+           setCurrentIndex(currentIndex - 1);
+        }
+        setShowFront(true);
+        await loadCards();
+      } catch (e: any) {
+        alert(`Failed to delete card: ${e.response?.data?.detail || e.message}`);
       }
     }
   };
@@ -179,6 +215,8 @@ export default function App() {
   const handleReview = async (quality: number) => {
     if (!currentCard) return;
     await axios.post('http://localhost:8001/cards/review', { card_id: parseInt(currentCard.id), quality });
+    setShowSynonyms(false);
+    setSynonyms([]);
     if (currentIndex < deckIds.length - 1) {
       setCurrentIndex(currentIndex + 1);
       setShowFront(true);
@@ -233,15 +271,16 @@ export default function App() {
         speed: playbackRate
       }, { responseType: 'blob' });
       
+      const contentType = res.headers['content-type'] || 'audio/wav';
       // Handle cases where response might be an object instead of direct blob
       let blob: Blob;
       if (res.data instanceof Blob) {
         blob = res.data;
       } else if (res.data && res.data.data) {
         // Axios sometimes returns object with data property if not handled correctly
-        blob = new Blob([new Uint8Array(res.data.data)], { type: 'audio/wav' });
+        blob = new Blob([new Uint8Array(res.data.data)], { type: contentType });
       } else {
-        blob = new Blob([res.data], { type: 'audio/wav' });
+        blob = new Blob([res.data], { type: contentType });
       }
 
       const url = URL.createObjectURL(blob);
@@ -360,6 +399,36 @@ export default function App() {
                       </div>
                     </div>
                   )}
+
+                  <div className="synonym-section" onClick={(e) => e.stopPropagation()}>
+                    <button className="btn outline-btn toggle-synonyms-btn" onClick={toggleSynonyms}>
+                      {showSynonyms ? 'Hide Synonyms' : 'Show Synonyms'}
+                    </button>
+                    {showSynonyms && (
+                      <div className="synonyms-content">
+                        <div className="synonym-source-selector">
+                          <label>Source: </label>
+                          <select value={synonymSource} onChange={(e) => { setSynonymSource(e.target.value); setSynonyms([]); }} className="source-select">
+                            <option value="dm">Datamuse</option>
+                            <option value="mw">Merriam-Webster</option>
+                            <option value="ox">Oxford Dictionaries</option>
+                          </select>
+                          <button onClick={fetchSynonyms} className="btn mini-btn primary" disabled={loadingSynonyms}>
+                            {loadingSynonyms ? 'Loading...' : 'Fetch'}
+                          </button>
+                        </div>
+                        {loadingSynonyms ? (
+                          <p>Loading synonyms...</p>
+                        ) : synonyms.length > 0 ? (
+                          <ul className="synonyms-list">
+                            {synonyms.map((s, idx) => <li key={idx}>{s}</li>)}
+                          </ul>
+                        ) : (
+                          <p>No synonyms found.</p>
+                        )}
+                      </div>
+                    )}
+                  </div>
                 </div>
               )}
             </div>

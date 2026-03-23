@@ -50,3 +50,7 @@ enrich_german_verbs.py
 recovered.sql
 remove_wrong_lang.py
 restore_dutch.py
+.directory
+wordhord.db*
+generation.pid
+generation.log

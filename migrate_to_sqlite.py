@@ -46,6 +46,21 @@ def extract_field(section, field_name):
         return match.group(1).strip()
     return ""
 
+def validate_card_data(lang, term, translation):
+    if not term or not translation:
+        return False
+    if len(term) > 100 or len(translation) > 200:
+        return False
+    # Term shouldn't have markdown bold syntax or unclosed parens left
+    if '**' in term or '**' in translation:
+        return False
+    # Term shouldn't contain newline characters
+    if '\n' in term or '\r' in term:
+        return False
+    if lang == 'german' and len(term) < 2:
+        return False
+    return True
+
 def migrate():
     engine = create_engine(f"sqlite:///{DB_PATH}")
     Base.metadata.create_all(bind=engine)
@@ -154,6 +169,11 @@ def migrate():
                 ex_match = re.search(r'Example:\s*"([^"]+)"\s*\(([^)]+)\)', section)
                 example = ex_match.group(1) if ex_match else ""
                 ex_trans = ex_match.group(2) if ex_match else ""
+                
+                # Validation step
+                if not validate_card_data(lang, term, translation):
+                    print(f"Skipping invalid card: {term} -> {translation}")
+                    continue
                 
                 # Check if exists in our local cache or if we already added it in this run
                 if term in existing_cards:

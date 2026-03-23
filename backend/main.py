@@ -4,7 +4,7 @@ from fastapi.middleware.gzip import GZipMiddleware
 from fastapi.responses import Response
 from pydantic import BaseModel, model_validator
 from langdetect import detect, LangDetectException
-from sqlalchemy import Column, Integer, String, Float, DateTime, UniqueConstraint, Index, func, select, update, delete
+from sqlalchemy import Column, Integer, String, Float, DateTime, UniqueConstraint, Index, func, select, update, delete, cast
 from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession, async_sessionmaker
 from sqlalchemy.orm import declarative_base
 from sqlalchemy.inspection import inspect
@@ -21,10 +21,25 @@ import tempfile
 import aiofiles
 import hashlib
 from datetime import datetime, timedelta
+from synonyms import get_synonyms
 
 # Database Setup
 DB_PATH = "/home/chris/wordhord/wordhord.db"
-engine = create_async_engine(f"sqlite+aiosqlite:///{DB_PATH}")
+engine = create_async_engine(
+    f"sqlite+aiosqlite:///{DB_PATH}",
+    connect_args={"check_same_thread": False}
+)
+
+from sqlalchemy import event
+from sqlalchemy.engine import Engine
+
+@event.listens_for(engine.sync_engine, "connect")
+def set_sqlite_pragma(dbapi_connection, connection_record):
+    cursor = dbapi_connection.cursor()
+    cursor.execute("PRAGMA journal_mode=WAL")
+    cursor.execute("PRAGMA synchronous=NORMAL")
+    cursor.close()
+
 AsyncSessionLocal = async_sessionmaker(autocommit=False, autoflush=False, bind=engine, expire_on_commit=False)
 Base = declarative_base()
 
@@ -169,15 +184,78 @@ class CardCreate(BaseModel):
     level: str = ""
 
     @model_validator(mode='after')
-    def validate_language(self):
+    def validate_card(self):
         target_lang = self.language.lower().strip() if self.language else ""
         term = self.term.strip() if self.term else ""
+        translation = self.translation.strip() if self.translation else ""
         example = self.example.strip() if self.example else ""
         
-        if target_lang and target_lang not in ["english", "german"] and term:
+        # 1. Reverse inverted entries (English word with foreign language definition)
+        # We assume an entry is inverted if the target_lang is NOT English, but the term is detected as English
+        # AND the translation contains foreign characters or doesn't look like English.
+        # A simpler check based on user request: if they provide an English word in 'term' and definition in 'translation'
+        if target_lang and target_lang != "english":
+            try:
+                if term:
+                    # Very basic check: If the term is completely English and translation is not
+                    term_lang = detect(term)
+                    trans_lang = detect(translation) if translation else ""
+                    if term_lang == 'en' and trans_lang != 'en' and trans_lang != '':
+                        # Swap them
+                        self.term, self.translation = self.translation, self.term
+                        term = self.term.strip()
+                        translation = self.translation.strip()
+            except LangDetectException:
+                pass
+                
+        # 2. Swedish validation
+        if target_lang == "swedish":
+            # Remove english words from the name of foreign words (term)
+            # This is tricky without a dictionary, but we can remove text in brackets e.g. "word (english)"
+            self.term = re.sub(r'\s*\([a-zA-Z\s]+\)', '', self.term).strip()
+            term = self.term
+            
+            # Ensure verbs start with "att "
+            pos = self.part_of_speech.lower().strip() if self.part_of_speech else ""
+            if "verb" in pos and not term.startswith("att "):
+                self.term = "att " + term
+                term = self.term
+                
+            # Filter German origin words
+            # (In a real app, this would use a lexicon, but here we can check for common German patterns or use a hardcoded list if provided)
+            # For now, we will add a simple placeholder check. A real filter requires a DB or API.
+            # Example: words ending in -ung, -heit, -keit are often German, but let's just do a basic check
+            german_suffixes = ("ung", "heit", "keit", "schaft", "tion")
+            if any(term.endswith(suf) for suf in german_suffixes):
+                 raise ValueError(f"Term '{term}' appears to be of German origin and is excluded from Swedish.")
+
+            # Validation for mandatory fields
+            missing_fields = []
+            if not self.ipa: missing_fields.append("ipa")
+            if not self.tone or self.tone not in ["1", "2"]: missing_fields.append("tone (must be '1' or '2')")
+            if not self.part_of_speech: missing_fields.append("part_of_speech")
+            if not self.example: missing_fields.append("example (sample sentence)")
+            if not self.example_translation: missing_fields.append("example_translation")
+            
+            if "noun" in pos and not self.gender: missing_fields.append("gender")
+            if "verb" in pos and not self.conjugations: missing_fields.append("conjugations (verb_parts)")
+            
+            if missing_fields:
+                raise ValueError(f"Swedish words require the following fields: {', '.join(missing_fields)}")
+
+        # 3. Portuguese case normalization
+        if target_lang == "portuguese":
+            # Make lowercase unless proper noun. Proper nouns usually start with uppercase and aren't at the beginning of a sentence.
+            # A simple heuristic: if it's strictly alphabetical and not identified as a proper noun in POS, lower it.
+            pos = self.part_of_speech.lower().strip() if self.part_of_speech else ""
+            if "proper" not in pos and "proper noun" not in pos:
+                self.term = self.term.lower()
+
+        if target_lang and target_lang != "english" and term:
             try:
                 detected_lang = detect(term)
-                if detected_lang in ["en", "de"] and not example:
+                suspicious_langs = ["en"] if target_lang == "german" else ["en", "de"]
+                if detected_lang in suspicious_langs and not example:
                     raise ValueError(f"Suspected incorrect language insertion: Term '{term}' detected as '{detected_lang}', but missing sample sentence for target language '{target_lang}'.")
             except LangDetectException:
                 pass
@@ -427,14 +505,39 @@ async def next_cards(request: dict, db: AsyncSession = Depends(get_db)):
             stmt = stmt.filter((CardModel.level.in_(levels)) | (CardModel.level == None))
         else:
             stmt = stmt.filter(CardModel.level.in_(levels))
-    overdue_stmt = stmt.filter(CardModel.next_review <= now).order_by(CardModel.next_review).limit(10)
+            
+    # Weighted Learning Algorithm: Prioritize cards that have a high failure rate.
+    # Weight = failed / (passed + 1) -> highest ratio goes first.
+    weight_expression = cast(CardModel.failed, Float) / (cast(CardModel.passed, Float) + 1.0)
+    
+    overdue_stmt = stmt.filter(CardModel.next_review <= now).order_by(
+        weight_expression.desc(),
+        CardModel.next_review
+    ).limit(10)
+    
     result = await db.execute(overdue_stmt)
     overdue = list(result.scalars().all())
+    
     if len(overdue) < 10:
-        new_stmt = stmt.filter(CardModel.repetition_count == 0).limit(10 - len(overdue))
-        result = await db.execute(new_stmt)
-        new_cards = result.scalars().all()
-        overdue.extend(new_cards)
+        # Also randomize new vocabulary acquisition for better learning variance
+        import random
+        count_stmt = select(func.count(CardModel.id)).filter(CardModel.language == language, CardModel.repetition_count == 0)
+        if levels:
+            if "" in levels or "None" in levels:
+                count_stmt = count_stmt.filter((CardModel.level.in_(levels)) | (CardModel.level == None))
+            else:
+                count_stmt = count_stmt.filter(CardModel.level.in_(levels))
+        count_result = await db.execute(count_stmt)
+        num_new = count_result.scalar()
+        
+        if num_new > 0:
+            needed = 10 - len(overdue)
+            offset = random.randint(0, max(0, num_new - needed))
+            new_stmt = stmt.filter(CardModel.repetition_count == 0).offset(offset).limit(needed)
+            result = await db.execute(new_stmt)
+            new_cards = result.scalars().all()
+            overdue.extend(new_cards)
+        
     return {"ids": [str(c.id) for c in overdue]}
 
 @app.post("/native_audio")
@@ -547,8 +650,17 @@ async def evaluate_pronunciation(audio: UploadFile = File(...), language: str = 
                     f"Provide one sentence of helpful, encouraging feedback."
                 )
                 try:
-                    response_msg = await llm.ainvoke(prompt)
-                    feedback = response_msg.content
+                    for attempt in range(5):
+                        try:
+                            response_msg = await llm.ainvoke(prompt)
+                            feedback = response_msg.content
+                            break
+                        except Exception as e:
+                            if attempt < 4:
+                                import random
+                                await asyncio.sleep(2 * (2 ** attempt) + random.uniform(0, 1))
+                            else:
+                                raise e
                 except (Exception,) as llm_error:
                     try:
                         feedback = await ollama_llm.ainvoke(prompt)
@@ -563,9 +675,39 @@ async def speak_ipa(request: SpeakRequest):
     if not isinstance(request.text, str) or not request.text.strip():
         raise HTTPException(status_code=400, detail="Invalid IPA text")
     
-    # Sanitize IPA text: Remove existing brackets, then wrap in double brackets for espeak-ng
-    clean_ipa = request.text.strip().strip('[]')
-    # Allow standard IPA characters and common punctuation
+    clean_ipa = request.text.strip().strip('[]').replace('"', '&quot;')
+    
+    # Try Google TTS SSML first to match standard playback voices
+    try:
+        if texttospeech and os.environ.get("GOOGLE_APPLICATION_CREDENTIALS"):
+            client = texttospeech.TextToSpeechClient()
+            gtts_voice_map = {
+                "swedish": ("sv-SE", "sv-SE-Chirp3-HD-Laomedeia"),
+                "german": ("de-DE", "de-DE-Chirp3-HD-Leda"),
+                "finnish": ("fi-FI", "fi-FI-Chirp3-HD-Despina"),
+                "portuguese": ("pt-BR", "pt-BR-Chirp3-HD-Dione"),
+                "spanish": ("es-US", "es-US-Chirp3-HD-Callirrhoe"),
+                "dutch": ("nl-NL", "nl-NL-Chirp3-HD-Despina"),
+                "scottish gaelic": ("en-GB", "en-GB-Standard-A")
+            }
+            l_code, v_name = gtts_voice_map.get(request.language.lower(), ("en-US", "en-US-Journey-F"))
+            voice = texttospeech.VoiceSelectionParams(language_code=l_code, name=v_name)
+            
+            synthesis_input = texttospeech.SynthesisInput(
+                ssml=f'<speak><phoneme alphabet="ipa" ph="{clean_ipa}">{clean_ipa}</phoneme></speak>'
+            )
+            
+            audio_config = texttospeech.AudioConfig(
+                audio_encoding=texttospeech.AudioEncoding.MP3, 
+                speaking_rate=request.speed
+            )
+            
+            response = await asyncio.to_thread(client.synthesize_speech, input=synthesis_input, voice=voice, audio_config=audio_config)
+            return Response(content=response.audio_content, media_type="audio/mpeg")
+    except Exception as e:
+        print(f"DEBUG: Google TTS failed for IPA, falling back to espeak-ng: {e}", flush=True)
+
+    # Fallback to espeak-ng
     sanitized = re.sub(r'[^\w\s\.\,ˈˌːˑ˘\.◌\u0250-\u02AF\u1D00-\u1D7F\u1D80-\u1DBF]', '', clean_ipa)
     ipa_input = f"[[{sanitized}]]"
     
@@ -583,7 +725,6 @@ async def speak_ipa(request: SpeakRequest):
     voice = voice_map.get(request.language.lower(), "en-gb")
     
     # Scale base speed (150) by request.speed
-    # standard speed is 1.0, so speed 0.75 would be 150 * 0.75 = 112
     espeak_speed = str(int(150 * request.speed))
     
     try:
@@ -622,6 +763,14 @@ async def reset_progress(request: dict, db: AsyncSession = Depends(get_db)):
     await db.execute(stmt)
     await db.commit()
     return {"status": "ok"}
+
+@app.get("/synonyms/{word}")
+async def fetch_synonyms(word: str, lang: str = "en", source: str = "dm"):
+    try:
+        syns = get_synonyms(word, lang, source)
+        return {"synonyms": syns}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
 
 if __name__ == "__main__":
     import uvicorn

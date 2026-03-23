@@ -12,9 +12,31 @@ from pydantic import BaseModel, ConfigDict, Field
 from typing import List, Optional
 from datetime import datetime, timezone
 from langdetect import detect, LangDetectException
+from lingua import Language, LanguageDetectorBuilder
 
 # Suppress Pydantic warnings
 warnings.filterwarnings("ignore", category=UserWarning, module="pydantic")
+
+# Lingua detector (N-gram analysis) setup for robust Dutch/German disambiguation
+try:
+    dutch_detector = LanguageDetectorBuilder.from_languages(Language.DUTCH, Language.GERMAN, Language.ENGLISH).build()
+    finnish_detector = LanguageDetectorBuilder.from_languages(Language.FINNISH, Language.ENGLISH, Language.GERMAN, Language.SWEDISH).build()
+except Exception as e:
+    print(f"Failed to initialize Lingua detector: {e}")
+    dutch_detector = None
+    finnish_detector = None
+
+# Load Dutch lexicon for highly accurate disambiguation
+DUTCH_LEXICON = set()
+try:
+    with open("/home/chris/wordhord/dutch_lexicon.txt", "r", encoding="utf-8") as f:
+        for line in f:
+            parts = line.strip().split()
+            if parts:
+                DUTCH_LEXICON.add(parts[0].lower())
+    print(f"Loaded {len(DUTCH_LEXICON)} words into Dutch lexicon.", flush=True)
+except Exception as e:
+    print(f"Warning: Could not load Dutch lexicon: {e}", flush=True)
 
 # Database Setup
 DB_PATH = "/home/chris/wordhord/wordhord.db"
@@ -35,12 +57,12 @@ BATCHES_PER_LANG = 1000 # Increased from 15 to ensure targets are met
 BATCH_TARGET = 20 # Increased from 15 for slightly larger batches
 
 LANGUAGE_RULES = {
-    'german': "Nouns MUST be capitalized and include article like 'Der Hund'. Other parts of speech MUST be lowercase.",
-    'swedish': "Provide the base word without leading articles. Capitalize the first letter.",
+    'german': "CRITICAL: Nouns MUST be capitalized and include article (der/die/das). MUST INCLUDE Lemma and POS. NOUNS MUST CONTAIN Nominative, Genitive, and Plural forms, noting irregular vowel/consonant changes. VERBS MUST CONTAIN 1st person singular, past, perfect forms, and irregular changes. For verbs, include Transitive/Intransitive tag. Explicitly note IRREGULAR Forms (e.g., masculine accusative forms). Use 'conjugations' field to store: Transitive/Intransitive tag, Verb Tense/Mood Examples, Irregular forms. Use 'example' field to include an unambiguous Example sentence, and Idiomatic Usage Notes (especially distinct phrasal verb forms, separable/inseparable, or nominative expressions). Always include IPA.",
+    'swedish': "CRITICAL: Base word. MUST INCLUDE Lemma and POS. NOUNS MUST CONTAIN base form, definite suffix (-en/-ett), Genitive forms, and Plural forms, noting irregular changes. VERBS MUST CONTAIN present, past, supine forms, 1st person singular, and irregular changes. For verbs, include Transitive/Intransitive tag. Explicitly note IRREGULAR Forms. Use 'conjugations' field to store: Transitive/Intransitive tag, Verb Tense/Mood Examples, Irregular forms. Use 'example' field to include an unambiguous Example sentence, and Idiomatic Usage Notes (especially distinct phrasal/particle verb forms). Always include IPA.",
     'portuguese': "Provide the base word ONLY. NEVER capitalize at the beginning (always lowercase).",
     'spanish': "Provide the base word ONLY. NEVER capitalize at the beginning (always lowercase).",
-    'dutch': "Provide the base word without leading articles. Capitalize the first letter.",
-    'finnish': "Provide basic A1-B2 words. Base word ONLY. Lowercase by default. ONLY capitalize if it is a town, country, or region name.",
+    'dutch': "CRITICAL: Base word with article (de/het). MUST INCLUDE Lemma and POS. NOUNS MUST CONTAIN base form, Genitive (if applicable), and Plural forms, noting irregular changes. VERBS MUST CONTAIN 1st person singular, past, perfect forms, and irregular changes. For verbs, include Transitive/Intransitive tag. Explicitly note IRREGULAR Forms. Use 'conjugations' field to store: Transitive/Intransitive tag, Verb Tense/Mood Examples, Irregular forms. Use 'example' field to include an unambiguous Example sentence, and Idiomatic Usage Notes (especially distinct separable/inseparable phrasal verb forms). Always include IPA.",
+    'finnish': "CRITICAL: Provide full vocabulary info. Lowercase by default. MUST INCLUDE Lemma and POS. NOUNS MUST CONTAIN NOMINATIVE AND GENITIVE FORMS (e.g. in 'term' or 'plural') AND IRREGULAR CONSONANT/VOWEL CHANGES. VERBS MUST CONTAIN 1ST PERSON SINGULAR AND IRREGULAR CHANGES. For Finnish, use the 'conjugations' field to store: Transitive/Intransitive Tag, All Cases (Nom, Gen, Part, Ill, Iness, El, All, Abl, Ess, Tra), Verb Person/Number Forms, Imperative/Conditional Moods, and Derivational Suffixes. Use the 'example' field to include an Example sentence, Verb Tense/Mood Examples, and Idiomatic Usage Notes. Always include Pronunciation/Phonetic Transcription (IPA).",
     'scottish gaelic': "Provide the base word. Capitalize the first letter."
 }
 
@@ -73,6 +95,7 @@ class CardItem(BaseModel):
     example_translation: Optional[str] = ""
     level: Optional[str] = "A1"
     plural: Optional[str] = ""
+    conjugations: Optional[str] = ""
 
 def cleanup_term(term, language):
     if not term: return term
@@ -105,7 +128,7 @@ RULE: {rule}
 Requirement: Provide translation, IPA, part of speech, gender, natural example sentence with English translation, and CEFR level (A1-C2).
 For Finnish: If you recognize a word from a German source, provide the ENGLISH translation.
 
-Return ONLY a JSON list of objects.
+Return ONLY a JSON list of objects. Include fields: term, translation, ipa, gender, part_of_speech, example, example_translation, level, plural, conjugations.
 """
     else:
         existing_list = list(existing_terms)
@@ -117,43 +140,52 @@ Generate {BATCH_TARGET} unique {language.capitalize()} vocabulary entries (A1-B2
 Focus: High frequency words from News and Wikipedia.
 RULE: {rule}
 STRICTLY AVOID: {existing_str}...
-Return ONLY a JSON list of objects with fields: term, translation, ipa, gender, part_of_speech, example, example_translation, level, plural.
+Return ONLY a JSON list of objects with fields: term, translation, ipa, gender, part_of_speech, example, example_translation, level, plural, conjugations.
 """
     
-    try:
-        response = await asyncio.wait_for(llm.ainvoke(prompt), timeout=120)
-        content = response.content.strip()
-        if content.startswith("```"):
-            content = re.sub(r'^```(json)?\n', '', content)
-            content = re.sub(r'\n```$', '', content)
-        items = json.loads(content)
-        
-        # Robust Mapping
-        standardized = []
-        for item in items:
-            # Map common LLM aliases
-            term = item.get('term') or item.get('word') or item.get('german_word') or item.get('portuguese_word')
-            translation = item.get('translation') or item.get('english_translation')
-            example = item.get('example') or item.get('sentence')
-            ex_trans = item.get('example_translation') or item.get('sentence_translation')
-            level = item.get('level') or item.get('cefr_level') or item.get('cefr')
+    max_retries = 5
+    base_delay = 2
+    for attempt in range(max_retries):
+        try:
+            response = await asyncio.wait_for(llm.ainvoke(prompt), timeout=120)
+            content = response.content.strip()
+            if content.startswith("```"):
+                content = re.sub(r'^```(json)?\n', '', content)
+                content = re.sub(r'\n```$', '', content)
+            items = json.loads(content)
             
-            if term and translation:
-                standardized.append({
-                    'term': str(term),
-                    'translation': str(translation),
-                    'ipa': str(item.get('ipa', '[]')),
-                    'gender': str(item.get('gender', 'N/A')),
-                    'part_of_speech': str(item.get('part_of_speech', 'unknown')),
-                    'example': str(example or ""),
-                    'example_translation': str(ex_trans or ""),
-                    'level': str(level or "A1"),
-                    'plural': str(item.get('plural', ""))
-                })
-        return standardized
-    except Exception as e:
-        print(f"  [!] LLM error generating {language}: {e}", flush=True)
-        return []
+            # Robust Mapping
+            standardized = []
+            for item in items:
+                # Map common LLM aliases
+                term = item.get('term') or item.get('word') or item.get('german_word') or item.get('portuguese_word')
+                translation = item.get('translation') or item.get('english_translation')
+                example = item.get('example') or item.get('sentence')
+                ex_trans = item.get('example_translation') or item.get('sentence_translation')
+                level = item.get('level') or item.get('cefr_level') or item.get('cefr')
+                
+                if term and translation:
+                    standardized.append({
+                        'term': str(term),
+                        'translation': str(translation),
+                        'ipa': str(item.get('ipa', '[]')),
+                        'gender': str(item.get('gender', 'N/A')),
+                        'part_of_speech': str(item.get('part_of_speech', 'unknown')),
+                        'example': str(example or ""),
+                        'example_translation': str(ex_trans or ""),
+                        'level': str(level or "A1"),
+                        'plural': str(item.get('plural', "")),
+                        'conjugations': str(item.get('conjugations', ""))
+                    })
+            return standardized
+        except Exception as e:
+            if attempt < max_retries - 1:
+                delay = base_delay * (2 ** attempt) + random.uniform(0, 1)
+                print(f"  [!] LLM error generating {language}: {e}. Retrying in {delay:.2f}s...", flush=True)
+                await asyncio.sleep(delay)
+            else:
+                print(f"  [!] LLM error generating {language} after {max_retries} attempts: {e}", flush=True)
+                return []
 
 def setup_logging():
     log_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'generation_errors.log')
@@ -226,7 +258,35 @@ async def process_language(language, target_count):
                     continue
 
                 # Data validation & Language detection
-                if language.lower() not in ['english', 'german']:
+                if language.lower() == 'dutch':
+                    # Extremely robust Dutch validation using lexicon and n-gram analysis
+                    lower_clean = clean_term.lower()
+                    is_dutch = False
+                    
+                    # 1. Check against dedicated Dutch lexicon first
+                    if lower_clean in DUTCH_LEXICON:
+                        is_dutch = True
+                    # 2. If not in lexicon, use Lingua n-gram analysis
+                    elif dutch_detector:
+                        detected = dutch_detector.detect_language_of(clean_term)
+                        if detected == Language.DUTCH:
+                            is_dutch = True
+                    
+                    if not is_dutch and not str(item.get('example', '')).strip():
+                        print(f"  [!] Rejecting '{clean_term}' (Not verified as Dutch by lexicon/n-gram, missing example)", flush=True)
+                        continue
+                elif language.lower() == 'finnish':
+                    if finnish_detector:
+                        detected = finnish_detector.detect_language_of(clean_term)
+                        if detected in [Language.ENGLISH, Language.GERMAN, Language.SWEDISH]:
+                            example_text = str(item.get('example', '')).strip()
+                            if not example_text or finnish_detector.detect_language_of(example_text) != Language.FINNISH:
+                                print(f"  [!] Rejecting '{clean_term}' (Detected {detected.name} instead of FINNISH)", flush=True)
+                                continue
+                    if not str(item.get('example', '')).strip():
+                        print(f"  [!] Rejecting '{clean_term}' (Missing example sentence for Finnish)", flush=True)
+                        continue
+                elif language.lower() not in ['english', 'german']:
                     try:
                         detected_lang = detect(clean_term)
                         if detected_lang in ['en', 'de'] and not str(item.get('example', '')).strip():
@@ -238,12 +298,13 @@ async def process_language(language, target_count):
                 # Use INSERT OR IGNORE to prevent race conditions with unique constraint
                 cursor.execute("""
                     INSERT OR IGNORE INTO cards (language, term, translation, ipa, gender, part_of_speech, 
-                                     example, example_translation, plural, level, next_review, ease_factor)
-                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                                     example, example_translation, plural, level, conjugations, next_review, ease_factor)
+                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
                 """, (language, clean_term, str(item.get('translation', '')), str(item.get('ipa', '[]')), 
                       str(item.get('gender', 'N/A')), str(item.get('part_of_speech', 'unknown')),
                       str(item.get('example', '')), str(item.get('example_translation', '')), 
                       str(item.get('plural', '')), str(item.get('level', 'A1')),
+                      str(item.get('conjugations', '')),
                       datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M:%S'), 2.5))
                 
                 if cursor.rowcount > 0:

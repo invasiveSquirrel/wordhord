@@ -221,3 +221,55 @@ main {
   font-weight: 700;
   color: var(--peach);
 }
+
+.synonym-section {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--surface1);
+  text-align: left;
+}
+
+.toggle-synonyms-btn {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.synonyms-content {
+  background: var(--surface0);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.synonym-source-selector {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.source-select {
+  background: var(--crust);
+  color: var(--text);
+  border: 1px solid var(--surface2);
+  border-radius: 4px;
+  padding: 0.3rem 0.5rem;
+}
+
+.synonyms-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.synonyms-list li {
+  background: var(--surface1);
+  padding: 0.4rem 0.8rem;
+  border-radius: 16px;
+  font-size: 0.95rem;
+  color: var(--text);
+}
